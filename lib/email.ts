@@ -1,6 +1,8 @@
 import { Resend } from 'resend'
 
-const FROM_EMAIL = 'FraudAudit <noreply@fraudaudit.com>'
+// Use Resend's onboarding address until a custom domain is verified.
+// Once verified, change to: 'FraudAudit <noreply@fraudaudit.com>'
+const FROM_EMAIL = 'FraudAudit <onboarding@resend.dev>'
 
 export async function sendEmail(params: {
   to: string
