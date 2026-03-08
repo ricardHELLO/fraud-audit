@@ -1,10 +1,10 @@
-import { SignIn } from '@clerk/nextjs'
+import { SignUp } from '@clerk/nextjs'
 
 export const metadata = {
-  title: 'Iniciar Sesion - FraudAudit',
+  title: 'Crear Cuenta - FraudAudit',
 }
 
-export default function LoginPage() {
+export default function SignUpPage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-stone-50">
       <div className="w-full max-w-md">
@@ -13,11 +13,11 @@ export default function LoginPage() {
             FraudAudit
           </h1>
           <p className="mt-2 text-sm text-stone-500">
-            Inicia sesion para acceder a tu panel de analisis
+            Crea tu cuenta gratuita y recibe 100 creditos
           </p>
         </div>
-        <SignIn
-          signUpUrl="/signup"
+        <SignUp
+          signInUrl="/login"
           appearance={{
             elements: {
               rootBox: 'mx-auto',
