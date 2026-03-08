@@ -144,9 +144,9 @@ export function CorrelationTab({ data }: CorrelationTabProps) {
             <div className="grid gap-4 sm:grid-cols-2">
               {data.patterns_by_local.map((local) => {
                 const badgeVariant: 'danger' | 'warning' | 'success' =
-                  local.strength > 0.7
+                  local.strength > 70
                     ? 'danger'
-                    : local.strength > 0.4
+                    : local.strength > 40
                       ? 'warning'
                       : 'success'
 
@@ -160,7 +160,7 @@ export function CorrelationTab({ data }: CorrelationTabProps) {
                         {local.location}
                       </h4>
                       <Badge variant={badgeVariant}>
-                        Fuerza: {(local.strength * 100).toFixed(0)}%
+                        Fuerza: {local.strength}/100
                       </Badge>
                     </div>
                     <p className="text-xs text-stone-600">{local.pattern}</p>

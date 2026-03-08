@@ -113,6 +113,7 @@ export interface CorrelationScatterPoint {
 export interface CorrelationPatternByLocal {
   location: string;
   pattern: string;
+  /** Combined risk score, integer 0-100 */
   strength: number;
 }
 
