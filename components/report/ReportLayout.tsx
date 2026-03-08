@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import type { ReportData } from '@/lib/types/report'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { trackReportTabClicked } from '@/lib/posthog-events'
 
@@ -57,9 +58,10 @@ const riskLabel: Record<string, string> = {
 
 interface ReportLayoutProps {
   data: ReportData
+  reportId?: string // Only provided when the owner views it
 }
 
-export function ReportLayout({ data }: ReportLayoutProps) {
+export function ReportLayout({ data, reportId }: ReportLayoutProps) {
   const [activeTab, setActiveTab] = useState<TabKey>('resumen')
 
   function renderTab() {
@@ -107,12 +109,32 @@ export function ReportLayout({ data }: ReportLayoutProps) {
                 {data.summary.locations_count} locales
               </p>
             </div>
-            <Badge
-              variant={riskBadgeVariant[data.summary.overall_risk_level]}
-              className="px-3 py-1 text-sm"
-            >
-              Riesgo {riskLabel[data.summary.overall_risk_level]}
-            </Badge>
+            <div className="flex items-center gap-3">
+              {reportId && (
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => window.open(`/api/reports/${reportId}/pdf`, '_blank')}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="h-4 w-4"
+                  >
+                    <path d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03l4.25 4.5a.75.75 0 001.09 0l4.25-4.5a.75.75 0 00-1.09-1.03l-2.955 3.129V2.75z" />
+                    <path d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z" />
+                  </svg>
+                  Descargar PDF
+                </Button>
+              )}
+              <Badge
+                variant={riskBadgeVariant[data.summary.overall_risk_level]}
+                className="px-3 py-1 text-sm"
+              >
+                Riesgo {riskLabel[data.summary.overall_risk_level]}
+              </Badge>
+            </div>
           </div>
         </div>
 

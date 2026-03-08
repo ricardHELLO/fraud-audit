@@ -101,6 +101,42 @@ export const analyzeReport = inngest.createFunction(
       });
     });
 
+    // Step 6: Send notification email (fire-and-forget)
+    await step.run('send-report-email', async () => {
+      try {
+        const { data: userData } = await supabase
+          .from('users')
+          .select('email, name')
+          .eq('id', userId)
+          .single();
+
+        if (userData?.email) {
+          const { sendEmail } = await import('@/lib/email');
+          const { reportReadyEmail } = await import('@/lib/email-templates');
+
+          const { data: org } = await supabase
+            .from('organizations')
+            .select('name')
+            .eq('id', organizationId)
+            .single();
+
+          const template = reportReadyEmail(
+            userData.name,
+            slug,
+            org?.name ?? 'tu restaurante'
+          );
+          await sendEmail({
+            to: userData.email,
+            subject: template.subject,
+            html: template.html,
+          });
+        }
+      } catch (emailError) {
+        console.error('Failed to send report email:', emailError);
+        // Don't fail the step — email is non-critical
+      }
+    });
+
     return { slug: reportSlug };
   }
 );

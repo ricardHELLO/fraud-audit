@@ -43,6 +43,9 @@ export const env = {
   INNGEST_EVENT_KEY: required('INNGEST_EVENT_KEY'),
   INNGEST_SIGNING_KEY: required('INNGEST_SIGNING_KEY'),
 
+  // Resend (optional — emails degrade gracefully)
+  RESEND_API_KEY: optional('RESEND_API_KEY'),
+
   // PostHog (optional — analytics degrade gracefully)
   NEXT_PUBLIC_POSTHOG_KEY: optional('NEXT_PUBLIC_POSTHOG_KEY'),
   NEXT_PUBLIC_POSTHOG_HOST: optional('NEXT_PUBLIC_POSTHOG_HOST', 'https://eu.posthog.com'),

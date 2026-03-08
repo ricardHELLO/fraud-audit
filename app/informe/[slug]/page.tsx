@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import { auth } from '@clerk/nextjs/server'
 import { createServerClient } from '@/lib/supabase'
 import { ReportLayout } from '@/components/report/ReportLayout'
 import type { ReportData } from '@/lib/types/report'
@@ -16,6 +17,7 @@ interface ReportRow {
   report_data: ReportData | null
   external_views: number
   organization_id: string
+  user_id: string
   organizations: {
     name: string
   }
@@ -76,7 +78,7 @@ export default async function InformePage({ params }: PageProps) {
   const { data: report, error } = await supabase
     .from('reports')
     .select(
-      'id, slug, status, report_data, external_views, organization_id, organizations(name)'
+      'id, slug, status, report_data, external_views, organization_id, user_id, organizations(name)'
     )
     .eq('slug', params.slug)
     .single<ReportRow>()
@@ -95,10 +97,10 @@ export default async function InformePage({ params }: PageProps) {
       // View counter updated silently
     })
 
-  // Track report view in PostHog
+  // Track report view in PostHog (fire-and-forget)
   serverTrackReportViewed(report.organization_id || 'anonymous', {
     slug: report.slug,
-    is_owner: false, // Public page, assume external viewer
+    is_owner: false,
     source: 'shared_link',
   })
 
@@ -192,6 +194,25 @@ export default async function InformePage({ params }: PageProps) {
     )
   }
 
+  // --- Check if viewer is the report owner ---
+  let ownerReportId: string | undefined
+  try {
+    const { userId: clerkId } = await auth()
+    if (clerkId) {
+      const { data: viewer } = await supabase
+        .from('users')
+        .select('id')
+        .eq('clerk_id', clerkId)
+        .single()
+
+      if (viewer && viewer.id === report.user_id) {
+        ownerReportId = report.id
+      }
+    }
+  } catch {
+    // Not authenticated — public view, no PDF button
+  }
+
   // --- Status: Completed ---
-  return <ReportLayout data={report.report_data} />
+  return <ReportLayout data={report.report_data} reportId={ownerReportId} />
 }

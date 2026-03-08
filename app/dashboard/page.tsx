@@ -1,15 +1,17 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { useUser } from '@clerk/nextjs'
 import { useSearchParams } from 'next/navigation'
 import { CreditBalance } from '@/components/dashboard/CreditBalance'
 import { GamificationChecklist } from '@/components/dashboard/GamificationChecklist'
+import { DashboardNav } from '@/components/dashboard/DashboardNav'
 import { ReportsList, type ReportSummary } from '@/components/dashboard/ReportsList'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Alert } from '@/components/ui/alert'
+import { useToast } from '@/components/ui/toast'
 import { trackUpgradeInitiated } from '@/lib/posthog-events'
 
 /* ------------------------------------------------------------------ */
@@ -19,6 +21,7 @@ import { trackUpgradeInitiated } from '@/lib/posthog-events'
 export default function DashboardPage() {
   const { user, isLoaded: isUserLoaded } = useUser()
   const searchParams = useSearchParams()
+  const { showToast } = useToast()
 
   // --- State ---
   const [balance, setBalance] = useState<number>(0)
@@ -69,6 +72,20 @@ export default function DashboardPage() {
     trackUpgradeInitiated(0)
     window.location.href = '/dashboard/upload'
   }
+
+  // --- Gamification action completed handler ---
+  const handleActionCompleted = useCallback(
+    (actionId: string, creditAwarded: boolean) => {
+      if (creditAwarded) {
+        setCompletedActions((prev) =>
+          prev.includes(actionId) ? prev : [...prev, actionId]
+        )
+        setBalance((prev) => prev + 1)
+        showToast('+1 ejecucion ganada', 'success')
+      }
+    },
+    [showToast]
+  )
 
   // --- Loading state ---
   if (!isUserLoaded || isLoading) {
@@ -130,7 +147,11 @@ export default function DashboardPage() {
           {/* Left column: Credit balance + Gamification */}
           <div className="space-y-6 lg:col-span-1">
             <CreditBalance balance={balance} onBuyMore={handleBuyMore} />
-            <GamificationChecklist completedActions={completedActions} />
+            <GamificationChecklist
+              completedActions={completedActions}
+              reports={reports}
+              onActionCompleted={handleActionCompleted}
+            />
           </div>
 
           {/* Right column: Reports list */}
@@ -143,31 +164,3 @@ export default function DashboardPage() {
   )
 }
 
-/* ------------------------------------------------------------------ */
-/*  Dashboard nav bar                                                   */
-/* ------------------------------------------------------------------ */
-
-function DashboardNav({ userName }: { userName: string | null }) {
-  return (
-    <nav className="border-b border-stone-200 bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        {/* Logo */}
-        <Link href="/dashboard" className="text-lg font-bold tracking-tight text-stone-900">
-          FraudAudit
-        </Link>
-
-        {/* Right side */}
-        <div className="flex items-center gap-4">
-          {userName && (
-            <span className="hidden text-sm text-stone-600 sm:inline">
-              {userName}
-            </span>
-          )}
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">
-            {userName ? userName.charAt(0).toUpperCase() : '?'}
-          </div>
-        </div>
-      </div>
-    </nav>
-  )
-}

@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Webhook } from 'svix';
 import { createServerClient } from '@/lib/supabase';
 import { serverTrackSignup } from '@/lib/posthog-server-events';
+import { sendEmail } from '@/lib/email';
+import { welcomeEmail } from '@/lib/email-templates';
 
 interface ClerkUserEvent {
   data: {
@@ -90,6 +92,10 @@ export async function POST(req: NextRequest) {
 
         // Track signup event
         serverTrackSignup(clerkId, 'email'); // Default to email; Clerk doesn't expose SSO provider in webhook
+
+        // Send welcome email (fire-and-forget)
+        const welcomeTemplate = welcomeEmail(name);
+        sendEmail({ to: email, subject: welcomeTemplate.subject, html: welcomeTemplate.html });
 
         break;
       }

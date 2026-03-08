@@ -104,6 +104,25 @@ export async function POST(req: NextRequest) {
             credits_purchased: totalCreditsAwarded,
             stripe_session_id: session.id,
           });
+
+          // Send purchase confirmation email (fire-and-forget)
+          try {
+            const { data: userData } = await supabase
+              .from('users')
+              .select('email, name')
+              .eq('id', userId)
+              .single();
+
+            if (userData?.email) {
+              const { sendEmail } = await import('@/lib/email');
+              const { purchaseConfirmationEmail } = await import('@/lib/email-templates');
+              const amountPaid = session.amount_total ? session.amount_total / 100 : 0;
+              const template = purchaseConfirmationEmail(userData.name, totalCreditsAwarded, amountPaid);
+              await sendEmail({ to: userData.email, subject: template.subject, html: template.html });
+            }
+          } catch (emailErr) {
+            console.error('Failed to send purchase email:', emailErr);
+          }
         }
         break;
       }
