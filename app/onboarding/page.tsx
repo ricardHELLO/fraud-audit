@@ -7,6 +7,7 @@ import { POSSelector } from '@/components/onboarding/POSSelector'
 import { InventorySelector } from '@/components/onboarding/InventorySelector'
 import { ExportGuide } from '@/components/onboarding/ExportGuide'
 import { Button } from '@/components/ui/button'
+import { trackOnboardingStep, trackOnboardingAbandoned } from '@/lib/posthog-events'
 
 /* ------------------------------------------------------------------ */
 /*  Step definitions                                                    */
@@ -103,6 +104,17 @@ export default function OnboardingPage() {
   const [posConnector, setPosConnector] = useState<string | null>(null)
   const [inventoryConnector, setInventoryConnector] = useState<string | null>(null)
 
+  // Track onboarding abandonment on unmount
+  React.useEffect(() => {
+    return () => {
+      const onboardingData = localStorage.getItem('fraudaudit_onboarding')
+      if (!onboardingData || !JSON.parse(onboardingData).onboardingCompleted) {
+        trackOnboardingAbandoned(currentStep)
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const stepMeta = STEPS.find((s) => s.id === currentStep)!
 
   const canGoNext =
@@ -114,6 +126,10 @@ export default function OnboardingPage() {
 
   function handleNext() {
     if (currentStep < 3) {
+      trackOnboardingStep(currentStep as 1 | 2 | 3, {
+        pos_selected: posConnector ?? undefined,
+        inventory_selected: inventoryConnector ?? undefined,
+      })
       setCurrentStep((s) => s + 1)
     }
   }
@@ -125,6 +141,10 @@ export default function OnboardingPage() {
   }
 
   function handleComplete() {
+    trackOnboardingStep(3, {
+      pos_selected: posConnector ?? undefined,
+      inventory_selected: inventoryConnector ?? undefined,
+    })
     // Persist selections to localStorage
     const selections = {
       posConnector,

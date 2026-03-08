@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 import { createServerClient } from '@/lib/supabase';
 import { deductCredit } from '@/lib/credits';
 import { inngest } from '@/lib/inngest/client';
+import { serverTrackAnalysisStarted, serverTrackCreditSpent } from '@/lib/posthog-server-events';
 
 export async function POST(req: NextRequest) {
   try {
@@ -97,6 +98,15 @@ export async function POST(req: NextRequest) {
         inventoryConnector: inventoryConnector ?? null,
         slug,
       },
+    });
+
+    // Track analytics events
+    serverTrackCreditSpent(user.id, 'analysis', -1); // Will update with real balance later
+    serverTrackAnalysisStarted(user.id, {
+      credits_used: 1,
+      analysis_window_months: 0, // Not calculated at this point
+      locations_count: 0,
+      report_slug: slug,
     });
 
     return NextResponse.json(

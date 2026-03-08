@@ -2,6 +2,7 @@ import { inngest } from './client';
 import { createServerClient } from '@/lib/supabase';
 import { getParser, mergeDatasets } from '@/lib/parsers';
 import { generateReport } from '@/lib/report-generator';
+import { serverTrackAnalysisCompleted, serverTrackAnalysisFailed } from '@/lib/posthog-server-events';
 
 export const analyzeReport = inngest.createFunction(
   { id: 'analyze-report', name: 'Analyze Report' },
@@ -92,6 +93,12 @@ export const analyzeReport = inngest.createFunction(
         .from('reports')
         .update({ status: 'completed' })
         .eq('id', reportId);
+
+      // Track completion
+      serverTrackAnalysisCompleted(userId, {
+        processing_time_seconds: 0, // Inngest doesn't easily expose total duration
+        report_slug: slug,
+      });
     });
 
     return { slug: reportSlug };

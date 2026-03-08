@@ -12,6 +12,7 @@ import { UpgradePrompt } from '@/components/upload/UpgradePrompt'
 import { Button } from '@/components/ui/button'
 import { Alert } from '@/components/ui/alert'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
+import { trackFileUploaded, trackVolumeLimitShown, trackUpgradePromptShown, trackUpgradeInitiated } from '@/lib/posthog-events'
 
 /* ------------------------------------------------------------------ */
 /*  Connector dropdown                                                  */
@@ -84,8 +85,22 @@ export default function UploadPage() {
         const volume = detectVolume(text, posConnector)
         setPosVolume(volume)
 
+        trackFileUploaded({
+          connector_type: posConnector,
+          source_category: 'pos',
+          file_size_bytes: file.size,
+          detected_rows: volume.totalRows,
+          detected_months: volume.monthsCovered,
+          detected_locations: volume.locations.length,
+        })
+
         // Check if user needs more credits
         if (volume.creditsRequired > userCredits) {
+          trackVolumeLimitShown({
+            months_in_data: volume.monthsCovered,
+            locations_in_data: volume.locations.length,
+          })
+          trackUpgradePromptShown()
           setShowUpgrade(true)
         } else {
           setShowUpgrade(false)
@@ -167,6 +182,8 @@ export default function UploadPage() {
   }
 
   function handleSelectPlan(planId: string) {
+    const creditMap: Record<string, number> = { basic: 5, pro: 15, enterprise: 50 }
+    trackUpgradeInitiated(creditMap[planId] ?? 0)
     // TODO: Redirect to Stripe checkout
     console.log('Selected plan:', planId)
   }

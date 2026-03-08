@@ -8,6 +8,7 @@ import { GamificationChecklist } from '@/components/dashboard/GamificationCheckl
 import { ReportsList, type ReportSummary } from '@/components/dashboard/ReportsList'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
+import { trackUpgradeInitiated } from '@/lib/posthog-events'
 
 /* ------------------------------------------------------------------ */
 /*  Dashboard page                                                      */
@@ -43,8 +44,8 @@ export default function DashboardPage() {
         // setReports(reportsData.reports)
         // setCompletedActions(actionsData.completedActions)
 
-        // Placeholder / mock data for now
-        setBalance(1)
+        // Placeholder / mock data for now (beta: generous free credits)
+        setBalance(100)
         setReports([])
         setCompletedActions(['signup'])
       } catch (error) {
@@ -61,7 +62,7 @@ export default function DashboardPage() {
   function handleBuyMore() {
     // TODO: Navigate to Stripe checkout or open pricing modal
     // router.push('/dashboard/pricing')
-    console.log('Navigate to pricing')
+    trackUpgradeInitiated(0)
   }
 
   // --- Loading state ---

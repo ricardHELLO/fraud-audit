@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { createServerClient } from '@/lib/supabase';
 import { awardCredit } from '@/lib/credits';
+import { serverTrackFeedbackSubmitted, serverTrackCreditEarned } from '@/lib/posthog-server-events';
 
 export async function POST(req: NextRequest) {
   try {
@@ -90,7 +91,17 @@ export async function POST(req: NextRequest) {
     let creditAwarded = false;
     if (isFirstFeedback) {
       creditAwarded = await awardCredit(user.id, 'feedback', reportId);
+      if (creditAwarded) {
+        serverTrackCreditEarned(user.id, 'feedback', 0); // Balance will be fetched
+      }
     }
+
+    // Track feedback event
+    serverTrackFeedbackSubmitted(user.id, {
+      accuracy_rating,
+      most_useful_section: most_useful_section ?? undefined,
+      would_share: would_share ?? undefined,
+    });
 
     return NextResponse.json(
       {

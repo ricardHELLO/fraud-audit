@@ -3,6 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { trackReportViralCTA } from '@/lib/posthog-events'
 
 export function ReportBanner() {
   return (
@@ -14,7 +15,7 @@ export function ReportBanner() {
         Genera tu primer informe de fraude operativo gratis
       </p>
       <div className="mt-6">
-        <Link href="/">
+        <Link href="/" onClick={() => trackReportViralCTA()}>
           <Button
             variant="secondary"
             size="lg"

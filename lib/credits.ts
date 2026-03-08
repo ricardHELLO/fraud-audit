@@ -1,4 +1,5 @@
 import { createServerClient } from './supabase'
+import { serverTrackCreditEarned, serverTrackCreditSpent } from '@/lib/posthog-server-events'
 
 // --- Types ---
 
@@ -18,7 +19,7 @@ export const CREDIT_COSTS = {
 } as const
 
 export const CREDIT_REWARDS = {
-  signup_bonus: 1,
+  signup_bonus: 100, // Free beta — generous credits for testers
   feedback: 1,
   referral: 2,
   referred_bonus: 1,
@@ -97,6 +98,8 @@ export async function deductCredit(
     throw new Error(`Failed to update user balance: ${updateError.message}`)
   }
 
+  serverTrackCreditSpent(userId, reason, balance + CREDIT_COSTS.analysis)
+
   return true
 }
 
@@ -143,6 +146,8 @@ export async function awardCredit(
   if (updateError) {
     throw new Error(`Failed to update user balance: ${updateError.message}`)
   }
+
+  serverTrackCreditEarned(userId, reason, balance + amount)
 
   return true
 }

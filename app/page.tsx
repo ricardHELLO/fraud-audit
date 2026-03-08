@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { LandingCTALink } from '@/components/LandingCTALink'
 
 const steps = [
   {
@@ -89,9 +90,9 @@ export default function LandingPage() {
             >
               Iniciar sesion
             </Link>
-            <Link href="/login" className="btn-primary">
+            <LandingCTALink href="/login" className="btn-primary" position="hero">
               Comenzar gratis
-            </Link>
+            </LandingCTALink>
           </div>
         </div>
       </nav>
@@ -113,9 +114,9 @@ export default function LandingPage() {
               riesgo por empleado. Sin instalar nada.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link href="/login" className="btn-primary text-base">
+              <LandingCTALink href="/login" className="btn-primary text-base" position="hero">
                 Genera tu informe gratis
-              </Link>
+              </LandingCTALink>
               <Link href="#como-funciona" className="btn-secondary text-base">
                 Como funciona
               </Link>
@@ -211,12 +212,13 @@ export default function LandingPage() {
               sin compromisos.
             </p>
             <div className="mt-10">
-              <Link
+              <LandingCTALink
                 href="/login"
                 className="inline-flex items-center justify-center rounded-lg bg-brand-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-all hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400"
+                position="bottom"
               >
                 Genera tu informe gratis
-              </Link>
+              </LandingCTALink>
             </div>
           </div>
         </div>

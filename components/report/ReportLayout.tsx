@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import type { ReportData } from '@/lib/types/report'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
+import { trackReportTabClicked } from '@/lib/posthog-events'
 
 import { SummaryTab } from './SummaryTab'
 import { CashTab } from './CashTab'
@@ -121,7 +122,7 @@ export function ReportLayout({ data }: ReportLayoutProps) {
             {TABS.map((tab) => (
               <button
                 key={tab.key}
-                onClick={() => setActiveTab(tab.key)}
+                onClick={() => { trackReportTabClicked(tab.key); setActiveTab(tab.key) }}
                 className={cn(
                   'shrink-0 border-b-2 px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap',
                   activeTab === tab.key

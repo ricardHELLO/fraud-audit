@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Webhook } from 'svix';
 import { createServerClient } from '@/lib/supabase';
+import { serverTrackSignup } from '@/lib/posthog-server-events';
 
 interface ClerkUserEvent {
   data: {
@@ -76,7 +77,7 @@ export async function POST(req: NextRequest) {
           clerk_id: clerkId,
           email,
           name,
-          credits_balance: 1,
+          credits_balance: 100, // Free beta — generous credits for testers
         });
 
         if (error) {
@@ -86,6 +87,9 @@ export async function POST(req: NextRequest) {
             { status: 500 }
           );
         }
+
+        // Track signup event
+        serverTrackSignup(clerkId, 'email'); // Default to email; Clerk doesn't expose SSO provider in webhook
 
         break;
       }

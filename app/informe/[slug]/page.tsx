@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { createServerClient } from '@/lib/supabase'
 import { ReportLayout } from '@/components/report/ReportLayout'
 import type { ReportData } from '@/lib/types/report'
+import { serverTrackReportViewed } from '@/lib/posthog-server-events'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                               */
@@ -93,6 +94,13 @@ export default async function InformePage({ params }: PageProps) {
     .then(() => {
       // View counter updated silently
     })
+
+  // Track report view in PostHog
+  serverTrackReportViewed(report.organization_id || 'anonymous', {
+    slug: report.slug,
+    is_owner: false, // Public page, assume external viewer
+    source: 'shared_link',
+  })
 
   // --- Status: Processing ---
   if (report.status === 'processing') {
