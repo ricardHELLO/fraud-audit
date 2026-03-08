@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider dynamic>
       <html lang="es" className={inter.variable}>
         <body className={`${inter.className} antialiased`}>
           <PostHogProvider>
