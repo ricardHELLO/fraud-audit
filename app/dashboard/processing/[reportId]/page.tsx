@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import React, { useEffect, useState, useRef } from 'react'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -14,14 +14,13 @@ import { Card, CardContent } from '@/components/ui/card'
 interface ProcessingStep {
   id: string
   label: string
-  duration: number // simulated duration in ms
 }
 
 const PROCESSING_STEPS: ProcessingStep[] = [
-  { id: 'parsing', label: 'Parseando datos...', duration: 2000 },
-  { id: 'discrepancies', label: 'Analizando descuadres...', duration: 3000 },
-  { id: 'correlations', label: 'Calculando correlaciones...', duration: 2500 },
-  { id: 'report', label: 'Generando informe...', duration: 2000 },
+  { id: 'upload', label: 'Archivos recibidos' },
+  { id: 'parsing', label: 'Parseando datos...' },
+  { id: 'analysis', label: 'Analizando patrones de fraude...' },
+  { id: 'report', label: 'Generando informe...' },
 ]
 
 /* ------------------------------------------------------------------ */
@@ -109,54 +108,75 @@ function StepItem({
 /* ------------------------------------------------------------------ */
 
 export default function ProcessingPage() {
-  const params = useParams<{ jobId: string }>()
-  const router = useRouter()
-  const jobId = params.jobId
+  const params = useParams<{ reportId: string }>()
+  const reportId = params.reportId
 
-  const [currentStepIndex, setCurrentStepIndex] = useState(0)
   const [isCompleted, setIsCompleted] = useState(false)
   const [reportSlug, setReportSlug] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [currentStepIndex, setCurrentStepIndex] = useState(0)
+  const pollCount = useRef(0)
 
-  // --- Simulated progress ---
-  // In production, this would poll /api/analyze/status?jobId=...
+  // --- Poll for real report status ---
   useEffect(() => {
     let cancelled = false
+    let intervalId: NodeJS.Timeout
 
-    async function simulateProgress() {
-      for (let i = 0; i < PROCESSING_STEPS.length; i++) {
+    // Mark first step (upload) as completed immediately
+    setCurrentStepIndex(1)
+
+    async function pollStatus() {
+      try {
+        const res = await fetch(`/api/reports/${reportId}/status`)
+
+        if (!res.ok) {
+          const data = await res.json()
+          if (!cancelled) {
+            setError(data.error || 'Error al consultar el estado del informe')
+          }
+          return
+        }
+
+        const data = await res.json()
+
         if (cancelled) return
-        setCurrentStepIndex(i)
 
-        await new Promise((resolve) =>
-          setTimeout(resolve, PROCESSING_STEPS[i].duration)
-        )
+        if (data.status === 'completed') {
+          setReportSlug(data.slug)
+          setCurrentStepIndex(PROCESSING_STEPS.length)
+          setIsCompleted(true)
+          clearInterval(intervalId)
+        } else if (data.status === 'failed') {
+          setError('El analisis fallo. Intentalo de nuevo con un archivo diferente.')
+          clearInterval(intervalId)
+        } else {
+          // Still processing — animate through steps
+          pollCount.current += 1
+          // Progress through steps based on poll count (each poll = ~3s)
+          if (pollCount.current >= 3) {
+            setCurrentStepIndex(3) // Generating report
+          } else if (pollCount.current >= 1) {
+            setCurrentStepIndex(2) // Analyzing
+          }
+        }
+      } catch {
+        // Network error — keep polling
+        console.error('Poll failed, retrying...')
       }
-
-      if (cancelled) return
-
-      // TODO: In production, poll the real API:
-      // const res = await fetch(`/api/analyze/status?jobId=${jobId}`)
-      // const data = await res.json()
-      // if (data.status === 'completed') {
-      //   setReportSlug(data.reportSlug)
-      //   setIsCompleted(true)
-      // } else if (data.status === 'failed') {
-      //   setError(data.error)
-      // }
-
-      // Simulated completion
-      const simulatedSlug = `informe-${jobId.replace('job_', '')}`
-      setReportSlug(simulatedSlug)
-      setIsCompleted(true)
     }
 
-    simulateProgress()
+    // Initial poll after a short delay
+    const timeoutId = setTimeout(() => {
+      pollStatus()
+      intervalId = setInterval(pollStatus, 3000)
+    }, 1500)
 
     return () => {
       cancelled = true
+      clearTimeout(timeoutId)
+      clearInterval(intervalId)
     }
-  }, [jobId])
+  }, [reportId])
 
   // --- Step status ---
   function getStepStatus(index: number): 'pending' | 'active' | 'completed' {
@@ -356,9 +376,9 @@ export default function ProcessingPage() {
           </CardContent>
         </Card>
 
-        {/* Job ID reference */}
+        {/* Report ID reference */}
         <p className="mt-4 text-center text-xs text-stone-400">
-          ID de trabajo: {jobId}
+          ID de informe: {reportId}
         </p>
       </div>
     </div>

@@ -42,10 +42,24 @@ export async function POST(req: NextRequest) {
 
     const supabase = createServerClient();
 
+    // Look up internal user from Clerk ID
+    const { data: user, error: userError } = await supabase
+      .from('users')
+      .select('id, organization_id')
+      .eq('clerk_id', userId)
+      .single();
+
+    if (userError || !user) {
+      return NextResponse.json(
+        { error: 'User not found' },
+        { status: 404 }
+      );
+    }
+
     // Build the storage path
     const timestamp = Date.now();
     const sanitizedFilename = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const storagePath = `${userId}/${timestamp}_${sanitizedFilename}`;
+    const storagePath = `${user.id}/${timestamp}_${sanitizedFilename}`;
 
     // Read the file content for volume detection
     const fileContent = await file.text();
@@ -86,7 +100,8 @@ export async function POST(req: NextRequest) {
     const { data: uploadRecord, error: dbError } = await supabase
       .from('uploads')
       .insert({
-        user_id: userId,
+        user_id: user.id,
+        organization_id: user.organization_id,
         file_path: storagePath,
         file_name: file.name,
         file_size_bytes: file.size,

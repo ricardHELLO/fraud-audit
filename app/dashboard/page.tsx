@@ -3,11 +3,13 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useUser } from '@clerk/nextjs'
+import { useSearchParams } from 'next/navigation'
 import { CreditBalance } from '@/components/dashboard/CreditBalance'
 import { GamificationChecklist } from '@/components/dashboard/GamificationChecklist'
 import { ReportsList, type ReportSummary } from '@/components/dashboard/ReportsList'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
+import { Alert } from '@/components/ui/alert'
 import { trackUpgradeInitiated } from '@/lib/posthog-events'
 
 /* ------------------------------------------------------------------ */
@@ -16,12 +18,23 @@ import { trackUpgradeInitiated } from '@/lib/posthog-events'
 
 export default function DashboardPage() {
   const { user, isLoaded: isUserLoaded } = useUser()
+  const searchParams = useSearchParams()
 
   // --- State ---
-  const [balance, setBalance] = useState<number>(1)
+  const [balance, setBalance] = useState<number>(0)
   const [reports, setReports] = useState<ReportSummary[]>([])
   const [completedActions, setCompletedActions] = useState<string[]>(['signup'])
   const [isLoading, setIsLoading] = useState(true)
+  const [showPurchaseSuccess, setShowPurchaseSuccess] = useState(false)
+
+  // --- Check for purchase success parameter ---
+  useEffect(() => {
+    if (searchParams.get('purchase') === 'success') {
+      setShowPurchaseSuccess(true)
+      // Clean URL without reloading
+      window.history.replaceState({}, '', '/dashboard')
+    }
+  }, [searchParams])
 
   // --- Fetch dashboard data ---
   useEffect(() => {
@@ -31,23 +44,16 @@ export default function DashboardPage() {
       setIsLoading(true)
 
       try {
-        // TODO: Replace with real API calls once endpoints are implemented
-        // const [balanceRes, reportsRes, actionsRes] = await Promise.all([
-        //   fetch('/api/credits/balance'),
-        //   fetch('/api/reports'),
-        //   fetch('/api/gamification/status'),
-        // ])
-        // const balanceData = await balanceRes.json()
-        // const reportsData = await reportsRes.json()
-        // const actionsData = await actionsRes.json()
-        // setBalance(balanceData.balance)
-        // setReports(reportsData.reports)
-        // setCompletedActions(actionsData.completedActions)
+        const res = await fetch('/api/dashboard')
 
-        // Placeholder / mock data for now (beta: generous free credits)
-        setBalance(100)
-        setReports([])
-        setCompletedActions(['signup'])
+        if (res.ok) {
+          const data = await res.json()
+          setBalance(data.balance)
+          setReports(data.reports)
+          setCompletedActions(data.completedActions)
+        } else {
+          console.error('Dashboard API returned error:', res.status)
+        }
       } catch (error) {
         console.error('Failed to load dashboard data:', error)
       } finally {
@@ -60,9 +66,8 @@ export default function DashboardPage() {
 
   // --- Buy more handler ---
   function handleBuyMore() {
-    // TODO: Navigate to Stripe checkout or open pricing modal
-    // router.push('/dashboard/pricing')
     trackUpgradeInitiated(0)
+    window.location.href = '/dashboard/upload'
   }
 
   // --- Loading state ---
@@ -84,6 +89,17 @@ export default function DashboardPage() {
       <DashboardNav userName={user?.firstName ?? user?.emailAddresses?.[0]?.emailAddress ?? null} />
 
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+        {/* Purchase success alert */}
+        {showPurchaseSuccess && (
+          <div className="mb-6">
+            <Alert
+              variant="success"
+              title="Compra completada"
+              description="Tus creditos se han anadido a tu cuenta. Ya puedes ejecutar nuevos analisis."
+            />
+          </div>
+        )}
+
         {/* Page header */}
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>

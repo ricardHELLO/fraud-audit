@@ -1,9 +1,8 @@
 'use client'
 
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { cn } from '@/lib/utils'
 import { POS_CONNECTORS, INVENTORY_CONNECTORS } from '@/lib/types/connectors'
 import { detectVolume, type VolumeInfo } from '@/lib/volume-detector'
 import { FileDropZone } from '@/components/upload/FileDropZone'
@@ -67,12 +66,29 @@ export default function UploadPage() {
   const [inventoryVolume, setInventoryVolume] = useState<VolumeInfo | null>(null)
 
   // --- Credits ---
-  const [userCredits] = useState(1) // TODO: Fetch real balance from API
+  const [userCredits, setUserCredits] = useState<number | null>(null)
   const [showUpgrade, setShowUpgrade] = useState(false)
 
   // --- UI state ---
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  // --- Fetch real balance on mount ---
+  useEffect(() => {
+    async function fetchBalance() {
+      try {
+        const res = await fetch('/api/dashboard')
+        if (res.ok) {
+          const data = await res.json()
+          setUserCredits(data.balance)
+        }
+      } catch {
+        // Fallback — don't block user
+        setUserCredits(100)
+      }
+    }
+    fetchBalance()
+  }, [])
 
   // --- File handlers ---
   const handlePosFileSelect = useCallback(
@@ -95,7 +111,8 @@ export default function UploadPage() {
         })
 
         // Check if user needs more credits
-        if (volume.creditsRequired > userCredits) {
+        const credits = userCredits ?? 0
+        if (volume.creditsRequired > credits) {
           trackVolumeLimitShown({
             months_in_data: volume.monthsCovered,
             locations_in_data: volume.locations.length,
@@ -133,13 +150,34 @@ export default function UploadPage() {
     [inventoryConnector]
   )
 
+  // --- Upload file helper ---
+  async function uploadFile(file: File, connectorType: string, sourceCategory: string) {
+    const formData = new FormData()
+    formData.append('file', file)
+    formData.append('connectorType', connectorType)
+    formData.append('sourceCategory', sourceCategory)
+
+    const res = await fetch('/api/upload', {
+      method: 'POST',
+      body: formData,
+    })
+
+    if (!res.ok) {
+      const data = await res.json()
+      throw new Error(data.error || 'Error al subir el archivo')
+    }
+
+    return res.json()
+  }
+
   // --- Submit analysis ---
   const canAnalyze =
     posConnector !== '' &&
     posFile !== null &&
     posVolume !== null &&
     !showUpgrade &&
-    !isAnalyzing
+    !isAnalyzing &&
+    userCredits !== null
 
   async function handleAnalyze() {
     if (!canAnalyze) return
@@ -148,31 +186,41 @@ export default function UploadPage() {
     setError(null)
 
     try {
-      // Build form data
-      const formData = new FormData()
-      formData.append('posFile', posFile!)
-      formData.append('posConnector', posConnector)
+      // Step 1: Upload POS file
+      const posUpload = await uploadFile(posFile!, posConnector, 'pos')
+      const posUploadId = posUpload.uploadId
+
+      // Step 2: Upload inventory file (optional)
+      let inventoryUploadId: string | undefined
       if (inventoryFile && inventoryConnector) {
-        formData.append('inventoryFile', inventoryFile)
-        formData.append('inventoryConnector', inventoryConnector)
+        const invUpload = await uploadFile(inventoryFile, inventoryConnector, 'inventory')
+        inventoryUploadId = invUpload.uploadId
       }
 
-      // TODO: Replace with real API call
-      // const res = await fetch('/api/analyze', {
-      //   method: 'POST',
-      //   body: formData,
-      // })
-      // if (!res.ok) {
-      //   const data = await res.json()
-      //   throw new Error(data.error || 'Error al iniciar el analisis')
-      // }
-      // const { jobId } = await res.json()
+      // Step 3: Trigger analysis
+      const analyzeRes = await fetch('/api/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          posUploadId,
+          posConnector,
+          inventoryUploadId,
+          inventoryConnector: inventoryConnector || undefined,
+        }),
+      })
 
-      // Simulated response for now
-      const jobId = `job_${Date.now()}`
+      if (!analyzeRes.ok) {
+        const data = await analyzeRes.json()
+        if (analyzeRes.status === 402) {
+          throw new Error('Creditos insuficientes. Adquiere mas ejecuciones para continuar.')
+        }
+        throw new Error(data.error || 'Error al iniciar el analisis')
+      }
 
-      // Redirect to processing page
-      router.push(`/dashboard/processing/${jobId}`)
+      const { reportId } = await analyzeRes.json()
+
+      // Step 4: Redirect to processing page with real report ID
+      router.push(`/dashboard/processing/${reportId}`)
     } catch (err) {
       const message =
         err instanceof Error ? err.message : 'Error desconocido al iniciar el analisis'
@@ -181,11 +229,28 @@ export default function UploadPage() {
     }
   }
 
-  function handleSelectPlan(planId: string) {
-    const creditMap: Record<string, number> = { basic: 5, pro: 15, enterprise: 50 }
+  async function handleSelectPlan(planId: string) {
+    const creditMap: Record<string, number> = { pack_5: 5, pack_15: 15, pack_50: 50 }
     trackUpgradeInitiated(creditMap[planId] ?? 0)
-    // TODO: Redirect to Stripe checkout
-    console.log('Selected plan:', planId)
+
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ packageId: planId }),
+      })
+
+      if (!res.ok) {
+        const data = await res.json()
+        setError(data.error || 'Error al crear la sesion de pago')
+        return
+      }
+
+      const { checkoutUrl } = await res.json()
+      window.location.href = checkoutUrl
+    } catch {
+      setError('Error al conectar con el sistema de pagos')
+    }
   }
 
   return (
@@ -253,7 +318,7 @@ export default function UploadPage() {
                 />
               )}
 
-              {posVolume && (
+              {posVolume && userCredits !== null && (
                 <VolumePreview volumeInfo={posVolume} userCredits={userCredits} />
               )}
             </CardContent>
@@ -288,7 +353,7 @@ export default function UploadPage() {
                 />
               )}
 
-              {inventoryVolume && (
+              {inventoryVolume && userCredits !== null && (
                 <VolumePreview
                   volumeInfo={inventoryVolume}
                   userCredits={userCredits}
@@ -301,7 +366,7 @@ export default function UploadPage() {
           {showUpgrade && posVolume && (
             <UpgradePrompt
               creditsNeeded={posVolume.creditsRequired}
-              currentCredits={userCredits}
+              currentCredits={userCredits ?? 0}
               onSelectPlan={handleSelectPlan}
             />
           )}

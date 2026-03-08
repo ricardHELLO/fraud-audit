@@ -1,0 +1,87 @@
+Fecha,Local,Producto,Cantidad,Unidad,Coste Unitario,Coste Total
+01/10/2025,Centro,Carne de ternera,1.91,kg,14.50,27.71
+08/10/2025,Centro,Pollo,2.90,kg,7.20,20.89
+15/10/2025,Centro,Salmon,5.74,kg,18.00,103.40
+22/10/2025,Centro,Tomate,2.13,kg,2.80,5.96
+29/10/2025,Centro,Lechuga,5.89,kg,1.90,11.18
+05/11/2025,Centro,Cerveza barril,4.96,L,3.20,15.87
+12/11/2025,Centro,Pan,3.64,kg,2.50,9.09
+19/11/2025,Centro,Aceite de oliva,1.54,L,8.50,13.06
+26/11/2025,Centro,Queso,4.03,kg,12.00,48.31
+03/12/2025,Centro,Patatas,5.23,kg,1.50,7.85
+10/12/2025,Centro,Carne de ternera,5.32,kg,14.50,77.17
+17/12/2025,Centro,Pollo,3.14,kg,7.20,22.59
+24/12/2025,Centro,Salmon,5.08,kg,18.00,91.40
+31/12/2025,Centro,Tomate,4.40,kg,2.80,12.32
+01/10/2025,Centro,Lechuga,4.51,kg,1.90,8.57
+08/10/2025,Centro,Cerveza barril,1.76,L,3.20,5.62
+15/10/2025,Centro,Pan,2.26,kg,2.50,5.65
+22/10/2025,Centro,Aceite de oliva,4.41,L,8.50,37.50
+29/10/2025,Centro,Queso,2.60,kg,12.00,31.23
+05/11/2025,Centro,Patatas,3.87,kg,1.50,5.81
+01/10/2025,Gracia,Carne de ternera,5.06,kg,14.50,73.35
+08/10/2025,Gracia,Pollo,7.57,kg,7.20,54.49
+15/10/2025,Gracia,Salmon,6.00,kg,18.00,107.97
+22/10/2025,Gracia,Tomate,6.60,kg,2.80,18.48
+29/10/2025,Gracia,Lechuga,5.49,kg,1.90,10.43
+05/11/2025,Gracia,Cerveza barril,4.71,L,3.20,15.08
+12/11/2025,Gracia,Pan,4.05,kg,2.50,10.12
+19/11/2025,Gracia,Aceite de oliva,3.59,L,8.50,30.48
+26/11/2025,Gracia,Queso,3.94,kg,12.00,47.25
+03/12/2025,Gracia,Patatas,2.02,kg,1.50,3.03
+10/12/2025,Gracia,Carne de ternera,2.33,kg,14.50,33.81
+17/12/2025,Gracia,Pollo,2.15,kg,7.20,15.49
+24/12/2025,Gracia,Salmon,5.37,kg,18.00,96.65
+31/12/2025,Gracia,Tomate,4.90,kg,2.80,13.71
+01/10/2025,Gracia,Lechuga,6.33,kg,1.90,12.02
+08/10/2025,Gracia,Cerveza barril,7.82,L,3.20,25.03
+15/10/2025,Gracia,Pan,7.82,kg,2.50,19.55
+22/10/2025,Gracia,Aceite de oliva,7.13,L,8.50,60.63
+29/10/2025,Gracia,Queso,6.92,kg,12.00,82.99
+05/11/2025,Gracia,Patatas,3.47,kg,1.50,5.21
+12/11/2025,Gracia,Carne de ternera,4.81,kg,14.50,69.73
+19/11/2025,Gracia,Pollo,6.06,kg,7.20,43.63
+01/10/2025,Born,Carne de ternera,0.88,kg,14.50,12.79
+08/10/2025,Born,Pollo,1.22,kg,7.20,8.80
+15/10/2025,Born,Salmon,0.42,kg,18.00,7.55
+22/10/2025,Born,Tomate,1.06,kg,2.80,2.96
+29/10/2025,Born,Lechuga,0.34,kg,1.90,0.65
+05/11/2025,Born,Cerveza barril,0.80,L,3.20,2.56
+12/11/2025,Born,Pan,1.21,kg,2.50,3.02
+19/11/2025,Born,Aceite de oliva,0.59,L,8.50,5.03
+26/11/2025,Born,Queso,1.18,kg,12.00,14.13
+03/12/2025,Born,Patatas,1.38,kg,1.50,2.08
+10/12/2025,Born,Carne de ternera,0.83,kg,14.50,12.02
+17/12/2025,Born,Pollo,1.02,kg,7.20,7.33
+24/12/2025,Born,Salmon,1.17,kg,18.00,21.11
+31/12/2025,Born,Tomate,0.84,kg,2.80,2.35
+01/10/2025,Born,Lechuga,0.91,kg,1.90,1.73
+
+Mes,Local,Producto,Consumo Teorico,Consumo Real,Desviacion,Unidad
+Octubre 2025,Centro,Cerveza,1460.06,1534.63,74.56,L
+Octubre 2025,Centro,Carne de ternera,914.64,1112.70,198.06,kg
+Octubre 2025,Centro,Aceite de oliva,1490.97,1664.95,173.98,L
+Octubre 2025,Gracia,Cerveza,1195.93,1614.57,418.64,L
+Octubre 2025,Gracia,Carne de ternera,1137.28,1467.14,329.86,kg
+Octubre 2025,Gracia,Aceite de oliva,959.71,1445.03,485.32,L
+Octubre 2025,Born,Cerveza,1565.75,3796.28,2230.53,L
+Octubre 2025,Born,Carne de ternera,1330.53,1763.68,433.15,kg
+Octubre 2025,Born,Aceite de oliva,1210.68,1436.28,225.60,L
+Noviembre 2025,Centro,Cerveza,1064.60,1179.30,114.70,L
+Noviembre 2025,Centro,Carne de ternera,1101.94,1160.90,58.96,kg
+Noviembre 2025,Centro,Aceite de oliva,841.81,961.56,119.75,L
+Noviembre 2025,Gracia,Cerveza,979.00,1400.26,421.26,L
+Noviembre 2025,Gracia,Carne de ternera,1142.53,1394.34,251.81,kg
+Noviembre 2025,Gracia,Aceite de oliva,803.62,1143.09,339.47,L
+Noviembre 2025,Born,Cerveza,1225.44,3586.04,2360.60,L
+Noviembre 2025,Born,Carne de ternera,1460.60,1992.86,532.26,kg
+Noviembre 2025,Born,Aceite de oliva,1441.93,1718.23,276.29,L
+Diciembre 2025,Centro,Cerveza,1242.02,1384.48,142.46,L
+Diciembre 2025,Centro,Carne de ternera,1231.48,1413.17,181.69,kg
+Diciembre 2025,Centro,Aceite de oliva,1414.55,1535.07,120.52,L
+Diciembre 2025,Gracia,Cerveza,982.10,1381.89,399.79,L
+Diciembre 2025,Gracia,Carne de ternera,1099.59,1433.70,334.11,kg
+Diciembre 2025,Gracia,Aceite de oliva,968.22,1245.45,277.23,L
+Diciembre 2025,Born,Cerveza,1080.20,3258.58,2178.39,L
+Diciembre 2025,Born,Carne de ternera,1278.39,1615.65,337.27,kg
+Diciembre 2025,Born,Aceite de oliva,986.95,1180.14,193.18,L
