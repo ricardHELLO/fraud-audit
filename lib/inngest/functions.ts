@@ -114,16 +114,20 @@ export const analyzeReport = inngest.createFunction(
           const { sendEmail } = await import('@/lib/email');
           const { reportReadyEmail } = await import('@/lib/email-templates');
 
-          const { data: org } = await supabase
-            .from('organizations')
-            .select('name')
-            .eq('id', organizationId)
-            .single();
+          let orgName = 'tu restaurante';
+          if (organizationId) {
+            const { data: org } = await supabase
+              .from('organizations')
+              .select('name')
+              .eq('id', organizationId)
+              .single();
+            orgName = org?.name ?? 'tu restaurante';
+          }
 
           const template = reportReadyEmail(
             userData.name,
             slug,
-            org?.name ?? 'tu restaurante'
+            orgName
           );
           await sendEmail({
             to: userData.email,

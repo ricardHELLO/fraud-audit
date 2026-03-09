@@ -4,7 +4,7 @@ import { runAnalysis } from './analysis-engine'
 
 interface GenerateReportParams {
   userId: string
-  organizationId: string
+  organizationId: string | null
   dataset: NormalizedDataset
   slug: string
   posUploadId: string
@@ -36,39 +36,36 @@ export async function generateReport(
   // Run the analysis
   const reportData = runAnalysis(dataset)
 
-  // Fetch organization name to enrich the summary
-  const { data: orgData, error: orgError } = await supabase
-    .from('organizations')
-    .select('name')
-    .eq('id', organizationId)
-    .single()
+  // Fetch organization name to enrich the summary (skip if no org)
+  let orgName = 'Tu restaurante'
+  if (organizationId) {
+    const { data: orgData } = await supabase
+      .from('organizations')
+      .select('name')
+      .eq('id', organizationId)
+      .single()
 
-  if (orgError) {
-    throw new Error(
-      `Failed to fetch organization ${organizationId}: ${orgError.message}`
-    )
+    orgName = orgData?.name ?? 'Tu restaurante'
   }
 
-  reportData.summary.organization_name = orgData?.name ?? 'Unknown'
+  reportData.summary.organization_name = orgName
 
-  // Persist the report
-  const { error: insertError } = await supabase.from('reports').insert({
-    slug,
-    user_id: userId,
-    organization_id: organizationId,
-    pos_upload_id: posUploadId,
-    inventory_upload_id: inventoryUploadId ?? null,
-    status: 'completed',
-    report_data: reportData,
-    date_from: dataset.metadata.date_from,
-    date_to: dataset.metadata.date_to,
-    locations: dataset.metadata.locations,
-    pos_connector: dataset.metadata.pos_connector,
-    inventory_connector: dataset.metadata.inventory_connector ?? null,
-  })
+  // Persist the report data (update existing record created by analyze API)
+  const { error: updateError } = await supabase
+    .from('reports')
+    .update({
+      status: 'completed',
+      report_data: reportData,
+      date_from: dataset.metadata.date_from,
+      date_to: dataset.metadata.date_to,
+      locations: dataset.metadata.locations,
+      pos_connector: dataset.metadata.pos_connector,
+      inventory_connector: dataset.metadata.inventory_connector ?? null,
+    })
+    .eq('slug', slug)
 
-  if (insertError) {
-    throw new Error(`Failed to save report: ${insertError.message}`)
+  if (updateError) {
+    throw new Error(`Failed to save report: ${updateError.message}`)
   }
 
   return slug
