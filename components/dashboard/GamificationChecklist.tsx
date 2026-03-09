@@ -70,6 +70,41 @@ export function GamificationChecklist({
   // Find latest completed report for share/feedback links
   const latestReport = reports.find((r) => r.status === 'completed')
 
+  // --- Clipboard helper with fallback ---
+
+  async function copyToClipboard(text: string): Promise<boolean> {
+    // Try modern Clipboard API first
+    if (navigator.clipboard?.writeText) {
+      try {
+        await Promise.race([
+          navigator.clipboard.writeText(text),
+          new Promise((_, reject) =>
+            setTimeout(() => reject(new Error('Clipboard timeout')), 3000)
+          ),
+        ])
+        return true
+      } catch {
+        // Fall through to fallback
+      }
+    }
+
+    // Fallback: hidden textarea
+    try {
+      const textarea = document.createElement('textarea')
+      textarea.value = text
+      textarea.style.position = 'fixed'
+      textarea.style.left = '-9999px'
+      textarea.style.opacity = '0'
+      document.body.appendChild(textarea)
+      textarea.select()
+      const ok = document.execCommand('copy')
+      document.body.removeChild(textarea)
+      return ok
+    } catch {
+      return false
+    }
+  }
+
   // --- Action handlers ---
 
   async function handleCopyReferralLink() {
@@ -80,8 +115,13 @@ export function GamificationChecklist({
 
       const data = await res.json()
       const link = `${window.location.origin}/?ref=${data.referralCode}`
-      await navigator.clipboard.writeText(link)
-      showToast('Enlace de referido copiado', 'success')
+      const copied = await copyToClipboard(link)
+
+      if (copied) {
+        showToast('Enlace de referido copiado', 'success')
+      } else {
+        showToast('No se pudo copiar. Link: ' + link, 'error')
+      }
     } catch {
       showToast('Error al copiar enlace', 'error')
     } finally {
@@ -94,8 +134,13 @@ export function GamificationChecklist({
 
     try {
       const link = `${window.location.origin}/informe/${latestReport.slug}`
-      await navigator.clipboard.writeText(link)
-      showToast('Enlace del informe copiado', 'success')
+      const copied = await copyToClipboard(link)
+
+      if (copied) {
+        showToast('Enlace del informe copiado', 'success')
+      } else {
+        showToast('No se pudo copiar. Link: ' + link, 'error')
+      }
     } catch {
       showToast('Error al copiar enlace', 'error')
     }
