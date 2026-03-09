@@ -97,23 +97,27 @@ export async function POST(req: NextRequest) {
     }
 
     // Save the upload record to the database
+    const insertData: Record<string, unknown> = {
+      user_id: user.id,
+      file_path: storagePath,
+      file_name: file.name,
+      file_size_bytes: file.size,
+      connector_type: connectorType,
+      source_category: sourceCategory,
+      detected_date_from: volumeInfo.dateFrom || null,
+      detected_date_to: volumeInfo.dateTo || null,
+      detected_locations: volumeInfo.locations.length,
+      detected_rows: volumeInfo.totalRows,
+      months_covered: volumeInfo.monthsCovered,
+      credits_required: volumeInfo.creditsRequired,
+    };
+    if (user.organization_id) {
+      insertData.organization_id = user.organization_id;
+    }
+
     const { data: uploadRecord, error: dbError } = await supabase
       .from('uploads')
-      .insert({
-        user_id: user.id,
-        organization_id: user.organization_id,
-        file_path: storagePath,
-        file_name: file.name,
-        file_size_bytes: file.size,
-        connector_type: connectorType,
-        source_category: sourceCategory,
-        detected_date_from: volumeInfo.dateFrom || null,
-        detected_date_to: volumeInfo.dateTo || null,
-        detected_locations: volumeInfo.locations.length,
-        detected_rows: volumeInfo.totalRows,
-        months_covered: volumeInfo.monthsCovered,
-        credits_required: volumeInfo.creditsRequired,
-      })
+      .insert(insertData)
       .select('id')
       .single();
 

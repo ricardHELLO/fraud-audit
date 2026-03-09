@@ -62,18 +62,22 @@ export async function POST(req: NextRequest) {
     const slug = nanoid(12);
 
     // Create the report record with status 'processing'
+    const reportInsert: Record<string, unknown> = {
+      slug,
+      user_id: user.id,
+      pos_upload_id: posUploadId,
+      inventory_upload_id: inventoryUploadId ?? null,
+      status: 'processing',
+      pos_connector: posConnector,
+      inventory_connector: inventoryConnector ?? null,
+    };
+    if (user.organization_id) {
+      reportInsert.organization_id = user.organization_id;
+    }
+
     const { data: report, error: reportError } = await supabase
       .from('reports')
-      .insert({
-        slug,
-        user_id: user.id,
-        organization_id: user.organization_id,
-        pos_upload_id: posUploadId,
-        inventory_upload_id: inventoryUploadId ?? null,
-        status: 'processing',
-        pos_connector: posConnector,
-        inventory_connector: inventoryConnector ?? null,
-      })
+      .insert(reportInsert)
       .select('id')
       .single();
 
