@@ -12,7 +12,9 @@ import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Alert } from '@/components/ui/alert'
 import { useToast } from '@/components/ui/toast'
+import { AlertRulesCard } from '@/components/dashboard/AlertRulesCard'
 import { trackUpgradeInitiated } from '@/lib/posthog-events'
+import type { AlertRule } from '@/lib/types/alerts'
 
 /* ------------------------------------------------------------------ */
 /*  Dashboard page                                                      */
@@ -27,6 +29,7 @@ export default function DashboardPage() {
   const [balance, setBalance] = useState<number>(0)
   const [reports, setReports] = useState<ReportSummary[]>([])
   const [completedActions, setCompletedActions] = useState<string[]>(['signup'])
+  const [alertRules, setAlertRules] = useState<AlertRule[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [showPurchaseSuccess, setShowPurchaseSuccess] = useState(false)
 
@@ -54,6 +57,7 @@ export default function DashboardPage() {
           setBalance(data.balance)
           setReports(data.reports)
           setCompletedActions(data.completedActions)
+          setAlertRules(data.alertRules ?? [])
         } else {
           console.error('Dashboard API returned error:', res.status)
         }
@@ -147,6 +151,7 @@ export default function DashboardPage() {
           {/* Left column: Credit balance + Gamification */}
           <div className="space-y-6 lg:col-span-1">
             <CreditBalance balance={balance} onBuyMore={handleBuyMore} />
+            <AlertRulesCard initialRules={alertRules} />
             <GamificationChecklist
               completedActions={completedActions}
               reports={reports}

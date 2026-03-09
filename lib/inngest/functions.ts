@@ -141,6 +141,127 @@ export const analyzeReport = inngest.createFunction(
       }
     });
 
+    // Step 7: Evaluate alert rules (fire-and-forget)
+    await step.run('evaluate-alert-rules', async () => {
+      try {
+        // Fetch completed report data
+        const { data: completedReport } = await supabase
+          .from('reports')
+          .select('id, report_data, slug')
+          .eq('id', reportId)
+          .single();
+
+        if (!completedReport?.report_data) return;
+
+        // Fetch active alert rules for this user
+        const { data: alertRules } = await supabase
+          .from('alert_rules')
+          .select('*')
+          .eq('user_id', userId)
+          .eq('is_active', true);
+
+        if (!alertRules || alertRules.length === 0) return;
+
+        const { evaluateAlerts } = await import('@/lib/alert-evaluator');
+        const triggered = evaluateAlerts(alertRules, completedReport.report_data as any);
+
+        if (triggered.length === 0) return;
+
+        // Insert alert history records
+        const historyRecords = triggered.map((t) => ({
+          alert_rule_id: t.ruleId,
+          report_id: completedReport.id,
+          metric_value: t.actualValue,
+          threshold_value: t.threshold,
+          email_sent: false,
+        }));
+
+        await supabase.from('alert_history').insert(historyRecords);
+
+        // Update last_triggered_at for each triggered rule
+        for (const t of triggered) {
+          await supabase
+            .from('alert_rules')
+            .update({ last_triggered_at: new Date().toISOString() })
+            .eq('id', t.ruleId);
+        }
+
+        // Send alert email
+        const { data: userData } = await supabase
+          .from('users')
+          .select('email, name')
+          .eq('id', userId)
+          .single();
+
+        if (userData?.email) {
+          const { sendEmail } = await import('@/lib/email');
+          const { alertTriggeredEmail } = await import('@/lib/email-templates');
+
+          const template = alertTriggeredEmail(
+            userData.name,
+            completedReport.slug,
+            triggered.map((t) => ({
+              ruleName: t.ruleName,
+              actualValue: Math.round(t.actualValue * 100) / 100,
+              threshold: t.threshold,
+            }))
+          );
+
+          await sendEmail({
+            to: userData.email,
+            subject: template.subject,
+            html: template.html,
+          });
+
+          // Mark history records as email_sent
+          const ruleIds = triggered.map((t) => t.ruleId);
+          await supabase
+            .from('alert_history')
+            .update({ email_sent: true })
+            .eq('report_id', completedReport.id)
+            .in('alert_rule_id', ruleIds);
+        }
+
+        console.log(`[Alerts] ${triggered.length} alert(s) triggered for report ${completedReport.slug}`);
+      } catch (alertError) {
+        console.error('Failed to evaluate alert rules:', alertError);
+        // Don't fail the step — alerts are non-critical
+      }
+    });
+
+    // Step 8: Generate AI insights (fire-and-forget)
+    await step.run('generate-ai-insights', async () => {
+      try {
+        if (!process.env.ANTHROPIC_API_KEY) {
+          console.log('[AI Insights] Skipped (no ANTHROPIC_API_KEY)');
+          return;
+        }
+
+        const { data: completedReport } = await supabase
+          .from('reports')
+          .select('id, report_data')
+          .eq('id', reportId)
+          .single();
+
+        if (!completedReport?.report_data) return;
+
+        const { generateAIInsights } = await import('@/lib/ai-insights-generator');
+        const insights = await generateAIInsights(completedReport.report_data as any);
+
+        if (insights) {
+          await supabase
+            .from('reports')
+            .update({ ai_insights: insights })
+            .eq('id', completedReport.id);
+
+          console.log(`[AI Insights] Saved for report ${reportId}`);
+        }
+      } catch (aiError) {
+        console.error('Failed to generate AI insights:', aiError);
+        // Don't fail the step — AI insights are non-critical
+      }
+    });
+
     return { slug: reportSlug };
   }
 );

@@ -50,6 +50,9 @@ export const env = {
   NEXT_PUBLIC_POSTHOG_KEY: optional('NEXT_PUBLIC_POSTHOG_KEY'),
   NEXT_PUBLIC_POSTHOG_HOST: optional('NEXT_PUBLIC_POSTHOG_HOST', 'https://eu.posthog.com'),
 
+  // Anthropic (optional — AI insights degrade gracefully)
+  ANTHROPIC_API_KEY: optional('ANTHROPIC_API_KEY'),
+
   // App
   NEXT_PUBLIC_APP_URL: required('NEXT_PUBLIC_APP_URL'),
 } as const

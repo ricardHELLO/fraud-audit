@@ -10,6 +10,7 @@
     "inngest": "npx inngest-cli@latest dev"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
     "@clerk/nextjs": "^6.39.0",
     "@react-pdf/renderer": "^4.3.2",
     "@supabase/supabase-js": "^2.39.0",

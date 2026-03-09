@@ -18,6 +18,27 @@ export function DashboardNav({ userName }: DashboardNavProps) {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
+          {/* Compare link */}
+          <Link
+            href="/dashboard/comparar"
+            className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm text-stone-500 transition-colors hover:bg-stone-100 hover:text-stone-700"
+            title="Comparar informes"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="h-4 w-4"
+            >
+              <path
+                fillRule="evenodd"
+                d="M13.2 2.24a.75.75 0 00.04 1.06l2.1 1.95H6.75a.75.75 0 000 1.5h8.59l-2.1 1.95a.75.75 0 101.02 1.1l3.5-3.25a.75.75 0 000-1.1l-3.5-3.25a.75.75 0 00-1.06.04zm-6.4 8a.75.75 0 00-1.06-.04l-3.5 3.25a.75.75 0 000 1.1l3.5 3.25a.75.75 0 101.02-1.1l-2.1-1.95h8.59a.75.75 0 000-1.5H4.66l2.1-1.95a.75.75 0 00.04-1.06z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <span className="hidden sm:inline">Comparar</span>
+          </Link>
+
           {userName && (
             <span className="hidden text-sm text-stone-600 sm:inline">
               {userName}

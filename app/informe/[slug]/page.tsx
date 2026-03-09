@@ -4,6 +4,7 @@ import { auth } from '@clerk/nextjs/server'
 import { createServerClient } from '@/lib/supabase'
 import { ReportLayout } from '@/components/report/ReportLayout'
 import type { ReportData } from '@/lib/types/report'
+import type { AIInsights } from '@/lib/types/ai-insights'
 import { serverTrackReportViewed } from '@/lib/posthog-server-events'
 
 /* ------------------------------------------------------------------ */
@@ -15,6 +16,7 @@ interface ReportRow {
   slug: string
   status: string
   report_data: ReportData | null
+  ai_insights: AIInsights | null
   external_views: number
   organization_id: string
   user_id: string
@@ -78,7 +80,7 @@ export default async function InformePage({ params }: PageProps) {
   const { data: report, error } = await supabase
     .from('reports')
     .select(
-      'id, slug, status, report_data, external_views, organization_id, user_id, organizations(name)'
+      'id, slug, status, report_data, ai_insights, external_views, organization_id, user_id, organizations(name)'
     )
     .eq('slug', params.slug)
     .single<ReportRow>()
@@ -214,5 +216,11 @@ export default async function InformePage({ params }: PageProps) {
   }
 
   // --- Status: Completed ---
-  return <ReportLayout data={report.report_data} reportId={ownerReportId} />
+  return (
+    <ReportLayout
+      data={report.report_data}
+      reportId={ownerReportId}
+      aiInsights={report.ai_insights}
+    />
+  )
 }

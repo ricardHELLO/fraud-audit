@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import type { ReportData } from '@/lib/types/report'
+import type { AIInsights } from '@/lib/types/ai-insights'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -16,6 +17,7 @@ import { InventoryTab } from './InventoryTab'
 import { CorrelationTab } from './CorrelationTab'
 import { ConclusionsTab } from './ConclusionsTab'
 import { ReportBanner } from './ReportBanner'
+import { AIInsightsTab } from './AIInsightsTab'
 
 /* ------------------------------------------------------------------ */
 /*  Tab definitions                                                    */
@@ -30,6 +32,7 @@ const TABS = [
   { key: 'inventario', label: 'Inventario' },
   { key: 'correlacion', label: 'Correlacion' },
   { key: 'conclusiones', label: 'Conclusiones' },
+  { key: 'ia', label: 'IA Insights' },
 ] as const
 
 type TabKey = (typeof TABS)[number]['key']
@@ -59,9 +62,10 @@ const riskLabel: Record<string, string> = {
 interface ReportLayoutProps {
   data: ReportData
   reportId?: string // Only provided when the owner views it
+  aiInsights?: AIInsights | null
 }
 
-export function ReportLayout({ data, reportId }: ReportLayoutProps) {
+export function ReportLayout({ data, reportId, aiInsights }: ReportLayoutProps) {
   const [activeTab, setActiveTab] = useState<TabKey>('resumen')
 
   function renderTab() {
@@ -89,6 +93,8 @@ export function ReportLayout({ data, reportId }: ReportLayoutProps) {
         return <CorrelationTab data={data.correlation} />
       case 'conclusiones':
         return <ConclusionsTab data={data.conclusions} />
+      case 'ia':
+        return <AIInsightsTab data={aiInsights ?? null} />
       default:
         return null
     }

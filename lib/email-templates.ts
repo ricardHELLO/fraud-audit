@@ -91,6 +91,49 @@ export function reportReadyEmail(
   }
 }
 
+export function alertTriggeredEmail(
+  name: string | null,
+  reportSlug: string,
+  triggeredAlerts: { ruleName: string; actualValue: number; threshold: number }[]
+): { subject: string; html: string } {
+  const greeting = name ? `Hola ${name},` : 'Hola,'
+
+  const alertRows = triggeredAlerts
+    .map(
+      (a) => `
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e7e5e4;color:#1c1917;font-size:14px;">${a.ruleName}</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e7e5e4;color:#dc2626;font-size:14px;font-weight:600;">${a.actualValue}</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e7e5e4;color:#57534e;font-size:14px;">${a.threshold}</td>
+        </tr>`
+    )
+    .join('')
+
+  return {
+    subject: `Alerta de fraude activada - ${triggeredAlerts.length} regla${triggeredAlerts.length > 1 ? 's' : ''}`,
+    html: emailLayout(`
+      <h1 style="margin:0 0 16px;font-size:20px;color:#1c1917;">${greeting}</h1>
+      <p style="margin:0 0 12px;color:#57534e;font-size:14px;line-height:1.6;">
+        Se han activado <strong>${triggeredAlerts.length}</strong> alerta${triggeredAlerts.length > 1 ? 's' : ''}
+        en tu ultimo informe de fraude. Revisa los detalles a continuacion:
+      </p>
+      <table style="width:100%;border-collapse:collapse;margin:16px 0;">
+        <thead>
+          <tr style="background:#f5f5f4;">
+            <th style="padding:8px 12px;text-align:left;color:#78716c;font-size:12px;font-weight:600;text-transform:uppercase;">Regla</th>
+            <th style="padding:8px 12px;text-align:left;color:#78716c;font-size:12px;font-weight:600;text-transform:uppercase;">Valor actual</th>
+            <th style="padding:8px 12px;text-align:left;color:#78716c;font-size:12px;font-weight:600;text-transform:uppercase;">Umbral</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${alertRows}
+        </tbody>
+      </table>
+      ${ctaButton('Ver informe', `${APP_URL}/informe/${reportSlug}`)}
+    `),
+  }
+}
+
 export function purchaseConfirmationEmail(
   name: string | null,
   creditsAmount: number,

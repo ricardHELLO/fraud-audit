@@ -74,11 +74,19 @@ export async function GET() {
       completedActions.push('second_source');
     if (earnedReasons.has('bug_report')) completedActions.push('bug_report');
 
+    // Fetch alert rules for the user
+    const { data: alertRules } = await supabase
+      .from('alert_rules')
+      .select('*')
+      .eq('user_id', user.id)
+      .order('created_at', { ascending: false });
+
     return NextResponse.json(
       {
         balance: user.credits_balance ?? 0,
         reports: formattedReports,
         completedActions,
+        alertRules: alertRules ?? [],
       },
       { status: 200 }
     );
