@@ -9,7 +9,7 @@ export function getPostHogServer(): PostHogNode | null {
 
   if (!serverClient) {
     serverClient = new PostHogNode(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
-      host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://eu.posthog.com',
+      host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
       flushAt: 1,
       flushInterval: 0,
     })
