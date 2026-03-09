@@ -90,6 +90,7 @@ export default function CompararPage() {
   useEffect(() => {
     if (!slugA || !slugB || slugA === slugB) {
       setComparison(null)
+      setError(null)
       return
     }
 

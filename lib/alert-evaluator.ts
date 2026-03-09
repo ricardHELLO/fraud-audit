@@ -49,7 +49,8 @@ export function evaluateCondition(
     case 'lte':
       return actual <= threshold
     case 'eq':
-      return actual === threshold
+      // Use epsilon comparison to handle floating-point precision
+      return Math.abs(actual - threshold) < 0.01
     default:
       return false
   }
