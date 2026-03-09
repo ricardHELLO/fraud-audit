@@ -56,9 +56,9 @@ export async function generateReport(
     .update({
       status: 'completed',
       report_data: reportData,
-      date_from: dataset.metadata.date_from,
-      date_to: dataset.metadata.date_to,
-      locations: dataset.metadata.locations,
+      analysis_window_from: dataset.metadata.date_from,
+      analysis_window_to: dataset.metadata.date_to,
+      locations_analyzed: dataset.metadata.locations,
       pos_connector: dataset.metadata.pos_connector,
       inventory_connector: dataset.metadata.inventory_connector ?? null,
     })
