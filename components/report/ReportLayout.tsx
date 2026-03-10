@@ -94,7 +94,7 @@ export function ReportLayout({ data, reportId, aiInsights }: ReportLayoutProps) 
       case 'conclusiones':
         return <ConclusionsTab data={data.conclusions} />
       case 'ia':
-        return <AIInsightsTab data={aiInsights ?? null} />
+        return <AIInsightsTab data={aiInsights ?? null} reportId={reportId} />
       default:
         return null
     }
