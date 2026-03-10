@@ -124,7 +124,8 @@ export async function generateAIInsights(
     // Structured error logging — surface the actual failure reason
     const errObj = error as Record<string, unknown>
     const statusCode = errObj?.status ?? errObj?.statusCode ?? 'N/A'
-    const errType = errObj?.error?.type ?? errObj?.name ?? 'Unknown'
+    const nestedError = errObj?.error as Record<string, unknown> | undefined
+    const errType = nestedError?.type ?? errObj?.name ?? 'Unknown'
     const errMessage = errObj?.message ?? String(error)
 
     console.error(
