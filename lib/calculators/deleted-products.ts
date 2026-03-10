@@ -83,7 +83,7 @@ export function calculateDeletedProducts(
       after_billing_percentage: afterBillingPct,
     });
   }
-  byLocal.sort((a, b) => b.amount - a.amount);
+  byLocal.sort((a, b) => b.amount - a.amount || a.location.localeCompare(b.location));
 
   // Critical alert: if after_billing > 20% of total
   let criticalAlert = '';

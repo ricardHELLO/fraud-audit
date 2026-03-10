@@ -191,7 +191,7 @@ export function generateConclusions(data: CalculatorInputs): ConclusionsResult {
     low: 3,
   };
   conclusions.sort(
-    (a, b) => severityOrder[a.severity] - severityOrder[b.severity]
+    (a, b) => severityOrder[a.severity] - severityOrder[b.severity] || a.title.localeCompare(b.title)
   );
 
   // --- Structural (long-term) actions ---

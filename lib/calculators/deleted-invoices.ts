@@ -30,7 +30,7 @@ export function calculateDeletedInvoices(
       amount: Math.round(data.amount * 100) / 100,
     });
   }
-  byLocal.sort((a, b) => b.amount - a.amount);
+  byLocal.sort((a, b) => b.amount - a.amount || a.location.localeCompare(b.location));
 
   // Group by employee (including their primary location)
   const employeeMap = new Map<
@@ -71,7 +71,7 @@ export function calculateDeletedInvoices(
       amount: Math.round(data.amount * 100) / 100,
     });
   }
-  byEmployee.sort((a, b) => b.count - a.count);
+  byEmployee.sort((a, b) => b.count - a.count || a.employee.localeCompare(b.employee));
 
   // Total count and amount
   const totalCount = deleted.length;

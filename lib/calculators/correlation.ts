@@ -53,8 +53,10 @@ export function calculateCorrelation(
 
   // --- Scatter data ---
   // x = deleted invoice amount, y = cash discrepancy (absolute value)
+  // Sort locations alphabetically for deterministic output order
+  const sortedLocations = [...allLocations].sort((a, b) => a.localeCompare(b));
   const scatterData: CorrelationScatterPoint[] = [];
-  for (const location of allLocations) {
+  for (const location of sortedLocations) {
     const deletedAmount = invoicesByLocal.get(location) ?? 0;
     const cashDiscrepancy = cashByLocal.get(location) ?? 0;
 
@@ -72,12 +74,12 @@ export function calculateCorrelation(
 
   if (scatterData.length >= 2) {
     // Sort by x (deleted invoices) and assign rank
-    const sortedByX = [...scatterData].sort((a, b) => b.x - a.x);
+    const sortedByX = [...scatterData].sort((a, b) => b.x - a.x || a.label.localeCompare(b.label));
     const rankByX = new Map<string, number>();
     sortedByX.forEach((p, i) => rankByX.set(p.label, i));
 
     // Sort by y (cash discrepancy absolute) and assign rank
-    const sortedByY = [...scatterData].sort((a, b) => b.y - a.y);
+    const sortedByY = [...scatterData].sort((a, b) => b.y - a.y || a.label.localeCompare(b.label));
     const rankByY = new Map<string, number>();
     sortedByY.forEach((p, i) => rankByY.set(p.label, i));
 
@@ -155,7 +157,7 @@ export function calculateCorrelation(
     });
   }
 
-  patternsByLocal.sort((a, b) => b.strength - a.strength);
+  patternsByLocal.sort((a, b) => b.strength - a.strength || a.location.localeCompare(b.location));
 
   return {
     scatter_data: scatterData,

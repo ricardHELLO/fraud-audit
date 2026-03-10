@@ -42,8 +42,8 @@ export function calculateCashDiscrepancy(
     });
   }
 
-  // Sort by total_discrepancy ascending (most negative first)
-  locals.sort((a, b) => a.total_discrepancy - b.total_discrepancy);
+  // Sort by total_discrepancy ascending (most negative first), tiebreak by name
+  locals.sort((a, b) => a.total_discrepancy - b.total_discrepancy || a.name.localeCompare(b.name));
 
   // Find worst local (most negative total discrepancy)
   const worstLocal =

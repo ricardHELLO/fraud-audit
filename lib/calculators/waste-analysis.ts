@@ -61,7 +61,7 @@ export function calculateWasteAnalysis(
       waste_percentage: locPct,
     });
   }
-  byLocal.sort((a, b) => b.waste_percentage - a.waste_percentage);
+  byLocal.sort((a, b) => b.waste_percentage - a.waste_percentage || a.location.localeCompare(b.location));
 
   // Benchmark comparison against 3% industry standard
   let benchmarkComparison: string;

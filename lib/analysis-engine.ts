@@ -56,7 +56,7 @@ function extractKeyFindings(conclusions: Conclusion[]): string[] {
 
   const sorted = [...conclusions].sort(
     (a, b) =>
-      (severityWeight[b.severity] ?? 0) - (severityWeight[a.severity] ?? 0)
+      (severityWeight[b.severity] ?? 0) - (severityWeight[a.severity] ?? 0) || a.title.localeCompare(b.title)
   )
 
   return sorted.slice(0, 5).map((c) => c.title)

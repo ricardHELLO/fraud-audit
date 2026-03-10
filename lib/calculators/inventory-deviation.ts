@@ -61,7 +61,7 @@ export function calculateInventoryDeviation(
       unit: data.unit,
     });
   }
-  allProducts.sort((a, b) => b.total_deviation - a.total_deviation);
+  allProducts.sort((a, b) => b.total_deviation - a.total_deviation || a.product_name.localeCompare(b.product_name));
 
   const byProductTop10 = allProducts.slice(0, TOP_PRODUCTS_LIMIT);
 
