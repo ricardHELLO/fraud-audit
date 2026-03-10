@@ -140,7 +140,7 @@ export function ReportsList({ reports }: ReportsListProps) {
                     <td className="px-6 py-4 text-right">
                       {report.status === 'completed' && (
                         <a
-                          href={`/reports/${report.slug}`}
+                          href={`/informe/${report.slug}`}
                           className="text-sm font-medium text-brand-600 hover:text-brand-700 hover:underline"
                         >
                           Ver informe
