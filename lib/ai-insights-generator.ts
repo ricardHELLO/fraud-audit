@@ -37,9 +37,14 @@ Reglas:
 - Los montos en euros, porcentajes con un decimal
 - NO incluyas markdown en la narrativa, solo texto plano`
 
+// Max characters for the serialized report data sent to Claude.
+// ~80k chars ≈ ~20k tokens, well within the 200k context window.
+const MAX_PAYLOAD_CHARS = 80_000
+
 /**
  * Generate AI-powered insights from a completed report.
- * Returns null if ANTHROPIC_API_KEY is not configured.
+ * Returns null if ANTHROPIC_API_KEY is not configured or on failure.
+ * Errors are logged with structured detail for debugging.
  */
 export async function generateAIInsights(
   reportData: ReportData
@@ -47,16 +52,27 @@ export async function generateAIInsights(
   const apiKey = process.env.ANTHROPIC_API_KEY
 
   if (!apiKey) {
-    console.log('[AI Insights] Skipped (no ANTHROPIC_API_KEY)')
+    console.warn('[AI Insights] ANTHROPIC_API_KEY is not set — skipping generation')
     return null
   }
 
   try {
     const client = new Anthropic({ apiKey })
 
-    const userPrompt = `Analiza este informe de fraude operativo y genera insights:
+    // Serialize and truncate if needed to avoid exceeding context limits
+    let serialized = JSON.stringify(reportData, null, 2)
+    if (serialized.length > MAX_PAYLOAD_CHARS) {
+      console.warn(
+        `[AI Insights] Report data too large (${serialized.length} chars), truncating to ${MAX_PAYLOAD_CHARS}`
+      )
+      serialized = serialized.slice(0, MAX_PAYLOAD_CHARS) + '\n... [truncado por tamaño]'
+    }
 
-${JSON.stringify(reportData, null, 2)}`
+    const userPrompt = `Analiza este informe de fraude operativo y genera insights:\n\n${serialized}`
+
+    console.log(
+      `[AI Insights] Calling Claude API (model: claude-sonnet-4-20250514, payload: ${serialized.length} chars)`
+    )
 
     const response = await client.messages.create({
       model: 'claude-sonnet-4-20250514',
@@ -73,6 +89,7 @@ ${JSON.stringify(reportData, null, 2)}`
     // Extract text from the response
     const textBlock = response.content.find((block) => block.type === 'text')
     if (!textBlock || textBlock.type !== 'text') {
+      console.error('[AI Insights] No text block in response:', JSON.stringify(response.content))
       throw new Error('No text response from Claude')
     }
 
@@ -90,6 +107,7 @@ ${JSON.stringify(reportData, null, 2)}`
 
     // Validate required fields
     if (!parsed.narrative || !Array.isArray(parsed.recommendations) || !Array.isArray(parsed.anomalies)) {
+      console.error('[AI Insights] Invalid structure:', Object.keys(parsed))
       throw new Error('Invalid AI response structure')
     }
 
@@ -102,8 +120,22 @@ ${JSON.stringify(reportData, null, 2)}`
 
     console.log('[AI Insights] Generated successfully')
     return insights
-  } catch (error) {
-    console.error('[AI Insights] Failed to generate:', error)
+  } catch (error: unknown) {
+    // Structured error logging — surface the actual failure reason
+    const errObj = error as Record<string, unknown>
+    const statusCode = errObj?.status ?? errObj?.statusCode ?? 'N/A'
+    const errType = errObj?.error?.type ?? errObj?.name ?? 'Unknown'
+    const errMessage = errObj?.message ?? String(error)
+
+    console.error(
+      `[AI Insights] FAILED — status: ${statusCode}, type: ${errType}, message: ${errMessage}`
+    )
+
+    // Log full error in development for debugging
+    if (process.env.NODE_ENV === 'development') {
+      console.error('[AI Insights] Full error:', error)
+    }
+
     return null
   }
 }
