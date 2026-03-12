@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 /**
- * Stripe webhook handler — disabled during free beta.
- * When Stripe is configured, this processes checkout.session.completed events
- * and awards credits to users.
+ * Stripe webhook handler — processes checkout.session.completed events
+ * and awards credits atomically with idempotency protection.
+ *
+ * Idempotency: Uses session.id as reference_id in the PG function.
+ * The unique index on (reason, reference_id) prevents duplicate credits
+ * even if Stripe delivers the same webhook multiple times.
  */
 export async function POST(req: NextRequest) {
   const STRIPE_SECRET = process.env.STRIPE_SECRET_KEY;
@@ -20,8 +23,7 @@ export async function POST(req: NextRequest) {
   // Dynamic import to avoid module-level crash when Stripe key is missing
   const Stripe = (await import('stripe')).default;
   const stripe = new Stripe(STRIPE_SECRET, { apiVersion: '2023-10-16' });
-  const { createServerClient } = await import('@/lib/supabase');
-  const { getBalance } = await import('@/lib/credits');
+  const { awardCreditsRaw } = await import('@/lib/credits');
   const { serverTrackPurchaseCompleted } = await import('@/lib/posthog-server-events');
 
   // Map price IDs to credit amounts
@@ -61,7 +63,6 @@ export async function POST(req: NextRequest) {
         }
 
         const lineItems = await stripe.checkout.sessions.listLineItems(session.id, { limit: 10 });
-        const supabase = createServerClient();
         const priceToCredits = getPriceToCredits();
         let totalCreditsAwarded = 0;
 
@@ -73,32 +74,24 @@ export async function POST(req: NextRequest) {
           const quantity = item.quantity ?? 1;
           const totalCredits = creditAmount * quantity;
 
-          const { error: txError } = await supabase.from('credit_transactions').insert({
-            user_id: userId,
-            amount: totalCredits,
-            reason: 'purchase',
-            reference_id: session.id,
-          });
+          // Atomic + idempotent: PG function checks for duplicate session.id
+          const newBalance = await awardCreditsRaw(
+            userId,
+            totalCredits,
+            'purchase',
+            session.id
+          );
 
-          if (txError) {
-            console.error('Failed to insert purchase transaction:', txError.message);
-            return NextResponse.json({ error: 'Failed to record credit transaction' }, { status: 500 });
+          if (newBalance === -1) {
+            // Already processed — Stripe delivered duplicate webhook
+            console.info(`Duplicate Stripe webhook for session ${session.id}, ignoring`);
+            return NextResponse.json({ received: true, duplicate: true }, { status: 200 });
           }
+
           totalCreditsAwarded += totalCredits;
         }
 
         if (totalCreditsAwarded > 0) {
-          const currentBalance = await getBalance(userId);
-          const { error: updateError } = await supabase
-            .from('users')
-            .update({ credits_balance: currentBalance + totalCreditsAwarded })
-            .eq('id', userId);
-
-          if (updateError) {
-            console.error('Failed to update user balance:', updateError.message);
-            return NextResponse.json({ error: 'Failed to update user balance' }, { status: 500 });
-          }
-
           serverTrackPurchaseCompleted(userId, {
             amount: session.amount_total ? session.amount_total / 100 : 0,
             credits_purchased: totalCreditsAwarded,
@@ -107,6 +100,8 @@ export async function POST(req: NextRequest) {
 
           // Send purchase confirmation email (fire-and-forget)
           try {
+            const { createServerClient } = await import('@/lib/supabase');
+            const supabase = createServerClient();
             const { data: userData } = await supabase
               .from('users')
               .select('email, name')

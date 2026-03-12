@@ -15,7 +15,7 @@ export interface CreditTransaction {
 // --- Constants ---
 
 export const CREDIT_COSTS = {
-  analysis: -1,
+  analysis: 1, // Stored as positive; PG function applies the negative
 } as const
 
 export const CREDIT_REWARDS = {
@@ -58,8 +58,12 @@ export async function getBalance(userId: string): Promise<number> {
 }
 
 /**
- * Deduct a credit from the user's balance.
+ * Deduct a credit from the user's balance using an atomic PostgreSQL function.
  * Returns false if the user has insufficient credits.
+ *
+ * The PG function `deduct_credits` does:
+ *   UPDATE users SET balance = balance - amount WHERE balance >= amount
+ * in a single atomic operation — no race condition possible.
  */
 export async function deductCredit(
   userId: string,
@@ -68,44 +72,34 @@ export async function deductCredit(
 ): Promise<boolean> {
   const supabase = createServerClient()
 
-  // Check current balance
-  const balance = await getBalance(userId)
-  if (balance < 1) {
+  const { data, error } = await supabase.rpc('deduct_credits', {
+    p_user_id: userId,
+    p_amount: CREDIT_COSTS.analysis,
+    p_reason: reason,
+    p_reference_id: referenceId ?? null,
+  })
+
+  if (error) {
+    throw new Error(`Failed to deduct credit: ${error.message}`)
+  }
+
+  // PG function returns -1 when insufficient balance
+  const newBalance = data as number
+  if (newBalance === -1) {
     return false
   }
 
-  // Insert negative transaction
-  const { error: txError } = await supabase
-    .from('credit_transactions')
-    .insert({
-      user_id: userId,
-      amount: CREDIT_COSTS.analysis,
-      reason,
-      reference_id: referenceId ?? null,
-    })
-
-  if (txError) {
-    throw new Error(`Failed to insert deduction transaction: ${txError.message}`)
-  }
-
-  // Update user balance
-  const { error: updateError } = await supabase
-    .from('users')
-    .update({ credits_balance: balance + CREDIT_COSTS.analysis })
-    .eq('id', userId)
-
-  if (updateError) {
-    throw new Error(`Failed to update user balance: ${updateError.message}`)
-  }
-
-  serverTrackCreditSpent(userId, reason, balance + CREDIT_COSTS.analysis)
-
+  serverTrackCreditSpent(userId, reason, newBalance)
   return true
 }
 
 /**
- * Award credits to a user for a specific reward type.
- * Returns false if the user has exceeded the limit for this reward type.
+ * Award credits to a user using an atomic PostgreSQL function.
+ * Returns false if the reward was already granted (idempotent via reference_id)
+ * or if the user has exceeded the limit for this reward type.
+ *
+ * The PG function `award_credits` checks for duplicate reference_ids
+ * before awarding, preventing double-credits from webhook retries.
  */
 export async function awardCredit(
   userId: string,
@@ -114,7 +108,7 @@ export async function awardCredit(
 ): Promise<boolean> {
   const supabase = createServerClient()
 
-  // Check if user can still earn this reward
+  // Check if user can still earn this reward (application-level limits)
   const canEarn = await canEarnReward(userId, reason)
   if (!canEarn) {
     return false
@@ -122,34 +116,60 @@ export async function awardCredit(
 
   const amount = CREDIT_REWARDS[reason]
 
-  // Insert positive transaction
-  const { error: txError } = await supabase
-    .from('credit_transactions')
-    .insert({
-      user_id: userId,
-      amount,
-      reason,
-      reference_id: referenceId ?? null,
-    })
+  const { data, error } = await supabase.rpc('award_credits', {
+    p_user_id: userId,
+    p_amount: amount,
+    p_reason: reason,
+    p_reference_id: referenceId ?? null,
+  })
 
-  if (txError) {
-    throw new Error(`Failed to insert reward transaction: ${txError.message}`)
+  if (error) {
+    // Unique constraint violation = duplicate reference_id (idempotent)
+    if (error.code === '23505') {
+      return false
+    }
+    throw new Error(`Failed to award credit: ${error.message}`)
   }
 
-  // Update user balance
-  const balance = await getBalance(userId)
-  const { error: updateError } = await supabase
-    .from('users')
-    .update({ credits_balance: balance + amount })
-    .eq('id', userId)
-
-  if (updateError) {
-    throw new Error(`Failed to update user balance: ${updateError.message}`)
+  // PG function returns -1 when reference_id already processed
+  const newBalance = data as number
+  if (newBalance === -1) {
+    return false
   }
 
-  serverTrackCreditEarned(userId, reason, balance + amount)
-
+  serverTrackCreditEarned(userId, reason, newBalance)
   return true
+}
+
+/**
+ * Award credits directly via RPC — used by Stripe webhook where
+ * we need exact amount control and idempotency via session.id.
+ * Returns the new balance, or -1 if already processed.
+ */
+export async function awardCreditsRaw(
+  userId: string,
+  amount: number,
+  reason: string,
+  referenceId: string
+): Promise<number> {
+  const supabase = createServerClient()
+
+  const { data, error } = await supabase.rpc('award_credits', {
+    p_user_id: userId,
+    p_amount: amount,
+    p_reason: reason,
+    p_reference_id: referenceId,
+  })
+
+  if (error) {
+    // Unique constraint violation = duplicate reference_id
+    if (error.code === '23505') {
+      return -1
+    }
+    throw new Error(`Failed to award credits: ${error.message}`)
+  }
+
+  return data as number
 }
 
 /**
@@ -215,7 +235,6 @@ export async function canEarnReward(
 
     case 'feedback':
       // One feedback reward per unique report (reference_id)
-      // If no referenceId provided, just check global count is reasonable
       return count < 100 // generous global cap
 
     case 'first_share_view':

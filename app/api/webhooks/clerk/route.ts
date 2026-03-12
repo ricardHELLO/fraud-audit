@@ -75,12 +75,18 @@ export async function POST(req: NextRequest) {
         const email = primaryEmail?.email_address ?? email_addresses[0]?.email_address ?? '';
         const name = [first_name, last_name].filter(Boolean).join(' ') || null;
 
-        const { error } = await supabase.from('users').insert({
-          clerk_id: clerkId,
-          email,
-          name,
-          credits_balance: 100, // Free beta — generous credits for testers
-        });
+        // Upsert: if Clerk re-delivers user.created, we ignore the duplicate
+        // instead of failing on the clerk_id unique constraint.
+        // ignoreDuplicates: true ensures we DON'T overwrite existing balance.
+        const { error } = await supabase.from('users').upsert(
+          {
+            clerk_id: clerkId,
+            email,
+            name,
+            credits_balance: 100, // Free beta — generous credits for testers
+          },
+          { onConflict: 'clerk_id', ignoreDuplicates: true }
+        );
 
         if (error) {
           console.error('Failed to create user:', error.message);
