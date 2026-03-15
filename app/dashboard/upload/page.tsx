@@ -53,6 +53,9 @@ function ConnectorDropdown({ label, connectors, value, onChange }: ConnectorDrop
 export default function UploadPage() {
   const router = useRouter()
 
+  // --- Restaurant name ---
+  const [restaurantName, setRestaurantName] = useState<string>('')
+
   // --- Connector selection ---
   const [posConnector, setPosConnector] = useState<string>('')
   const [inventoryConnector, setInventoryConnector] = useState<string>('')
@@ -68,6 +71,9 @@ export default function UploadPage() {
   // --- Credits ---
   const [userCredits, setUserCredits] = useState<number | null>(null)
   const [showUpgrade, setShowUpgrade] = useState(false)
+
+  // --- Demo mode ---
+  const [isDemo, setIsDemo] = useState(false)
 
   // --- UI state ---
   const [isAnalyzing, setIsAnalyzing] = useState(false)
@@ -206,6 +212,8 @@ export default function UploadPage() {
           posConnector,
           inventoryUploadId,
           inventoryConnector: inventoryConnector || undefined,
+          restaurantName: restaurantName.trim() || undefined,
+          isDemo: isDemo || undefined,
         }),
       })
 
@@ -294,6 +302,25 @@ export default function UploadPage() {
         </div>
 
         <div className="space-y-8">
+          {/* --- Restaurant name --- */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Nombre del restaurante</CardTitle>
+              <CardDescription>
+                Opcional. Identifica tu informe en el dashboard y en comparativas.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <input
+                type="text"
+                value={restaurantName}
+                onChange={(e) => setRestaurantName(e.target.value)}
+                placeholder="Ej: Paella Dorada — Valencia Centro"
+                className="w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
+              />
+            </CardContent>
+          </Card>
+
           {/* --- POS Section --- */}
           <Card>
             <CardHeader>
@@ -323,6 +350,42 @@ export default function UploadPage() {
               )}
             </CardContent>
           </Card>
+
+          {/* --- Demo data prompt --- */}
+          {!posFile && (
+            <div className="rounded-xl border border-dashed border-stone-300 bg-stone-50 px-6 py-5 text-center">
+              <p className="text-sm font-medium text-stone-600">
+                No tienes datos ahora?
+              </p>
+              <button
+                type="button"
+                onClick={async () => {
+                  try {
+                    const res = await fetch('/demo/lastapp-demo.csv')
+                    const blob = await res.blob()
+                    const demoFile = new File([blob], 'lastapp-demo.csv', { type: 'text/csv' })
+                    setPosConnector('lastapp')
+                    setRestaurantName('Demo — Paella Dorada')
+                    setIsDemo(true)
+                    // Slight delay to let connector state update before file handler reads it
+                    setTimeout(() => handlePosFileSelect(demoFile), 50)
+                  } catch {
+                    setError('No se pudo cargar los datos demo')
+                  }
+                }}
+                className="mt-2 inline-flex items-center gap-2 rounded-lg bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-100"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+                  <path fillRule="evenodd" d="M4.606 12.97a.75.75 0 01-.134 1.051 2.494 2.494 0 00-.93 2.437 2.494 2.494 0 002.437-.93.75.75 0 111.186.918 3.995 3.995 0 01-4.482 1.332.75.75 0 01-.461-.461 3.994 3.994 0 011.332-4.482.75.75 0 011.052.134z" clipRule="evenodd" />
+                  <path fillRule="evenodd" d="M5.752 12A13.07 13.07 0 008 14.248v4.002c0 .414.336.75.75.75a5 5 0 004.797-6.414 12.984 12.984 0 005.45-10.848.75.75 0 00-.735-.735 12.984 12.984 0 00-10.849 5.45A5 5 0 001 11.25c.001.414.337.75.751.75h4.002zM13 9a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                Probar con datos de ejemplo
+              </button>
+              <p className="mt-1.5 text-xs text-stone-400">
+                Genera un informe demo en 30 segundos
+              </p>
+            </div>
+          )}
 
           {/* --- Inventory Section --- */}
           <Card>
@@ -375,6 +438,28 @@ export default function UploadPage() {
           {error && (
             <Alert variant="danger" title="Error" description={error} />
           )}
+
+          {/* --- Trust badges --- */}
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-stone-500">
+            <span className="flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
+                <path fillRule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clipRule="evenodd" />
+              </svg>
+              Cifrado seguro
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
+                <path fillRule="evenodd" d="M8.75 1A2.75 2.75 0 006 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 10.23 1.482l.149-.022.841 10.518A2.75 2.75 0 007.596 19h4.807a2.75 2.75 0 002.742-2.53l.841-10.52.149.023a.75.75 0 00.23-1.482A41.03 41.03 0 0014 3.68V3.75A2.75 2.75 0 0011.25 1h-2.5zM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4zM8.58 7.72a.75.75 0 00-1.5.06l.3 7.5a.75.75 0 101.5-.06l-.3-7.5zm4.34.06a.75.75 0 10-1.5-.06l-.3 7.5a.75.75 0 101.5.06l.3-7.5z" clipRule="evenodd" />
+              </svg>
+              Eliminado tras analisis
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
+                <path fillRule="evenodd" d="M9.661 2.237a.531.531 0 01.678 0 11.947 11.947 0 007.078 2.749.5.5 0 01.479.425c.069.52.104 1.05.104 1.589 0 5.162-3.26 9.563-7.834 11.256a.48.48 0 01-.332 0C5.26 16.564 2 12.163 2 7c0-.538.035-1.069.104-1.589a.5.5 0 01.48-.425 11.947 11.947 0 007.077-2.75z" clipRule="evenodd" />
+              </svg>
+              GDPR compliant
+            </span>
+          </div>
 
           {/* --- Analyze button --- */}
           <div className="flex justify-end">

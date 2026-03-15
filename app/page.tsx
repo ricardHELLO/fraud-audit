@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { LandingCTALink } from '@/components/LandingCTALink'
+import { ReportPreview } from '@/components/landing/ReportPreview'
 
 const steps = [
   {
@@ -139,6 +140,16 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Product Preview */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-5xl px-6">
+          <p className="mb-6 text-center text-sm font-medium uppercase tracking-wider text-stone-500">
+            Asi se ve tu informe
+          </p>
+          <ReportPreview />
+        </div>
+      </section>
+
       {/* How It Works */}
       <section id="como-funciona" className="border-t border-stone-200 bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
@@ -169,6 +180,43 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Compatible Systems */}
+      <section className="border-t border-stone-200 bg-stone-50 py-12">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <p className="text-sm font-medium uppercase tracking-wider text-stone-500">
+            Compatible con tu sistema
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+            {[
+              { name: 'Last.app', active: true },
+              { name: 'Agora', active: true },
+              { name: 'T-Spoon Lab', active: true },
+              { name: 'Glop', active: false },
+              { name: 'Revo', active: false },
+            ].map((pos) => (
+              <span
+                key={pos.name}
+                className={`text-lg font-semibold tracking-tight ${
+                  pos.active
+                    ? 'text-stone-700'
+                    : 'text-stone-300'
+                }`}
+              >
+                {pos.name}
+                {!pos.active && (
+                  <span className="ml-1.5 inline-block rounded-full bg-stone-100 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-stone-400">
+                    pronto
+                  </span>
+                )}
+              </span>
+            ))}
+          </div>
+          <p className="mt-4 text-xs text-stone-400">
+            Mas integraciones proximamente
+          </p>
         </div>
       </section>
 

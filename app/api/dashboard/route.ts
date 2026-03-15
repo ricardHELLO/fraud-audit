@@ -27,7 +27,7 @@ export async function GET() {
     const { data: reports, error: reportsError } = await supabase
       .from('reports')
       .select(
-        'id, slug, status, created_at, locations_analyzed, analysis_window_from, analysis_window_to, external_views, pos_connector'
+        'id, slug, status, created_at, locations_analyzed, analysis_window_from, analysis_window_to, external_views, pos_connector, report_data'
       )
       .eq('user_id', user.id)
       .order('created_at', { ascending: false });
@@ -46,7 +46,10 @@ export async function GET() {
       return {
         id: r.id,
         slug: r.slug,
-        organization_name: r.pos_connector ?? 'Restaurante',
+        organization_name:
+          (r.report_data as any)?.summary?.organization_name
+          ?? r.pos_connector
+          ?? 'Restaurante',
         status: r.status,
         created_at: r.created_at,
         locations,

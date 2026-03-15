@@ -169,8 +169,8 @@ export function ReportLayout({ data, reportId, aiInsights }: ReportLayoutProps) 
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
         {renderTab()}
 
-        {/* Bottom banner */}
-        <ReportBanner />
+        {/* Bottom banner — only shown to non-owners (public/shared views) */}
+        {!reportId && <ReportBanner />}
       </main>
     </div>
   )

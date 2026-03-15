@@ -23,6 +23,8 @@ export async function POST(req: NextRequest) {
       inventoryUploadId,
       posConnector,
       inventoryConnector,
+      restaurantName,
+      isDemo,
     } = body;
 
     if (!posUploadId || !posConnector) {
@@ -48,14 +50,16 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Deduct credit for the analysis
-    const deducted = await deductCredit(user.id, 'analysis', undefined);
+    // Deduct credit for the analysis (skip for demo mode)
+    if (!isDemo) {
+      const deducted = await deductCredit(user.id, 'analysis', undefined);
 
-    if (!deducted) {
-      return NextResponse.json(
-        { error: 'Insufficient credits' },
-        { status: 402 }
-      );
+      if (!deducted) {
+        return NextResponse.json(
+          { error: 'Insufficient credits' },
+          { status: 402 }
+        );
+      }
     }
 
     // Generate a unique slug for the report URL
@@ -100,6 +104,7 @@ export async function POST(req: NextRequest) {
         inventoryUploadId: inventoryUploadId ?? null,
         posConnector,
         inventoryConnector: inventoryConnector ?? null,
+        restaurantName: restaurantName ?? null,
         slug,
       },
     });

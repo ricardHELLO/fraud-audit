@@ -16,6 +16,7 @@ export const analyzeReport = inngest.createFunction(
       inventoryUploadId,
       posConnector,
       inventoryConnector,
+      restaurantName,
       slug,
     } = event.data;
 
@@ -84,6 +85,7 @@ export const analyzeReport = inngest.createFunction(
         slug,
         posUploadId,
         inventoryUploadId,
+        restaurantName: restaurantName ?? undefined,
       });
     });
 
@@ -114,8 +116,8 @@ export const analyzeReport = inngest.createFunction(
           const { sendEmail } = await import('@/lib/email');
           const { reportReadyEmail } = await import('@/lib/email-templates');
 
-          let orgName = 'tu restaurante';
-          if (organizationId) {
+          let orgName = restaurantName ?? 'tu restaurante';
+          if (!restaurantName && organizationId) {
             const { data: org } = await supabase
               .from('organizations')
               .select('name')

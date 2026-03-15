@@ -9,6 +9,7 @@ interface GenerateReportParams {
   slug: string
   posUploadId: string
   inventoryUploadId?: string
+  restaurantName?: string
 }
 
 /**
@@ -29,6 +30,7 @@ export async function generateReport(
     slug,
     posUploadId,
     inventoryUploadId,
+    restaurantName,
   } = params
 
   const supabase = createServerClient()
@@ -36,19 +38,18 @@ export async function generateReport(
   // Run the analysis
   const reportData = runAnalysis(dataset)
 
-  // Fetch organization name to enrich the summary (skip if no org)
-  let orgName = 'Tu restaurante'
-  if (organizationId) {
+  // Determine report name: user-provided name > org DB name > fallback
+  let displayName = restaurantName
+  if (!displayName && organizationId) {
     const { data: orgData } = await supabase
       .from('organizations')
       .select('name')
       .eq('id', organizationId)
       .single()
 
-    orgName = orgData?.name ?? 'Tu restaurante'
+    displayName = orgData?.name ?? undefined
   }
-
-  reportData.summary.organization_name = orgName
+  reportData.summary.organization_name = displayName || 'Tu restaurante'
 
   // Persist the report data (update existing record created by analyze API)
   const { error: updateError } = await supabase

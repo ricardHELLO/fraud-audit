@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { formatDate } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
@@ -78,6 +79,8 @@ function EmptyState() {
 /* ------------------------------------------------------------------ */
 
 export function ReportsList({ reports }: ReportsListProps) {
+  const router = useRouter()
+
   if (reports.length === 0) {
     return (
       <Card>
@@ -116,7 +119,15 @@ export function ReportsList({ reports }: ReportsListProps) {
                 return (
                   <tr
                     key={report.id}
-                    className="transition-colors hover:bg-stone-50"
+                    className={cn(
+                      'transition-colors hover:bg-stone-50',
+                      report.status === 'completed' && 'cursor-pointer'
+                    )}
+                    onClick={() => {
+                      if (report.status === 'completed') {
+                        router.push(`/informe/${report.slug}`)
+                      }
+                    }}
                   >
                     <td className="px-6 py-4 font-medium text-stone-900">
                       {report.organization_name}
@@ -160,7 +171,18 @@ export function ReportsList({ reports }: ReportsListProps) {
             const { variant, label } = statusBadge(report.status)
 
             return (
-              <div key={report.id} className="space-y-2 px-6 py-4">
+              <div
+                key={report.id}
+                className={cn(
+                  'space-y-2 px-6 py-4',
+                  report.status === 'completed' && 'cursor-pointer'
+                )}
+                onClick={() => {
+                  if (report.status === 'completed') {
+                    router.push(`/informe/${report.slug}`)
+                  }
+                }}
+              >
                 <div className="flex items-start justify-between">
                   <p className="font-medium text-stone-900">
                     {report.organization_name}
@@ -178,7 +200,7 @@ export function ReportsList({ reports }: ReportsListProps) {
                 </div>
                 {report.status === 'completed' && (
                   <a
-                    href={`/reports/${report.slug}`}
+                    href={`/informe/${report.slug}`}
                     className="inline-block text-sm font-medium text-brand-600 hover:text-brand-700 hover:underline"
                   >
                     Ver informe
