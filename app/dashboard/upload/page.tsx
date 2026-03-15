@@ -439,26 +439,64 @@ export default function UploadPage() {
             <Alert variant="danger" title="Error" description={error} />
           )}
 
-          {/* --- Trust badges --- */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-stone-500">
-            <span className="flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
-                <path fillRule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clipRule="evenodd" />
-              </svg>
-              Cifrado seguro
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
-                <path fillRule="evenodd" d="M8.75 1A2.75 2.75 0 006 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 10.23 1.482l.149-.022.841 10.518A2.75 2.75 0 007.596 19h4.807a2.75 2.75 0 002.742-2.53l.841-10.52.149.023a.75.75 0 00.23-1.482A41.03 41.03 0 0014 3.68V3.75A2.75 2.75 0 0011.25 1h-2.5zM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4zM8.58 7.72a.75.75 0 00-1.5.06l.3 7.5a.75.75 0 101.5-.06l-.3-7.5zm4.34.06a.75.75 0 10-1.5-.06l-.3 7.5a.75.75 0 101.5.06l.3-7.5z" clipRule="evenodd" />
-              </svg>
-              Eliminado tras analisis
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
-                <path fillRule="evenodd" d="M9.661 2.237a.531.531 0 01.678 0 11.947 11.947 0 007.078 2.749.5.5 0 01.479.425c.069.52.104 1.05.104 1.589 0 5.162-3.26 9.563-7.834 11.256a.48.48 0 01-.332 0C5.26 16.564 2 12.163 2 7c0-.538.035-1.069.104-1.589a.5.5 0 01.48-.425 11.947 11.947 0 007.077-2.75z" clipRule="evenodd" />
-              </svg>
-              GDPR compliant
-            </span>
+          {/* --- Data transparency + Trust badges --- */}
+          <div className="rounded-xl border border-stone-200 bg-white p-6">
+            <p className="text-center text-sm font-semibold text-stone-700">
+              Que pasa con tus datos?
+            </p>
+
+            {/* 4-step data flow */}
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                { label: 'Subes tu archivo', desc: 'CSV o Excel' },
+                { label: 'Analisis automatico', desc: 'Sin revision humana' },
+                { label: 'Informe generado', desc: 'Listo en 30 seg' },
+                { label: 'Archivos eliminados', desc: 'Borrado permanente' },
+              ].map((step, i) => (
+                <div key={step.label} className="flex items-start gap-2.5 rounded-lg bg-stone-50 p-3">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-100 text-[11px] font-bold text-green-700">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <p className="text-xs font-medium text-stone-700">{step.label}</p>
+                    <p className="text-[11px] text-stone-400">{step.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Trust badges */}
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-5 border-t border-stone-100 pt-4 text-xs text-stone-500">
+              <span className="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
+                  <path fillRule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clipRule="evenodd" />
+                </svg>
+                Cifrado seguro
+              </span>
+              <span className="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
+                  <path fillRule="evenodd" d="M8.75 1A2.75 2.75 0 006 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 10.23 1.482l.149-.022.841 10.518A2.75 2.75 0 007.596 19h4.807a2.75 2.75 0 002.742-2.53l.841-10.52.149.023a.75.75 0 00.23-1.482A41.03 41.03 0 0014 3.68V3.75A2.75 2.75 0 0011.25 1h-2.5zM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4zM8.58 7.72a.75.75 0 00-1.5.06l.3 7.5a.75.75 0 101.5-.06l-.3-7.5zm4.34.06a.75.75 0 10-1.5-.06l-.3 7.5a.75.75 0 101.5.06l.3-7.5z" clipRule="evenodd" />
+                </svg>
+                Eliminado tras analisis
+              </span>
+              <span className="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
+                  <path fillRule="evenodd" d="M9.661 2.237a.531.531 0 01.678 0 11.947 11.947 0 007.078 2.749.5.5 0 01.479.425c.069.52.104 1.05.104 1.589 0 5.162-3.26 9.563-7.834 11.256a.48.48 0 01-.332 0C5.26 16.564 2 12.163 2 7c0-.538.035-1.069.104-1.589a.5.5 0 01.48-.425 11.947 11.947 0 007.077-2.75z" clipRule="evenodd" />
+                </svg>
+                GDPR compliant
+              </span>
+              <span className="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-green-600">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                </svg>
+                Nadie revisa tus datos
+              </span>
+            </div>
+
+            {/* Reassurance sentence */}
+            <p className="mt-3 text-center text-[11px] text-stone-400">
+              FraudAudit no almacena ni comparte tus datos financieros con terceros.
+            </p>
           </div>
 
           {/* --- Analyze button --- */}

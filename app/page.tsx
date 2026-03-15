@@ -75,6 +75,45 @@ const stats = [
   { value: '< 5 min', label: 'Tiempo de analisis' },
 ]
 
+const dataSecuritySteps = [
+  {
+    title: 'Subida cifrada',
+    description: 'Tus archivos viajan con cifrado SSL. Nunca se transmiten en texto plano.',
+    icon: (
+      <svg className="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Analisis automatico',
+    description: 'Ningun humano revisa tus archivos. El motor de analisis procesa todo automaticamente.',
+    icon: (
+      <svg className="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Solo tu accedes',
+    description: 'Tu informe es privado. Solo tu decides si compartirlo via link.',
+    icon: (
+      <svg className="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Borrado inmediato',
+    description: 'Los archivos CSV/Excel se eliminan permanentemente despues del analisis.',
+    icon: (
+      <svg className="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+      </svg>
+    ),
+  },
+]
+
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-stone-50">
@@ -220,6 +259,39 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Data Security / Transparency */}
+      <section className="border-t border-stone-200 bg-white py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-green-600">
+              Seguridad de datos
+            </h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
+              Tus datos, bajo tu control
+            </p>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-6 sm:grid-cols-4">
+            {dataSecuritySteps.map((step) => (
+              <div key={step.title} className="rounded-xl border border-stone-200 bg-stone-50 p-5 text-center">
+                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-green-50">
+                  {step.icon}
+                </div>
+                <h3 className="text-sm font-semibold text-stone-900">{step.title}</h3>
+                <p className="mt-1 text-xs leading-5 text-stone-500">{step.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center text-sm text-stone-500">
+            FraudAudit esta diseñado exclusivamente para hosteleria.
+            <br />
+            Tus datos financieros{' '}
+            <span className="font-medium text-stone-700">nunca se comparten con terceros</span>.
+          </p>
+        </div>
+      </section>
+
       {/* Social Proof / Stats */}
       <section className="border-t border-stone-200 bg-stone-50 py-24">
         <div className="mx-auto max-w-6xl px-6">
@@ -258,6 +330,9 @@ export default function LandingPage() {
             <p className="mt-4 text-lg text-stone-300">
               Genera tu primer informe de fraude gratis. Sin tarjeta de credito,
               sin compromisos.
+            </p>
+            <p className="mt-2 text-sm text-stone-400">
+              Tus archivos se eliminan automaticamente. No compartimos tus datos.
             </p>
             <div className="mt-10">
               <LandingCTALink
