@@ -50,15 +50,29 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Deduct credit for the analysis (skip for demo mode)
-    if (!isDemo) {
-      const deducted = await deductCredit(user.id, 'analysis', undefined);
+    // Deduct credit or enforce demo limit
+    if (isDemo) {
+      // Server-side enforcement: max 1 demo analysis per user
+      const { count } = await supabase
+        .from('reports')
+        .select('id', { count: 'exact', head: true })
+        .eq('user_id', user.id)
+        .eq('is_demo', true)
+
+      if ((count ?? 0) > 0) {
+        return NextResponse.json(
+          { error: 'Insufficient credits' },
+          { status: 402 }
+        )
+      }
+    } else {
+      const deducted = await deductCredit(user.id, 'analysis', undefined)
 
       if (!deducted) {
         return NextResponse.json(
           { error: 'Insufficient credits' },
           { status: 402 }
-        );
+        )
       }
     }
 
@@ -74,6 +88,7 @@ export async function POST(req: NextRequest) {
       status: 'processing',
       pos_connector: posConnector,
       inventory_connector: inventoryConnector ?? null,
+      is_demo: isDemo ?? false,
     };
     if (user.organization_id) {
       reportInsert.organization_id = user.organization_id;
