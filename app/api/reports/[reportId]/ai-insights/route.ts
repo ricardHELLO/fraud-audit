@@ -53,10 +53,13 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
       return NextResponse.json({ status: 'generating', data: null })
     }
 
-    // Report is completed but no insights — check how long ago
+    // Report is completed but no insights — check how long ago.
+    // updated_at is not in the schema, so we use created_at with a generous
+    // 10-minute window to accommodate reports that take several minutes to
+    // process before the Inngest AI step has a chance to run.
     const createdAt = new Date(report.created_at).getTime()
     const elapsed = Date.now() - createdAt
-    const TIMEOUT_MS = 60_000 // 1 minute grace period
+    const TIMEOUT_MS = 10 * 60_000 // 10 minutes grace period (updated_at unavailable)
 
     if (elapsed < TIMEOUT_MS) {
       // Still within grace period — Inngest step may finish soon
