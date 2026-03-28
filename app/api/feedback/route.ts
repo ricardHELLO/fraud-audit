@@ -33,9 +33,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (accuracy_rating === undefined || accuracy_rating === null) {
+    if (
+      typeof accuracy_rating !== 'number' ||
+      accuracy_rating < 1 ||
+      accuracy_rating > 5
+    ) {
       return NextResponse.json(
-        { error: 'accuracy_rating is required' },
+        { error: 'accuracy_rating must be a number between 1 and 5' },
         { status: 400 }
       );
     }
