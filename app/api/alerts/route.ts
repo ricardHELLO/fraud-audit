@@ -99,9 +99,9 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate threshold is a number
-    if (typeof threshold !== 'number' || isNaN(threshold)) {
+    if (typeof threshold !== 'number' || !isFinite(threshold)) {
       return NextResponse.json(
-        { error: 'threshold must be a valid number' },
+        { error: 'threshold must be a valid finite number' },
         { status: 400 }
       )
     }
