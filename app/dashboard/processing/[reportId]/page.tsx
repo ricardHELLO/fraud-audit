@@ -16,6 +16,8 @@ interface ProcessingStep {
   label: string
 }
 
+const MAX_POLLS = 100 // 100 × 3 s interval ≈ 5 min timeout
+
 const PROCESSING_STEPS: ProcessingStep[] = [
   { id: 'upload', label: 'Archivos recibidos' },
   { id: 'parsing', label: 'Parseando datos...' },
@@ -157,6 +159,12 @@ export default function ProcessingPage() {
             setCurrentStepIndex(3) // Generating report
           } else if (pollCount.current >= 1) {
             setCurrentStepIndex(2) // Analyzing
+          }
+          // 5-minute timeout: 100 polls × 3s. Stop if job is hung.
+          if (pollCount.current >= MAX_POLLS) {
+            setError('El analisis esta tardando mas de lo esperado. Vuelve al dashboard para consultar el estado.')
+            clearInterval(intervalId)
+            return
           }
         }
       } catch {
