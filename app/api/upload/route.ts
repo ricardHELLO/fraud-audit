@@ -123,6 +123,11 @@ export async function POST(req: NextRequest) {
 
     if (dbError) {
       console.error('Database insert error:', dbError.message);
+      // Clean up the already-uploaded file to prevent orphans in storage
+      const { error: removeError } = await supabase.storage.from('uploads').remove([storagePath]);
+      if (removeError) {
+        console.error('Failed to remove orphaned storage file:', storagePath, removeError.message);
+      }
       return NextResponse.json(
         { error: 'Failed to save upload record' },
         { status: 500 }
