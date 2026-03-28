@@ -10,6 +10,7 @@ import { VolumePreview } from '@/components/upload/VolumePreview'
 import { UpgradePrompt } from '@/components/upload/UpgradePrompt'
 import { Button } from '@/components/ui/button'
 import { Alert } from '@/components/ui/alert'
+import { Skeleton } from '@/components/ui/skeleton'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import { trackFileUploaded, trackVolumeLimitShown, trackUpgradePromptShown, trackUpgradeInitiated } from '@/lib/posthog-events'
 
@@ -70,6 +71,7 @@ export default function UploadPage() {
 
   // --- Credits ---
   const [userCredits, setUserCredits] = useState<number | null>(null)
+  const [isLoadingBalance, setIsLoadingBalance] = useState(true)
   const [showUpgrade, setShowUpgrade] = useState(false)
 
   // --- Demo mode ---
@@ -89,8 +91,10 @@ export default function UploadPage() {
           setUserCredits(data.balance)
         }
       } catch {
-        // Fallback — don't block user
-        setUserCredits(100)
+        // Balance unknown — keep null so UI blocks analyze until balance loads
+        setUserCredits(null)
+      } finally {
+        setIsLoadingBalance(false)
       }
     }
     fetchBalance()
@@ -183,7 +187,8 @@ export default function UploadPage() {
     posVolume !== null &&
     !showUpgrade &&
     !isAnalyzing &&
-    userCredits !== null
+    userCredits !== null &&
+    userCredits > 0
 
   async function handleAnalyze() {
     if (!canAnalyze) return
@@ -345,6 +350,9 @@ export default function UploadPage() {
                 />
               )}
 
+              {posVolume && userCredits === null && (
+                <Skeleton variant="card" className="h-32" />
+              )}
               {posVolume && userCredits !== null && (
                 <VolumePreview volumeInfo={posVolume} userCredits={userCredits} />
               )}
@@ -431,6 +439,15 @@ export default function UploadPage() {
               creditsNeeded={posVolume.creditsRequired}
               currentCredits={userCredits ?? 0}
               onSelectPlan={handleSelectPlan}
+            />
+          )}
+
+          {/* Warning when balance failed to load */}
+          {!isLoadingBalance && userCredits === null && (
+            <Alert
+              variant="warning"
+              title="No pudimos verificar tu saldo"
+              description="Recarga la página para intentarlo de nuevo. El análisis no está disponible hasta confirmar tus créditos."
             />
           )}
 
