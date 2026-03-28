@@ -167,8 +167,8 @@ export default function ProcessingPage() {
 
     // Initial poll after a short delay
     const timeoutId = setTimeout(() => {
-      pollStatus()
       intervalId = setInterval(pollStatus, 3000)
+      pollStatus()
     }, 1500)
 
     return () => {
