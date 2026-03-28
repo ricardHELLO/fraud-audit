@@ -86,14 +86,15 @@ export async function POST(req: NextRequest) {
       volumeInfo = detectVolume(fileContent, connectorType);
     } catch (err) {
       console.error('Volume detection error:', err);
-      volumeInfo = {
-        dateFrom: '',
-        dateTo: '',
-        locations: [],
-        totalRows: 0,
-        monthsCovered: 0,
-        creditsRequired: 1,
-      };
+      // Clean up the uploaded file before returning the error
+      const { error: removeError } = await supabase.storage.from('uploads').remove([storagePath]);
+      if (removeError) {
+        console.error('Failed to remove orphaned storage file:', storagePath, removeError.message);
+      }
+      return NextResponse.json(
+        { error: 'No se pudo analizar la estructura del archivo. Verifica que sea un CSV válido para el conector seleccionado.' },
+        { status: 400 }
+      );
     }
 
     // Save the upload record to the database
