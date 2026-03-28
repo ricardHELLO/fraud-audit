@@ -165,7 +165,7 @@ export function AIInsightsTab({ data: initialData, reportId }: AIInsightsTabProp
 
   // Poll for insights when data starts null
   useEffect(() => {
-    if (initialData || !reportId || status === 'ready') return
+    if (initialData || !reportId || status === 'ready' || status === 'unavailable') return
 
     const interval = setInterval(async () => {
       pollCount.current += 1
