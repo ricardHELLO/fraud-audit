@@ -90,13 +90,12 @@ export default async function InformePage({ params }: PageProps) {
     notFound()
   }
 
-  // Increment external_views counter (fire-and-forget)
+  // Increment external_views atomically (fire-and-forget)
+  // Uses RPC to avoid read-modify-write race condition under concurrent views
   supabase
-    .from('reports')
-    .update({ external_views: (report.external_views ?? 0) + 1 })
-    .eq('id', report.id)
+    .rpc('increment_external_views', { p_report_id: report.id })
     .then(() => {
-      // View counter updated silently
+      // View counter updated atomically
     })
 
   // Track report view in PostHog (fire-and-forget)
