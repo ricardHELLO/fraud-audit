@@ -23,6 +23,10 @@ export async function GET() {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
+    // BUG-API05 fix: add .limit() to prevent loading all reports for users with
+    // 100+ reports, which could cause timeouts. 50 is enough for the dashboard view.
+    const DASHBOARD_REPORTS_LIMIT = 50;
+
     // Fetch user's reports
     const { data: reports, error: reportsError } = await supabase
       .from('reports')
@@ -30,7 +34,8 @@ export async function GET() {
         'id, slug, status, created_at, locations_analyzed, analysis_window_from, analysis_window_to, external_views, pos_connector, report_data'
       )
       .eq('user_id', user.id)
-      .order('created_at', { ascending: false });
+      .order('created_at', { ascending: false })
+      .limit(DASHBOARD_REPORTS_LIMIT);
 
     if (reportsError) {
       console.error('Failed to fetch reports:', reportsError.message);

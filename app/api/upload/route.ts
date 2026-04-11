@@ -26,6 +26,16 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // BUG-API03 fix: validate file size before reading into memory.
+    // file.text() without a size check allows arbitrary-size uploads (OOM risk).
+    const MAX_FILE_SIZE_BYTES = 50 * 1024 * 1024; // 50 MB
+    if (file.size > MAX_FILE_SIZE_BYTES) {
+      return NextResponse.json(
+        { error: `El archivo es demasiado grande. El tamaño máximo permitido es ${MAX_FILE_SIZE_BYTES / 1024 / 1024}MB.` },
+        { status: 413 }
+      );
+    }
+
     if (!connectorType) {
       return NextResponse.json(
         { error: 'connectorType is required' },

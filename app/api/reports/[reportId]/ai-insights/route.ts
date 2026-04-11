@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { createServerClient } from '@/lib/supabase'
+import { deductCredit } from '@/lib/credits'
 
 type RouteParams = { params: Promise<{ reportId: string }> }
 
@@ -123,6 +124,16 @@ export async function POST(_req: NextRequest, { params }: RouteParams) {
       return NextResponse.json(
         { status: 'unavailable', error: 'AI service not configured' },
         { status: 503 }
+      )
+    }
+
+    // BUG-API02 fix: deduct a credit before calling the AI API.
+    // Previously, regeneration was free — potential for unlimited AI API abuse.
+    const deducted = await deductCredit(user.id, 'analysis', reportId)
+    if (!deducted) {
+      return NextResponse.json(
+        { error: 'Insufficient credits' },
+        { status: 402 }
       )
     }
 
