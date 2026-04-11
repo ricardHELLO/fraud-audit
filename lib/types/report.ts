@@ -80,7 +80,8 @@ export interface WasteAnalysisResult {
 
 export interface InventoryDeviationByMonth {
   month: string;
-  total_deviation: number;
+  total_deviation: number; // sum of |deviations| — reflects magnitude
+  net_deviation: number;   // algebraic sum — 0 when deviations cancel out (BUG-C06)
   product_count: number;
 }
 
