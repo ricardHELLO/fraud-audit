@@ -46,6 +46,9 @@ interface CorrelationTabProps {
 }
 
 export function CorrelationTab({ data }: CorrelationTabProps) {
+  const scatterData = data.scatter_data ?? []
+  const hasEnoughData = scatterData.length >= 4
+
   return (
     <div className="space-y-6">
       {/* Explanation */}
@@ -75,12 +78,21 @@ export function CorrelationTab({ data }: CorrelationTabProps) {
         />
       )}
 
-      {/* Scatter chart */}
+      {/* Scatter chart — AUDIT-017: only render when ≥4 locations (BUG-C08) */}
       <Card>
         <CardHeader>
           <CardTitle>Facturas Eliminadas vs Descuadre de Caja</CardTitle>
         </CardHeader>
         <CardContent>
+          {!hasEnoughData ? (
+            <div className="py-10 text-center">
+              <p className="text-sm font-medium text-stone-500">Datos insuficientes para el analisis de correlacion</p>
+              <p className="mt-1 text-xs text-stone-400">
+                Se necesitan al menos 4 locales para calcular la correlacion de Spearman de forma estadisticamente valida.
+                Actualmente hay {scatterData.length} {scatterData.length === 1 ? 'local' : 'locales'}.
+              </p>
+            </div>
+          ) : (
           <div className="h-80">
             <ResponsiveContainer width="100%" height="100%">
               <ScatterChart margin={{ top: 20, right: 20, bottom: 30, left: 30 }}>
@@ -123,7 +135,7 @@ export function CorrelationTab({ data }: CorrelationTabProps) {
                 <Tooltip content={<ScatterTooltip />} />
                 <Scatter
                   name="Locales"
-                  data={data.scatter_data}
+                  data={scatterData}
                   fill="#3b82f6"
                   fillOpacity={0.7}
                   r={8}
@@ -131,6 +143,7 @@ export function CorrelationTab({ data }: CorrelationTabProps) {
               </ScatterChart>
             </ResponsiveContainer>
           </div>
+          )}
         </CardContent>
       </Card>
 

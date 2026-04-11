@@ -27,13 +27,27 @@ interface CashTabProps {
 }
 
 export function CashTab({ data }: CashTabProps) {
+  const locals = data.locals ?? []
+
+  // AUDIT-017: guard — no data to render
+  if (locals.length === 0) {
+    return (
+      <Card>
+        <CardContent className="py-12 text-center">
+          <p className="text-sm text-stone-500">No hay datos de caja disponibles para este periodo.</p>
+        </CardContent>
+      </Card>
+    )
+  }
+
   /* Split discrepancy into positive (sobrante) and negative (faltante) */
-  const chartData = data.locals.map((local) => ({
+  const chartData = locals.map((local) => ({
     name: local.name,
     sobrante: local.total_discrepancy > 0 ? local.total_discrepancy : 0,
     faltante: local.total_discrepancy < 0 ? local.total_discrepancy : 0,
     total: local.total_discrepancy,
   }))
+
 
   return (
     <div className="space-y-6">
@@ -103,7 +117,7 @@ export function CashTab({ data }: CashTabProps) {
               </tr>
             </thead>
             <tbody className="divide-y divide-stone-100">
-              {data.locals.map((local) => {
+              {locals.map((local) => {
                 const isWorst = local.name === data.worst_local
                 return (
                   <tr

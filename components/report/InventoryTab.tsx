@@ -24,7 +24,21 @@ interface InventoryTabProps {
 }
 
 export function InventoryTab({ data }: InventoryTabProps) {
-  const monthChart = data.by_month.map((m) => ({
+  const byMonth = data.by_month ?? []
+  const byProduct = data.by_product_top10 ?? []
+
+  // AUDIT-017: guard — no inventory data
+  if (byMonth.length === 0 && byProduct.length === 0) {
+    return (
+      <Card>
+        <CardContent className="py-12 text-center">
+          <p className="text-sm text-stone-500">No hay datos de inventario disponibles para este periodo.</p>
+        </CardContent>
+      </Card>
+    )
+  }
+
+  const monthChart = byMonth.map((m) => ({
     name: m.month,
     desviacion: m.total_deviation,
     productos: m.product_count,
@@ -72,6 +86,9 @@ export function InventoryTab({ data }: InventoryTabProps) {
           <CardTitle>Desviacion de Inventario por Mes</CardTitle>
         </CardHeader>
         <CardContent>
+          {byMonth.length === 0 ? (
+            <p className="py-8 text-center text-sm text-stone-400">Sin datos mensuales disponibles.</p>
+          ) : (
           <div className="h-72">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
@@ -107,6 +124,7 @@ export function InventoryTab({ data }: InventoryTabProps) {
               </BarChart>
             </ResponsiveContainer>
           </div>
+          )}
         </CardContent>
       </Card>
 
@@ -126,7 +144,13 @@ export function InventoryTab({ data }: InventoryTabProps) {
               </tr>
             </thead>
             <tbody className="divide-y divide-stone-100">
-              {data.by_product_top10.map((p, i) => (
+              {byProduct.length === 0 ? (
+                <tr>
+                  <td colSpan={4} className="py-8 text-center text-sm text-stone-400">
+                    Sin productos con desviaciones registradas.
+                  </td>
+                </tr>
+              ) : byProduct.map((p, i) => (
                 <tr key={p.product_name} className="hover:bg-stone-50">
                   <td className="py-3 pr-4 text-stone-400 tabular-nums">
                     {i + 1}
@@ -143,6 +167,7 @@ export function InventoryTab({ data }: InventoryTabProps) {
                 </tr>
               ))}
             </tbody>
+
           </table>
         </CardContent>
       </Card>
