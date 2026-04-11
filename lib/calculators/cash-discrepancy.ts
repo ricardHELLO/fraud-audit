@@ -42,27 +42,33 @@ export function calculateCashDiscrepancy(
     });
   }
 
-  // Sort by total_discrepancy ascending (most negative first), tiebreak by name
-  locals.sort((a, b) => a.total_discrepancy - b.total_discrepancy || a.name.localeCompare(b.name));
+  // BUG-C01 + BUG-C02 fix: Sort by Math.abs(total_discrepancy) descending
+  // so worst_local is the largest absolute deviation (faltante OR sobrante)
+  locals.sort(
+    (a, b) =>
+      Math.abs(b.total_discrepancy) - Math.abs(a.total_discrepancy) ||
+      a.name.localeCompare(b.name)
+  );
 
-  // Find worst local (most negative total discrepancy)
-  const worstLocal =
-    locals.length > 0 ? locals[0].name : 'Sin datos';
+  const worstLocal = locals.length > 0 ? locals[0].name : 'Sin datos';
 
-  // Generate alert message based on severity
+  // BUG-C01 fix: use Math.abs() to detect both shortages AND surpluses
   const hasAnyCritical = locals.some(
-    (l) => l.total_discrepancy < -CRITICAL_SHORTAGE_THRESHOLD
+    (l) => Math.abs(l.total_discrepancy) > CRITICAL_SHORTAGE_THRESHOLD
   );
   const hasAnyModerate = locals.some(
-    (l) => l.total_discrepancy < -MODERATE_SHORTAGE_THRESHOLD
+    (l) => Math.abs(l.total_discrepancy) > MODERATE_SHORTAGE_THRESHOLD
   );
+
+  // Distinguish direction for more informative message
+  const worstValue = locals.length > 0 ? locals[0].total_discrepancy : 0;
+  const alertType = worstValue < 0 ? 'faltante' : 'sobrante';
 
   let alertMessage: string;
   if (hasAnyCritical) {
-    alertMessage =
-      'ALERTA CR\u00cdTICA: Descuadres significativos detectados';
+    alertMessage = `ALERTA CR\u00cdTICA: Descuadres significativos detectados (${alertType} superior a ${CRITICAL_SHORTAGE_THRESHOLD}\u20ac)`;
   } else if (hasAnyModerate) {
-    alertMessage = 'ALERTA: Descuadres moderados detectados';
+    alertMessage = `ALERTA: Descuadres moderados detectados (${alertType})`;
   } else {
     alertMessage = 'Descuadres dentro de rangos normales';
   }
