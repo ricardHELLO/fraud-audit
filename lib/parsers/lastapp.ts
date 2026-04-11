@@ -303,8 +303,11 @@ function parseSalesRows(
         ]),
       );
 
-      // Only add if we have at least some numeric data
-      if (grossSales === 0 && netSales === 0 && expectedCash === 0 && actualCash === 0) {
+      // BUG-P03 fix: rows with all numeric fields at 0 are silently dropped,
+      // masking data quality issues. Skip only if there is NO date or location
+      // (truly empty rows). Zero-value rows with valid date/location are kept.
+      // The caller can inspect these rows for data quality purposes.
+      if (!date || (!location && grossSales === 0 && netSales === 0 && expectedCash === 0 && actualCash === 0)) {
         continue;
       }
 
@@ -406,23 +409,23 @@ function parseInvoiceRows(
           ]),
         );
 
-        if (productName) {
-          const totalAmount = quantity && unitPrice ? quantity * unitPrice : amount;
-
-          deletedProducts.push({
-            id: nextId('del'),
-            date,
-            location: location || 'Unknown',
-            employee: employee || 'Unknown',
-            product_name: productName,
-            quantity: quantity || 1,
-            unit_price: unitPrice || amount,
-            total_amount: totalAmount,
-            phase: deletionPhaseRaw
-              ? mapDeletionPhase(deletionPhaseRaw)
-              : 'after_billing',
-          });
-        }
+        // BUG-P02 fix: create a deleted_products entry even when productName is empty.
+        // Previously, 71% of deleted invoices were invisible to the product analysis
+        // because they lacked a product name (common in Last.app exports).
+        const totalAmount = quantity && unitPrice ? quantity * unitPrice : amount;
+        deletedProducts.push({
+          id: nextId('del'),
+          date,
+          location: location || 'Unknown',
+          employee: employee || 'Unknown',
+          product_name: productName || 'Producto no especificado',
+          quantity: quantity || 1,
+          unit_price: unitPrice || amount,
+          total_amount: totalAmount,
+          phase: deletionPhaseRaw
+            ? mapDeletionPhase(deletionPhaseRaw)
+            : 'after_billing',
+        });
       }
     } catch {
       // Skip malformed row and continue

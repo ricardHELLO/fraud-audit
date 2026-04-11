@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import type { ComparisonResult, Trend } from '@/lib/types/comparison'
+import { authedFetch } from '@/lib/authed-fetch'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -62,21 +63,25 @@ export default function CompararPage() {
   const [error, setError] = useState<string | null>(null)
 
   // Fetch available reports
+  // AUDIT-009 fix: AbortController prevents stale updates on unmount
   useEffect(() => {
     if (!isLoaded || !user) return
 
+    const controller = new AbortController()
+
     async function loadReports() {
       try {
-        const res = await fetch('/api/dashboard')
+        const res = await authedFetch('/api/dashboard', { signal: controller.signal })
+        if (!res) return // redirect in progress (401)
         if (res.ok) {
           const data = await res.json()
-          // Only show completed reports
           const completed = (data.reports ?? []).filter(
             (r: any) => r.status === 'completed'
           )
           setReports(completed)
         }
-      } catch {
+      } catch (err) {
+        if ((err as Error).name === 'AbortError') return
         console.error('Failed to load reports')
       } finally {
         setIsLoadingReports(false)
@@ -84,9 +89,12 @@ export default function CompararPage() {
     }
 
     loadReports()
+    return () => controller.abort()
   }, [isLoaded, user])
 
   // Fetch comparison when both are selected
+  // AUDIT-025 fix: AbortController prevents race condition where slugA changes
+  // while a comparison fetch is in-flight, causing stale results to overwrite new ones.
   useEffect(() => {
     if (!slugA || !slugB || slugA === slugB) {
       setComparison(null)
@@ -94,14 +102,18 @@ export default function CompararPage() {
       return
     }
 
+    const controller = new AbortController()
+
     async function compare() {
       setIsComparing(true)
       setError(null)
 
       try {
-        const res = await fetch(
-          `/api/compare?reportA=${encodeURIComponent(slugA)}&reportB=${encodeURIComponent(slugB)}`
+        const res = await authedFetch(
+          `/api/compare?reportA=${encodeURIComponent(slugA)}&reportB=${encodeURIComponent(slugB)}`,
+          { signal: controller.signal }
         )
+        if (!res) return // redirect in progress (401)
 
         if (res.ok) {
           const data = await res.json()
@@ -110,7 +122,8 @@ export default function CompararPage() {
           const data = await res.json()
           setError(data.error || 'Error al comparar informes')
         }
-      } catch {
+      } catch (err) {
+        if ((err as Error).name === 'AbortError') return
         setError('Error de conexion')
       } finally {
         setIsComparing(false)
@@ -118,6 +131,7 @@ export default function CompararPage() {
     }
 
     compare()
+    return () => controller.abort()
   }, [slugA, slugB])
 
   if (!isLoaded || isLoadingReports) {

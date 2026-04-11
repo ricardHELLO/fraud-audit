@@ -15,6 +15,7 @@ import { useToast } from '@/components/ui/toast'
 import { AlertRulesCard } from '@/components/dashboard/AlertRulesCard'
 import { trackUpgradeInitiated } from '@/lib/posthog-events'
 import type { AlertRule } from '@/lib/types/alerts'
+import { authedFetch } from '@/lib/authed-fetch'
 
 /* ------------------------------------------------------------------ */
 /*  Dashboard page                                                      */
@@ -46,11 +47,16 @@ export default function DashboardPage() {
   useEffect(() => {
     if (!isUserLoaded || !user) return
 
+    // AUDIT-009 fix: AbortController prevents stale state updates when the
+    // component unmounts before the fetch completes.
+    const controller = new AbortController()
+
     async function loadDashboard() {
       setIsLoading(true)
 
       try {
-        const res = await fetch('/api/dashboard')
+        const res = await authedFetch('/api/dashboard', { signal: controller.signal })
+        if (!res) return // redirect in progress (401)
 
         if (res.ok) {
           const data = await res.json()
@@ -62,6 +68,7 @@ export default function DashboardPage() {
           console.error('Dashboard API returned error:', res.status)
         }
       } catch (error) {
+        if ((error as Error).name === 'AbortError') return
         console.error('Failed to load dashboard data:', error)
       } finally {
         setIsLoading(false)
@@ -69,6 +76,7 @@ export default function DashboardPage() {
     }
 
     loadDashboard()
+    return () => controller.abort()
   }, [isUserLoaded, user])
 
   // --- Buy more handler ---

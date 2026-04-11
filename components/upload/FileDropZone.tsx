@@ -9,9 +9,13 @@ import { cn } from '@/lib/utils'
 
 export interface FileDropZoneProps {
   onFileSelect: (file: File) => void
+  onError?: (message: string) => void  // AUDIT-021: report validation errors to parent
   accept: string
   label: string
 }
+
+const MAX_FILE_SIZE_MB = 50
+const ALLOWED_EXTENSIONS = /\.(csv|xlsx|xls)$/i
 
 function formatFileSize(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`
@@ -19,17 +23,26 @@ function formatFileSize(bytes: number): string {
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`
 }
 
-export function FileDropZone({ onFileSelect, accept, label }: FileDropZoneProps) {
+export function FileDropZone({ onFileSelect, onError, accept, label }: FileDropZoneProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
 
   const handleFile = useCallback(
     (file: File) => {
+      // AUDIT-021: client-side validation before sending to parent
+      if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
+        onError?.(`El archivo "${file.name}" supera el l\u00edmite de ${MAX_FILE_SIZE_MB} MB`)
+        return
+      }
+      if (!ALLOWED_EXTENSIONS.test(file.name)) {
+        onError?.('Formato no v\u00e1lido: solo se aceptan archivos CSV, XLS y XLSX')
+        return
+      }
       setSelectedFile(file)
       onFileSelect(file)
     },
-    [onFileSelect]
+    [onFileSelect, onError]
   )
 
   const handleDragOver = useCallback(

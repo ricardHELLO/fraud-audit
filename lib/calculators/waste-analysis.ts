@@ -64,8 +64,9 @@ export function calculateWasteAnalysis(
   byLocal.sort((a, b) => b.waste_percentage - a.waste_percentage || a.location.localeCompare(b.location));
 
   // Benchmark comparison against 3% industry standard
+  // BUG-C15 fix: use <= so that exactly 2.5% (= 3% - 0.5%) is "Por debajo", not "En línea".
   let benchmarkComparison: string;
-  if (wastePercentage < INDUSTRY_BENCHMARK_PCT - BENCHMARK_TOLERANCE) {
+  if (wastePercentage <= INDUSTRY_BENCHMARK_PCT - BENCHMARK_TOLERANCE) {
     benchmarkComparison = 'Por debajo del benchmark';
   } else if (wastePercentage > INDUSTRY_BENCHMARK_PCT + BENCHMARK_TOLERANCE) {
     benchmarkComparison = 'Por encima del benchmark';

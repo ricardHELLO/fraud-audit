@@ -6,6 +6,9 @@ import {
 } from '@/lib/types/report';
 
 const CONCENTRATION_THRESHOLD = 0.4;
+// BUG-C04 fix: require a minimum absolute count before firing concentration alert.
+// 1 invoice from 1 employee = 100% concentration → false alert with no context.
+const MIN_DELETIONS_FOR_CONCENTRATION_ALERT = 5;
 
 export function calculateDeletedInvoices(
   invoices: NormalizedInvoice[]
@@ -54,7 +57,6 @@ export function calculateDeletedInvoices(
 
   const byEmployee: DeletedInvoicesByEmployee[] = [];
   for (const [employee, data] of employeeMap) {
-    // Determine primary location for this employee
     let primaryLocation = '';
     let maxCount = 0;
     for (const [loc, cnt] of data.locationCounts) {
@@ -71,22 +73,29 @@ export function calculateDeletedInvoices(
       amount: Math.round(data.amount * 100) / 100,
     });
   }
-  byEmployee.sort((a, b) => b.count - a.count || a.employee.localeCompare(b.employee));
+  // Sort by amount descending for consistent ordering (count still available)
+  byEmployee.sort((a, b) => b.amount - a.amount || a.employee.localeCompare(b.employee));
 
-  // Total count and amount
   const totalCount = deleted.length;
   const totalAmount =
     Math.round(deleted.reduce((sum, inv) => sum + inv.amount, 0) * 100) / 100;
 
-  // Concentration alert: check if the top employee has > 40% of deletions
+  // BUG-C04 fix: require MIN_DELETIONS_FOR_CONCENTRATION_ALERT before alerting.
+  // BUG-C05 fix: concentration based on AMOUNT (€), not count.
+  //   3 invoices of 10€ (count: 60%) should not overshadow 2 invoices of 5000€ (amount: 44%).
   let concentrationAlert = '';
-  if (byEmployee.length > 0 && totalCount > 0) {
-    const topEmployee = byEmployee[0];
-    const topPercentage = topEmployee.count / totalCount;
+  if (
+    byEmployee.length > 0 &&
+    totalCount >= MIN_DELETIONS_FOR_CONCENTRATION_ALERT &&
+    totalAmount > 0
+  ) {
+    // Find top employee by amount (byEmployee is already sorted by amount)
+    const topByAmount = byEmployee[0];
+    const topAmountPercentage = topByAmount.amount / totalAmount;
 
-    if (topPercentage > CONCENTRATION_THRESHOLD) {
-      const pctFormatted = Math.round(topPercentage * 100);
-      concentrationAlert = `Concentraci\u00f3n an\u00f3mala en empleado ${topEmployee.employee} (${pctFormatted}% de las anulaciones)`;
+    if (topAmountPercentage > CONCENTRATION_THRESHOLD) {
+      const pctFormatted = Math.round(topAmountPercentage * 100);
+      concentrationAlert = `Concentraci\u00f3n an\u00f3mala en empleado ${topByAmount.employee} (${pctFormatted}% del importe de anulaciones: ${topByAmount.amount.toFixed(2)}\u20ac)`;
     }
   }
 

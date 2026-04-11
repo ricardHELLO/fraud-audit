@@ -30,9 +30,11 @@ export function generateConclusions(data: CalculatorInputs): ConclusionsResult {
   const structuralActions: string[] = [];
 
   // --- 1. Cash discrepancy analysis ---
+  // BUG-C11 fix: use Math.abs to find worst local by absolute deviation (not most-negative).
+  // Matches the fix in cash-discrepancy.ts so both modules agree on "worst" local.
   const worstCashLocal = data.cash.locals.length > 0
     ? data.cash.locals.reduce((worst, l) =>
-        l.total_discrepancy < worst.total_discrepancy ? l : worst
+        Math.abs(l.total_discrepancy) > Math.abs(worst.total_discrepancy) ? l : worst
       )
     : null;
 
@@ -121,10 +123,14 @@ export function generateConclusions(data: CalculatorInputs): ConclusionsResult {
   }
 
   // --- 4. Waste underreporting ---
+  // BUG-C13 fix: scale severity based on how extreme the underreporting is.
+  // 0.01% waste is FAR more suspicious than 0.9% — should be critical, not medium.
   if (data.waste.waste_percentage < WASTE_UNDERREPORTING_THRESHOLD) {
+    const wasteSeverity =
+      data.waste.waste_percentage < 0.5 ? 'critical' : 'medium';
     conclusions.push({
       title: 'Posible infrareporte de mermas',
-      severity: 'medium',
+      severity: wasteSeverity,
       description: `El porcentaje de mermas reportado (${data.waste.waste_percentage.toFixed(2)}%) est\u00e1 muy por debajo del benchmark de la industria (3%). Un nivel tan bajo sugiere que las mermas no est\u00e1n siendo reportadas correctamente, lo cual podr\u00eda ocultar sustracciones de producto.`,
     });
     immediateActions.push(
@@ -175,7 +181,9 @@ export function generateConclusions(data: CalculatorInputs): ConclusionsResult {
   const multiRiskLocals = data.correlation.patterns_by_local.filter(
     (p) => p.strength > 40 && p.pattern !== 'Sin anomal\u00edas significativas'
   );
-  if (multiRiskLocals.length > 0 && !data.correlation.correlation_exists) {
+  // BUG-C14 fix: remove `&& !correlation_exists`. Multi-risk locals should be shown
+  // ALWAYS — especially when correlation_exists (complementary, not redundant info).
+  if (multiRiskLocals.length > 0) {
     conclusions.push({
       title: 'Locales con m\u00faltiples factores de riesgo',
       severity: 'medium',

@@ -44,7 +44,8 @@ interface SummaryTabProps {
 }
 
 export function SummaryTab({ data, cash, invoices, waste }: SummaryTabProps) {
-  const totalCashDiscrepancy = cash.locals.reduce(
+  // BUG-UI01 fix: guard against cash.locals being undefined/null (defensive)
+  const totalCashDiscrepancy = (cash.locals ?? []).reduce(
     (sum, l) => sum + l.total_discrepancy,
     0
   )

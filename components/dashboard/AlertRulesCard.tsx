@@ -49,8 +49,11 @@ export function AlertRulesCard({ initialRules }: AlertRulesCardProps) {
     }
   }
 
-  // Delete rule
+  // Delete rule — AUDIT-004 fix: confirm before destructive action
   async function handleDelete(ruleId: string) {
+    const ruleName = rules.find((r) => r.id === ruleId)?.name ?? 'esta alerta'
+    if (!window.confirm(`\u00bfEliminar "${ruleName}"? Esta acci\u00f3n no se puede deshacer.`)) return
+
     try {
       const res = await fetch(`/api/alerts/${ruleId}`, {
         method: 'DELETE',

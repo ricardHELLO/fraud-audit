@@ -267,8 +267,11 @@ export function parseTSpoonLab(csvContent: string): Partial<NormalizedDataset> {
   }
   if (!dateTo && sortedMonths.length > 0) {
     const lastMonth = sortedMonths[sortedMonths.length - 1];
-    // Set to last day of the month (approximate with 28)
-    dateTo = `${lastMonth}-28`;
+    // BUG-P10 fix: compute the real last day of the month instead of hardcoding 28.
+    // Day 0 of month+1 = last day of lastMonth.
+    const [y, m] = lastMonth.split('-').map(Number);
+    const lastDay = new Date(y, m, 0).getDate(); // getDate() on day 0 of next month
+    dateTo = `${lastMonth}-${String(lastDay).padStart(2, '0')}`;
   }
 
   return {
@@ -340,8 +343,10 @@ function parseWasteRows(
         product_name: productName,
         quantity: quantity || 1,
         unit,
-        unit_cost: unitCost || (totalCost && quantity ? totalCost / quantity : 0),
-        total_cost: totalCost || unitCost * (quantity || 1),
+        unit_cost: unitCost !== 0 ? unitCost : (totalCost !== 0 && quantity ? totalCost / quantity : 0),
+        // BUG-P11 fix: use !== 0 instead of || to allow legitimate total_cost=0.
+        // Previously totalCost=0 (falsy) was silently overwritten with unitCost*quantity.
+        total_cost: totalCost !== 0 ? totalCost : unitCost * (quantity || 1),
       });
 
       allDates.push(date);
@@ -401,9 +406,18 @@ function parseInventoryRows(
         'Diferencia', 'Diff',
       ]);
 
-      const deviation = deviationRaw
-        ? parseNumber(deviationRaw)
-        : actualConsumption - theoreticalConsumption;
+      // BUG-P12 fix: validate CSV deviation against calculated value.
+      // If they differ by more than rounding tolerance, trust the calculation.
+      const calculatedDeviation = actualConsumption - theoreticalConsumption;
+      let deviation: number;
+      if (deviationRaw) {
+        const csvDeviation = parseNumber(deviationRaw);
+        const discrepancy = Math.abs(csvDeviation - calculatedDeviation);
+        // Allow ≤1 unit rounding error; beyond that, prefer the calculated value
+        deviation = discrepancy <= 1 ? csvDeviation : calculatedDeviation;
+      } else {
+        deviation = calculatedDeviation;
+      }
 
       const unit = getField(row, [
         'Unidad', 'unidad', 'Unit', 'unit', 'Ud', 'Medida',

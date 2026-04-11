@@ -13,17 +13,21 @@ export function calculateInventoryDeviation(
   deviations: NormalizedInventoryDeviation[]
 ): InventoryDeviationResult {
   // --- By month ---
+  // BUG-C06 fix: track both absolute (magnitude) and net (algebraic) deviation.
+  // Without net_deviation, +500 and -500 in the same month show 1000 instead of 0.
   const monthMap = new Map<
     string,
-    { totalDeviation: number; products: Set<string> }
+    { totalDeviation: number; netDeviation: number; products: Set<string> }
   >();
 
   for (const d of deviations) {
     const entry = monthMap.get(d.month) ?? {
       totalDeviation: 0,
+      netDeviation: 0,
       products: new Set<string>(),
     };
-    entry.totalDeviation += Math.abs(d.deviation);
+    entry.totalDeviation += Math.abs(d.deviation); // absolute: reflects total magnitude
+    entry.netDeviation += d.deviation;              // net: reveals compensating deviations
     entry.products.add(d.product_name);
     monthMap.set(d.month, entry);
   }
@@ -33,6 +37,7 @@ export function calculateInventoryDeviation(
     byMonth.push({
       month,
       total_deviation: Math.round(data.totalDeviation * 100) / 100,
+      net_deviation: Math.round(data.netDeviation * 100) / 100,
       product_count: data.products.size,
     });
   }
@@ -84,9 +89,11 @@ export function calculateInventoryDeviation(
   );
 
   let mainCause: string;
-  if (
+  if (totalAbsoluteDeviation === 0) {
+    // BUG-C07 fix: when all deviations are 0, say "no deviations" not "distributed"
+    mainCause = 'Sin desviaciones de inventario';
+  } else if (
     byProductTop10.length > 0 &&
-    totalAbsoluteDeviation > 0 &&
     byProductTop10[0].total_deviation / totalAbsoluteDeviation >
       DOMINANT_PRODUCT_THRESHOLD
   ) {

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { Component, useState } from 'react'
 import type { ReportData } from '@/lib/types/report'
 import type { AIInsights } from '@/lib/types/ai-insights'
 import { Badge } from '@/components/ui/badge'
@@ -18,6 +18,55 @@ import { CorrelationTab } from './CorrelationTab'
 import { ConclusionsTab } from './ConclusionsTab'
 import { ReportBanner } from './ReportBanner'
 import { AIInsightsTab } from './AIInsightsTab'
+
+/* ------------------------------------------------------------------ */
+/*  BUG-UI02: Tab Error Boundary                                       */
+/* ------------------------------------------------------------------ */
+
+interface TabErrorBoundaryState {
+  hasError: boolean
+  error: Error | null
+}
+
+class TabErrorBoundary extends Component<
+  { children: React.ReactNode },
+  TabErrorBoundaryState
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props)
+    this.state = { hasError: false, error: null }
+  }
+
+  static getDerivedStateFromError(error: Error): TabErrorBoundaryState {
+    return { hasError: true, error }
+  }
+
+  override componentDidCatch(error: Error, info: React.ErrorInfo) {
+    console.error('ReportLayout tab error:', error, info.componentStack)
+  }
+
+  override render() {
+    if (this.state.hasError) {
+      return (
+        <div className="rounded-xl border border-red-200 bg-red-50 p-6 text-center">
+          <p className="text-sm font-semibold text-red-700">
+            Error al renderizar esta pesta\u00f1a
+          </p>
+          <p className="mt-1 text-xs text-red-500">
+            {this.state.error?.message ?? 'Error desconocido'}
+          </p>
+          <button
+            className="mt-3 text-xs text-red-600 underline"
+            onClick={() => this.setState({ hasError: false, error: null })}
+          >
+            Reintentar
+          </button>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
 
 /* ------------------------------------------------------------------ */
 /*  Tab definitions                                                    */
@@ -165,9 +214,11 @@ export function ReportLayout({ data, reportId, aiInsights }: ReportLayoutProps) 
         </div>
       </header>
 
-      {/* Tab content */}
+      {/* Tab content — wrapped in Error Boundary (BUG-UI02) */}
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
-        {renderTab()}
+        <TabErrorBoundary key={activeTab}>
+          {renderTab()}
+        </TabErrorBoundary>
 
         {/* Bottom banner — only shown to non-owners (public/shared views) */}
         {!reportId && <ReportBanner />}

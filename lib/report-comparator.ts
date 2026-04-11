@@ -128,9 +128,12 @@ export function compareReports(input: CompareReportsInput): ComparisonResult {
 
     perLocal.push({
       location,
+      // BUG-API06 fix: use raw values (not Math.abs) so direction is preserved.
+      // Math.abs(-500) - Math.abs(+500) = 0, hiding that one is a shortage and
+      // the other a surplus. The UI should show positive = improvement, negative = worse.
       cash_delta:
-        Math.abs(cashLocalB?.total_discrepancy ?? 0) -
-        Math.abs(cashLocalA?.total_discrepancy ?? 0),
+        (cashLocalB?.total_discrepancy ?? 0) -
+        (cashLocalA?.total_discrepancy ?? 0),
       invoices_count_delta:
         (invoiceLocalB?.count ?? 0) - (invoiceLocalA?.count ?? 0),
       waste_delta:

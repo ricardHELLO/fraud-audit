@@ -60,9 +60,10 @@ export async function POST(req: NextRequest) {
         .eq('is_demo', true)
 
       if ((count ?? 0) > 0) {
+        // BUG-API04 fix: demo limit is not a credits issue; use 400 + clear message.
         return NextResponse.json(
-          { error: 'Insufficient credits' },
-          { status: 402 }
+          { error: 'Demo limit reached' },
+          { status: 400 }
         )
       }
     } else {
@@ -108,21 +109,32 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Send the Inngest event to trigger async processing
-    await inngest.send({
-      name: 'report/analyze',
-      data: {
-        reportId: report.id,
-        userId: user.id,
-        organizationId: user.organization_id,
-        posUploadId,
-        inventoryUploadId: inventoryUploadId ?? null,
-        posConnector,
-        inventoryConnector: inventoryConnector ?? null,
-        restaurantName: restaurantName ?? null,
-        slug,
-      },
-    });
+    // BUG-API01 fix: wrap inngest.send() in try/catch.
+    // If Inngest is down after credit deduction + report creation, mark the report
+    // as failed so the user sees a clear error (not a zombie "processing" report).
+    try {
+      await inngest.send({
+        name: 'report/analyze',
+        data: {
+          reportId: report.id,
+          userId: user.id,
+          organizationId: user.organization_id,
+          posUploadId,
+          inventoryUploadId: inventoryUploadId ?? null,
+          posConnector,
+          inventoryConnector: inventoryConnector ?? null,
+          restaurantName: restaurantName ?? null,
+          slug,
+        },
+      });
+    } catch (inngestErr) {
+      console.error('Failed to send Inngest event:', inngestErr);
+      await supabase.from('reports').update({ status: 'failed' }).eq('id', report.id);
+      return NextResponse.json(
+        { error: 'Failed to queue analysis. Please try again.' },
+        { status: 500 }
+      );
+    }
 
     // Track analytics events
     serverTrackCreditSpent(user.id, 'analysis', -1); // Will update with real balance later

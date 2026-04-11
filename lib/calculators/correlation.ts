@@ -20,6 +20,10 @@ function normalizeToScale(
   return ((value - min) / (max - min)) * 100;
 }
 
+// BUG-C08 fix: Spearman is statistically invalid with n < 4.
+// With n=2, rho = 1 - (6*0)/(2*3) = 1.0 always → guaranteed false positive.
+const MIN_LOCATIONS_FOR_CORRELATION = 4;
+
 export function calculateCorrelation(
   cash: CashDiscrepancyResult,
   invoices: DeletedInvoicesResult,
@@ -39,12 +43,6 @@ export function calculateCorrelation(
     invoicesByLocal.set(local.location, local.amount);
   }
 
-  // Inventory deviation by local (aggregate from by_month is not per-location,
-  // so we use total deviation range as a reference; but for per-local correlation
-  // we need to extract from the top products or accept limitation)
-  // Since InventoryDeviationResult does not have by_local, we use the overall
-  // deviation range max as a proxy for inventory risk.
-
   // Collect all unique location names across datasets
   const allLocations = new Set<string>([
     ...cashByLocal.keys(),
@@ -53,7 +51,6 @@ export function calculateCorrelation(
 
   // --- Scatter data ---
   // x = deleted invoice amount, y = cash discrepancy (absolute value)
-  // Sort locations alphabetically for deterministic output order
   const sortedLocations = [...allLocations].sort((a, b) => a.localeCompare(b));
   const scatterData: CorrelationScatterPoint[] = [];
   for (const location of sortedLocations) {
@@ -67,40 +64,30 @@ export function calculateCorrelation(
     });
   }
 
-  // --- Correlation heuristic ---
-  // Check if locals with high deletions also tend to have high discrepancies.
-  // Simple approach: rank locals by both metrics and check if rankings align.
+  // --- Correlation heuristic (Spearman rank correlation) ---
   let correlationExists = false;
 
-  if (scatterData.length >= 2) {
-    // Sort by x (deleted invoices) and assign rank
+  // BUG-C08 fix: require MIN_LOCATIONS_FOR_CORRELATION (4) for statistical validity
+  if (scatterData.length >= MIN_LOCATIONS_FOR_CORRELATION) {
     const sortedByX = [...scatterData].sort((a, b) => b.x - a.x || a.label.localeCompare(b.label));
     const rankByX = new Map<string, number>();
     sortedByX.forEach((p, i) => rankByX.set(p.label, i));
 
-    // Sort by y (cash discrepancy absolute) and assign rank
     const sortedByY = [...scatterData].sort((a, b) => b.y - a.y || a.label.localeCompare(b.label));
     const rankByY = new Map<string, number>();
     sortedByY.forEach((p, i) => rankByY.set(p.label, i));
 
-    // Compute Spearman rank correlation coefficient
     let sumDSquared = 0;
     const n = scatterData.length;
     for (const point of scatterData) {
       const d = (rankByX.get(point.label) ?? 0) - (rankByY.get(point.label) ?? 0);
       sumDSquared += d * d;
     }
-    // Spearman: rho = 1 - (6 * sum(d^2)) / (n * (n^2 - 1))
     const rho = 1 - (6 * sumDSquared) / (n * (n * n - 1));
-
-    // Consider correlation exists if rho > 0.5 (moderate positive correlation)
     correlationExists = rho > 0.5;
   }
 
   // --- Patterns by local ---
-  // Determine risk factors and combined score for each location
-  const inventoryDeviationMax = inventory.total_deviation_range.max;
-
   const patternsByLocal: CorrelationPatternByLocal[] = [];
   for (const location of allLocations) {
     const cashVal = Math.abs(cashByLocal.get(location) ?? 0);
@@ -108,39 +95,35 @@ export function calculateCorrelation(
 
     const riskFactors: string[] = [];
 
-    // Cash discrepancy risk
     if (cashVal > 500) {
       riskFactors.push('Descuadres de caja cr\u00edticos');
     } else if (cashVal > 200) {
       riskFactors.push('Descuadres de caja moderados');
     }
 
-    // Invoice deletion risk
     if (invoiceVal > 1000) {
       riskFactors.push('Alto volumen de facturas anuladas');
     } else if (invoiceVal > 500) {
       riskFactors.push('Volumen moderado de facturas anuladas');
     }
 
-    // If both cash and invoice issues exist, note the correlation
     if (cashVal > 200 && invoiceVal > 500) {
       riskFactors.push('Correlaci\u00f3n entre anulaciones y descuadres');
     }
 
-    // Combined risk score (0-100)
-    // Weighted: 40% cash discrepancy, 40% invoice deletions, 20% inventory
+    // BUG-C09 fix: inventory.total_deviation_range.max is GLOBAL (not per-local),
+    // so normalizeToScale(globalMax, 0, globalMax) = 100 for ALL locals.
+    // Disable inventory component (set to 0) until by_local data is available.
+    // Rebalance weights: 50% cash + 50% invoices.
     const maxCash = Math.max(...[...cashByLocal.values()].map(Math.abs), 1);
     const maxInvoice = Math.max(...[...invoicesByLocal.values()], 1);
-    const maxInventory = Math.max(inventoryDeviationMax, 1);
 
-    const cashScore = normalizeToScale(cashVal, 0, maxCash) * 0.4;
-    const invoiceScore = normalizeToScale(invoiceVal, 0, maxInvoice) * 0.4;
-    const inventoryScore =
-      normalizeToScale(inventoryDeviationMax, 0, maxInventory) * 0.2;
+    const cashScore = normalizeToScale(cashVal, 0, maxCash) * 0.5;
+    const invoiceScore = normalizeToScale(invoiceVal, 0, maxInvoice) * 0.5;
+    // inventoryScore omitted (BUG-C09): will be re-enabled when by_local exists
 
-    const combinedScore = Math.round(cashScore + invoiceScore + inventoryScore);
+    const combinedScore = Math.round(cashScore + invoiceScore);
 
-    // Determine overall pattern description
     let pattern: string;
     if (riskFactors.length === 0) {
       pattern = 'Sin anomal\u00edas significativas';

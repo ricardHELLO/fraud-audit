@@ -13,6 +13,7 @@ import { Alert } from '@/components/ui/alert'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import { trackFileUploaded, trackVolumeLimitShown, trackUpgradePromptShown, trackUpgradeInitiated } from '@/lib/posthog-events'
+import { authedFetch } from '@/lib/authed-fetch'
 
 /* ------------------------------------------------------------------ */
 /*  Connector dropdown                                                  */
@@ -83,14 +84,19 @@ export default function UploadPage() {
 
   // --- Fetch real balance on mount ---
   useEffect(() => {
+    // AUDIT-009 fix: AbortController prevents setState on unmounted component
+    const controller = new AbortController()
+
     async function fetchBalance() {
       try {
-        const res = await fetch('/api/dashboard')
+        const res = await authedFetch('/api/dashboard', { signal: controller.signal })
+        if (!res) return // redirect in progress (401)
         if (res.ok) {
           const data = await res.json()
           setUserCredits(data.balance)
         }
-      } catch {
+      } catch (err) {
+        if ((err as Error).name === 'AbortError') return
         // Balance unknown — keep null so UI blocks analyze until balance loads
         setUserCredits(null)
       } finally {
@@ -98,6 +104,7 @@ export default function UploadPage() {
       }
     }
     fetchBalance()
+    return () => controller.abort()
   }, [])
 
   // --- File handlers ---
@@ -345,6 +352,7 @@ export default function UploadPage() {
               {posConnector && (
                 <FileDropZone
                   onFileSelect={handlePosFileSelect}
+                  onError={(msg) => setError(msg)}
                   accept=".csv,.xlsx,.xls"
                   label="Archivo CSV o Excel del POS"
                 />
@@ -372,11 +380,22 @@ export default function UploadPage() {
                     const res = await fetch('/demo/lastapp-demo.csv')
                     const blob = await res.blob()
                     const demoFile = new File([blob], 'lastapp-demo.csv', { type: 'text/csv' })
-                    setPosConnector('lastapp')
+
+                    // AUDIT-008 fix: don't use setTimeout + handlePosFileSelect.
+                    // handlePosFileSelect captures posConnector via closure, which
+                    // is still '' when the timeout fires (stale closure bug).
+                    // Instead, set all state and run volume detection inline with
+                    // the known connector value 'lastapp'.
+                    const demoConnector = 'lastapp'
+                    setPosConnector(demoConnector)
                     setRestaurantName('Demo — Paella Dorada')
                     setIsDemo(true)
-                    // Slight delay to let connector state update before file handler reads it
-                    setTimeout(() => handlePosFileSelect(demoFile), 50)
+                    setPosFile(demoFile)
+                    setError(null)
+
+                    const text = await demoFile.text()
+                    const volume = detectVolume(text, demoConnector)
+                    setPosVolume(volume)
                   } catch {
                     setError('No se pudo cargar los datos demo')
                   }
@@ -419,6 +438,7 @@ export default function UploadPage() {
               {inventoryConnector && (
                 <FileDropZone
                   onFileSelect={handleInventoryFileSelect}
+                  onError={(msg) => setError(msg)}
                   accept=".csv,.xlsx,.xls"
                   label="Archivo CSV o Excel de inventario"
                 />
