@@ -8,6 +8,7 @@ import {
   ALL_CONNECTOR_IDS,
   SOURCE_CATEGORIES,
 } from '@/lib/types/connectors';
+import { UPLOAD_MAX_BYTES, UPLOAD_MAX_MB } from '@/lib/constants/upload';
 
 export async function POST(req: NextRequest) {
   try {
@@ -34,10 +35,10 @@ export async function POST(req: NextRequest) {
 
     // BUG-API03 fix: validate file size before reading into memory.
     // file.text() without a size check allows arbitrary-size uploads (OOM risk).
-    const MAX_FILE_SIZE_BYTES = 50 * 1024 * 1024; // 50 MB
-    if (file.size > MAX_FILE_SIZE_BYTES) {
+    // Constant lives in lib/constants/upload.ts so UI + API + tests agree.
+    if (file.size > UPLOAD_MAX_BYTES) {
       return NextResponse.json(
-        { error: `El archivo es demasiado grande. El tamaño máximo permitido es ${MAX_FILE_SIZE_BYTES / 1024 / 1024}MB.` },
+        { error: `El archivo es demasiado grande. El tamaño máximo permitido es ${UPLOAD_MAX_MB}MB.` },
         { status: 413 }
       );
     }
