@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { detectVolume } from '@/lib/volume-detector'
-import { UPLOAD_MAX_BYTES, UPLOAD_MAX_MB } from '@/lib/constants/upload'
+import { UPLOAD_MAX_BYTES, UPLOAD_MAX_MB, UPLOAD_MAX_ROWS } from '@/lib/constants/upload'
 
 describe('detectVolume — empty and degenerate inputs', () => {
   it('empty string throws (so /api/upload can return 400 con mensaje claro)', () => {
@@ -67,5 +67,21 @@ describe('UPLOAD_MAX_BYTES — SEC-03 / PERF-01 guard', () => {
 
   it('human-readable MB value matches the byte constant', () => {
     expect(UPLOAD_MAX_MB).toBe(50)
+  })
+})
+
+describe('UPLOAD_MAX_ROWS — PERF-02 guard', () => {
+  it('is exactly 500 000 rows', () => {
+    // Freezing the value in a test so bumping it requires updating both
+    // the constant and this assertion — forces a conscious choice. The
+    // /api/upload route rejects with 413 above this cap.
+    expect(UPLOAD_MAX_ROWS).toBe(500_000)
+  })
+
+  it('is well below the theoretical OOM limit of the Vercel worker', () => {
+    // Vercel Node workers have ~1024 MB RAM. At ~600 bytes/row in the
+    // PapaParse row-object representation, ~1.7M rows is the OOM ceiling.
+    // We want a firm margin — at least 3× headroom.
+    expect(UPLOAD_MAX_ROWS).toBeLessThan(1_700_000 / 3)
   })
 })

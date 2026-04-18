@@ -103,21 +103,40 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Award 1 credit if this is the first feedback for this report
+    // ERR-02: a partir de aquí, el feedback YA está persistido. Cualquier
+    // error posterior (crédito, analytics) se loguea pero NO debe devolver
+    // 500 al cliente: si el cliente retria, inserta un duplicado en
+    // `feedback`, y la segunda inserción tendrá isFirstFeedback=false
+    // (sin crédito), pero el registro duplicado queda para siempre.
     let creditAwarded = false;
     if (isFirstFeedback) {
-      creditAwarded = await awardCredit(user.id, 'feedback', reportId);
-      if (creditAwarded) {
-        serverTrackCreditEarned(user.id, 'feedback', 0); // Balance will be fetched
+      try {
+        creditAwarded = await awardCredit(user.id, 'feedback', reportId);
+        if (creditAwarded) {
+          serverTrackCreditEarned(user.id, 'feedback', 0); // Balance will be fetched
+        }
+      } catch (creditErr) {
+        console.error(
+          'Failed to award feedback credit (feedback ya guardado):',
+          creditErr instanceof Error ? creditErr.message : creditErr
+        );
+        // No fallar la request — el feedback se guardó correctamente.
       }
     }
 
-    // Track feedback event
-    serverTrackFeedbackSubmitted(user.id, {
-      accuracy_rating,
-      most_useful_section: most_useful_section ?? undefined,
-      would_share: would_share ?? undefined,
-    });
+    // Track feedback event (best-effort — PostHog no debe romper la respuesta)
+    try {
+      serverTrackFeedbackSubmitted(user.id, {
+        accuracy_rating,
+        most_useful_section: most_useful_section ?? undefined,
+        would_share: would_share ?? undefined,
+      });
+    } catch (trackErr) {
+      console.error(
+        'Failed to track feedback event:',
+        trackErr instanceof Error ? trackErr.message : trackErr
+      );
+    }
 
     return NextResponse.json(
       {

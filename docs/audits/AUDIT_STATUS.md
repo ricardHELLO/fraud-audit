@@ -1,6 +1,6 @@
 # Estado de los findings de auditoría QA
 
-**Última actualización:** 2026-04-18 (post commit `3d333d7` + INN-03/ERR-01 en WIP)
+**Última actualización:** 2026-04-18 (Cubo 1 cerrado: ERR-02 + PERF-02)
 **Alcance:** 64 findings (31 backend + 33 frontend) de las auditorías QA
 del 2026-03-28.
 
@@ -74,7 +74,7 @@ del 2026-03-28.
 | ID | Sev | Título | Estado | Ref. |
 |---|---|---|---|---|
 | PERF-01 | 🟠 HIGH | Upload: archivo completo en memoria sin límite (OOM) | ✅ | `58b44c0` — límite 50MB previene OOM |
-| PERF-02 | 🟡 MED | PapaParse sin límite de filas | 🟡 | Pendiente — añadir `preview` o `step` option |
+| PERF-02 | 🟡 MED | PapaParse sin límite de filas | ✅ | **esta PR (Cubo 1)** — `UPLOAD_MAX_ROWS=500_000` en `/api/upload` tras `detectVolume`, 413 con cleanup de Storage |
 | PERF-03 | 🟡 MED | `canEarnReward` hace query completa sin LIMIT | ✅ | `3d333d7` — `count: 'exact', head: true` |
 
 ### Error handling (ERR)
@@ -82,7 +82,7 @@ del 2026-03-28.
 | ID | Sev | Título | Estado | Ref. |
 |---|---|---|---|---|
 | ERR-01 | 🟠 HIGH | Routes no destructuran el error de Supabase | ✅ | **esta PR** — barrido en 12 routes: 500 si `error.code !== 'PGRST116'`, 404 si no hay fila |
-| ERR-02 | 🟡 MED | `feedback/route.ts`: feedback guardado pero 500 si crédito falla | 🟡 | Pendiente — reordenar commit/rollback |
+| ERR-02 | 🟡 MED | `feedback/route.ts`: feedback guardado pero 500 si crédito falla | ✅ | **esta PR (Cubo 1)** — try/catch alrededor de `awardCredit` + analytics; tras el insert, errores posteriores loguean pero devuelven 200 |
 | ERR-03 | 🟡 MED | `console.log`/`console.error` en producción | 🟡 | Pendiente — migrar a logger estructurado |
 | ERR-04 | 🟢 LOW | `bug-report/route.ts`: silencia errores de crédito | ✅ | Ya cerrado — `catch` actual sí loguea con `console.error` |
 
@@ -132,8 +132,8 @@ del 2026-03-28.
 
 | Estado | Backend | Frontend | Total |
 |---|---|---|---|
-| ✅ Cerrado | 22 | 11 | **33** |
-| 🟡 Abierto | 5 | 22 | **27** |
+| ✅ Cerrado | 24 | 11 | **35** |
+| 🟡 Abierto | 3 | 22 | **25** |
 | 🔵 Requiere infra | 3 | 0 | **3** |
 | ❔ Incierto | 1 | 0 | **1** |
 | 🟣 No aplica | 0 | 0 | **0** |
@@ -149,6 +149,8 @@ Cerrado hasta ahora en la rama:
 - ✅ **ERR-04** — verificado ya cerrado en `catch` actual del bug-report.
 - ✅ **INN-03** — analytics extraído a su propio step (`track-analysis-completed`) para que retries del UPDATE no reenvíen el evento.
 - ✅ **ERR-01** — barrido en 12 routes: discriminación `PGRST116` (404 "no rows") vs otros codes (500 "DB rota").
+- ✅ **ERR-02** (Cubo 1) — `feedback/route.ts` reordenado: el insert del feedback es el punto de no retorno; fallos posteriores de crédito/analytics loguean pero devuelven 200 con `creditAwarded:false`.
+- ✅ **PERF-02** (Cubo 1) — `UPLOAD_MAX_ROWS=500_000` enforzado en `/api/upload` tras `detectVolume`, con cleanup de Storage y 413 explícito. Test en `__tests__/volume-detector.test.ts`.
 
 Pendiente en la rama:
 
@@ -159,6 +161,8 @@ Finding abierto con restricción explícita "no tocar calculators":
 
 - ❔ **BIZ-04** (waste-analysis underreporting con datos vacíos) — verificado **abierto** (`lib/calculators/waste-analysis.ts:78` sin guard de datos). Deferido: el usuario pidió no tocar calculators en esta PR.
 
-Post-PR, quedan 27 findings abiertos. Los pendientes de severidad alta son
+Post-PR, quedan 25 findings abiertos. Los pendientes de severidad alta son
 todos de accesibilidad/UX (no críticos) o decisiones de negocio (BIZ-01,
-BIZ-08) / infra (SEC-04, SEC-07, INT-03).
+BIZ-08) / infra (SEC-04, SEC-07, INT-03). El único pendiente backend
+propiamente "de código" es **ERR-03** (migración a logger estructurado)
+— tamaño suficiente para justificar su propia PR fuera de este sprint.

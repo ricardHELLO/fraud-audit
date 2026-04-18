@@ -8,7 +8,7 @@ import {
   ALL_CONNECTOR_IDS,
   SOURCE_CATEGORIES,
 } from '@/lib/types/connectors';
-import { UPLOAD_MAX_BYTES, UPLOAD_MAX_MB } from '@/lib/constants/upload';
+import { UPLOAD_MAX_BYTES, UPLOAD_MAX_MB, UPLOAD_MAX_ROWS } from '@/lib/constants/upload';
 
 export async function POST(req: NextRequest) {
   try {
@@ -139,6 +139,26 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: 'No se pudo analizar la estructura del archivo. Verifica que sea un CSV válido para el conector seleccionado.' },
         { status: 400 }
+      );
+    }
+
+    // PERF-02: cap de filas aparte del cap de bytes. UPLOAD_MAX_BYTES ya
+    // limita el input a 50 MB, pero inputs patológicos (líneas cortas,
+    // muchas celdas vacías) pueden expandirse a millones de filas y
+    // reventar el worker de Inngest downstream. Rechazamos aquí con 413
+    // claro antes de guardar nada en DB. El archivo YA está en Storage
+    // (subido a L113), así que reutilizamos el patrón de cleanup que usa
+    // el catch de detectVolume.
+    if (volumeInfo.totalRows > UPLOAD_MAX_ROWS) {
+      const { error: removeError } = await supabase.storage.from('uploads').remove([storagePath]);
+      if (removeError) {
+        console.error('Failed to remove orphaned storage file:', storagePath, removeError.message);
+      }
+      return NextResponse.json(
+        {
+          error: `El archivo tiene demasiadas filas (${volumeInfo.totalRows.toLocaleString('es-ES')}). El máximo permitido es ${UPLOAD_MAX_ROWS.toLocaleString('es-ES')}.`,
+        },
+        { status: 413 }
       );
     }
 
