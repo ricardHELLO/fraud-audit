@@ -399,11 +399,11 @@ El pipeline es 100% determinista. Todas las ordenaciones incluyen tiebreakers se
 
 ### Tests automatizados (Vitest)
 
-La suite de tests unitarios cubre los 7 calculadores, parsers, y utilidades. Total: **107 tests** pasando. Ejecutar con `npm test` (one-shot) o `npm run test:watch` (modo watch).
+La suite de tests unitarios cubre 6 de los 7 calculadores, parsers, y utilidades. Total: **51 tests** pasando en **9 archivos**. Ejecutar con `npm test` (one-shot) o `npm run test:watch` (modo watch). Gap conocido: falta cobertura para `deleted-products` (tracked en roadmap).
 
 ```
 __tests__/
-|-- calculators/           # 7 archivos, uno por calculador
+|-- calculators/           # 6 archivos (falta deleted-products)
 |-- parsers/               # Tests de lastapp y tspoonlab
 +-- lib/                   # Utils, credits, report-generator
 ```
@@ -881,7 +881,7 @@ npm start             # Servidor produccion
 npm run lint          # ESLint
 
 # Testing
-npm test                              # Suite completa Vitest (107 tests unitarios, one-shot)
+npm test                              # Suite completa Vitest (51 tests unitarios, one-shot)
 npm run test:watch                    # Vitest en modo watch (TDD)
 npx tsx scripts/test-determinism.ts   # Verificar determinismo del pipeline (60 ejecuciones)
 
@@ -968,7 +968,7 @@ Todos usan el conector Last.app.
 | `postcss` | ^8.4.0 | CSS processing |
 | `eslint` | ^8.0.0 | Linting |
 | `supabase` | ^2.77.0 | CLI para migraciones de base de datos |
-| `vitest` | ^4.0.18 | Framework de tests unitarios (107 tests en `__tests__/`) |
+| `vitest` | ^4.0.18 | Framework de tests unitarios (51 tests en `__tests__/`) |
 
 ---
 
@@ -986,5 +986,5 @@ Todos usan el conector Last.app.
 - [ ] App movil: el diseno API-first lo soporta nativamente
 - [ ] Multi-idioma: soportar en, pt ademas de es
 - [ ] Dashboard de tendencias: visualizar evolucion de metricas entre informes
-- [x] Tests automatizados: **107 tests unitarios** para calculadores, parsers y utilidades (Vitest). Pendiente: integration tests para API routes
+- [x] Tests automatizados: **51 tests unitarios** (9 archivos) para 6 de 7 calculadores, parsers y utilidades (Vitest). Pendiente: cobertura de `deleted-products` e integration tests para API routes
 - [ ] Row Level Security: politicas RLS en Supabase para multi-tenancy seguro

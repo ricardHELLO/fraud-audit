@@ -11,7 +11,7 @@ Orden: mas reciente primero.
 
 Tras auditoria externa de QA se identificaron 33 bugs clasificados en 14 tareas. Este sprint introduce 5 patrones arquitectonicos nuevos que afectan al conjunto del frontend y al pipeline de Inngest. Los patrones se documentan individualmente mas abajo; este bloque resume el sprint como unidad.
 
-**Cobertura de tests:** se adopta **Vitest 4.0.18** como framework de tests unitarios. Al cierre del sprint: **107 tests pasando** cubriendo los 7 calculadores, parsers (lastapp, tspoonlab) y utilidades (`credits`, `report-generator`). Los tests son requisito de merge a `main`.
+**Cobertura de tests:** se adopta **Vitest 4.0.18** como framework de tests unitarios. Al cierre del sprint: **51 tests pasando** en 9 archivos, cubriendo 6 de los 7 calculadores (pendiente `deleted-products`), parsers (lastapp, tspoonlab) y utilidades (`credits`, `determinism`, `stripe-webhook`). Los tests son requisito de merge a `main`.
 
 **Branch:** `fix/qa-bugs-completo` -> PR revisado y mergeado. Deploy automatico a Vercel produccion verificado.
 
