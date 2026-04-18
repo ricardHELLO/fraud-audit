@@ -369,7 +369,7 @@ Cada calculador recibe el `NormalizedDataset` y produce un resultado tipado:
 | 3 | Productos eliminados | `deleted-products.ts` | Eliminaciones por fase (pre-cocina, post-cocina, post-facturacion) |
 | 4 | Merma | `waste-analysis.ts` | Porcentaje de merma vs benchmarks del sector |
 | 5 | Desviacion inventario | `inventory-deviation.ts` | Consumo teorico vs real (shrinkage) |
-| 6 | Correlaciones | `correlation.ts` | Patrones cruzados entre metricas (Spearman rank) |
+| 6 | Correlaciones | `correlation.ts` | Patrones cruzados entre metricas (Spearman rank) -- requiere `n >= 4` locales para validez estadistica; por debajo, la UI muestra mensaje "Datos insuficientes" |
 | 7 | Conclusiones | `conclusions.ts` | Sintesis de riesgo + acciones inmediatas y estructurales |
 
 ### Estructura del informe (ReportData)
@@ -396,6 +396,17 @@ interface ReportData {
 ### Determinismo
 
 El pipeline es 100% determinista. Todas las ordenaciones incluyen tiebreakers secundarios (`localeCompare`) para garantizar resultados identicos en cualquier ejecucion con los mismos datos. Verificado con `scripts/test-determinism.ts` (6 datasets x 10 ejecuciones = 60 tests identicos).
+
+### Tests automatizados (Vitest)
+
+La suite de tests unitarios cubre los 7 calculadores, parsers, y utilidades. Total: **107 tests** pasando. Ejecutar con `npm test` (one-shot) o `npm run test:watch` (modo watch).
+
+```
+__tests__/
+|-- calculators/           # 7 archivos, uno por calculador
+|-- parsers/               # Tests de lastapp y tspoonlab
++-- lib/                   # Utils, credits, report-generator
+```
 
 ---
 
@@ -475,6 +486,10 @@ Paso 7: generate-ai-insights (fire-and-forget)
 
 **Importante:** Los pasos 5-7 son fire-and-forget. El informe se marca como `completed` en el paso 4. Si Claude API falla, el informe sigue disponible sin AI Insights. Si Resend falla, el informe sigue disponible sin email.
 
+### Manejo de errores del job principal
+
+Si los pasos 1-4 fallan (parse o calculo), el handler `onFailure` de Inngest actualiza `report.status = 'failed'` y registra el error. El frontend detecta este estado via polling y muestra mensaje al usuario en lugar de quedarse bloqueado en "processing". El credito consumido **no se reembolsa automaticamente** (decision consciente para evitar abuso); el usuario puede reportar el fallo para recuperarlo via soporte.
+
 ---
 
 ## AI Insights (Claude)
@@ -508,9 +523,9 @@ interface AIInsights {
 
 ### Flujo de generacion
 
-1. **Automatica:** Paso 7 de Inngest (fire-and-forget tras completar informe)
+1. **Automatica:** Paso 7 de Inngest (fire-and-forget tras completar informe) -- **sin coste de credito**
 2. **Polling frontend:** `AIInsightsTab` hace polling cada 3s a `GET /api/reports/[id]/ai-insights` (max 10 polls = 30s timeout)
-3. **Regeneracion manual:** Boton "Reintentar" llama a `POST /api/reports/[id]/ai-insights`
+3. **Regeneracion manual:** Boton "Reintentar" llama a `POST /api/reports/[id]/ai-insights` -- **coste: 1 credito** (se deduce al iniciar la llamada; se reembolsa si Claude responde con error)
 4. **Truncamiento:** Payload limitado a 80.000 chars para respetar ventana de contexto
 5. **Degradacion graceful:** Si `ANTHROPIC_API_KEY` no existe, se omite sin errores
 
@@ -551,7 +566,7 @@ El middleware maneja redirects legacy: `/reports/:slug` -> `/informe/:slug` (301
 
 | Metodo | Ruta | Descripcion |
 |--------|------|-------------|
-| POST | `/api/upload` | Sube CSV a Supabase Storage + volume detection |
+| POST | `/api/upload` | Sube CSV a Supabase Storage + volume detection. **Limite: 50MB por archivo** (validado en cliente y servidor; responde 413 Payload Too Large si se excede) |
 
 ### Analisis
 
@@ -638,6 +653,8 @@ El middleware maneja redirects legacy: `/reports/:slug` -> `/informe/:slug` (301
 | Correlaciones | `CorrelationTab.tsx` | Scatter plot + patrones cruzados |
 | Conclusiones | `ConclusionsTab.tsx` | Resumen ejecutivo + acciones inmediatas/estructurales |
 | IA Insights | `AIInsightsTab.tsx` | Narrativa Claude + anomalias + recomendaciones (polling) |
+
+**Empty states y resiliencia:** Todos los tabs que renderizan graficas Recharts (`CashTab`, `InventoryTab`, `CorrelationTab`) incluyen guards defensivos que detectan arrays vacios o `undefined` y muestran un mensaje explicativo en lugar de renderizar un chart roto. Ademas, cada tab esta envuelto en un `TabErrorBoundary` (React class component con `getDerivedStateFromError`) que captura errores en runtime y muestra un fallback con la opcion de recargar, evitando que un fallo en un tab tumbe la pagina completa.
 
 ### Componentes clave
 
@@ -864,6 +881,8 @@ npm start             # Servidor produccion
 npm run lint          # ESLint
 
 # Testing
+npm test                              # Suite completa Vitest (107 tests unitarios, one-shot)
+npm run test:watch                    # Vitest en modo watch (TDD)
 npx tsx scripts/test-determinism.ts   # Verificar determinismo del pipeline (60 ejecuciones)
 
 # Base de datos
@@ -906,6 +925,11 @@ Todos usan el conector Last.app.
 | PostHog analytics | Alternativa open-source a Mixpanel. Feature flags + funnels + retention. |
 | Tiebreakers en sorts | Defensive coding: todos los sorts tienen tiebreaker `localeCompare`. Determinismo garantizado. |
 | Redirects en middleware | Los redirects de next.config.js no se ejecutan cuando Clerk middleware intercepta. |
+| `AbortController` en `useEffect` | Todos los fetch en paginas dashboard usan `AbortController` y limpian con `controller.abort()` en el cleanup del effect. Previene "setState on unmounted component" y race conditions al navegar rapido entre vistas. |
+| `TabErrorBoundary` por tab | Cada tab del informe esta envuelto en su propio Error Boundary (React class component). Un crash en un tab no tumba el informe completo; el usuario ve el resto y puede recargar solo el tab afectado. |
+| Spearman `n >= 4` | La correlacion de rangos requiere minimo 4 observaciones para ser estadisticamente valida. Por debajo, se muestra mensaje explicativo en lugar de un coeficiente enganoso. Evita falsos positivos de riesgo con datasets pequenos. |
+| Limite 50MB en upload | Validado en dos capas: cliente (pre-upload UX inmediato) + servidor (`/api/upload` devuelve 413). Protege contra archivos corruptos y DoS por memoria. |
+| `authedFetch` wrapper para 401 | Wrapper centralizado alrededor de `fetch` que detecta 401 del servidor y redirige a `/login` automaticamente. Elimina boilerplate de auth en cada pagina y garantiza UX consistente ante expiracion de sesion. |
 
 ---
 
@@ -944,6 +968,7 @@ Todos usan el conector Last.app.
 | `postcss` | ^8.4.0 | CSS processing |
 | `eslint` | ^8.0.0 | Linting |
 | `supabase` | ^2.77.0 | CLI para migraciones de base de datos |
+| `vitest` | ^4.0.18 | Framework de tests unitarios (107 tests en `__tests__/`) |
 
 ---
 
@@ -961,5 +986,5 @@ Todos usan el conector Last.app.
 - [ ] App movil: el diseno API-first lo soporta nativamente
 - [ ] Multi-idioma: soportar en, pt ademas de es
 - [ ] Dashboard de tendencias: visualizar evolucion de metricas entre informes
-- [ ] Tests automatizados: unit tests para calculadores, integration tests para API routes
+- [x] Tests automatizados: **107 tests unitarios** para calculadores, parsers y utilidades (Vitest). Pendiente: integration tests para API routes
 - [ ] Row Level Security: politicas RLS en Supabase para multi-tenancy seguro
