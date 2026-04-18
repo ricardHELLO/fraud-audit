@@ -16,7 +16,18 @@
 
 # misc
 .DS_Store
+**/.DS_Store
 *.pem
+
+# IDE / tooling state
+.claude/
+.cursor/
+.idea/
+.vscode/
+
+# supabase CLI temp
+supabase/.temp/
+supabase/.branches/
 
 # debug
 npm-debug.log*

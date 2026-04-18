@@ -1,0 +1,1217 @@
+Fecha,Local,Ventas Brutas,Ventas Netas,Efectivo Esperado,Efectivo Real,Descuadre
+01/11/2025,Sevilla Centro,5480.35,4752.53,1676.24,1472.85,-203.39
+01/11/2025,Triana,3880.06,3355.36,1448.65,1350.46,-98.19
+01/11/2025,Nervion,3687.19,3367.63,1363.21,1292.03,-71.18
+02/11/2025,Sevilla Centro,5837.24,5133.53,2252.52,2047.59,-204.93
+02/11/2025,Triana,4149.27,3608.56,1292.33,1144.11,-148.22
+02/11/2025,Nervion,3267.85,2893.90,1159.61,1101.00,-58.61
+03/11/2025,Sevilla Centro,5255.95,4588.78,1880.39,1745.68,-134.71
+03/11/2025,Triana,3774.42,3406.79,1387.46,1259.94,-127.52
+03/11/2025,Nervion,3519.61,3033.34,1217.90,1178.06,-39.84
+04/11/2025,Sevilla Centro,6119.54,5525.43,2479.49,2184.30,-295.19
+04/11/2025,Triana,4687.67,4246.64,1757.12,1700.42,-56.70
+04/11/2025,Nervion,3765.76,3368.76,1371.42,1300.45,-70.97
+05/11/2025,Sevilla Centro,4294.87,3787.55,1425.01,1296.30,-128.71
+05/11/2025,Triana,3845.17,3456.85,1236.77,1181.85,-54.92
+05/11/2025,Nervion,3524.19,3104.79,1213.08,1146.47,-66.61
+06/11/2025,Sevilla Centro,6097.34,5508.20,2149.42,1881.99,-267.43
+06/11/2025,Triana,4861.87,4362.71,1910.72,1812.92,-97.80
+06/11/2025,Nervion,3915.26,3486.99,1282.27,1256.67,-25.60
+07/11/2025,Sevilla Centro,6098.26,5217.71,2345.46,2208.74,-136.72
+07/11/2025,Triana,4860.98,4298.75,1746.09,1642.14,-103.95
+07/11/2025,Nervion,2984.29,2721.22,1007.96,980.24,-27.72
+08/11/2025,Sevilla Centro,5159.13,4550.50,2008.78,1710.00,-298.78
+08/11/2025,Triana,3845.78,3492.48,1435.67,1304.55,-131.12
+08/11/2025,Nervion,3380.97,2911.16,1078.95,1044.15,-34.80
+09/11/2025,Sevilla Centro,5338.91,4894.49,1827.81,1704.67,-123.14
+09/11/2025,Triana,4349.14,3769.04,1442.35,1367.93,-74.42
+09/11/2025,Nervion,3459.60,3108.32,1123.02,1066.34,-56.68
+10/11/2025,Sevilla Centro,5413.95,4972.65,1964.02,1862.80,-101.22
+10/11/2025,Triana,4197.63,3586.65,1377.27,1286.52,-90.75
+10/11/2025,Nervion,2784.78,2438.77,1096.53,1051.01,-45.52
+11/11/2025,Sevilla Centro,6396.48,5558.60,2257.58,2060.11,-197.47
+11/11/2025,Triana,4551.55,4078.68,1527.61,1383.58,-144.03
+11/11/2025,Nervion,2720.05,2477.99,1035.38,1003.50,-31.88
+12/11/2025,Sevilla Centro,5164.77,4584.84,1794.64,1595.04,-199.60
+12/11/2025,Triana,4854.85,4257.92,1650.76,1571.26,-79.50
+12/11/2025,Nervion,3494.99,3136.56,1205.61,1167.55,-38.06
+13/11/2025,Sevilla Centro,5449.75,4920.54,2166.48,1876.84,-289.64
+13/11/2025,Triana,3759.23,3419.26,1498.49,1412.39,-86.10
+13/11/2025,Nervion,3584.07,3082.06,1340.67,1293.89,-46.78
+14/11/2025,Sevilla Centro,4821.42,4165.61,1644.90,1354.18,-290.72
+14/11/2025,Triana,3951.91,3618.31,1620.04,1515.39,-104.65
+14/11/2025,Nervion,2947.52,2597.47,921.56,843.58,-77.98
+15/11/2025,Sevilla Centro,5572.76,4749.11,1966.43,1839.66,-126.77
+15/11/2025,Triana,4718.01,4160.33,1623.41,1531.57,-91.84
+15/11/2025,Nervion,3400.96,2989.52,1098.31,1074.87,-23.44
+16/11/2025,Sevilla Centro,4739.96,4128.22,1662.26,1512.71,-149.55
+16/11/2025,Triana,3060.38,2783.56,1101.63,1008.43,-93.20
+16/11/2025,Nervion,3489.66,3202.17,1425.42,1357.37,-68.05
+17/11/2025,Sevilla Centro,5617.11,5022.79,1802.59,1586.38,-216.21
+17/11/2025,Triana,3004.36,2750.77,1151.31,1080.43,-70.88
+17/11/2025,Nervion,3826.84,3355.91,1211.54,1183.53,-28.01
+18/11/2025,Sevilla Centro,5015.36,4309.55,1748.59,1554.67,-193.92
+18/11/2025,Triana,4681.34,4057.82,1468.95,1325.20,-143.75
+18/11/2025,Nervion,3636.11,3135.29,1386.69,1319.34,-67.35
+19/11/2025,Sevilla Centro,6253.39,5431.19,2047.19,1812.40,-234.79
+19/11/2025,Triana,4189.72,3746.09,1380.01,1257.85,-122.16
+19/11/2025,Nervion,3997.48,3588.27,1569.88,1548.38,-21.50
+20/11/2025,Sevilla Centro,4203.06,3575.82,1518.43,1380.53,-137.90
+20/11/2025,Triana,4860.89,4180.28,1530.95,1477.41,-53.54
+20/11/2025,Nervion,2822.42,2516.94,1028.31,1009.33,-18.98
+21/11/2025,Sevilla Centro,4390.53,3800.43,1468.57,1170.36,-298.21
+21/11/2025,Triana,4102.64,3563.71,1408.15,1348.67,-59.48
+21/11/2025,Nervion,3890.27,3322.74,1365.66,1327.85,-37.81
+22/11/2025,Sevilla Centro,5122.15,4401.11,1872.33,1620.79,-251.54
+22/11/2025,Triana,3636.49,3305.98,1451.79,1335.71,-116.08
+22/11/2025,Nervion,3027.90,2620.83,1117.55,1054.18,-63.37
+23/11/2025,Sevilla Centro,5884.75,5290.35,2282.87,2140.82,-142.05
+23/11/2025,Triana,4557.77,3962.92,1393.47,1270.21,-123.26
+23/11/2025,Nervion,3100.16,2787.41,1209.85,1188.28,-21.57
+24/11/2025,Sevilla Centro,5366.96,4606.57,2015.04,1829.03,-186.01
+24/11/2025,Triana,4996.16,4333.74,1676.91,1630.21,-46.70
+24/11/2025,Nervion,3100.10,2668.13,986.56,914.83,-71.73
+25/11/2025,Sevilla Centro,5069.72,4444.53,1914.17,1735.03,-179.14
+25/11/2025,Triana,4249.86,3769.74,1426.36,1284.47,-141.89
+25/11/2025,Nervion,3059.25,2666.84,1151.17,1134.08,-17.09
+26/11/2025,Sevilla Centro,6138.30,5503.97,2022.26,1871.96,-150.30
+26/11/2025,Triana,4902.63,4231.07,1702.77,1573.07,-129.70
+26/11/2025,Nervion,3941.87,3506.12,1272.30,1217.25,-55.05
+27/11/2025,Sevilla Centro,4995.39,4584.04,2039.27,1853.11,-186.16
+27/11/2025,Triana,3816.36,3294.43,1266.63,1183.76,-82.87
+27/11/2025,Nervion,3385.01,3088.07,1266.36,1239.73,-26.63
+28/11/2025,Sevilla Centro,5469.97,4931.76,2116.28,1963.08,-153.20
+28/11/2025,Triana,3495.90,3049.97,1236.11,1138.63,-97.48
+28/11/2025,Nervion,3958.81,3519.06,1394.95,1347.15,-47.80
+29/11/2025,Sevilla Centro,5527.29,4842.19,2072.94,1775.41,-297.53
+29/11/2025,Triana,3242.84,2814.25,1033.58,941.14,-92.44
+29/11/2025,Nervion,3800.40,3297.24,1354.51,1290.57,-63.94
+30/11/2025,Sevilla Centro,4818.43,4299.09,1825.41,1720.62,-104.79
+30/11/2025,Triana,4198.98,3614.62,1310.68,1161.76,-148.92
+30/11/2025,Nervion,2506.63,2142.30,813.54,775.94,-37.60
+01/12/2025,Sevilla Centro,5645.56,4983.05,1942.84,1810.86,-131.98
+01/12/2025,Triana,4448.75,4075.38,1816.23,1699.78,-116.45
+01/12/2025,Nervion,3478.09,3011.60,1064.23,1002.71,-61.52
+02/12/2025,Sevilla Centro,6339.46,5419.92,2059.85,1763.19,-296.66
+02/12/2025,Triana,4033.17,3590.50,1372.07,1321.19,-50.88
+02/12/2025,Nervion,3765.42,3324.51,1174.61,1134.45,-40.16
+03/12/2025,Sevilla Centro,5086.95,4440.43,1852.26,1611.68,-240.58
+03/12/2025,Triana,4484.57,4021.31,1687.86,1570.51,-117.35
+03/12/2025,Nervion,2517.03,2248.91,946.66,876.50,-70.16
+04/12/2025,Sevilla Centro,5296.48,4588.59,1987.62,1693.82,-293.80
+04/12/2025,Triana,4864.98,4473.51,1757.24,1710.91,-46.33
+04/12/2025,Nervion,2653.46,2430.65,986.53,946.86,-39.67
+05/12/2025,Sevilla Centro,4312.76,3948.93,1753.39,1618.85,-134.54
+05/12/2025,Triana,4090.40,3755.37,1620.99,1542.38,-78.61
+05/12/2025,Nervion,3785.96,3324.68,1207.43,1127.71,-79.72
+06/12/2025,Sevilla Centro,5184.65,4539.24,1873.77,1574.33,-299.44
+06/12/2025,Triana,4231.37,3717.82,1649.39,1546.76,-102.63
+06/12/2025,Nervion,2999.81,2650.69,1128.58,1090.94,-37.64
+07/12/2025,Sevilla Centro,5831.35,5349.98,2027.85,1897.18,-130.67
+07/12/2025,Triana,3619.24,3277.87,1248.00,1126.34,-121.66
+07/12/2025,Nervion,3566.23,3110.68,1388.72,1351.40,-37.32
+08/12/2025,Sevilla Centro,5205.40,4650.02,2022.95,1742.34,-280.61
+08/12/2025,Triana,3103.66,2744.61,1014.53,883.18,-131.35
+08/12/2025,Nervion,3244.49,2978.27,1060.89,1008.13,-52.76
+09/12/2025,Sevilla Centro,5893.92,5324.13,1958.93,1667.93,-291.00
+09/12/2025,Triana,4390.02,3987.60,1692.42,1606.64,-85.78
+09/12/2025,Nervion,3583.35,3194.04,1282.61,1215.18,-67.43
+10/12/2025,Sevilla Centro,5149.05,4445.13,1881.07,1743.14,-137.93
+10/12/2025,Triana,4703.57,4100.27,1782.24,1663.77,-118.47
+10/12/2025,Nervion,3413.40,3087.70,1233.04,1154.71,-78.33
+11/12/2025,Sevilla Centro,5874.48,5213.12,2276.05,2130.94,-145.11
+11/12/2025,Triana,3630.43,3102.56,1386.43,1237.00,-149.43
+11/12/2025,Nervion,3755.41,3300.81,1180.44,1149.65,-30.79
+12/12/2025,Sevilla Centro,4178.23,3689.32,1303.85,1187.63,-116.22
+12/12/2025,Triana,4114.73,3722.54,1435.89,1339.06,-96.83
+12/12/2025,Nervion,2858.34,2561.13,1117.65,1076.20,-41.45
+13/12/2025,Sevilla Centro,4196.14,3670.02,1355.19,1106.35,-248.84
+13/12/2025,Triana,4210.04,3600.16,1546.19,1452.17,-94.02
+13/12/2025,Nervion,3016.47,2679.00,958.83,926.71,-32.12
+14/12/2025,Sevilla Centro,4238.59,3868.41,1528.75,1283.00,-245.75
+14/12/2025,Triana,4601.53,4037.70,1560.87,1477.12,-83.75
+14/12/2025,Nervion,2675.46,2348.75,973.94,947.32,-26.62
+15/12/2025,Sevilla Centro,4006.73,3485.67,1424.88,1303.33,-121.55
+15/12/2025,Triana,4602.32,4142.91,1582.15,1466.44,-115.71
+15/12/2025,Nervion,3309.36,3041.07,1366.80,1302.96,-63.84
+16/12/2025,Sevilla Centro,6307.80,5675.94,2071.50,1787.79,-283.71
+16/12/2025,Triana,4079.26,3661.82,1497.16,1390.46,-106.70
+16/12/2025,Nervion,2740.48,2509.69,1061.95,997.46,-64.49
+17/12/2025,Sevilla Centro,4929.37,4473.18,1813.73,1650.63,-163.10
+17/12/2025,Triana,3557.40,3265.86,1385.95,1308.56,-77.39
+17/12/2025,Nervion,3301.27,2808.96,1093.17,1023.40,-69.77
+18/12/2025,Sevilla Centro,5744.54,4919.27,2165.12,1921.62,-243.50
+18/12/2025,Triana,3874.66,3456.28,1509.34,1438.80,-70.54
+18/12/2025,Nervion,3013.82,2649.83,980.46,961.08,-19.38
+19/12/2025,Sevilla Centro,5512.25,4866.16,1831.45,1535.58,-295.87
+19/12/2025,Triana,4815.77,4396.80,1873.95,1816.40,-57.55
+19/12/2025,Nervion,3231.07,2860.76,1277.32,1233.62,-43.70
+20/12/2025,Sevilla Centro,6481.00,5528.16,2027.83,1923.64,-104.19
+20/12/2025,Triana,4431.28,3952.54,1626.52,1536.01,-90.51
+20/12/2025,Nervion,3584.33,3220.50,1412.42,1350.76,-61.66
+21/12/2025,Sevilla Centro,4555.89,3901.81,1631.25,1513.34,-117.91
+21/12/2025,Triana,4621.51,4050.75,1456.75,1365.83,-90.92
+21/12/2025,Nervion,3330.32,2961.53,1138.09,1110.11,-27.98
+22/12/2025,Sevilla Centro,4602.42,4124.09,1489.39,1320.63,-168.76
+22/12/2025,Triana,3064.70,2818.28,1211.50,1135.45,-76.05
+22/12/2025,Nervion,2738.40,2331.11,868.55,847.37,-21.18
+23/12/2025,Sevilla Centro,5695.30,5030.79,2239.69,2012.36,-227.33
+23/12/2025,Triana,3557.03,3143.05,1319.52,1256.42,-63.10
+23/12/2025,Nervion,3795.31,3406.38,1423.50,1352.44,-71.06
+24/12/2025,Sevilla Centro,5601.43,4838.34,1908.14,1620.84,-287.30
+24/12/2025,Triana,3780.80,3233.11,1331.26,1218.55,-112.71
+24/12/2025,Nervion,2865.82,2490.57,1089.97,1041.55,-48.42
+25/12/2025,Sevilla Centro,4968.71,4365.37,1908.88,1644.84,-264.04
+25/12/2025,Triana,3653.43,3299.51,1278.87,1129.18,-149.69
+25/12/2025,Nervion,2848.13,2423.62,1029.81,954.60,-75.21
+26/12/2025,Sevilla Centro,5336.55,4542.21,1759.64,1622.23,-137.41
+26/12/2025,Triana,4814.43,4094.27,1804.28,1711.14,-93.14
+26/12/2025,Nervion,2572.63,2353.88,836.06,771.43,-64.63
+27/12/2025,Sevilla Centro,4990.57,4325.37,1872.55,1646.74,-225.81
+27/12/2025,Triana,3258.53,2890.85,1197.12,1118.29,-78.83
+27/12/2025,Nervion,3143.40,2856.15,1177.83,1136.03,-41.80
+28/12/2025,Sevilla Centro,4027.37,3484.26,1234.75,958.40,-276.35
+28/12/2025,Triana,3329.82,3018.10,1127.94,981.11,-146.83
+28/12/2025,Nervion,3047.25,2595.13,976.36,906.64,-69.72
+29/12/2025,Sevilla Centro,4500.08,4122.04,1754.74,1568.42,-186.32
+29/12/2025,Triana,4392.23,3846.13,1675.94,1589.13,-86.81
+29/12/2025,Nervion,3736.57,3429.58,1214.64,1175.15,-39.49
+30/12/2025,Sevilla Centro,5333.62,4549.63,1985.02,1777.71,-207.31
+30/12/2025,Triana,4834.46,4429.94,1964.43,1887.20,-77.23
+30/12/2025,Nervion,2886.68,2508.91,1036.22,1018.09,-18.13
+31/12/2025,Sevilla Centro,4109.61,3575.39,1450.48,1271.47,-179.01
+31/12/2025,Triana,4386.97,4013.20,1494.97,1354.93,-140.04
+31/12/2025,Nervion,3336.16,2983.01,1080.08,1035.70,-44.38
+01/01/2026,Sevilla Centro,4973.22,4446.30,1791.59,1548.27,-243.32
+01/01/2026,Triana,4677.94,4068.92,1558.47,1516.31,-42.16
+01/01/2026,Nervion,2735.35,2357.19,1012.22,956.33,-55.89
+02/01/2026,Sevilla Centro,4308.37,3848.05,1366.96,1206.84,-160.12
+02/01/2026,Triana,3759.77,3257.58,1404.54,1265.82,-138.72
+02/01/2026,Nervion,3130.00,2691.07,1087.67,1009.65,-78.02
+03/01/2026,Sevilla Centro,4026.21,3548.80,1469.33,1320.88,-148.45
+03/01/2026,Triana,4803.60,4219.61,1532.17,1421.04,-111.13
+03/01/2026,Nervion,3991.46,3494.99,1350.87,1275.49,-75.38
+04/01/2026,Sevilla Centro,6387.23,5733.58,2045.66,1791.74,-253.92
+04/01/2026,Triana,4451.67,4080.31,1600.77,1539.76,-61.01
+04/01/2026,Nervion,2974.05,2539.18,1022.42,979.61,-42.81
+05/01/2026,Sevilla Centro,4933.55,4255.42,1618.01,1359.85,-258.16
+05/01/2026,Triana,4181.46,3644.27,1482.19,1338.42,-143.77
+05/01/2026,Nervion,3063.06,2660.25,1129.37,1063.27,-66.10
+06/01/2026,Sevilla Centro,5700.02,4972.65,2207.34,2090.92,-116.42
+06/01/2026,Triana,4167.05,3635.14,1439.60,1352.59,-87.01
+06/01/2026,Nervion,3603.01,3253.85,1442.24,1403.66,-38.58
+07/01/2026,Sevilla Centro,5328.79,4691.63,1990.94,1751.01,-239.93
+07/01/2026,Triana,4437.01,3951.83,1552.94,1445.66,-107.28
+07/01/2026,Nervion,2684.58,2326.06,1019.07,985.45,-33.62
+08/01/2026,Sevilla Centro,5237.24,4681.59,1900.52,1679.72,-220.80
+08/01/2026,Triana,4909.69,4301.86,1707.28,1642.20,-65.08
+08/01/2026,Nervion,3955.85,3637.67,1525.66,1500.75,-24.91
+09/01/2026,Sevilla Centro,6003.22,5140.01,1935.40,1806.51,-128.89
+09/01/2026,Triana,4611.42,3952.07,1456.58,1309.39,-147.19
+09/01/2026,Nervion,3039.82,2687.87,999.09,974.36,-24.73
+10/01/2026,Sevilla Centro,4359.14,3920.84,1646.21,1388.75,-257.46
+10/01/2026,Triana,4365.22,3774.71,1697.97,1592.51,-105.46
+10/01/2026,Nervion,2888.61,2492.94,1012.30,940.97,-71.33
+11/01/2026,Sevilla Centro,4600.18,3962.92,1543.47,1404.25,-139.22
+11/01/2026,Triana,4928.30,4318.79,1882.76,1804.56,-78.20
+11/01/2026,Nervion,2887.43,2543.11,1123.66,1084.09,-39.57
+12/01/2026,Sevilla Centro,5772.77,4997.30,2016.37,1784.00,-232.37
+12/01/2026,Triana,3281.38,2820.56,1180.69,1033.08,-147.61
+12/01/2026,Nervion,2640.88,2372.07,830.26,777.77,-52.49
+13/01/2026,Sevilla Centro,4472.25,4039.69,1484.66,1240.44,-244.22
+13/01/2026,Triana,3276.60,3005.65,1200.65,1058.42,-142.23
+13/01/2026,Nervion,3386.48,2913.91,1197.07,1169.05,-28.02
+14/01/2026,Sevilla Centro,5208.18,4725.86,2061.43,1827.08,-234.35
+14/01/2026,Triana,3537.46,3091.55,1359.26,1215.59,-143.67
+14/01/2026,Nervion,3888.97,3393.72,1380.70,1340.31,-40.39
+15/01/2026,Sevilla Centro,4173.60,3708.57,1380.01,1085.90,-294.11
+15/01/2026,Triana,4433.24,3890.32,1472.23,1349.27,-122.96
+15/01/2026,Nervion,3510.15,3028.91,1289.82,1274.36,-15.46
+16/01/2026,Sevilla Centro,5811.77,5001.25,1814.59,1604.47,-210.12
+16/01/2026,Triana,3933.72,3399.77,1215.56,1163.10,-52.46
+16/01/2026,Nervion,3259.35,2989.50,1331.80,1277.92,-53.88
+17/01/2026,Sevilla Centro,4746.84,4193.69,1855.92,1644.51,-211.41
+17/01/2026,Triana,3414.67,2988.88,1117.26,1054.99,-62.27
+17/01/2026,Nervion,3002.59,2618.03,1079.65,1051.40,-28.25
+18/01/2026,Sevilla Centro,4338.18,3774.81,1595.96,1303.48,-292.48
+18/01/2026,Triana,3945.83,3549.53,1500.71,1365.26,-135.45
+18/01/2026,Nervion,3244.09,2761.68,1145.55,1093.78,-51.77
+19/01/2026,Sevilla Centro,5953.75,5213.57,1911.82,1702.51,-209.31
+19/01/2026,Triana,3275.44,2914.62,1020.82,972.67,-48.15
+19/01/2026,Nervion,3745.61,3187.39,1128.34,1094.27,-34.07
+20/01/2026,Sevilla Centro,4477.28,3965.01,1777.16,1604.02,-173.14
+20/01/2026,Triana,4587.72,4202.67,1842.05,1779.55,-62.50
+20/01/2026,Nervion,3918.80,3530.94,1335.66,1284.77,-50.89
+21/01/2026,Sevilla Centro,4787.65,4232.28,1729.39,1450.29,-279.10
+21/01/2026,Triana,4850.62,4456.10,1871.11,1783.89,-87.22
+21/01/2026,Nervion,3226.61,2872.33,1160.90,1098.96,-61.94
+22/01/2026,Sevilla Centro,6493.14,5878.05,2208.79,2091.57,-117.22
+22/01/2026,Triana,4012.17,3420.00,1450.11,1397.87,-52.24
+22/01/2026,Nervion,3720.80,3166.38,1197.56,1163.20,-34.36
+23/01/2026,Sevilla Centro,5654.60,4862.98,1904.80,1779.28,-125.52
+23/01/2026,Triana,3593.20,3086.30,1310.23,1267.52,-42.71
+23/01/2026,Nervion,2885.89,2529.97,918.57,848.77,-69.80
+24/01/2026,Sevilla Centro,5370.13,4829.21,2115.45,1976.57,-138.88
+24/01/2026,Triana,3149.26,2868.00,1033.72,951.47,-82.25
+24/01/2026,Nervion,3343.58,2921.49,1095.99,1016.26,-79.73
+25/01/2026,Sevilla Centro,4183.09,3756.22,1478.80,1318.60,-160.20
+25/01/2026,Triana,4838.41,4167.97,1837.92,1777.75,-60.17
+25/01/2026,Nervion,3958.25,3559.35,1354.04,1306.39,-47.65
+26/01/2026,Sevilla Centro,4431.56,4042.76,1672.48,1440.68,-231.80
+26/01/2026,Triana,4430.26,3997.23,1677.27,1534.33,-142.94
+26/01/2026,Nervion,3270.09,2894.30,1053.91,1036.65,-17.26
+27/01/2026,Sevilla Centro,4512.57,4001.79,1619.14,1415.76,-203.38
+27/01/2026,Triana,3659.66,3250.75,1413.37,1270.78,-142.59
+27/01/2026,Nervion,3283.23,2879.10,1029.86,997.39,-32.47
+28/01/2026,Sevilla Centro,5744.77,4985.77,2065.32,1845.48,-219.84
+28/01/2026,Triana,3935.08,3614.64,1481.81,1438.78,-43.03
+28/01/2026,Nervion,3952.81,3468.19,1475.03,1416.13,-58.90
+29/01/2026,Sevilla Centro,5070.95,4467.85,1684.08,1539.09,-144.99
+29/01/2026,Triana,3773.64,3441.00,1390.71,1347.53,-43.18
+29/01/2026,Nervion,3784.47,3444.12,1358.63,1291.72,-66.91
+30/01/2026,Sevilla Centro,6009.96,5129.79,2073.98,1888.77,-185.21
+30/01/2026,Triana,3281.42,2808.43,1095.51,946.32,-149.19
+30/01/2026,Nervion,3128.04,2736.86,1045.11,994.34,-50.77
+31/01/2026,Sevilla Centro,5266.42,4827.07,1849.03,1682.13,-166.90
+31/01/2026,Triana,4045.48,3551.53,1359.45,1292.90,-66.55
+31/01/2026,Nervion,3832.70,3352.25,1505.56,1436.75,-68.81
+
+Fecha,Local,Nº Factura,Empleado,Importe,Estado,Fase Eliminación,Producto,Cantidad,Precio Unitario
+27/11/2025,Triana,F-1757,Laura F.,72.00,Activo,,Lubina a la Plancha,4,18.00
+14/11/2025,Nervion,F-1334,Sofia N.,16.00,Activo,,Tortilla Espanola,2,8.00
+03/11/2025,Triana,F-1774,Maria G.,15.00,Activo,,Cerveza Artesana,3,5.00
+16/12/2025,Nervion,F-1921,Sofia N.,36.00,Eliminado,Despues del cobro,Sangria Jarra,3,12.00
+09/11/2025,Nervion,F-1436,Maria G.,18.00,Activo,,Tiramisu,3,6.00
+10/11/2025,Sevilla Centro,F-1629,Pedro S.,12.00,Activo,,Refresco,4,3.00
+13/11/2025,Triana,F-1076,Maria G.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+13/11/2025,Sevilla Centro,F-1109,David L.,38.00,Activo,,Ensalada Mixta,4,9.50
+23/01/2026,Triana,F-1266,Laura F.,7.00,Activo,,Croquetas Jamon,1,7.00
+01/01/2026,Nervion,F-1716,Sofia N.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+03/11/2025,Triana,F-1753,David L.,19.50,Activo,,Patatas Bravas,3,6.50
+20/11/2025,Sevilla Centro,F-1333,Javier R.,8.50,Activo,,Mojito,1,8.50
+17/12/2025,Nervion,F-1559,Carlos M.,5.70,Activo,,Cortado,3,1.90
+24/01/2026,Triana,F-1478,Javier R.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+08/12/2025,Sevilla Centro,F-1854,Miguel A.,18.00,Eliminado,Despues de la cocina,Lubina a la Plancha,1,18.00
+20/11/2025,Nervion,F-1300,Pedro S.,16.00,Activo,,Arroz Negro,1,16.00
+09/11/2025,Nervion,F-1131,Maria G.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+10/12/2025,Nervion,F-1596,Maria G.,28.50,Activo,,Gin Tonic,3,9.50
+07/12/2025,Triana,F-1390,Ana P.,48.00,Activo,,Solomillo Iberico,2,24.00
+25/11/2025,Sevilla Centro,F-1444,Pedro S.,36.00,Activo,,Lubina a la Plancha,2,18.00
+23/11/2025,Sevilla Centro,F-1832,Miguel A.,15.00,Eliminado,Despues del cobro,Pulpo a la Gallega,1,15.00
+25/11/2025,Triana,F-1458,David L.,5.00,Activo,,Cerveza Artesana,1,5.00
+01/01/2026,Sevilla Centro,F-1093,Ana P.,13.00,Activo,,Tarta Queso,2,6.50
+22/01/2026,Nervion,F-1161,Maria G.,15.00,Activo,,Cerveza Artesana,3,5.00
+21/01/2026,Sevilla Centro,F-1933,Javier R.,48.00,Eliminado,Despues del cobro,Solomillo Iberico,2,24.00
+13/12/2025,Triana,F-1410,Javier R.,10.00,Activo,,Agua Mineral,4,2.50
+18/11/2025,Nervion,F-1803,Maria G.,14.00,Activo,,Tostada,4,3.50
+10/12/2025,Sevilla Centro,F-1776,Miguel A.,32.00,Activo,,Jamon Iberico,2,16.00
+30/01/2026,Sevilla Centro,F-1095,Miguel A.,44.00,Activo,,Entrecot,2,22.00
+31/12/2025,Sevilla Centro,F-1265,Carlos M.,28.50,Activo,,Gin Tonic,3,9.50
+10/11/2025,Triana,F-1082,Laura F.,30.00,Activo,,Gazpacho,4,7.50
+31/01/2026,Nervion,F-1066,Carlos M.,2.50,Activo,,Agua Mineral,1,2.50
+26/01/2026,Sevilla Centro,F-1311,Sofia N.,5.40,Activo,,Cafe Solo,3,1.80
+19/01/2026,Sevilla Centro,F-1881,Miguel A.,24.00,Eliminado,Despues del cobro,Sangria Jarra,2,12.00
+18/11/2025,Triana,F-1240,Ana P.,7.00,Activo,,Cerveza Estrella,2,3.50
+20/12/2025,Nervion,F-1355,Ana P.,32.00,Activo,,Arroz Negro,2,16.00
+27/12/2025,Sevilla Centro,F-1903,Miguel A.,48.00,Eliminado,Despues del cobro,Jamon Iberico,3,16.00
+27/01/2026,Triana,F-1802,Sofia N.,33.00,Activo,,Ensalada Cesar,3,11.00
+31/12/2025,Sevilla Centro,F-1429,Maria G.,15.00,Activo,,Cerveza Artesana,3,5.00
+03/01/2026,Triana,F-1801,Ana P.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+25/12/2025,Nervion,F-1157,Sofia N.,8.00,Activo,,Tortilla Espanola,1,8.00
+19/12/2025,Sevilla Centro,F-1129,Laura F.,18.00,Activo,,Helado Artesano,4,4.50
+18/11/2025,Nervion,F-1255,Maria G.,44.00,Activo,,Ensalada Cesar,4,11.00
+09/12/2025,Sevilla Centro,F-1839,Miguel A.,15.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,1,15.00
+06/12/2025,Nervion,F-1205,Javier R.,18.00,Activo,,Lubina a la Plancha,1,18.00
+12/01/2026,Nervion,F-1395,David L.,13.50,Activo,,Gambas al Ajillo,1,13.50
+30/11/2025,Sevilla Centro,F-1343,Javier R.,96.00,Activo,,Solomillo Iberico,4,24.00
+11/11/2025,Triana,F-1150,Sofia N.,28.50,Activo,,Gin Tonic,3,9.50
+29/12/2025,Triana,F-1031,Maria G.,7.50,Activo,,Agua Mineral,3,2.50
+09/12/2025,Nervion,F-1134,Carlos M.,10.00,Activo,,Cerveza Artesana,2,5.00
+13/12/2025,Sevilla Centro,F-1251,Javier R.,32.00,Activo,,Arroz Negro,2,16.00
+15/11/2025,Sevilla Centro,F-1894,Miguel A.,24.00,Eliminado,Despues del cobro,Sangria Jarra,2,12.00
+11/12/2025,Triana,F-1316,David L.,20.00,Activo,,Cerveza Artesana,4,5.00
+13/11/2025,Nervion,F-1928,Maria G.,32.00,Eliminado,Despues del cobro,Jamon Iberico,2,16.00
+17/12/2025,Sevilla Centro,F-1932,David L.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+23/12/2025,Triana,F-1729,Laura F.,10.00,Activo,,Agua Mineral,4,2.50
+27/01/2026,Nervion,F-1626,Ana P.,31.50,Activo,,Calamares Fritos,3,10.50
+28/01/2026,Nervion,F-1698,Carlos M.,32.00,Activo,,Tortilla Espanola,4,8.00
+08/01/2026,Sevilla Centro,F-1833,Miguel A.,15.50,Eliminado,Despues del cobro,Paella Mixta,1,15.50
+08/11/2025,Triana,F-1672,Maria G.,21.00,Activo,,Croquetas Jamon,3,7.00
+31/01/2026,Triana,F-1451,Miguel A.,10.50,Activo,,Tostada,3,3.50
+29/12/2025,Triana,F-1804,Carlos M.,32.00,Activo,,Tortilla Espanola,4,8.00
+18/12/2025,Nervion,F-1335,Sofia N.,70.00,Activo,,Dorada al Horno,4,17.50
+20/01/2026,Triana,F-1578,Carlos M.,19.00,Activo,,Gin Tonic,2,9.50
+29/11/2025,Sevilla Centro,F-1330,Maria G.,11.00,Activo,,Copa Vino Tinto,2,5.50
+30/11/2025,Sevilla Centro,F-1140,David L.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+11/12/2025,Triana,F-1010,Carlos M.,48.00,Activo,,Sangria Jarra,4,12.00
+21/12/2025,Nervion,F-1315,Laura F.,40.50,Activo,,Gambas al Ajillo,3,13.50
+21/01/2026,Sevilla Centro,F-1539,Carlos M.,9.00,Activo,,Refresco,3,3.00
+07/01/2026,Sevilla Centro,F-1370,Carlos M.,8.50,Activo,,Mojito,1,8.50
+28/12/2025,Nervion,F-1087,Ana P.,6.00,Activo,,Tiramisu,1,6.00
+29/01/2026,Nervion,F-1364,Laura F.,13.00,Activo,,Patatas Bravas,2,6.50
+11/11/2025,Triana,F-1515,Maria G.,4.40,Activo,,Cafe con Leche,2,2.20
+10/01/2026,Triana,F-1135,Carlos M.,5.70,Activo,,Cortado,3,1.90
+05/01/2026,Sevilla Centro,F-1288,David L.,44.00,Activo,,Ensalada Cesar,4,11.00
+23/12/2025,Triana,F-1775,Sofia N.,52.50,Activo,,Dorada al Horno,3,17.50
+27/01/2026,Sevilla Centro,F-1674,Laura F.,38.00,Activo,,Gin Tonic,4,9.50
+18/11/2025,Triana,F-1799,Sofia N.,58.00,Activo,,Paella Valenciana,4,14.50
+16/11/2025,Triana,F-1094,Ana P.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+04/11/2025,Nervion,F-1469,Carlos M.,12.00,Activo,,Refresco,4,3.00
+16/12/2025,Nervion,F-1055,Laura F.,54.00,Activo,,Gambas al Ajillo,4,13.50
+26/12/2025,Sevilla Centro,F-1118,Carlos M.,9.00,Activo,,Refresco,3,3.00
+14/12/2025,Nervion,F-1471,Ana P.,9.00,Activo,,Helado Artesano,2,4.50
+27/01/2026,Sevilla Centro,F-1004,Maria G.,48.00,Activo,,Sangria Jarra,4,12.00
+15/12/2025,Sevilla Centro,F-1931,Miguel A.,15.50,Eliminado,Despues del cobro,Paella Mixta,1,15.50
+19/12/2025,Nervion,F-1366,Sofia N.,12.00,Activo,,Refresco,4,3.00
+14/12/2025,Nervion,F-1369,Laura F.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+06/01/2026,Sevilla Centro,F-1039,Laura F.,44.00,Activo,,Entrecot,2,22.00
+12/11/2025,Sevilla Centro,F-1202,Sofia N.,20.00,Activo,,Cerveza Artesana,4,5.00
+05/01/2026,Nervion,F-1057,Javier R.,8.80,Activo,,Cafe con Leche,4,2.20
+21/01/2026,Triana,F-1125,David L.,14.50,Activo,,Paella Valenciana,1,14.50
+14/11/2025,Triana,F-1227,Carlos M.,11.00,Activo,,Ensalada Cesar,1,11.00
+25/12/2025,Sevilla Centro,F-1147,Pedro S.,3.50,Activo,,Tostada,1,3.50
+05/11/2025,Triana,F-1313,Laura F.,48.00,Activo,,Solomillo Iberico,2,24.00
+26/01/2026,Nervion,F-1747,Pedro S.,14.00,Activo,,Croquetas Jamon,2,7.00
+29/01/2026,Sevilla Centro,F-1040,Javier R.,29.00,Activo,,Paella Valenciana,2,14.50
+12/12/2025,Sevilla Centro,F-1579,Laura F.,54.00,Activo,,Lubina a la Plancha,3,18.00
+22/01/2026,Sevilla Centro,F-1924,Miguel A.,46.50,Eliminado,Despues del cobro,Paella Mixta,3,15.50
+22/11/2025,Sevilla Centro,F-1272,Pedro S.,2.50,Activo,,Agua Mineral,1,2.50
+15/01/2026,Sevilla Centro,F-1236,Sofia N.,24.00,Activo,,Tiramisu,4,6.00
+08/12/2025,Nervion,F-1787,Pedro S.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+29/12/2025,Sevilla Centro,F-1561,David L.,3.80,Activo,,Cortado,2,1.90
+13/12/2025,Sevilla Centro,F-1892,Miguel A.,72.00,Eliminado,Despues del cobro,Solomillo Iberico,3,24.00
+14/11/2025,Triana,F-1218,Laura F.,6.60,Activo,,Cafe con Leche,3,2.20
+22/12/2025,Triana,F-1304,Miguel A.,88.00,Activo,,Entrecot,4,22.00
+07/12/2025,Sevilla Centro,F-1434,Javier R.,29.00,Activo,,Paella Valenciana,2,14.50
+18/12/2025,Nervion,F-1081,Pedro S.,6.50,Activo,,Patatas Bravas,1,6.50
+27/12/2025,Sevilla Centro,F-1075,Laura F.,4.40,Activo,,Cafe con Leche,2,2.20
+18/12/2025,Sevilla Centro,F-1618,Carlos M.,48.00,Activo,,Jamon Iberico,3,16.00
+01/11/2025,Sevilla Centro,F-1867,Miguel A.,72.00,Eliminado,Despues del cobro,Solomillo Iberico,3,24.00
+19/01/2026,Triana,F-1182,Sofia N.,42.00,Activo,,Calamares Fritos,4,10.50
+11/12/2025,Sevilla Centro,F-1442,Pedro S.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+06/12/2025,Triana,F-1822,Javier R.,36.00,Activo,,Sangria Jarra,3,12.00
+01/01/2026,Sevilla Centro,F-1164,Laura F.,13.50,Activo,,Gambas al Ajillo,1,13.50
+10/01/2026,Nervion,F-1069,Sofia N.,21.00,Activo,,Croquetas Jamon,3,7.00
+18/11/2025,Sevilla Centro,F-1162,David L.,8.50,Activo,,Mojito,1,8.50
+10/12/2025,Sevilla Centro,F-1744,David L.,5.40,Activo,,Cafe Solo,3,1.80
+11/12/2025,Nervion,F-1385,Carlos M.,44.00,Activo,,Entrecot,2,22.00
+05/12/2025,Triana,F-1746,Sofia N.,10.50,Activo,,Tostada,3,3.50
+18/11/2025,Nervion,F-1239,Laura F.,7.50,Activo,,Gazpacho,1,7.50
+25/01/2026,Sevilla Centro,F-1884,Carlos M.,12.00,Eliminado,Despues del cobro,Sangria Jarra,1,12.00
+26/11/2025,Sevilla Centro,F-1033,Pedro S.,11.00,Activo,,Crema Catalana,2,5.50
+24/12/2025,Triana,F-1302,Sofia N.,28.00,Activo,,Croquetas Jamon,4,7.00
+25/11/2025,Sevilla Centro,F-1866,Miguel A.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+09/01/2026,Sevilla Centro,F-1653,Carlos M.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+12/11/2025,Sevilla Centro,F-1143,David L.,96.00,Activo,,Solomillo Iberico,4,24.00
+28/11/2025,Triana,F-1791,David L.,22.00,Activo,,Ensalada Cesar,2,11.00
+03/11/2025,Triana,F-1380,Javier R.,9.00,Activo,,Refresco,3,3.00
+26/11/2025,Sevilla Centro,F-1583,Ana P.,64.00,Activo,,Jamon Iberico,4,16.00
+31/12/2025,Triana,F-1124,Laura F.,27.00,Activo,,Gambas al Ajillo,2,13.50
+05/11/2025,Nervion,F-1467,Laura F.,5.50,Activo,,Copa Vino Tinto,1,5.50
+07/11/2025,Sevilla Centro,F-1869,Miguel A.,72.00,Eliminado,Antes de la cocina,Solomillo Iberico,3,24.00
+30/12/2025,Sevilla Centro,F-1602,Laura F.,7.50,Activo,,Agua Mineral,3,2.50
+21/01/2026,Triana,F-1476,David L.,16.00,Activo,,Tortilla Espanola,2,8.00
+14/12/2025,Nervion,F-1024,Pedro S.,11.00,Activo,,Copa Vino Tinto,2,5.50
+30/12/2025,Triana,F-1798,Javier R.,7.60,Activo,,Cortado,4,1.90
+12/12/2025,Nervion,F-1886,Miguel A.,25.00,Eliminado,Despues del cobro,Hamburguesa Clasica,2,12.50
+31/12/2025,Triana,F-1601,Maria G.,88.00,Activo,,Entrecot,4,22.00
+27/01/2026,Sevilla Centro,F-1771,Javier R.,52.50,Activo,,Dorada al Horno,3,17.50
+06/12/2025,Nervion,F-1379,David L.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+02/01/2026,Nervion,F-1284,Carlos M.,48.00,Activo,,Solomillo Iberico,2,24.00
+24/12/2025,Sevilla Centro,F-1465,Laura F.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+22/01/2026,Sevilla Centro,F-1722,David L.,17.00,Activo,,Mojito,2,8.50
+06/12/2025,Nervion,F-1181,Pedro S.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+25/12/2025,Nervion,F-1089,David L.,64.00,Activo,,Jamon Iberico,4,16.00
+22/12/2025,Sevilla Centro,F-1906,Sofia N.,12.00,Eliminado,Despues del cobro,Sangria Jarra,1,12.00
+03/11/2025,Sevilla Centro,F-1532,Laura F.,5.40,Activo,,Cafe Solo,3,1.80
+25/01/2026,Sevilla Centro,F-1214,Miguel A.,62.00,Activo,,Paella Mixta,4,15.50
+05/12/2025,Sevilla Centro,F-1704,Miguel A.,13.50,Activo,,Gambas al Ajillo,1,13.50
+24/12/2025,Sevilla Centro,F-1200,Maria G.,7.00,Activo,,Croquetas Jamon,1,7.00
+15/12/2025,Triana,F-1580,Maria G.,28.00,Activo,,Croquetas Jamon,4,7.00
+22/11/2025,Triana,F-1726,Pedro S.,19.00,Activo,,Ensalada Mixta,2,9.50
+14/12/2025,Sevilla Centro,F-1835,Miguel A.,13.50,Eliminado,Despues del cobro,Gambas al Ajillo,1,13.50
+02/11/2025,Nervion,F-1445,Ana P.,14.00,Activo,,Croquetas Jamon,2,7.00
+09/11/2025,Triana,F-1565,Miguel A.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+10/12/2025,Nervion,F-1622,Maria G.,10.00,Activo,,Copa Vino Blanco,2,5.00
+19/11/2025,Triana,F-1703,Maria G.,34.00,Activo,,Mojito,4,8.50
+22/12/2025,Triana,F-1507,Javier R.,18.00,Activo,,Lubina a la Plancha,1,18.00
+11/01/2026,Triana,F-1621,Pedro S.,11.00,Activo,,Copa Vino Tinto,2,5.50
+15/12/2025,Nervion,F-1273,Miguel A.,6.00,Activo,,Refresco,2,3.00
+03/12/2025,Sevilla Centro,F-1545,Javier R.,24.00,Activo,,Tiramisu,4,6.00
+01/11/2025,Nervion,F-1341,Ana P.,3.60,Activo,,Cafe Solo,2,1.80
+05/01/2026,Triana,F-1880,Javier R.,54.00,Eliminado,Despues del cobro,Lubina a la Plancha,3,18.00
+05/11/2025,Sevilla Centro,F-1226,David L.,6.00,Activo,,Tiramisu,1,6.00
+25/01/2026,Nervion,F-1050,David L.,96.00,Activo,,Solomillo Iberico,4,24.00
+10/01/2026,Triana,F-1296,Maria G.,52.50,Activo,,Dorada al Horno,3,17.50
+15/12/2025,Nervion,F-1470,Sofia N.,64.00,Activo,,Jamon Iberico,4,16.00
+14/11/2025,Triana,F-1915,Miguel A.,24.00,Eliminado,Despues del cobro,Sangria Jarra,2,12.00
+16/12/2025,Nervion,F-1074,Ana P.,14.00,Activo,,Cerveza Estrella,4,3.50
+07/01/2026,Nervion,F-1679,Pedro S.,64.00,Activo,,Jamon Iberico,4,16.00
+24/11/2025,Sevilla Centro,F-1858,Miguel A.,66.00,Eliminado,Despues del cobro,Entrecot,3,22.00
+13/01/2026,Sevilla Centro,F-1139,David L.,36.00,Activo,,Lubina a la Plancha,2,18.00
+28/12/2025,Triana,F-1260,Javier R.,19.50,Activo,,Patatas Bravas,3,6.50
+26/01/2026,Sevilla Centro,F-1594,Miguel A.,19.50,Activo,,Patatas Bravas,3,6.50
+18/12/2025,Sevilla Centro,F-1391,Pedro S.,11.00,Activo,,Ensalada Cesar,1,11.00
+17/12/2025,Nervion,F-1554,Ana P.,10.50,Activo,,Cerveza Estrella,3,3.50
+30/01/2026,Triana,F-1788,Ana P.,42.00,Activo,,Calamares Fritos,4,10.50
+04/11/2025,Triana,F-1259,Laura F.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+26/11/2025,Nervion,F-1208,David L.,88.00,Activo,,Entrecot,4,22.00
+16/11/2025,Nervion,F-1447,David L.,9.00,Activo,,Refresco,3,3.00
+06/01/2026,Nervion,F-1241,Laura F.,11.00,Activo,,Ensalada Cesar,1,11.00
+16/01/2026,Triana,F-1687,Maria G.,42.00,Activo,,Calamares Fritos,4,10.50
+09/11/2025,Triana,F-1092,Sofia N.,9.00,Activo,,Refresco,3,3.00
+16/01/2026,Triana,F-1786,Laura F.,6.50,Activo,,Patatas Bravas,1,6.50
+24/11/2025,Triana,F-1209,David L.,3.60,Activo,,Cafe Solo,2,1.80
+04/11/2025,Nervion,F-1015,David L.,24.00,Activo,,Sangria Jarra,2,12.00
+09/12/2025,Nervion,F-1022,Carlos M.,54.00,Activo,,Gambas al Ajillo,4,13.50
+07/01/2026,Sevilla Centro,F-1862,Miguel A.,52.50,Eliminado,Despues del cobro,Dorada al Horno,3,17.50
+27/01/2026,Triana,F-1223,Pedro S.,25.50,Activo,,Mojito,3,8.50
+25/01/2026,Sevilla Centro,F-1281,Maria G.,10.50,Activo,,Tostada,3,3.50
+17/11/2025,Nervion,F-1191,Pedro S.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+26/01/2026,Triana,F-1452,Ana P.,6.50,Activo,,Patatas Bravas,1,6.50
+19/12/2025,Nervion,F-1548,Javier R.,18.00,Activo,,Helado Artesano,4,4.50
+17/12/2025,Nervion,F-1464,David L.,36.00,Activo,,Lubina a la Plancha,2,18.00
+07/12/2025,Nervion,F-1474,Javier R.,18.00,Activo,,Lubina a la Plancha,1,18.00
+18/01/2026,Nervion,F-1459,Maria G.,3.60,Activo,,Cafe Solo,2,1.80
+02/12/2025,Sevilla Centro,F-1394,Ana P.,1.80,Activo,,Cafe Solo,1,1.80
+31/12/2025,Sevilla Centro,F-1789,Sofia N.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+16/12/2025,Nervion,F-1889,Miguel A.,36.00,Eliminado,Despues del cobro,Sangria Jarra,3,12.00
+09/11/2025,Sevilla Centro,F-1673,David L.,20.00,Activo,,Copa Vino Blanco,4,5.00
+07/12/2025,Sevilla Centro,F-1146,Ana P.,70.00,Activo,,Dorada al Horno,4,17.50
+31/01/2026,Triana,F-1592,Pedro S.,3.60,Activo,,Cafe Solo,2,1.80
+28/12/2025,Triana,F-1876,Maria G.,22.00,Eliminado,Antes de la cocina,Entrecot,1,22.00
+05/11/2025,Nervion,F-1811,Carlos M.,9.50,Activo,,Ensalada Mixta,1,9.50
+02/12/2025,Triana,F-1815,Miguel A.,7.00,Activo,,Tostada,2,3.50
+13/01/2026,Nervion,F-1708,David L.,31.50,Activo,,Calamares Fritos,3,10.50
+14/11/2025,Nervion,F-1096,Javier R.,9.00,Activo,,Helado Artesano,2,4.50
+17/12/2025,Triana,F-1647,Ana P.,7.20,Activo,,Cafe Solo,4,1.80
+08/01/2026,Nervion,F-1367,David L.,34.00,Activo,,Mojito,4,8.50
+05/12/2025,Triana,F-1917,Miguel A.,36.00,Eliminado,Despues del cobro,Sangria Jarra,3,12.00
+01/11/2025,Triana,F-1381,Miguel A.,46.50,Activo,,Paella Mixta,3,15.50
+18/12/2025,Triana,F-1585,Miguel A.,48.00,Activo,,Arroz Negro,3,16.00
+04/01/2026,Nervion,F-1197,Javier R.,8.00,Activo,,Tortilla Espanola,1,8.00
+27/01/2026,Sevilla Centro,F-1416,Maria G.,3.50,Activo,,Tostada,1,3.50
+08/01/2026,Triana,F-1009,Carlos M.,13.00,Activo,,Tarta Queso,2,6.50
+24/01/2026,Sevilla Centro,F-1428,Miguel A.,15.50,Activo,,Paella Mixta,1,15.50
+19/12/2025,Nervion,F-1141,Laura F.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+03/01/2026,Triana,F-1348,Javier R.,48.00,Activo,,Arroz Negro,3,16.00
+11/01/2026,Sevilla Centro,F-1783,Javier R.,10.50,Activo,,Tostada,3,3.50
+10/01/2026,Nervion,F-1516,Pedro S.,14.00,Activo,,Cerveza Estrella,4,3.50
+05/01/2026,Triana,F-1508,Ana P.,29.00,Activo,,Paella Valenciana,2,14.50
+22/12/2025,Nervion,F-1295,Carlos M.,40.50,Activo,,Gambas al Ajillo,3,13.50
+05/12/2025,Triana,F-1018,Miguel A.,13.50,Activo,,Helado Artesano,3,4.50
+09/11/2025,Triana,F-1848,Miguel A.,22.00,Eliminado,Despues de la cocina,Entrecot,1,22.00
+25/11/2025,Sevilla Centro,F-1221,Sofia N.,28.50,Activo,,Ensalada Mixta,3,9.50
+18/12/2025,Triana,F-1184,Laura F.,38.00,Activo,,Ensalada Mixta,4,9.50
+27/01/2026,Triana,F-1821,Pedro S.,26.00,Activo,,Patatas Bravas,4,6.50
+21/11/2025,Nervion,F-1610,Laura F.,32.00,Activo,,Arroz Negro,2,16.00
+20/01/2026,Nervion,F-1743,Sofia N.,10.00,Activo,,Cerveza Artesana,2,5.00
+16/12/2025,Nervion,F-1431,Pedro S.,36.00,Activo,,Sangria Jarra,3,12.00
+05/12/2025,Triana,F-1187,Maria G.,14.00,Activo,,Croquetas Jamon,2,7.00
+02/12/2025,Triana,F-1433,Sofia N.,16.00,Activo,,Tortilla Espanola,2,8.00
+11/11/2025,Triana,F-1641,Laura F.,20.00,Activo,,Copa Vino Blanco,4,5.00
+20/11/2025,Triana,F-1702,David L.,13.00,Activo,,Patatas Bravas,2,6.50
+16/12/2025,Sevilla Centro,F-1558,David L.,13.50,Activo,,Gambas al Ajillo,1,13.50
+23/11/2025,Sevilla Centro,F-1312,David L.,6.50,Activo,,Tarta Queso,1,6.50
+31/12/2025,Triana,F-1276,Miguel A.,11.00,Activo,,Crema Catalana,2,5.50
+08/01/2026,Sevilla Centro,F-1344,David L.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+20/01/2026,Sevilla Centro,F-1551,Javier R.,35.00,Activo,,Dorada al Horno,2,17.50
+07/12/2025,Sevilla Centro,F-1460,Javier R.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+01/12/2025,Nervion,F-1637,Laura F.,36.00,Activo,,Lubina a la Plancha,2,18.00
+31/12/2025,Triana,F-1851,Miguel A.,36.00,Eliminado,Despues de la cocina,Lubina a la Plancha,2,18.00
+02/12/2025,Sevilla Centro,F-1916,Carlos M.,29.00,Eliminado,Despues del cobro,Paella Valenciana,2,14.50
+28/11/2025,Triana,F-1176,Miguel A.,26.00,Activo,,Tarta Queso,4,6.50
+24/12/2025,Sevilla Centro,F-1360,Ana P.,9.50,Activo,,Gin Tonic,1,9.50
+23/12/2025,Nervion,F-1352,Laura F.,10.00,Activo,,Copa Vino Blanco,2,5.00
+16/01/2026,Nervion,F-1919,Miguel A.,29.00,Eliminado,Despues del cobro,Paella Valenciana,2,14.50
+13/12/2025,Sevilla Centro,F-1356,Miguel A.,3.60,Activo,,Cafe Solo,2,1.80
+26/01/2026,Triana,F-1270,Laura F.,35.00,Activo,,Dorada al Horno,2,17.50
+16/11/2025,Triana,F-1797,David L.,28.50,Activo,,Ensalada Mixta,3,9.50
+08/11/2025,Triana,F-1723,Sofia N.,3.80,Activo,,Cortado,2,1.90
+19/12/2025,Nervion,F-1638,Carlos M.,72.00,Activo,,Solomillo Iberico,3,24.00
+14/11/2025,Sevilla Centro,F-1652,Javier R.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+23/01/2026,Triana,F-1254,David L.,12.00,Activo,,Sangria Jarra,1,12.00
+26/01/2026,Nervion,F-1320,David L.,21.00,Activo,,Calamares Fritos,2,10.50
+04/11/2025,Triana,F-1668,Pedro S.,28.00,Activo,,Croquetas Jamon,4,7.00
+01/12/2025,Triana,F-1510,Pedro S.,16.50,Activo,,Crema Catalana,3,5.50
+01/01/2026,Nervion,F-1152,Javier R.,2.20,Activo,,Cafe con Leche,1,2.20
+30/12/2025,Triana,F-1870,Ana P.,12.50,Eliminado,Despues del cobro,Hamburguesa Clasica,1,12.50
+11/01/2026,Nervion,F-1292,Carlos M.,28.00,Activo,,Croquetas Jamon,4,7.00
+17/11/2025,Nervion,F-1620,Javier R.,11.00,Activo,,Crema Catalana,2,5.50
+18/11/2025,Triana,F-1518,Maria G.,72.00,Activo,,Lubina a la Plancha,4,18.00
+11/11/2025,Sevilla Centro,F-1450,Laura F.,10.00,Activo,,Copa Vino Blanco,2,5.00
+26/11/2025,Triana,F-1389,Ana P.,24.00,Activo,,Solomillo Iberico,1,24.00
+30/11/2025,Nervion,F-1595,Pedro S.,5.50,Activo,,Crema Catalana,1,5.50
+12/11/2025,Nervion,F-1677,Laura F.,88.00,Activo,,Entrecot,4,22.00
+12/01/2026,Triana,F-1907,Miguel A.,32.00,Eliminado,Despues de la cocina,Jamon Iberico,2,16.00
+31/01/2026,Triana,F-1215,Ana P.,38.00,Activo,,Gin Tonic,4,9.50
+02/12/2025,Triana,F-1180,Ana P.,36.00,Activo,,Lubina a la Plancha,2,18.00
+25/01/2026,Nervion,F-1727,Carlos M.,6.60,Activo,,Cafe con Leche,3,2.20
+24/01/2026,Sevilla Centro,F-1423,Javier R.,11.00,Activo,,Crema Catalana,2,5.50
+03/01/2026,Sevilla Centro,F-1503,Ana P.,19.50,Activo,,Tarta Queso,3,6.50
+25/11/2025,Sevilla Centro,F-1836,Miguel A.,54.00,Eliminado,Despues de la cocina,Lubina a la Plancha,3,18.00
+10/11/2025,Sevilla Centro,F-1887,David L.,66.00,Eliminado,Despues del cobro,Entrecot,3,22.00
+12/01/2026,Sevilla Centro,F-1562,Ana P.,44.00,Activo,,Entrecot,2,22.00
+05/01/2026,Nervion,F-1340,Maria G.,31.50,Activo,,Calamares Fritos,3,10.50
+24/12/2025,Sevilla Centro,F-1819,Laura F.,26.00,Activo,,Tarta Queso,4,6.50
+17/01/2026,Sevilla Centro,F-1056,Pedro S.,22.50,Activo,,Gazpacho,3,7.50
+28/12/2025,Nervion,F-1054,Sofia N.,24.00,Activo,,Solomillo Iberico,1,24.00
+13/11/2025,Sevilla Centro,F-1571,Miguel A.,24.00,Activo,,Tortilla Espanola,3,8.00
+01/01/2026,Sevilla Centro,F-1615,Carlos M.,21.00,Activo,,Calamares Fritos,2,10.50
+18/01/2026,Sevilla Centro,F-1861,Miguel A.,54.00,Eliminado,Despues del cobro,Lubina a la Plancha,3,18.00
+13/11/2025,Sevilla Centro,F-1154,Javier R.,16.50,Activo,,Crema Catalana,3,5.50
+20/12/2025,Sevilla Centro,F-1185,Maria G.,8.00,Activo,,Tortilla Espanola,1,8.00
+03/11/2025,Sevilla Centro,F-1323,Javier R.,29.00,Activo,,Paella Valenciana,2,14.50
+13/12/2025,Sevilla Centro,F-1872,Carlos M.,48.00,Eliminado,Despues del cobro,Arroz Negro,3,16.00
+13/01/2026,Triana,F-1248,Miguel A.,16.00,Activo,,Tortilla Espanola,2,8.00
+03/01/2026,Sevilla Centro,F-1693,Javier R.,52.50,Activo,,Dorada al Horno,3,17.50
+06/12/2025,Sevilla Centro,F-1901,Miguel A.,24.00,Eliminado,Despues del cobro,Solomillo Iberico,1,24.00
+03/12/2025,Triana,F-1475,Sofia N.,26.00,Activo,,Tarta Queso,4,6.50
+10/12/2025,Sevilla Centro,F-1568,Maria G.,7.00,Activo,,Croquetas Jamon,1,7.00
+17/01/2026,Sevilla Centro,F-1329,Ana P.,14.00,Activo,,Cerveza Estrella,4,3.50
+24/01/2026,Nervion,F-1368,Sofia N.,70.00,Activo,,Dorada al Horno,4,17.50
+18/12/2025,Sevilla Centro,F-1409,Carlos M.,12.00,Activo,,Sangria Jarra,1,12.00
+02/11/2025,Nervion,F-1346,Laura F.,33.00,Activo,,Ensalada Cesar,3,11.00
+18/11/2025,Sevilla Centro,F-1504,Pedro S.,7.50,Activo,,Agua Mineral,3,2.50
+14/11/2025,Triana,F-1523,Maria G.,36.00,Activo,,Lubina a la Plancha,2,18.00
+08/11/2025,Sevilla Centro,F-1225,Javier R.,35.00,Activo,,Dorada al Horno,2,17.50
+03/12/2025,Nervion,F-1386,David L.,3.00,Activo,,Refresco,1,3.00
+05/11/2025,Nervion,F-1715,Miguel A.,34.00,Activo,,Mojito,4,8.50
+21/11/2025,Sevilla Centro,F-1588,Carlos M.,32.00,Activo,,Arroz Negro,2,16.00
+20/12/2025,Sevilla Centro,F-1736,Laura F.,10.00,Activo,,Cerveza Artesana,2,5.00
+05/12/2025,Sevilla Centro,F-1278,Carlos M.,13.50,Activo,,Helado Artesano,3,4.50
+25/12/2025,Triana,F-1155,Miguel A.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+31/12/2025,Triana,F-1001,David L.,3.50,Activo,,Cerveza Estrella,1,3.50
+13/11/2025,Triana,F-1338,Miguel A.,5.70,Activo,,Cortado,3,1.90
+14/01/2026,Nervion,F-1740,Javier R.,3.80,Activo,,Cortado,2,1.90
+07/01/2026,Triana,F-1645,Laura F.,2.50,Activo,,Agua Mineral,1,2.50
+12/01/2026,Triana,F-1756,Javier R.,33.00,Activo,,Ensalada Cesar,3,11.00
+06/11/2025,Sevilla Centro,F-1527,Maria G.,5.50,Activo,,Copa Vino Tinto,1,5.50
+08/01/2026,Nervion,F-1838,Javier R.,31.00,Eliminado,Despues del cobro,Paella Mixta,2,15.50
+28/12/2025,Nervion,F-1216,Carlos M.,31.00,Activo,,Paella Mixta,2,15.50
+18/12/2025,Triana,F-1828,Maria G.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+14/12/2025,Sevilla Centro,F-1136,Sofia N.,28.50,Activo,,Ensalada Mixta,3,9.50
+15/01/2026,Nervion,F-1666,Ana P.,10.00,Activo,,Cerveza Artesana,2,5.00
+24/12/2025,Triana,F-1116,Ana P.,24.00,Activo,,Solomillo Iberico,1,24.00
+16/01/2026,Nervion,F-1117,Javier R.,62.00,Activo,,Paella Mixta,4,15.50
+06/01/2026,Triana,F-1700,Pedro S.,21.00,Activo,,Croquetas Jamon,3,7.00
+27/11/2025,Nervion,F-1122,Ana P.,32.00,Activo,,Arroz Negro,2,16.00
+16/11/2025,Sevilla Centro,F-1242,Pedro S.,72.00,Activo,,Solomillo Iberico,3,24.00
+08/01/2026,Sevilla Centro,F-1893,Miguel A.,16.00,Eliminado,Despues de la cocina,Arroz Negro,1,16.00
+18/11/2025,Sevilla Centro,F-1120,Miguel A.,21.00,Activo,,Croquetas Jamon,3,7.00
+11/11/2025,Nervion,F-1336,Carlos M.,3.50,Activo,,Cerveza Estrella,1,3.50
+19/12/2025,Sevilla Centro,F-1301,Carlos M.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+17/11/2025,Sevilla Centro,F-1167,Miguel A.,9.50,Activo,,Ensalada Mixta,1,9.50
+22/12/2025,Sevilla Centro,F-1159,Carlos M.,3.80,Activo,,Cortado,2,1.90
+30/01/2026,Sevilla Centro,F-1115,Laura F.,9.00,Activo,,Helado Artesano,2,4.50
+15/01/2026,Triana,F-1144,Sofia N.,24.00,Activo,,Sangria Jarra,2,12.00
+02/12/2025,Triana,F-1728,Carlos M.,30.00,Activo,,Gazpacho,4,7.50
+19/12/2025,Triana,F-1005,David L.,13.50,Activo,,Gambas al Ajillo,1,13.50
+23/01/2026,Nervion,F-1865,Javier R.,36.00,Eliminado,Despues del cobro,Sangria Jarra,3,12.00
+06/11/2025,Nervion,F-1224,Pedro S.,16.00,Activo,,Jamon Iberico,1,16.00
+06/12/2025,Sevilla Centro,F-1485,Miguel A.,17.50,Activo,,Dorada al Horno,1,17.50
+06/12/2025,Sevilla Centro,F-1929,Miguel A.,17.50,Eliminado,Despues del cobro,Dorada al Horno,1,17.50
+16/11/2025,Sevilla Centro,F-1207,Laura F.,44.00,Activo,,Ensalada Cesar,4,11.00
+08/01/2026,Nervion,F-1497,Carlos M.,6.50,Activo,,Tarta Queso,1,6.50
+04/11/2025,Triana,F-1286,Laura F.,33.00,Activo,,Ensalada Cesar,3,11.00
+12/01/2026,Nervion,F-1616,Ana P.,17.50,Activo,,Dorada al Horno,1,17.50
+27/01/2026,Triana,F-1133,Javier R.,16.00,Activo,,Jamon Iberico,1,16.00
+10/01/2026,Triana,F-1574,Javier R.,5.70,Activo,,Cortado,3,1.90
+23/12/2025,Sevilla Centro,F-1198,Javier R.,12.00,Activo,,Tiramisu,2,6.00
+05/11/2025,Sevilla Centro,F-1422,Carlos M.,7.20,Activo,,Cafe Solo,4,1.80
+16/11/2025,Sevilla Centro,F-1863,Miguel A.,13.50,Eliminado,Despues del cobro,Gambas al Ajillo,1,13.50
+19/12/2025,Nervion,F-1667,Pedro S.,7.00,Activo,,Croquetas Jamon,1,7.00
+03/12/2025,Triana,F-1165,Miguel A.,5.00,Activo,,Cerveza Artesana,1,5.00
+05/12/2025,Triana,F-1303,Ana P.,5.50,Activo,,Copa Vino Tinto,1,5.50
+04/11/2025,Sevilla Centro,F-1285,Pedro S.,5.00,Activo,,Cerveza Artesana,1,5.00
+28/01/2026,Nervion,F-1324,Laura F.,44.00,Activo,,Entrecot,2,22.00
+19/01/2026,Triana,F-1646,David L.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+05/12/2025,Sevilla Centro,F-1859,Miguel A.,48.00,Eliminado,Despues del cobro,Jamon Iberico,3,16.00
+24/12/2025,Nervion,F-1841,Maria G.,66.00,Eliminado,Despues del cobro,Entrecot,3,22.00
+21/11/2025,Nervion,F-1372,Javier R.,43.50,Activo,,Paella Valenciana,3,14.50
+22/12/2025,Nervion,F-1486,Sofia N.,10.00,Activo,,Copa Vino Blanco,2,5.00
+18/11/2025,Triana,F-1569,David L.,14.00,Activo,,Croquetas Jamon,2,7.00
+13/12/2025,Triana,F-1778,Laura F.,7.50,Activo,,Gazpacho,1,7.50
+14/11/2025,Triana,F-1425,Pedro S.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+24/01/2026,Triana,F-1856,Miguel A.,36.00,Eliminado,Despues del cobro,Lubina a la Plancha,2,18.00
+25/01/2026,Sevilla Centro,F-1825,David L.,96.00,Activo,,Solomillo Iberico,4,24.00
+08/11/2025,Triana,F-1414,Sofia N.,36.00,Activo,,Sangria Jarra,3,12.00
+16/12/2025,Nervion,F-1549,Sofia N.,19.00,Activo,,Ensalada Mixta,2,9.50
+04/11/2025,Sevilla Centro,F-1522,David L.,10.00,Activo,,Agua Mineral,4,2.50
+17/11/2025,Triana,F-1401,David L.,12.00,Activo,,Tiramisu,2,6.00
+06/01/2026,Triana,F-1420,Javier R.,44.00,Activo,,Ensalada Cesar,4,11.00
+25/01/2026,Triana,F-1030,Ana P.,44.00,Activo,,Ensalada Cesar,4,11.00
+13/12/2025,Sevilla Centro,F-1885,David L.,48.00,Eliminado,Despues del cobro,Arroz Negro,3,16.00
+08/12/2025,Nervion,F-1517,Sofia N.,13.50,Activo,,Gambas al Ajillo,1,13.50
+27/11/2025,Sevilla Centro,F-1211,Laura F.,48.00,Activo,,Solomillo Iberico,2,24.00
+24/12/2025,Triana,F-1407,Carlos M.,5.00,Activo,,Agua Mineral,2,2.50
+17/01/2026,Triana,F-1017,Ana P.,35.00,Activo,,Dorada al Horno,2,17.50
+08/01/2026,Sevilla Centro,F-1430,Maria G.,10.50,Activo,,Tostada,3,3.50
+03/01/2026,Nervion,F-1543,Laura F.,28.50,Activo,,Ensalada Mixta,3,9.50
+21/01/2026,Nervion,F-1359,David L.,19.50,Activo,,Tarta Queso,3,6.50
+01/12/2025,Nervion,F-1590,Maria G.,48.00,Activo,,Sangria Jarra,4,12.00
+27/11/2025,Sevilla Centro,F-1402,Javier R.,88.00,Activo,,Entrecot,4,22.00
+26/11/2025,Sevilla Centro,F-1899,Miguel A.,72.00,Eliminado,Despues del cobro,Solomillo Iberico,3,24.00
+15/12/2025,Triana,F-1253,Miguel A.,27.00,Activo,,Gambas al Ajillo,2,13.50
+05/11/2025,Sevilla Centro,F-1707,Pedro S.,29.00,Activo,,Paella Valenciana,2,14.50
+23/01/2026,Nervion,F-1713,Javier R.,22.50,Activo,,Gazpacho,3,7.50
+11/12/2025,Sevilla Centro,F-1441,Maria G.,10.00,Activo,,Copa Vino Blanco,2,5.00
+28/01/2026,Sevilla Centro,F-1830,Miguel A.,12.50,Eliminado,Despues del cobro,Hamburguesa Clasica,1,12.50
+14/01/2026,Nervion,F-1714,Ana P.,9.00,Activo,,Refresco,3,3.00
+09/11/2025,Nervion,F-1007,Ana P.,11.00,Activo,,Ensalada Cesar,1,11.00
+01/12/2025,Triana,F-1487,Javier R.,26.00,Activo,,Patatas Bravas,4,6.50
+10/01/2026,Sevilla Centro,F-1290,Miguel A.,19.00,Activo,,Gin Tonic,2,9.50
+09/12/2025,Nervion,F-1247,Laura F.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+27/11/2025,Nervion,F-1659,Sofia N.,10.50,Activo,,Cerveza Estrella,3,3.50
+13/01/2026,Sevilla Centro,F-1572,David L.,8.80,Activo,,Cafe con Leche,4,2.20
+17/11/2025,Sevilla Centro,F-1326,David L.,38.00,Activo,,Gin Tonic,4,9.50
+11/01/2026,Sevilla Centro,F-1871,Miguel A.,32.00,Eliminado,Despues del cobro,Jamon Iberico,2,16.00
+25/12/2025,Triana,F-1437,Pedro S.,35.00,Activo,,Dorada al Horno,2,17.50
+13/12/2025,Sevilla Centro,F-1890,Javier R.,52.50,Eliminado,Despues del cobro,Dorada al Horno,3,17.50
+06/11/2025,Nervion,F-1457,Javier R.,11.00,Activo,,Crema Catalana,2,5.50
+24/12/2025,Sevilla Centro,F-1045,Sofia N.,12.00,Activo,,Refresco,4,3.00
+01/11/2025,Triana,F-1491,Pedro S.,11.00,Activo,,Copa Vino Tinto,2,5.50
+09/12/2025,Sevilla Centro,F-1809,Laura F.,54.00,Activo,,Gambas al Ajillo,4,13.50
+08/11/2025,Sevilla Centro,F-1489,Carlos M.,10.00,Activo,,Copa Vino Blanco,2,5.00
+13/11/2025,Nervion,F-1661,David L.,1.90,Activo,,Cortado,1,1.90
+07/11/2025,Sevilla Centro,F-1888,Miguel A.,45.00,Eliminado,Despues de la cocina,Pulpo a la Gallega,3,15.00
+06/11/2025,Nervion,F-1599,Miguel A.,9.00,Activo,,Helado Artesano,2,4.50
+24/01/2026,Triana,F-1025,Carlos M.,6.60,Activo,,Cafe con Leche,3,2.20
+19/01/2026,Sevilla Centro,F-1904,Miguel A.,44.00,Eliminado,Despues del cobro,Entrecot,2,22.00
+07/01/2026,Sevilla Centro,F-1042,Ana P.,12.00,Activo,,Tiramisu,2,6.00
+01/11/2025,Triana,F-1745,Javier R.,3.80,Activo,,Cortado,2,1.90
+22/01/2026,Triana,F-1084,Carlos M.,14.00,Activo,,Tostada,4,3.50
+06/11/2025,Nervion,F-1014,Maria G.,10.00,Activo,,Copa Vino Blanco,2,5.00
+10/01/2026,Nervion,F-1063,Laura F.,7.20,Activo,,Cafe Solo,4,1.80
+09/12/2025,Triana,F-1177,Ana P.,16.00,Activo,,Arroz Negro,1,16.00
+23/12/2025,Nervion,F-1506,Maria G.,5.00,Activo,,Cerveza Artesana,1,5.00
+08/11/2025,Nervion,F-1818,Sofia N.,22.50,Activo,,Gazpacho,3,7.50
+01/11/2025,Sevilla Centro,F-1438,Carlos M.,5.40,Activo,,Cafe Solo,3,1.80
+15/12/2025,Sevilla Centro,F-1525,Pedro S.,24.00,Activo,,Tiramisu,4,6.00
+24/12/2025,Triana,F-1717,Pedro S.,12.00,Activo,,Sangria Jarra,1,12.00
+31/12/2025,Sevilla Centro,F-1194,Miguel A.,96.00,Activo,,Solomillo Iberico,4,24.00
+07/11/2025,Sevilla Centro,F-1911,Miguel A.,72.00,Eliminado,Despues del cobro,Solomillo Iberico,3,24.00
+08/01/2026,Sevilla Centro,F-1842,Miguel A.,48.00,Eliminado,Despues de la cocina,Arroz Negro,3,16.00
+24/12/2025,Sevilla Centro,F-1790,Carlos M.,14.00,Activo,,Tostada,4,3.50
+07/12/2025,Sevilla Centro,F-1751,Pedro S.,7.60,Activo,,Cortado,4,1.90
+12/01/2026,Triana,F-1044,Javier R.,4.50,Activo,,Helado Artesano,1,4.50
+05/11/2025,Triana,F-1168,Sofia N.,6.00,Activo,,Refresco,2,3.00
+13/12/2025,Sevilla Centro,F-1758,David L.,24.00,Activo,,Solomillo Iberico,1,24.00
+24/12/2025,Triana,F-1123,Maria G.,5.00,Activo,,Cerveza Artesana,1,5.00
+16/11/2025,Triana,F-1230,Pedro S.,5.50,Activo,,Copa Vino Tinto,1,5.50
+21/01/2026,Triana,F-1636,Sofia N.,15.50,Activo,,Paella Mixta,1,15.50
+20/12/2025,Nervion,F-1210,David L.,42.00,Activo,,Calamares Fritos,4,10.50
+07/12/2025,Nervion,F-1762,Javier R.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+11/12/2025,Triana,F-1737,Maria G.,19.00,Activo,,Ensalada Mixta,2,9.50
+10/12/2025,Triana,F-1823,Ana P.,16.00,Activo,,Arroz Negro,1,16.00
+01/12/2025,Sevilla Centro,F-1319,Sofia N.,5.40,Activo,,Cafe Solo,3,1.80
+26/01/2026,Nervion,F-1502,Sofia N.,14.00,Activo,,Cerveza Estrella,4,3.50
+04/01/2026,Sevilla Centro,F-1840,Miguel A.,30.00,Eliminado,Despues del cobro,Pulpo a la Gallega,2,15.00
+02/11/2025,Triana,F-1153,Pedro S.,48.00,Activo,,Sangria Jarra,4,12.00
+20/01/2026,Nervion,F-1705,David L.,70.00,Activo,,Dorada al Horno,4,17.50
+13/01/2026,Sevilla Centro,F-1847,Carlos M.,45.00,Eliminado,Despues del cobro,Pulpo a la Gallega,3,15.00
+30/01/2026,Sevilla Centro,F-1902,Javier R.,27.00,Eliminado,Despues del cobro,Gambas al Ajillo,2,13.50
+31/01/2026,Nervion,F-1528,Miguel A.,48.00,Activo,,Jamon Iberico,3,16.00
+06/11/2025,Sevilla Centro,F-1640,Carlos M.,21.00,Activo,,Calamares Fritos,2,10.50
+27/12/2025,Triana,F-1189,Javier R.,48.00,Activo,,Arroz Negro,3,16.00
+31/01/2026,Triana,F-1396,Ana P.,58.00,Activo,,Paella Valenciana,4,14.50
+30/12/2025,Sevilla Centro,F-1102,David L.,44.00,Activo,,Ensalada Cesar,4,11.00
+21/12/2025,Sevilla Centro,F-1119,David L.,1.90,Activo,,Cortado,1,1.90
+01/01/2026,Sevilla Centro,F-1676,Pedro S.,3.50,Activo,,Tostada,1,3.50
+29/01/2026,Sevilla Centro,F-1581,Javier R.,12.00,Activo,,Refresco,4,3.00
+01/11/2025,Triana,F-1935,Carlos M.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+16/01/2026,Nervion,F-1488,Sofia N.,3.50,Activo,,Cerveza Estrella,1,3.50
+12/11/2025,Nervion,F-1484,Carlos M.,13.50,Activo,,Helado Artesano,3,4.50
+17/12/2025,Sevilla Centro,F-1264,David L.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+03/11/2025,Nervion,F-1482,Javier R.,5.00,Activo,,Copa Vino Blanco,1,5.00
+16/01/2026,Sevilla Centro,F-1406,Carlos M.,13.50,Activo,,Helado Artesano,3,4.50
+22/12/2025,Nervion,F-1188,Maria G.,6.60,Activo,,Cafe con Leche,3,2.20
+29/01/2026,Sevilla Centro,F-1692,Laura F.,6.50,Activo,,Patatas Bravas,1,6.50
+28/12/2025,Nervion,F-1262,Laura F.,48.00,Activo,,Solomillo Iberico,2,24.00
+02/12/2025,Nervion,F-1363,Pedro S.,3.60,Activo,,Cafe Solo,2,1.80
+27/12/2025,Sevilla Centro,F-1282,Miguel A.,11.00,Activo,,Crema Catalana,2,5.50
+05/01/2026,Nervion,F-1013,Javier R.,10.00,Activo,,Copa Vino Blanco,2,5.00
+24/01/2026,Triana,F-1388,Carlos M.,3.80,Activo,,Cortado,2,1.90
+04/01/2026,Triana,F-1750,Maria G.,22.00,Activo,,Ensalada Cesar,2,11.00
+11/01/2026,Nervion,F-1293,Laura F.,1.80,Activo,,Cafe Solo,1,1.80
+28/11/2025,Triana,F-1217,Sofia N.,2.50,Activo,,Agua Mineral,1,2.50
+10/01/2026,Sevilla Centro,F-1058,Pedro S.,64.00,Activo,,Jamon Iberico,4,16.00
+08/12/2025,Sevilla Centro,F-1481,Carlos M.,11.00,Activo,,Copa Vino Tinto,2,5.50
+02/01/2026,Triana,F-1072,Ana P.,26.00,Activo,,Tarta Queso,4,6.50
+03/01/2026,Sevilla Centro,F-1576,Pedro S.,10.50,Activo,,Tostada,3,3.50
+10/11/2025,Nervion,F-1770,Pedro S.,16.00,Activo,,Arroz Negro,1,16.00
+11/01/2026,Sevilla Centro,F-1206,Javier R.,19.00,Activo,,Ensalada Mixta,2,9.50
+02/11/2025,Nervion,F-1625,Sofia N.,38.00,Activo,,Ensalada Mixta,4,9.50
+13/12/2025,Triana,F-1175,David L.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+30/11/2025,Sevilla Centro,F-1710,Maria G.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+20/12/2025,Sevilla Centro,F-1538,Carlos M.,14.00,Activo,,Cerveza Estrella,4,3.50
+06/11/2025,Sevilla Centro,F-1071,Maria G.,22.00,Activo,,Copa Vino Tinto,4,5.50
+23/11/2025,Nervion,F-1688,Javier R.,34.00,Activo,,Mojito,4,8.50
+09/11/2025,Nervion,F-1490,Ana P.,5.50,Activo,,Crema Catalana,1,5.50
+12/11/2025,Nervion,F-1462,Laura F.,32.00,Activo,,Jamon Iberico,2,16.00
+05/12/2025,Nervion,F-1643,Maria G.,15.00,Activo,,Cerveza Artesana,3,5.00
+06/01/2026,Sevilla Centro,F-1845,Miguel A.,22.00,Eliminado,Despues del cobro,Entrecot,1,22.00
+29/01/2026,Nervion,F-1541,Ana P.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+06/01/2026,Nervion,F-1782,David L.,32.00,Activo,,Tortilla Espanola,4,8.00
+02/12/2025,Triana,F-1127,Laura F.,72.00,Activo,,Solomillo Iberico,3,24.00
+10/12/2025,Nervion,F-1808,Ana P.,21.00,Activo,,Calamares Fritos,2,10.50
+21/12/2025,Triana,F-1658,Miguel A.,70.00,Activo,,Dorada al Horno,4,17.50
+20/11/2025,Sevilla Centro,F-1061,Javier R.,17.00,Activo,,Mojito,2,8.50
+31/12/2025,Nervion,F-1090,David L.,10.00,Activo,,Cerveza Artesana,2,5.00
+08/12/2025,Nervion,F-1142,Sofia N.,5.40,Activo,,Cafe Solo,3,1.80
+19/12/2025,Triana,F-1520,Carlos M.,9.00,Activo,,Helado Artesano,2,4.50
+20/11/2025,Sevilla Centro,F-1006,David L.,22.50,Activo,,Gazpacho,3,7.50
+29/01/2026,Sevilla Centro,F-1238,Ana P.,5.00,Activo,,Agua Mineral,2,2.50
+15/12/2025,Triana,F-1577,Maria G.,28.50,Activo,,Gin Tonic,3,9.50
+15/01/2026,Nervion,F-1297,David L.,15.00,Activo,,Cerveza Artesana,3,5.00
+06/01/2026,Nervion,F-1073,Sofia N.,10.50,Activo,,Tostada,3,3.50
+26/12/2025,Triana,F-1724,David L.,3.50,Activo,,Cerveza Estrella,1,3.50
+03/01/2026,Sevilla Centro,F-1591,David L.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+25/11/2025,Sevilla Centro,F-1604,Pedro S.,10.50,Activo,,Tostada,3,3.50
+24/12/2025,Triana,F-1052,Maria G.,27.00,Activo,,Gambas al Ajillo,2,13.50
+13/11/2025,Nervion,F-1632,David L.,4.40,Activo,,Cafe con Leche,2,2.20
+08/12/2025,Nervion,F-1603,Carlos M.,33.00,Activo,,Ensalada Cesar,3,11.00
+20/11/2025,Triana,F-1192,Sofia N.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+16/01/2026,Triana,F-1712,Pedro S.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+05/01/2026,Triana,F-1378,Javier R.,4.40,Activo,,Cafe con Leche,2,2.20
+22/01/2026,Sevilla Centro,F-1036,Miguel A.,16.00,Activo,,Arroz Negro,1,16.00
+01/11/2025,Triana,F-1283,David L.,7.50,Activo,,Agua Mineral,3,2.50
+23/01/2026,Sevilla Centro,F-1064,Pedro S.,3.00,Activo,,Refresco,1,3.00
+18/01/2026,Sevilla Centro,F-1028,Ana P.,10.50,Activo,,Tostada,3,3.50
+09/11/2025,Sevilla Centro,F-1350,Carlos M.,2.20,Activo,,Cafe con Leche,1,2.20
+13/11/2025,Sevilla Centro,F-1709,Pedro S.,48.00,Activo,,Jamon Iberico,3,16.00
+23/12/2025,Triana,F-1816,Carlos M.,3.50,Activo,,Cerveza Estrella,1,3.50
+09/11/2025,Triana,F-1493,Pedro S.,1.90,Activo,,Cortado,1,1.90
+17/01/2026,Triana,F-1755,Ana P.,7.00,Activo,,Cerveza Estrella,2,3.50
+23/12/2025,Sevilla Centro,F-1059,Pedro S.,10.00,Activo,,Cerveza Artesana,2,5.00
+19/12/2025,Nervion,F-1339,David L.,17.50,Activo,,Dorada al Horno,1,17.50
+06/12/2025,Nervion,F-1417,Sofia N.,54.00,Activo,,Lubina a la Plancha,3,18.00
+22/01/2026,Sevilla Centro,F-1173,Maria G.,7.60,Activo,,Cortado,4,1.90
+29/12/2025,Nervion,F-1067,Miguel A.,28.00,Activo,,Croquetas Jamon,4,7.00
+16/11/2025,Nervion,F-1607,Laura F.,13.50,Activo,,Gambas al Ajillo,1,13.50
+08/11/2025,Nervion,F-1235,Ana P.,34.00,Activo,,Mojito,4,8.50
+05/12/2025,Nervion,F-1016,Carlos M.,16.00,Activo,,Arroz Negro,1,16.00
+19/01/2026,Sevilla Centro,F-1752,Pedro S.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+17/01/2026,Triana,F-1034,Pedro S.,43.50,Activo,,Paella Valenciana,3,14.50
+06/01/2026,Nervion,F-1257,Maria G.,64.00,Activo,,Arroz Negro,4,16.00
+28/01/2026,Triana,F-1701,Sofia N.,4.50,Activo,,Helado Artesano,1,4.50
+30/12/2025,Sevilla Centro,F-1021,Maria G.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+05/01/2026,Nervion,F-1824,Javier R.,26.00,Activo,,Tarta Queso,4,6.50
+25/01/2026,Triana,F-1657,Laura F.,22.50,Activo,,Gazpacho,3,7.50
+27/11/2025,Nervion,F-1810,Sofia N.,5.00,Activo,,Copa Vino Blanco,1,5.00
+11/01/2026,Triana,F-1530,Maria G.,24.00,Activo,,Solomillo Iberico,1,24.00
+08/01/2026,Nervion,F-1086,Laura F.,22.00,Activo,,Copa Vino Tinto,4,5.50
+25/01/2026,Nervion,F-1564,Carlos M.,8.00,Activo,,Tortilla Espanola,1,8.00
+09/12/2025,Nervion,F-1306,Pedro S.,10.00,Activo,,Copa Vino Blanco,2,5.00
+20/11/2025,Sevilla Centro,F-1909,Miguel A.,37.50,Eliminado,Despues de la cocina,Hamburguesa Clasica,3,12.50
+27/01/2026,Nervion,F-1611,Laura F.,20.00,Activo,,Copa Vino Blanco,4,5.00
+20/12/2025,Triana,F-1263,Miguel A.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+28/11/2025,Sevilla Centro,F-1846,Laura F.,37.50,Eliminado,Despues del cobro,Hamburguesa Clasica,3,12.50
+26/11/2025,Nervion,F-1913,Miguel A.,15.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,1,15.00
+12/11/2025,Sevilla Centro,F-1305,Javier R.,4.50,Activo,,Helado Artesano,1,4.50
+02/11/2025,Triana,F-1397,Sofia N.,31.00,Activo,,Paella Mixta,2,15.50
+22/12/2025,Triana,F-1166,Sofia N.,13.00,Activo,,Patatas Bravas,2,6.50
+19/11/2025,Sevilla Centro,F-1232,Sofia N.,48.00,Activo,,Jamon Iberico,3,16.00
+06/11/2025,Sevilla Centro,F-1874,Miguel A.,27.00,Eliminado,Despues del cobro,Gambas al Ajillo,2,13.50
+04/11/2025,Sevilla Centro,F-1228,David L.,2.20,Activo,,Cafe con Leche,1,2.20
+03/12/2025,Nervion,F-1877,Miguel A.,32.00,Eliminado,Despues del cobro,Arroz Negro,2,16.00
+20/01/2026,Triana,F-1879,Sofia N.,46.50,Eliminado,Despues del cobro,Paella Mixta,3,15.50
+25/12/2025,Sevilla Centro,F-1106,Ana P.,10.50,Activo,,Cerveza Estrella,3,3.50
+16/12/2025,Sevilla Centro,F-1307,Carlos M.,19.50,Activo,,Tarta Queso,3,6.50
+14/01/2026,Triana,F-1051,David L.,48.00,Activo,,Sangria Jarra,4,12.00
+16/12/2025,Sevilla Centro,F-1573,Ana P.,32.00,Activo,,Jamon Iberico,2,16.00
+16/01/2026,Nervion,F-1529,Miguel A.,22.00,Activo,,Crema Catalana,4,5.50
+17/01/2026,Sevilla Centro,F-1537,Laura F.,4.50,Activo,,Helado Artesano,1,4.50
+11/01/2026,Triana,F-1289,Ana P.,22.00,Activo,,Ensalada Cesar,2,11.00
+11/12/2025,Sevilla Centro,F-1820,Laura F.,4.50,Activo,,Helado Artesano,1,4.50
+15/12/2025,Triana,F-1648,Javier R.,5.00,Activo,,Agua Mineral,2,2.50
+04/11/2025,Sevilla Centro,F-1511,Javier R.,8.80,Activo,,Cafe con Leche,4,2.20
+30/01/2026,Sevilla Centro,F-1097,Miguel A.,28.50,Activo,,Gin Tonic,3,9.50
+13/11/2025,Sevilla Centro,F-1584,Laura F.,54.00,Activo,,Gambas al Ajillo,4,13.50
+20/12/2025,Triana,F-1427,Maria G.,11.00,Activo,,Crema Catalana,2,5.50
+19/11/2025,Nervion,F-1068,Pedro S.,7.20,Activo,,Cafe Solo,4,1.80
+24/01/2026,Nervion,F-1556,David L.,15.00,Activo,,Gazpacho,2,7.50
+09/12/2025,Triana,F-1567,Carlos M.,1.90,Activo,,Cortado,1,1.90
+12/12/2025,Triana,F-1614,Sofia N.,96.00,Activo,,Solomillo Iberico,4,24.00
+06/01/2026,Triana,F-1003,Pedro S.,9.00,Activo,,Refresco,3,3.00
+26/01/2026,Sevilla Centro,F-1383,Javier R.,12.00,Activo,,Refresco,4,3.00
+27/12/2025,Nervion,F-1617,David L.,10.50,Activo,,Calamares Fritos,1,10.50
+22/01/2026,Triana,F-1639,Javier R.,36.00,Activo,,Lubina a la Plancha,2,18.00
+10/12/2025,Sevilla Centro,F-1849,Maria G.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+23/01/2026,Sevilla Centro,F-1678,Ana P.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+30/01/2026,Triana,F-1780,Javier R.,7.60,Activo,,Cortado,4,1.90
+17/11/2025,Nervion,F-1112,Miguel A.,24.00,Activo,,Tiramisu,4,6.00
+01/01/2026,Triana,F-1446,Ana P.,24.00,Activo,,Solomillo Iberico,1,24.00
+11/12/2025,Sevilla Centro,F-1831,Miguel A.,32.00,Eliminado,Despues del cobro,Arroz Negro,2,16.00
+25/12/2025,Triana,F-1432,Ana P.,5.40,Activo,,Cafe Solo,3,1.80
+03/11/2025,Sevilla Centro,F-1011,Javier R.,3.50,Activo,,Tostada,1,3.50
+30/11/2025,Triana,F-1048,Carlos M.,22.00,Activo,,Copa Vino Tinto,4,5.50
+30/01/2026,Sevilla Centro,F-1495,Ana P.,62.00,Activo,,Paella Mixta,4,15.50
+01/01/2026,Nervion,F-1720,Sofia N.,11.00,Activo,,Ensalada Cesar,1,11.00
+12/01/2026,Nervion,F-1299,Carlos M.,22.50,Activo,,Gazpacho,3,7.50
+02/11/2025,Triana,F-1405,David L.,44.00,Activo,,Ensalada Cesar,4,11.00
+19/01/2026,Nervion,F-1494,Sofia N.,15.00,Activo,,Copa Vino Blanco,3,5.00
+11/01/2026,Triana,F-1521,Pedro S.,15.00,Activo,,Cerveza Artesana,3,5.00
+12/11/2025,Sevilla Centro,F-1852,Miguel A.,30.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,2,15.00
+15/11/2025,Nervion,F-1663,Javier R.,24.00,Activo,,Tiramisu,4,6.00
+04/12/2025,Nervion,F-1772,Miguel A.,19.50,Activo,,Patatas Bravas,3,6.50
+01/11/2025,Sevilla Centro,F-1399,Laura F.,6.00,Activo,,Refresco,2,3.00
+21/12/2025,Nervion,F-1213,David L.,6.50,Activo,,Tarta Queso,1,6.50
+02/12/2025,Sevilla Centro,F-1555,Javier R.,9.00,Activo,,Helado Artesano,2,4.50
+15/11/2025,Sevilla Centro,F-1174,Miguel A.,24.00,Activo,,Tortilla Espanola,3,8.00
+13/11/2025,Nervion,F-1454,Javier R.,10.00,Activo,,Agua Mineral,4,2.50
+25/01/2026,Sevilla Centro,F-1190,Maria G.,26.00,Activo,,Patatas Bravas,4,6.50
+20/11/2025,Triana,F-1114,Maria G.,20.00,Activo,,Cerveza Artesana,4,5.00
+25/12/2025,Nervion,F-1628,Pedro S.,8.50,Activo,,Mojito,1,8.50
+15/11/2025,Nervion,F-1062,Carlos M.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+19/11/2025,Nervion,F-1274,Miguel A.,3.80,Activo,,Cortado,2,1.90
+09/12/2025,Nervion,F-1332,Maria G.,7.00,Activo,,Cerveza Estrella,2,3.50
+16/11/2025,Triana,F-1249,David L.,5.00,Activo,,Copa Vino Blanco,1,5.00
+31/12/2025,Nervion,F-1204,Miguel A.,3.50,Activo,,Cerveza Estrella,1,3.50
+30/01/2026,Sevilla Centro,F-1250,Laura F.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+13/01/2026,Sevilla Centro,F-1535,Javier R.,21.00,Activo,,Calamares Fritos,2,10.50
+06/11/2025,Nervion,F-1268,Pedro S.,22.00,Activo,,Entrecot,1,22.00
+09/01/2026,Sevilla Centro,F-1725,David L.,33.00,Activo,,Ensalada Cesar,3,11.00
+20/11/2025,Sevilla Centro,F-1029,Sofia N.,34.00,Activo,,Mojito,4,8.50
+18/11/2025,Nervion,F-1170,Carlos M.,8.50,Activo,,Mojito,1,8.50
+19/11/2025,Sevilla Centro,F-1138,Pedro S.,12.00,Activo,,Tiramisu,2,6.00
+16/01/2026,Triana,F-1623,Pedro S.,58.00,Activo,,Paella Valenciana,4,14.50
+19/12/2025,Nervion,F-1267,Javier R.,5.70,Activo,,Cortado,3,1.90
+07/11/2025,Nervion,F-1083,Laura F.,3.60,Activo,,Cafe Solo,2,1.80
+24/01/2026,Nervion,F-1509,Pedro S.,26.00,Activo,,Patatas Bravas,4,6.50
+01/11/2025,Sevilla Centro,F-1633,Sofia N.,12.00,Activo,,Tiramisu,2,6.00
+13/12/2025,Sevilla Centro,F-1900,Miguel A.,44.00,Eliminado,Despues del cobro,Entrecot,2,22.00
+31/01/2026,Sevilla Centro,F-1793,Sofia N.,8.50,Activo,,Mojito,1,8.50
+25/11/2025,Sevilla Centro,F-1883,Miguel A.,44.00,Eliminado,Despues del cobro,Entrecot,2,22.00
+24/12/2025,Triana,F-1683,Pedro S.,8.50,Activo,,Mojito,1,8.50
+27/01/2026,Nervion,F-1669,Sofia N.,29.00,Activo,,Paella Valenciana,2,14.50
+10/01/2026,Nervion,F-1759,Sofia N.,3.50,Activo,,Cerveza Estrella,1,3.50
+04/12/2025,Triana,F-1817,Carlos M.,9.50,Activo,,Gin Tonic,1,9.50
+30/01/2026,Sevilla Centro,F-1844,Pedro S.,30.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,2,15.00
+31/12/2025,Nervion,F-1103,David L.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+01/12/2025,Sevilla Centro,F-1553,Carlos M.,96.00,Activo,,Solomillo Iberico,4,24.00
+02/01/2026,Nervion,F-1896,Miguel A.,29.00,Eliminado,Antes de la cocina,Paella Valenciana,2,14.50
+14/01/2026,Nervion,F-1212,David L.,7.00,Activo,,Cerveza Estrella,2,3.50
+12/01/2026,Triana,F-1741,Sofia N.,28.00,Activo,,Croquetas Jamon,4,7.00
+29/01/2026,Nervion,F-1148,Maria G.,6.50,Activo,,Tarta Queso,1,6.50
+26/11/2025,Nervion,F-1347,Laura F.,38.00,Activo,,Gin Tonic,4,9.50
+07/11/2025,Nervion,F-1850,Miguel A.,15.00,Eliminado,Despues de la cocina,Hamburguesa Gourmet,1,15.00
+13/01/2026,Sevilla Centro,F-1524,Miguel A.,42.00,Activo,,Calamares Fritos,4,10.50
+15/01/2026,Sevilla Centro,F-1193,David L.,25.50,Activo,,Mojito,3,8.50
+29/12/2025,Nervion,F-1461,Sofia N.,3.80,Activo,,Cortado,2,1.90
+29/12/2025,Sevilla Centro,F-1392,Sofia N.,14.00,Activo,,Croquetas Jamon,2,7.00
+01/12/2025,Nervion,F-1813,David L.,48.00,Activo,,Jamon Iberico,3,16.00
+25/11/2025,Triana,F-1733,Carlos M.,40.50,Activo,,Gambas al Ajillo,3,13.50
+01/12/2025,Sevilla Centro,F-1696,Ana P.,16.50,Activo,,Crema Catalana,3,5.50
+27/11/2025,Triana,F-1546,David L.,48.00,Activo,,Jamon Iberico,3,16.00
+18/12/2025,Sevilla Centro,F-1100,Pedro S.,31.50,Activo,,Calamares Fritos,3,10.50
+20/01/2026,Sevilla Centro,F-1534,Ana P.,19.00,Activo,,Ensalada Mixta,2,9.50
+28/11/2025,Nervion,F-1767,David L.,22.00,Activo,,Entrecot,1,22.00
+19/01/2026,Nervion,F-1079,Sofia N.,16.50,Activo,,Crema Catalana,3,5.50
+29/11/2025,Nervion,F-1294,Ana P.,32.00,Activo,,Jamon Iberico,2,16.00
+02/12/2025,Triana,F-1287,Laura F.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+13/11/2025,Triana,F-1325,David L.,4.40,Activo,,Cafe con Leche,2,2.20
+28/11/2025,Sevilla Centro,F-1910,Miguel A.,43.50,Eliminado,Despues del cobro,Paella Valenciana,3,14.50
+07/12/2025,Nervion,F-1680,Ana P.,15.00,Activo,,Copa Vino Blanco,3,5.00
+27/01/2026,Nervion,F-1735,Carlos M.,13.00,Activo,,Tarta Queso,2,6.50
+02/12/2025,Nervion,F-1814,Maria G.,48.00,Activo,,Arroz Negro,3,16.00
+09/01/2026,Nervion,F-1655,Ana P.,11.00,Activo,,Ensalada Cesar,1,11.00
+14/11/2025,Nervion,F-1280,Laura F.,24.00,Activo,,Tortilla Espanola,3,8.00
+27/01/2026,Sevilla Centro,F-1660,Laura F.,96.00,Activo,,Solomillo Iberico,4,24.00
+19/01/2026,Nervion,F-1463,Carlos M.,24.00,Activo,,Solomillo Iberico,1,24.00
+30/12/2025,Nervion,F-1327,Miguel A.,7.50,Activo,,Agua Mineral,3,2.50
+03/01/2026,Nervion,F-1404,Laura F.,26.00,Activo,,Patatas Bravas,4,6.50
+10/12/2025,Sevilla Centro,F-1314,Maria G.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+17/12/2025,Sevilla Centro,F-1634,Miguel A.,11.00,Activo,,Copa Vino Tinto,2,5.50
+01/11/2025,Triana,F-1342,Maria G.,13.00,Activo,,Patatas Bravas,2,6.50
+12/11/2025,Sevilla Centro,F-1151,David L.,28.00,Activo,,Croquetas Jamon,4,7.00
+23/11/2025,Sevilla Centro,F-1706,Miguel A.,14.00,Activo,,Tostada,4,3.50
+22/12/2025,Triana,F-1560,Miguel A.,3.50,Activo,,Cerveza Estrella,1,3.50
+12/11/2025,Nervion,F-1742,David L.,9.50,Activo,,Gin Tonic,1,9.50
+10/01/2026,Nervion,F-1761,Ana P.,19.50,Activo,,Patatas Bravas,3,6.50
+28/01/2026,Triana,F-1111,Ana P.,11.00,Activo,,Ensalada Cesar,1,11.00
+08/01/2026,Triana,F-1085,Laura F.,54.00,Activo,,Gambas al Ajillo,4,13.50
+17/11/2025,Nervion,F-1387,Laura F.,30.00,Activo,,Gazpacho,4,7.50
+08/12/2025,Sevilla Centro,F-1163,Carlos M.,58.00,Activo,,Paella Valenciana,4,14.50
+16/11/2025,Sevilla Centro,F-1331,Miguel A.,6.50,Activo,,Tarta Queso,1,6.50
+23/12/2025,Triana,F-1812,Javier R.,21.00,Activo,,Calamares Fritos,2,10.50
+02/11/2025,Triana,F-1642,Laura F.,32.00,Activo,,Arroz Negro,2,16.00
+27/12/2025,Nervion,F-1795,Javier R.,38.00,Activo,,Gin Tonic,4,9.50
+17/11/2025,Nervion,F-1078,Laura F.,22.00,Activo,,Crema Catalana,4,5.50
+10/11/2025,Sevilla Centro,F-1171,Sofia N.,48.00,Activo,,Jamon Iberico,3,16.00
+26/01/2026,Sevilla Centro,F-1699,Maria G.,33.00,Activo,,Ensalada Cesar,3,11.00
+01/12/2025,Triana,F-1739,Javier R.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+02/12/2025,Triana,F-1130,Miguel A.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+25/12/2025,Nervion,F-1091,Javier R.,7.50,Activo,,Gazpacho,1,7.50
+18/01/2026,Sevilla Centro,F-1925,Maria G.,52.50,Eliminado,Despues de la cocina,Dorada al Horno,3,17.50
+17/01/2026,Sevilla Centro,F-1598,Javier R.,22.50,Activo,,Gazpacho,3,7.50
+20/12/2025,Triana,F-1440,Pedro S.,21.00,Activo,,Croquetas Jamon,3,7.00
+20/01/2026,Nervion,F-1685,Maria G.,31.00,Activo,,Paella Mixta,2,15.50
+24/11/2025,Sevilla Centro,F-1536,Sofia N.,14.00,Activo,,Tostada,4,3.50
+30/12/2025,Sevilla Centro,F-1519,Javier R.,54.00,Activo,,Gambas al Ajillo,4,13.50
+28/01/2026,Sevilla Centro,F-1145,David L.,10.50,Activo,,Cerveza Estrella,3,3.50
+30/01/2026,Nervion,F-1070,Javier R.,30.00,Activo,,Gazpacho,4,7.50
+08/01/2026,Sevilla Centro,F-1271,Carlos M.,72.00,Activo,,Lubina a la Plancha,4,18.00
+05/11/2025,Nervion,F-1606,Miguel A.,72.00,Activo,,Lubina a la Plancha,4,18.00
+09/12/2025,Nervion,F-1483,Javier R.,15.00,Activo,,Cerveza Artesana,3,5.00
+03/11/2025,Triana,F-1764,Laura F.,24.00,Activo,,Solomillo Iberico,1,24.00
+06/01/2026,Triana,F-1426,Laura F.,38.00,Activo,,Gin Tonic,4,9.50
+19/01/2026,Triana,F-1186,Javier R.,7.50,Activo,,Gazpacho,1,7.50
+24/11/2025,Sevilla Centro,F-1923,Miguel A.,29.00,Eliminado,Despues del cobro,Paella Valenciana,2,14.50
+25/11/2025,Triana,F-1179,Miguel A.,15.00,Activo,,Copa Vino Blanco,3,5.00
+11/11/2025,Nervion,F-1526,Laura F.,30.00,Activo,,Gazpacho,4,7.50
+05/12/2025,Sevilla Centro,F-1026,Carlos M.,7.00,Activo,,Croquetas Jamon,1,7.00
+04/11/2025,Sevilla Centro,F-1400,Pedro S.,33.00,Activo,,Ensalada Cesar,3,11.00
+18/12/2025,Triana,F-1158,Miguel A.,3.50,Activo,,Tostada,1,3.50
+15/11/2025,Nervion,F-1575,Carlos M.,16.50,Activo,,Crema Catalana,3,5.50
+19/01/2026,Triana,F-1766,Laura F.,9.50,Activo,,Gin Tonic,1,9.50
+17/11/2025,Nervion,F-1448,Ana P.,26.00,Activo,,Tarta Queso,4,6.50
+21/01/2026,Sevilla Centro,F-1868,Miguel A.,48.00,Eliminado,Despues de la cocina,Solomillo Iberico,2,24.00
+24/11/2025,Triana,F-1373,Ana P.,21.00,Activo,,Croquetas Jamon,3,7.00
+27/11/2025,Triana,F-1234,Sofia N.,48.00,Activo,,Sangria Jarra,4,12.00
+20/01/2026,Sevilla Centro,F-1920,Maria G.,13.50,Eliminado,Despues del cobro,Gambas al Ajillo,1,13.50
+21/12/2025,Nervion,F-1468,Miguel A.,15.50,Activo,,Paella Mixta,1,15.50
+15/01/2026,Nervion,F-1053,Laura F.,6.00,Activo,,Tiramisu,1,6.00
+26/12/2025,Triana,F-1763,Pedro S.,64.00,Activo,,Jamon Iberico,4,16.00
+19/01/2026,Triana,F-1012,David L.,3.60,Activo,,Cafe Solo,2,1.80
+02/11/2025,Triana,F-1684,Laura F.,35.00,Activo,,Dorada al Horno,2,17.50
+13/11/2025,Triana,F-1201,Pedro S.,14.00,Activo,,Tostada,4,3.50
+21/01/2026,Nervion,F-1023,Sofia N.,16.00,Activo,,Jamon Iberico,1,16.00
+21/01/2026,Sevilla Centro,F-1533,Laura F.,26.00,Activo,,Tarta Queso,4,6.50
+11/01/2026,Sevilla Centro,F-1275,David L.,10.50,Activo,,Cerveza Estrella,3,3.50
+23/01/2026,Triana,F-1065,Carlos M.,58.00,Activo,,Paella Valenciana,4,14.50
+15/12/2025,Nervion,F-1453,Ana P.,88.00,Activo,,Entrecot,4,22.00
+01/01/2026,Nervion,F-1424,Laura F.,16.00,Activo,,Arroz Negro,1,16.00
+24/11/2025,Nervion,F-1582,Laura F.,62.00,Activo,,Paella Mixta,4,15.50
+07/01/2026,Nervion,F-1492,Sofia N.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+28/01/2026,Sevilla Centro,F-1773,Maria G.,48.00,Activo,,Arroz Negro,3,16.00
+19/01/2026,Nervion,F-1231,Carlos M.,24.00,Activo,,Tortilla Espanola,3,8.00
+16/01/2026,Triana,F-1689,Javier R.,26.00,Activo,,Patatas Bravas,4,6.50
+22/12/2025,Triana,F-1415,Pedro S.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+17/11/2025,Triana,F-1779,Carlos M.,24.00,Activo,,Tortilla Espanola,3,8.00
+09/12/2025,Nervion,F-1233,David L.,1.80,Activo,,Cafe Solo,1,1.80
+23/11/2025,Sevilla Centro,F-1630,Carlos M.,13.50,Activo,,Gambas al Ajillo,1,13.50
+28/12/2025,Sevilla Centro,F-1719,Ana P.,3.00,Activo,,Refresco,1,3.00
+19/11/2025,Triana,F-1651,Sofia N.,42.00,Activo,,Calamares Fritos,4,10.50
+22/11/2025,Sevilla Centro,F-1837,Ana P.,15.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,1,15.00
+25/01/2026,Sevilla Centro,F-1169,Carlos M.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+06/12/2025,Sevilla Centro,F-1318,Maria G.,22.00,Activo,,Entrecot,1,22.00
+06/01/2026,Triana,F-1930,Ana P.,31.00,Eliminado,Despues del cobro,Paella Mixta,2,15.50
+11/12/2025,Sevilla Centro,F-1619,Carlos M.,1.90,Activo,,Cortado,1,1.90
+11/12/2025,Triana,F-1049,Pedro S.,22.00,Activo,,Entrecot,1,22.00
+26/11/2025,Nervion,F-1195,Pedro S.,21.00,Activo,,Croquetas Jamon,3,7.00
+28/12/2025,Nervion,F-1279,Laura F.,21.00,Activo,,Croquetas Jamon,3,7.00
+27/01/2026,Triana,F-1077,Ana P.,16.50,Activo,,Copa Vino Tinto,3,5.50
+19/11/2025,Sevilla Centro,F-1008,Sofia N.,22.00,Activo,,Crema Catalana,4,5.50
+20/01/2026,Sevilla Centro,F-1627,Pedro S.,3.60,Activo,,Cafe Solo,2,1.80
+27/01/2026,Sevilla Centro,F-1864,Maria G.,14.50,Eliminado,Despues del cobro,Paella Valenciana,1,14.50
+20/12/2025,Nervion,F-1110,Carlos M.,32.00,Activo,,Jamon Iberico,2,16.00
+01/01/2026,Nervion,F-1354,Pedro S.,22.00,Activo,,Entrecot,1,22.00
+08/11/2025,Sevilla Centro,F-1237,Maria G.,18.00,Activo,,Lubina a la Plancha,1,18.00
+14/11/2025,Sevilla Centro,F-1860,Javier R.,43.50,Eliminado,Despues del cobro,Paella Valenciana,3,14.50
+19/11/2025,Sevilla Centro,F-1088,David L.,28.50,Activo,,Ensalada Mixta,3,9.50
+05/01/2026,Triana,F-1784,Sofia N.,5.00,Activo,,Cerveza Artesana,1,5.00
+25/11/2025,Sevilla Centro,F-1908,Maria G.,72.00,Eliminado,Despues del cobro,Solomillo Iberico,3,24.00
+26/12/2025,Triana,F-1552,David L.,16.50,Activo,,Crema Catalana,3,5.50
+27/12/2025,Triana,F-1914,Pedro S.,36.00,Eliminado,Despues del cobro,Lubina a la Plancha,2,18.00
+14/11/2025,Sevilla Centro,F-1934,Miguel A.,40.50,Eliminado,Despues del cobro,Gambas al Ajillo,3,13.50
+16/12/2025,Nervion,F-1132,Miguel A.,7.60,Activo,,Cortado,4,1.90
+21/01/2026,Nervion,F-1466,Laura F.,28.50,Activo,,Gin Tonic,3,9.50
+03/11/2025,Nervion,F-1060,Ana P.,14.50,Activo,,Paella Valenciana,1,14.50
+09/12/2025,Nervion,F-1781,Laura F.,31.00,Activo,,Paella Mixta,2,15.50
+19/01/2026,Nervion,F-1047,Carlos M.,3.60,Activo,,Cafe Solo,2,1.80
+29/12/2025,Triana,F-1418,Maria G.,6.50,Activo,,Tarta Queso,1,6.50
+20/12/2025,Triana,F-1609,Laura F.,44.00,Activo,,Entrecot,2,22.00
+23/11/2025,Triana,F-1540,Javier R.,9.00,Activo,,Refresco,3,3.00
+26/12/2025,Nervion,F-1769,Maria G.,10.50,Activo,,Cerveza Estrella,3,3.50
+04/12/2025,Triana,F-1365,Maria G.,26.00,Activo,,Tarta Queso,4,6.50
+11/01/2026,Nervion,F-1690,Laura F.,19.00,Activo,,Gin Tonic,2,9.50
+18/01/2026,Triana,F-1377,Javier R.,64.00,Activo,,Jamon Iberico,4,16.00
+01/12/2025,Nervion,F-1246,Laura F.,22.00,Activo,,Copa Vino Tinto,4,5.50
+15/12/2025,Nervion,F-1499,David L.,72.00,Activo,,Solomillo Iberico,3,24.00
+27/11/2025,Sevilla Centro,F-1439,Ana P.,7.60,Activo,,Cortado,4,1.90
+27/11/2025,Triana,F-1203,Miguel A.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+06/11/2025,Sevilla Centro,F-1362,Sofia N.,72.00,Activo,,Solomillo Iberico,3,24.00
+09/11/2025,Nervion,F-1256,Ana P.,18.00,Activo,,Tiramisu,3,6.00
+25/11/2025,Nervion,F-1694,Miguel A.,10.00,Activo,,Agua Mineral,4,2.50
+28/11/2025,Nervion,F-1412,Pedro S.,16.50,Activo,,Copa Vino Tinto,3,5.50
+12/12/2025,Sevilla Centro,F-1843,Carlos M.,32.00,Eliminado,Despues del cobro,Arroz Negro,2,16.00
+13/11/2025,Triana,F-1435,Ana P.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+01/12/2025,Sevilla Centro,F-1600,Sofia N.,32.00,Activo,,Jamon Iberico,2,16.00
+02/01/2026,Sevilla Centro,F-1563,Maria G.,28.50,Activo,,Ensalada Mixta,3,9.50
+21/11/2025,Sevilla Centro,F-1681,Laura F.,17.50,Activo,,Dorada al Horno,1,17.50
+11/12/2025,Sevilla Centro,F-1243,Ana P.,24.00,Activo,,Sangria Jarra,2,12.00
+26/01/2026,Nervion,F-1593,Javier R.,44.00,Activo,,Entrecot,2,22.00
+09/11/2025,Sevilla Centro,F-1374,Ana P.,5.70,Activo,,Cortado,3,1.90
+07/12/2025,Nervion,F-1113,Sofia N.,3.50,Activo,,Tostada,1,3.50
+03/11/2025,Sevilla Centro,F-1873,Pedro S.,35.00,Eliminado,Despues del cobro,Dorada al Horno,2,17.50
+30/01/2026,Sevilla Centro,F-1721,David L.,6.00,Activo,,Refresco,2,3.00
+19/11/2025,Triana,F-1408,Maria G.,19.00,Activo,,Gin Tonic,2,9.50
+26/12/2025,Sevilla Centro,F-1878,Sofia N.,29.00,Eliminado,Antes de la cocina,Paella Valenciana,2,14.50
+05/12/2025,Nervion,F-1697,Carlos M.,16.50,Activo,,Copa Vino Tinto,3,5.50
+16/12/2025,Sevilla Centro,F-1905,Javier R.,48.00,Eliminado,Despues del cobro,Jamon Iberico,3,16.00
+29/11/2025,Sevilla Centro,F-1321,Maria G.,12.00,Activo,,Tiramisu,2,6.00
+31/12/2025,Nervion,F-1542,David L.,15.00,Activo,,Cerveza Artesana,3,5.00
+12/11/2025,Triana,F-1183,Miguel A.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+30/11/2025,Nervion,F-1612,Miguel A.,2.20,Activo,,Cafe con Leche,1,2.20
+27/11/2025,Sevilla Centro,F-1718,Ana P.,14.00,Activo,,Tostada,4,3.50
+25/12/2025,Sevilla Centro,F-1443,Sofia N.,14.00,Activo,,Cerveza Estrella,4,3.50
+26/12/2025,Nervion,F-1557,Maria G.,6.00,Activo,,Tiramisu,1,6.00
+28/11/2025,Sevilla Centro,F-1834,David L.,54.00,Eliminado,Despues del cobro,Lubina a la Plancha,3,18.00
+14/11/2025,Nervion,F-1035,Javier R.,4.40,Activo,,Cafe con Leche,2,2.20
+11/11/2025,Nervion,F-1589,Javier R.,8.00,Activo,,Tortilla Espanola,1,8.00
+03/01/2026,Sevilla Centro,F-1922,Pedro S.,27.00,Eliminado,Despues de la cocina,Gambas al Ajillo,2,13.50
+18/12/2025,Sevilla Centro,F-1662,David L.,13.00,Activo,,Tarta Queso,2,6.50
+07/01/2026,Sevilla Centro,F-1587,Pedro S.,88.00,Activo,,Entrecot,4,22.00
+08/01/2026,Triana,F-1800,Carlos M.,26.00,Activo,,Tarta Queso,4,6.50
+12/11/2025,Triana,F-1393,Ana P.,9.00,Activo,,Helado Artesano,2,4.50
+22/01/2026,Triana,F-1037,Pedro S.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+03/12/2025,Nervion,F-1891,Miguel A.,36.00,Eliminado,Despues del cobro,Lubina a la Plancha,2,18.00
+26/11/2025,Sevilla Centro,F-1449,Carlos M.,14.00,Activo,,Cerveza Estrella,4,3.50
+22/12/2025,Nervion,F-1108,Pedro S.,36.00,Activo,,Sangria Jarra,3,12.00
+11/01/2026,Triana,F-1777,Laura F.,36.00,Activo,,Lubina a la Plancha,2,18.00
+15/01/2026,Sevilla Centro,F-1041,Laura F.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+22/11/2025,Sevilla Centro,F-1675,Pedro S.,6.60,Activo,,Cafe con Leche,3,2.20
+09/11/2025,Nervion,F-1032,Javier R.,19.00,Activo,,Ensalada Mixta,2,9.50
+29/11/2025,Nervion,F-1695,Sofia N.,15.50,Activo,,Paella Mixta,1,15.50
+02/12/2025,Sevilla Centro,F-1631,David L.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+27/01/2026,Triana,F-1357,Laura F.,18.00,Activo,,Tiramisu,3,6.00
+29/11/2025,Triana,F-1472,David L.,13.00,Activo,,Tarta Queso,2,6.50
+30/01/2026,Triana,F-1080,David L.,16.50,Activo,,Copa Vino Tinto,3,5.50
+07/01/2026,Sevilla Centro,F-1020,David L.,13.50,Activo,,Gambas al Ajillo,1,13.50
+16/11/2025,Triana,F-1104,Maria G.,18.00,Activo,,Tiramisu,3,6.00
+25/01/2026,Sevilla Centro,F-1398,Pedro S.,32.00,Activo,,Arroz Negro,2,16.00
+21/12/2025,Sevilla Centro,F-1624,Sofia N.,15.00,Activo,,Copa Vino Blanco,3,5.00
+05/12/2025,Sevilla Centro,F-1196,David L.,46.50,Activo,,Paella Mixta,3,15.50
+16/12/2025,Nervion,F-1027,Miguel A.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+16/12/2025,Triana,F-1473,Laura F.,1.90,Activo,,Cortado,1,1.90
+06/12/2025,Triana,F-1126,Carlos M.,4.40,Activo,,Cafe con Leche,2,2.20
+22/11/2025,Triana,F-1038,Javier R.,54.00,Activo,,Lubina a la Plancha,3,18.00
+02/11/2025,Sevilla Centro,F-1875,Miguel A.,31.00,Eliminado,Despues del cobro,Paella Mixta,2,15.50
+03/11/2025,Sevilla Centro,F-1785,Miguel A.,88.00,Activo,,Entrecot,4,22.00
+03/01/2026,Triana,F-1732,Sofia N.,6.00,Activo,,Tiramisu,1,6.00
+12/12/2025,Triana,F-1898,Miguel A.,45.00,Eliminado,Despues de la cocina,Hamburguesa Gourmet,3,15.00
+03/11/2025,Triana,F-1291,Sofia N.,42.00,Activo,,Calamares Fritos,4,10.50
+22/12/2025,Sevilla Centro,F-1512,Miguel A.,7.60,Activo,,Cortado,4,1.90
+28/11/2025,Triana,F-1222,Javier R.,36.00,Activo,,Lubina a la Plancha,2,18.00
+24/01/2026,Sevilla Centro,F-1730,Maria G.,46.50,Activo,,Paella Mixta,3,15.50
+20/01/2026,Sevilla Centro,F-1531,Carlos M.,3.60,Activo,,Cafe Solo,2,1.80
+08/12/2025,Sevilla Centro,F-1043,Javier R.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+08/11/2025,Triana,F-1349,Miguel A.,72.00,Activo,,Lubina a la Plancha,4,18.00
+13/11/2025,Sevilla Centro,F-1586,Javier R.,15.00,Activo,,Cerveza Artesana,3,5.00
+27/01/2026,Sevilla Centro,F-1328,Miguel A.,58.00,Activo,,Paella Valenciana,4,14.50
+02/11/2025,Nervion,F-1731,David L.,25.50,Activo,,Mojito,3,8.50
+07/11/2025,Nervion,F-1912,Carlos M.,17.50,Eliminado,Despues del cobro,Dorada al Horno,1,17.50
+02/01/2026,Nervion,F-1570,Maria G.,3.50,Activo,,Tostada,1,3.50
+21/12/2025,Triana,F-1128,Javier R.,15.00,Activo,,Gazpacho,2,7.50
+24/11/2025,Nervion,F-1298,Carlos M.,62.00,Activo,,Paella Mixta,4,15.50
+20/12/2025,Sevilla Centro,F-1252,Javier R.,13.50,Activo,,Helado Artesano,3,4.50
+07/11/2025,Sevilla Centro,F-1937,Miguel A.,25.00,Eliminado,Despues del cobro,Hamburguesa Clasica,2,12.50
+22/12/2025,Nervion,F-1826,Javier R.,9.00,Activo,,Helado Artesano,2,4.50
+07/01/2026,Sevilla Centro,F-1829,Miguel A.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+13/01/2026,Nervion,F-1738,Miguel A.,11.00,Activo,,Copa Vino Tinto,2,5.50
+12/11/2025,Sevilla Centro,F-1501,Maria G.,9.00,Activo,,Helado Artesano,2,4.50
+02/12/2025,Triana,F-1605,Maria G.,7.00,Activo,,Croquetas Jamon,1,7.00
+13/11/2025,Triana,F-1686,Sofia N.,17.00,Activo,,Mojito,2,8.50
+18/11/2025,Nervion,F-1505,Javier R.,28.00,Activo,,Croquetas Jamon,4,7.00
+03/12/2025,Sevilla Centro,F-1748,Ana P.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+29/01/2026,Sevilla Centro,F-1926,Miguel A.,31.00,Eliminado,Despues del cobro,Paella Mixta,2,15.50
+30/11/2025,Sevilla Centro,F-1099,David L.,38.00,Activo,,Gin Tonic,4,9.50
+21/01/2026,Sevilla Centro,F-1734,David L.,13.50,Activo,,Gambas al Ajillo,1,13.50
+29/12/2025,Triana,F-1649,Ana P.,19.00,Activo,,Gin Tonic,2,9.50
+22/12/2025,Triana,F-1456,Ana P.,46.50,Activo,,Paella Mixta,3,15.50
+23/12/2025,Sevilla Centro,F-1608,Laura F.,48.00,Activo,,Solomillo Iberico,2,24.00
+30/01/2026,Nervion,F-1827,Carlos M.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+18/12/2025,Sevilla Centro,F-1927,Miguel A.,25.00,Eliminado,Despues del cobro,Hamburguesa Clasica,2,12.50
+17/01/2026,Triana,F-1258,Pedro S.,7.00,Activo,,Croquetas Jamon,1,7.00
+23/01/2026,Sevilla Centro,F-1105,Ana P.,9.50,Activo,,Ensalada Mixta,1,9.50
+03/11/2025,Sevilla Centro,F-1477,Laura F.,35.00,Activo,,Dorada al Horno,2,17.50
+05/01/2026,Sevilla Centro,F-1895,Miguel A.,48.00,Eliminado,Despues del cobro,Solomillo Iberico,2,24.00
+25/11/2025,Triana,F-1308,Javier R.,8.80,Activo,,Cafe con Leche,4,2.20
+07/11/2025,Triana,F-1002,Pedro S.,66.00,Activo,,Entrecot,3,22.00
+14/11/2025,Triana,F-1455,Maria G.,48.00,Activo,,Arroz Negro,3,16.00
+24/11/2025,Triana,F-1310,Carlos M.,18.00,Activo,,Tiramisu,3,6.00
+03/01/2026,Sevilla Centro,F-1654,Ana P.,17.00,Activo,,Mojito,2,8.50
+07/12/2025,Sevilla Centro,F-1806,David L.,1.80,Activo,,Cafe Solo,1,1.80
+30/01/2026,Nervion,F-1671,Laura F.,8.80,Activo,,Cafe con Leche,4,2.20
+03/11/2025,Nervion,F-1754,Maria G.,6.60,Activo,,Cafe con Leche,3,2.20
+15/01/2026,Nervion,F-1760,Maria G.,19.00,Activo,,Ensalada Mixta,2,9.50
+13/01/2026,Sevilla Centro,F-1219,Laura F.,29.00,Activo,,Paella Valenciana,2,14.50
+19/12/2025,Triana,F-1245,Javier R.,3.50,Activo,,Tostada,1,3.50
+27/11/2025,Sevilla Centro,F-1172,Laura F.,7.00,Activo,,Tostada,2,3.50
+15/11/2025,Triana,F-1421,Ana P.,13.50,Activo,,Helado Artesano,3,4.50
+08/12/2025,Nervion,F-1199,Ana P.,8.00,Activo,,Tortilla Espanola,1,8.00
+31/01/2026,Nervion,F-1796,Carlos M.,44.00,Activo,,Entrecot,2,22.00
+18/01/2026,Nervion,F-1121,Pedro S.,5.50,Activo,,Copa Vino Tinto,1,5.50
+22/11/2025,Nervion,F-1656,Miguel A.,19.50,Activo,,Patatas Bravas,3,6.50
+14/11/2025,Sevilla Centro,F-1644,Sofia N.,24.00,Activo,,Solomillo Iberico,1,24.00
+29/12/2025,Triana,F-1938,David L.,48.00,Eliminado,Despues del cobro,Jamon Iberico,3,16.00
+20/01/2026,Nervion,F-1792,David L.,58.00,Activo,,Paella Valenciana,4,14.50
+21/12/2025,Nervion,F-1544,Maria G.,62.00,Activo,,Paella Mixta,4,15.50
+01/01/2026,Triana,F-1807,Ana P.,10.50,Activo,,Calamares Fritos,1,10.50
+07/11/2025,Sevilla Centro,F-1160,Pedro S.,48.00,Activo,,Arroz Negro,3,16.00
+19/11/2025,Sevilla Centro,F-1046,Ana P.,10.00,Activo,,Agua Mineral,4,2.50
+03/12/2025,Nervion,F-1413,Laura F.,15.00,Activo,,Copa Vino Blanco,3,5.00
+26/11/2025,Sevilla Centro,F-1419,Carlos M.,34.00,Activo,,Mojito,4,8.50
+28/01/2026,Sevilla Centro,F-1670,Maria G.,3.80,Activo,,Cortado,2,1.90
+08/01/2026,Sevilla Centro,F-1101,Javier R.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+12/01/2026,Nervion,F-1514,Sofia N.,88.00,Activo,,Entrecot,4,22.00
+06/12/2025,Nervion,F-1371,Carlos M.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+13/12/2025,Triana,F-1918,David L.,16.00,Eliminado,Despues del cobro,Jamon Iberico,1,16.00
+26/11/2025,Sevilla Centro,F-1853,Miguel A.,24.00,Eliminado,Antes de la cocina,Sangria Jarra,2,12.00
+08/12/2025,Triana,F-1309,David L.,96.00,Activo,,Solomillo Iberico,4,24.00
+15/01/2026,Nervion,F-1613,Sofia N.,14.50,Activo,,Paella Valenciana,1,14.50
+26/12/2025,Nervion,F-1765,Carlos M.,28.50,Activo,,Gin Tonic,3,9.50
+18/11/2025,Sevilla Centro,F-1498,Javier R.,5.50,Activo,,Crema Catalana,1,5.50
+17/11/2025,Sevilla Centro,F-1353,Laura F.,10.00,Activo,,Agua Mineral,4,2.50
+01/12/2025,Triana,F-1857,Miguel A.,48.00,Eliminado,Despues del cobro,Jamon Iberico,3,16.00
+20/12/2025,Triana,F-1805,Javier R.,18.00,Activo,,Helado Artesano,4,4.50
+23/01/2026,Sevilla Centro,F-1597,Carlos M.,5.40,Activo,,Cafe Solo,3,1.80
+14/12/2025,Triana,F-1768,Ana P.,42.00,Activo,,Calamares Fritos,4,10.50
+07/01/2026,Nervion,F-1691,Carlos M.,29.00,Activo,,Paella Valenciana,2,14.50
+26/01/2026,Sevilla Centro,F-1794,Sofia N.,21.00,Activo,,Croquetas Jamon,3,7.00
+07/11/2025,Sevilla Centro,F-1855,Javier R.,32.00,Eliminado,Despues del cobro,Arroz Negro,2,16.00
+15/11/2025,Sevilla Centro,F-1019,Maria G.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+15/11/2025,Triana,F-1566,Carlos M.,3.00,Activo,,Refresco,1,3.00
+14/01/2026,Sevilla Centro,F-1358,Laura F.,12.00,Activo,,Refresco,4,3.00
+20/12/2025,Nervion,F-1382,Maria G.,5.00,Activo,,Agua Mineral,2,2.50
+17/12/2025,Nervion,F-1376,Javier R.,54.00,Activo,,Gambas al Ajillo,4,13.50
+09/12/2025,Triana,F-1936,Miguel A.,15.50,Eliminado,Despues del cobro,Paella Mixta,1,15.50
+08/11/2025,Sevilla Centro,F-1149,Pedro S.,36.00,Activo,,Lubina a la Plancha,2,18.00
+22/01/2026,Sevilla Centro,F-1882,Carlos M.,48.00,Eliminado,Despues del cobro,Jamon Iberico,3,16.00
+26/12/2025,Triana,F-1244,Pedro S.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+07/11/2025,Triana,F-1156,Pedro S.,7.00,Activo,,Cerveza Estrella,2,3.50
+07/01/2026,Triana,F-1322,Sofia N.,16.50,Activo,,Copa Vino Tinto,3,5.50
+15/11/2025,Triana,F-1682,Pedro S.,46.50,Activo,,Paella Mixta,3,15.50
+27/01/2026,Nervion,F-1635,Laura F.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+12/01/2026,Nervion,F-1220,David L.,5.50,Activo,,Copa Vino Tinto,1,5.50
+06/01/2026,Sevilla Centro,F-1479,David L.,43.50,Activo,,Paella Valenciana,3,14.50
+24/12/2025,Nervion,F-1384,Ana P.,3.80,Activo,,Cortado,2,1.90
+03/12/2025,Triana,F-1665,Maria G.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+12/12/2025,Sevilla Centro,F-1897,Miguel A.,37.50,Eliminado,Despues del cobro,Hamburguesa Clasica,3,12.50
+22/01/2026,Sevilla Centro,F-1337,Miguel A.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+29/11/2025,Triana,F-1547,Maria G.,36.00,Activo,,Sangria Jarra,3,12.00
+03/11/2025,Nervion,F-1403,Miguel A.,24.00,Activo,,Tiramisu,4,6.00
+11/01/2026,Triana,F-1098,David L.,4.40,Activo,,Cafe con Leche,2,2.20
+23/11/2025,Triana,F-1317,Javier R.,7.00,Activo,,Cerveza Estrella,2,3.50
+29/12/2025,Sevilla Centro,F-1500,Maria G.,7.00,Activo,,Croquetas Jamon,1,7.00
+27/12/2025,Triana,F-1650,Laura F.,26.00,Activo,,Tarta Queso,4,6.50
+07/01/2026,Triana,F-1749,Javier R.,16.00,Activo,,Jamon Iberico,1,16.00
+27/11/2025,Triana,F-1664,David L.,18.00,Activo,,Lubina a la Plancha,1,18.00
+16/12/2025,Nervion,F-1277,David L.,5.50,Activo,,Copa Vino Tinto,1,5.50
+29/01/2026,Nervion,F-1351,Maria G.,18.00,Activo,,Lubina a la Plancha,1,18.00
+20/11/2025,Nervion,F-1229,Pedro S.,62.00,Activo,,Paella Mixta,4,15.50
+02/11/2025,Sevilla Centro,F-1107,Miguel A.,12.00,Activo,,Sangria Jarra,1,12.00
+17/12/2025,Nervion,F-1261,David L.,3.60,Activo,,Cafe Solo,2,1.80
+15/12/2025,Nervion,F-1411,Carlos M.,6.00,Activo,,Tiramisu,1,6.00
+08/12/2025,Triana,F-1345,David L.,32.00,Activo,,Tortilla Espanola,4,8.00
+26/12/2025,Triana,F-1513,Ana P.,6.50,Activo,,Tarta Queso,1,6.50
+04/12/2025,Nervion,F-1480,Miguel A.,35.00,Activo,,Dorada al Horno,2,17.50
+11/12/2025,Triana,F-1375,Sofia N.,32.00,Activo,,Tortilla Espanola,4,8.00
+07/12/2025,Sevilla Centro,F-1361,David L.,3.50,Activo,,Tostada,1,3.50
+23/11/2025,Triana,F-1178,Pedro S.,64.00,Activo,,Arroz Negro,4,16.00
+27/01/2026,Triana,F-1137,Pedro S.,58.00,Activo,,Paella Valenciana,4,14.50
+12/11/2025,Sevilla Centro,F-1496,Javier R.,29.00,Activo,,Paella Valenciana,2,14.50
+08/12/2025,Nervion,F-1550,Sofia N.,42.00,Activo,,Calamares Fritos,4,10.50
+07/11/2025,Nervion,F-1711,Sofia N.,14.00,Activo,,Cerveza Estrella,4,3.50
+01/11/2025,Sevilla Centro,F-1269,Javier R.,15.50,Activo,,Paella Mixta,1,15.50

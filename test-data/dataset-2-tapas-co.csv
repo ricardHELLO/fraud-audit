@@ -1,0 +1,540 @@
+Fecha,Local,Ventas Brutas,Ventas Netas,Efectivo Esperado,Efectivo Real,Descuadre
+01/02/2026,Madrid Sol,5911.77,5053.81,1823.79,1807.28,-16.51
+01/02/2026,Malasaña,3657.02,3205.46,1280.36,1285.26,4.90
+02/02/2026,Madrid Sol,4181.07,3793.03,1664.10,1650.71,-13.39
+02/02/2026,Malasaña,3454.20,2936.11,1070.72,1067.96,-2.76
+03/02/2026,Madrid Sol,5062.51,4441.33,1811.14,1772.99,-38.15
+03/02/2026,Malasaña,3522.28,3072.00,1250.39,1259.09,8.70
+04/02/2026,Madrid Sol,4609.10,4222.09,1661.28,1650.67,-10.61
+04/02/2026,Malasaña,3016.40,2582.79,906.07,915.87,9.80
+05/02/2026,Madrid Sol,4808.39,4130.07,1567.02,1534.94,-32.08
+05/02/2026,Malasaña,3323.33,2837.19,1192.57,1199.88,7.31
+06/02/2026,Madrid Sol,4718.49,4295.18,1875.14,1838.37,-36.77
+06/02/2026,Malasaña,3553.33,3118.40,1190.64,1191.38,0.74
+07/02/2026,Madrid Sol,4763.13,4230.41,1760.90,1732.52,-28.38
+07/02/2026,Malasaña,2782.34,2439.89,1079.52,1087.12,7.60
+08/02/2026,Madrid Sol,4308.53,3963.08,1652.63,1612.33,-40.30
+08/02/2026,Malasaña,2607.62,2219.34,936.86,939.16,2.30
+09/02/2026,Madrid Sol,4873.47,4480.26,1606.02,1583.50,-22.52
+09/02/2026,Malasaña,3123.78,2754.93,1181.57,1185.64,4.07
+10/02/2026,Madrid Sol,4851.41,4184.76,1677.84,1652.16,-25.68
+10/02/2026,Malasaña,3175.07,2777.78,1023.83,1027.90,4.07
+11/02/2026,Madrid Sol,5155.88,4688.12,1751.83,1724.39,-27.44
+11/02/2026,Malasaña,3116.26,2767.96,1070.36,1080.03,9.67
+12/02/2026,Madrid Sol,5136.30,4619.29,1669.03,1640.88,-28.15
+12/02/2026,Malasaña,3535.75,3040.55,1286.55,1296.30,9.75
+13/02/2026,Madrid Sol,5967.34,5397.58,2140.11,2097.85,-42.26
+13/02/2026,Malasaña,3834.87,3283.38,1304.31,1310.44,6.13
+14/02/2026,Madrid Sol,5920.82,5065.06,2093.74,2076.67,-17.07
+14/02/2026,Malasaña,2968.75,2534.40,974.11,980.79,6.68
+15/02/2026,Madrid Sol,4937.74,4374.28,1736.25,1716.93,-19.32
+15/02/2026,Malasaña,3131.52,2872.36,1234.60,1233.94,-0.66
+16/02/2026,Madrid Sol,4070.65,3723.02,1582.07,1562.51,-19.56
+16/02/2026,Malasaña,3345.56,2858.11,1135.57,1133.11,-2.46
+17/02/2026,Madrid Sol,4103.24,3772.21,1625.41,1602.26,-23.15
+17/02/2026,Malasaña,2930.22,2507.61,1004.45,1012.22,7.77
+18/02/2026,Madrid Sol,4555.70,3914.61,1480.10,1465.13,-14.97
+18/02/2026,Malasaña,2521.30,2162.79,794.74,798.62,3.88
+19/02/2026,Madrid Sol,4302.27,3791.44,1633.29,1597.43,-35.86
+19/02/2026,Malasaña,3551.16,3139.03,1349.59,1357.52,7.93
+20/02/2026,Madrid Sol,4685.70,4010.53,1461.87,1449.56,-12.31
+20/02/2026,Malasaña,2731.23,2416.36,1085.81,1092.37,6.56
+21/02/2026,Madrid Sol,4475.89,3942.42,1631.21,1593.59,-37.62
+21/02/2026,Malasaña,3601.54,3148.31,1304.11,1310.44,6.33
+22/02/2026,Madrid Sol,4231.99,3646.84,1421.81,1387.36,-34.45
+22/02/2026,Malasaña,3619.23,3266.97,1317.41,1318.11,0.70
+23/02/2026,Madrid Sol,5411.22,4779.30,1742.13,1727.59,-14.54
+23/02/2026,Malasaña,2517.79,2303.54,909.63,914.81,5.18
+24/02/2026,Madrid Sol,5923.53,5318.15,1883.17,1870.29,-12.88
+24/02/2026,Malasaña,3456.14,3169.05,1246.00,1254.77,8.77
+25/02/2026,Madrid Sol,5716.71,4993.25,1881.00,1839.44,-41.56
+25/02/2026,Malasaña,3481.51,3054.61,1305.28,1311.52,6.24
+26/02/2026,Madrid Sol,5468.63,4873.70,1800.80,1767.61,-33.19
+26/02/2026,Malasaña,3535.42,3049.63,1234.37,1239.46,5.09
+27/02/2026,Madrid Sol,5663.38,4818.61,1733.59,1692.23,-41.36
+27/02/2026,Malasaña,3168.91,2742.25,1037.47,1035.37,-2.10
+28/02/2026,Madrid Sol,4047.40,3466.34,1538.54,1516.52,-22.02
+28/02/2026,Malasaña,3753.19,3439.93,1423.47,1429.09,5.62
+01/03/2026,Madrid Sol,4239.95,3858.15,1400.47,1378.44,-22.03
+01/03/2026,Malasaña,3849.85,3424.92,1529.97,1538.41,8.44
+02/03/2026,Madrid Sol,5391.31,4678.22,1855.83,1843.60,-12.23
+02/03/2026,Malasaña,3458.17,3162.80,1194.39,1195.79,1.40
+03/03/2026,Madrid Sol,5806.78,5248.70,2006.79,1967.46,-39.33
+03/03/2026,Malasaña,2611.00,2361.38,916.88,916.87,-0.01
+04/03/2026,Madrid Sol,4120.12,3777.71,1422.18,1392.60,-29.58
+04/03/2026,Malasaña,3237.58,2962.39,1217.63,1215.31,-2.32
+05/03/2026,Madrid Sol,4984.11,4286.69,1829.86,1792.50,-37.36
+05/03/2026,Malasaña,3465.01,3166.61,1334.85,1331.40,-3.45
+06/03/2026,Madrid Sol,4145.84,3689.77,1383.88,1354.49,-29.39
+06/03/2026,Malasaña,3844.77,3308.12,1369.67,1378.66,8.99
+07/03/2026,Madrid Sol,5329.21,4629.22,1944.30,1930.96,-13.34
+07/03/2026,Malasaña,3361.96,2978.95,1322.63,1324.99,2.36
+08/03/2026,Madrid Sol,4872.12,4429.16,1896.10,1878.59,-17.51
+08/03/2026,Malasaña,3310.19,2814.43,1253.59,1260.86,7.27
+09/03/2026,Madrid Sol,4964.13,4416.62,1958.79,1926.35,-32.44
+09/03/2026,Malasaña,3522.75,3093.13,1278.17,1287.55,9.38
+10/03/2026,Madrid Sol,4181.33,3710.61,1655.28,1613.10,-42.18
+10/03/2026,Malasaña,3189.46,2882.17,1195.46,1193.11,-2.35
+11/03/2026,Madrid Sol,4078.66,3576.54,1320.10,1299.46,-20.64
+11/03/2026,Malasaña,3844.69,3437.70,1326.70,1322.97,-3.73
+12/03/2026,Madrid Sol,5265.58,4746.78,1727.80,1689.56,-38.24
+12/03/2026,Malasaña,3579.61,3191.24,1273.06,1269.00,-4.06
+13/03/2026,Madrid Sol,5081.10,4428.39,1786.39,1770.59,-15.80
+13/03/2026,Malasaña,3173.96,2919.12,1032.51,1028.35,-4.16
+14/03/2026,Madrid Sol,5575.56,4755.94,1720.79,1704.04,-16.75
+14/03/2026,Malasaña,3500.97,3088.16,1290.26,1298.37,8.11
+15/03/2026,Madrid Sol,4297.91,3827.52,1693.61,1649.90,-43.71
+15/03/2026,Malasaña,2712.39,2429.67,964.88,973.65,8.77
+16/03/2026,Madrid Sol,4091.60,3678.72,1335.57,1296.60,-38.97
+16/03/2026,Malasaña,2574.94,2244.10,963.55,965.39,1.84
+17/03/2026,Madrid Sol,4341.38,3869.79,1670.90,1629.62,-41.28
+17/03/2026,Malasaña,3245.72,2940.43,1094.01,1101.08,7.07
+18/03/2026,Madrid Sol,4852.42,4400.21,1972.26,1951.00,-21.26
+18/03/2026,Malasaña,2986.35,2742.39,1117.79,1114.85,-2.94
+19/03/2026,Madrid Sol,5672.85,5136.86,2190.47,2166.23,-24.24
+19/03/2026,Malasaña,3003.26,2578.16,938.77,940.00,1.23
+20/03/2026,Madrid Sol,5392.59,4792.60,1887.64,1875.04,-12.60
+20/03/2026,Malasaña,2561.05,2194.81,954.16,958.35,4.19
+21/03/2026,Madrid Sol,5555.32,4728.10,1885.08,1840.30,-44.78
+21/03/2026,Malasaña,2769.12,2371.03,984.39,992.69,8.30
+22/03/2026,Madrid Sol,4832.44,4380.70,1871.68,1850.91,-20.77
+22/03/2026,Malasaña,2809.24,2513.67,1011.27,1012.45,1.18
+23/03/2026,Madrid Sol,5876.18,5245.89,1855.80,1817.10,-38.70
+23/03/2026,Malasaña,3249.83,2978.54,1229.30,1236.04,6.74
+24/03/2026,Madrid Sol,4695.71,3992.86,1491.59,1450.70,-40.89
+24/03/2026,Malasaña,3295.30,2823.08,1090.25,1096.67,6.42
+25/03/2026,Madrid Sol,5079.45,4395.50,1877.02,1855.10,-21.92
+25/03/2026,Malasaña,2914.64,2516.97,1081.44,1086.72,5.28
+26/03/2026,Madrid Sol,5937.15,5243.74,1927.77,1906.22,-21.55
+26/03/2026,Malasaña,2564.67,2295.74,868.95,870.47,1.52
+27/03/2026,Madrid Sol,4668.59,4231.43,1801.92,1758.44,-43.48
+27/03/2026,Malasaña,3610.63,3302.79,1214.07,1220.85,6.78
+28/03/2026,Madrid Sol,4970.12,4264.98,1874.49,1854.74,-19.75
+28/03/2026,Malasaña,3389.06,2958.03,1094.10,1099.25,5.15
+29/03/2026,Madrid Sol,4651.37,4207.30,1609.77,1568.20,-41.57
+29/03/2026,Malasaña,3606.62,3285.24,1273.21,1271.52,-1.69
+30/03/2026,Madrid Sol,4941.98,4368.26,1917.88,1877.95,-39.93
+30/03/2026,Malasaña,3891.83,3432.01,1334.14,1331.19,-2.95
+31/03/2026,Madrid Sol,5439.64,4864.35,2177.07,2139.15,-37.92
+31/03/2026,Malasaña,2690.82,2417.58,860.57,857.62,-2.95
+
+Fecha,Local,Nº Factura,Empleado,Importe,Estado,Fase Eliminación,Producto,Cantidad,Precio Unitario
+15/02/2026,Madrid Sol,F-1409,Javier R.,15.00,Eliminado,Despues del cobro,Pulpo a la Gallega,1,15.00
+16/02/2026,Madrid Sol,F-1417,Javier R.,48.00,Eliminado,Despues de la cocina,Arroz Negro,3,16.00
+21/03/2026,Madrid Sol,F-1079,David L.,6.60,Activo,,Cafe con Leche,3,2.20
+16/02/2026,Malasaña,F-1347,Carlos M.,18.00,Activo,,Tiramisu,3,6.00
+23/03/2026,Madrid Sol,F-1096,David L.,13.00,Activo,,Patatas Bravas,2,6.50
+28/02/2026,Malasaña,F-1362,Javier R.,44.00,Eliminado,Despues del cobro,Entrecot,2,22.00
+30/03/2026,Madrid Sol,F-1030,Miguel A.,12.00,Activo,,Sangria Jarra,1,12.00
+27/03/2026,Madrid Sol,F-1224,Carlos M.,10.50,Activo,,Calamares Fritos,1,10.50
+09/02/2026,Madrid Sol,F-1401,Javier R.,35.00,Eliminado,Despues del cobro,Dorada al Horno,2,17.50
+08/02/2026,Madrid Sol,F-1262,Maria G.,3.50,Activo,,Tostada,1,3.50
+20/03/2026,Madrid Sol,F-1114,Carlos M.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+17/02/2026,Madrid Sol,F-1352,Laura F.,30.00,Activo,,Gazpacho,4,7.50
+28/03/2026,Madrid Sol,F-1158,Maria G.,26.00,Activo,,Patatas Bravas,4,6.50
+11/02/2026,Madrid Sol,F-1190,David L.,12.00,Activo,,Refresco,4,3.00
+19/02/2026,Malasaña,F-1110,Laura F.,48.00,Activo,,Sangria Jarra,4,12.00
+28/02/2026,Malasaña,F-1389,Laura F.,30.00,Eliminado,Despues de la cocina,Pulpo a la Gallega,2,15.00
+03/02/2026,Malasaña,F-1067,David L.,30.00,Activo,,Gazpacho,4,7.50
+14/03/2026,Malasaña,F-1070,Sofia N.,7.60,Activo,,Cortado,4,1.90
+03/02/2026,Madrid Sol,F-1128,Laura F.,13.50,Activo,,Helado Artesano,3,4.50
+09/03/2026,Malasaña,F-1381,Javier R.,54.00,Eliminado,Despues del cobro,Lubina a la Plancha,3,18.00
+07/03/2026,Malasaña,F-1055,Maria G.,38.00,Activo,,Gin Tonic,4,9.50
+24/02/2026,Malasaña,F-1083,Sofia N.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+23/03/2026,Malasaña,F-1124,Laura F.,44.00,Activo,,Ensalada Cesar,4,11.00
+14/03/2026,Madrid Sol,F-1383,Javier R.,30.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,2,15.00
+28/03/2026,Malasaña,F-1139,Carlos M.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+18/03/2026,Madrid Sol,F-1326,Maria G.,26.00,Activo,,Patatas Bravas,4,6.50
+12/03/2026,Madrid Sol,F-1286,Carlos M.,9.00,Activo,,Helado Artesano,2,4.50
+11/02/2026,Malasaña,F-1031,Carlos M.,7.20,Activo,,Cafe Solo,4,1.80
+22/02/2026,Madrid Sol,F-1050,Maria G.,18.00,Activo,,Lubina a la Plancha,1,18.00
+04/02/2026,Madrid Sol,F-1166,Miguel A.,7.50,Activo,,Gazpacho,1,7.50
+08/02/2026,Malasaña,F-1329,David L.,11.00,Activo,,Ensalada Cesar,1,11.00
+11/02/2026,Madrid Sol,F-1291,Laura F.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+14/03/2026,Madrid Sol,F-1307,David L.,66.00,Activo,,Entrecot,3,22.00
+05/03/2026,Madrid Sol,F-1186,Miguel A.,46.50,Activo,,Paella Mixta,3,15.50
+19/03/2026,Malasaña,F-1292,Maria G.,88.00,Activo,,Entrecot,4,22.00
+01/02/2026,Madrid Sol,F-1258,Maria G.,72.00,Activo,,Lubina a la Plancha,4,18.00
+26/02/2026,Madrid Sol,F-1411,Miguel A.,15.00,Eliminado,Antes de la cocina,Hamburguesa Gourmet,1,15.00
+31/03/2026,Madrid Sol,F-1328,David L.,15.50,Activo,,Paella Mixta,1,15.50
+23/03/2026,Madrid Sol,F-1332,Laura F.,15.50,Activo,,Paella Mixta,1,15.50
+13/02/2026,Malasaña,F-1056,Miguel A.,6.50,Activo,,Tarta Queso,1,6.50
+23/03/2026,Madrid Sol,F-1188,Carlos M.,29.00,Activo,,Paella Valenciana,2,14.50
+29/03/2026,Malasaña,F-1308,Laura F.,7.50,Activo,,Gazpacho,1,7.50
+23/02/2026,Malasaña,F-1059,Miguel A.,22.00,Activo,,Entrecot,1,22.00
+08/03/2026,Madrid Sol,F-1023,Laura F.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+17/03/2026,Malasaña,F-1259,Maria G.,52.50,Activo,,Dorada al Horno,3,17.50
+10/02/2026,Madrid Sol,F-1325,Sofia N.,48.00,Activo,,Solomillo Iberico,2,24.00
+08/03/2026,Malasaña,F-1068,Laura F.,5.00,Activo,,Cerveza Artesana,1,5.00
+11/03/2026,Madrid Sol,F-1170,Miguel A.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+27/03/2026,Malasaña,F-1001,Sofia N.,31.00,Activo,,Paella Mixta,2,15.50
+30/03/2026,Malasaña,F-1167,Miguel A.,38.00,Activo,,Gin Tonic,4,9.50
+21/03/2026,Malasaña,F-1338,Maria G.,44.00,Activo,,Entrecot,2,22.00
+09/02/2026,Madrid Sol,F-1091,Laura F.,38.00,Activo,,Gin Tonic,4,9.50
+28/02/2026,Madrid Sol,F-1264,Carlos M.,30.00,Activo,,Gazpacho,4,7.50
+05/03/2026,Malasaña,F-1026,Miguel A.,5.00,Activo,,Copa Vino Blanco,1,5.00
+06/03/2026,Madrid Sol,F-1330,Carlos M.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+02/02/2026,Madrid Sol,F-1035,David L.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+31/03/2026,Madrid Sol,F-1008,Sofia N.,5.50,Activo,,Copa Vino Tinto,1,5.50
+17/03/2026,Madrid Sol,F-1366,Javier R.,25.00,Eliminado,Despues del cobro,Hamburguesa Clasica,2,12.50
+20/02/2026,Malasaña,F-1130,Sofia N.,10.00,Activo,,Agua Mineral,4,2.50
+23/02/2026,Madrid Sol,F-1284,Laura F.,6.50,Activo,,Tarta Queso,1,6.50
+04/02/2026,Malasaña,F-1321,Laura F.,36.00,Activo,,Lubina a la Plancha,2,18.00
+04/03/2026,Malasaña,F-1125,David L.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+23/03/2026,Malasaña,F-1054,Laura F.,5.00,Activo,,Cerveza Artesana,1,5.00
+20/03/2026,Malasaña,F-1252,Laura F.,7.60,Activo,,Cortado,4,1.90
+24/02/2026,Malasaña,F-1021,David L.,16.50,Activo,,Copa Vino Tinto,3,5.50
+27/02/2026,Madrid Sol,F-1408,Javier R.,24.00,Eliminado,Despues del cobro,Sangria Jarra,2,12.00
+14/02/2026,Madrid Sol,F-1310,David L.,13.50,Activo,,Helado Artesano,3,4.50
+12/03/2026,Malasaña,F-1260,Maria G.,43.50,Activo,,Paella Valenciana,3,14.50
+31/03/2026,Malasaña,F-1057,Sofia N.,7.20,Activo,,Cafe Solo,4,1.80
+10/02/2026,Madrid Sol,F-1032,David L.,15.00,Activo,,Cerveza Artesana,3,5.00
+01/03/2026,Madrid Sol,F-1322,Miguel A.,22.00,Activo,,Crema Catalana,4,5.50
+03/03/2026,Madrid Sol,F-1267,Sofia N.,16.00,Activo,,Tortilla Espanola,2,8.00
+19/02/2026,Madrid Sol,F-1296,Carlos M.,28.50,Activo,,Ensalada Mixta,3,9.50
+11/02/2026,Madrid Sol,F-1076,Miguel A.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+03/03/2026,Malasaña,F-1063,Carlos M.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+09/02/2026,Malasaña,F-1088,David L.,16.50,Activo,,Crema Catalana,3,5.50
+14/02/2026,Malasaña,F-1102,Miguel A.,7.60,Activo,,Cortado,4,1.90
+07/02/2026,Madrid Sol,F-1290,David L.,5.50,Activo,,Copa Vino Tinto,1,5.50
+23/03/2026,Malasaña,F-1191,Sofia N.,36.00,Activo,,Lubina a la Plancha,2,18.00
+08/03/2026,Madrid Sol,F-1359,Javier R.,17.50,Eliminado,Despues del cobro,Dorada al Horno,1,17.50
+18/02/2026,Malasaña,F-1159,Maria G.,6.60,Activo,,Cafe con Leche,3,2.20
+20/03/2026,Madrid Sol,F-1387,Javier R.,15.00,Eliminado,Despues del cobro,Pulpo a la Gallega,1,15.00
+04/03/2026,Malasaña,F-1287,Miguel A.,10.50,Activo,,Calamares Fritos,1,10.50
+05/03/2026,Madrid Sol,F-1132,Sofia N.,64.00,Activo,,Jamon Iberico,4,16.00
+16/03/2026,Madrid Sol,F-1160,Sofia N.,8.00,Activo,,Tortilla Espanola,1,8.00
+02/03/2026,Madrid Sol,F-1187,Carlos M.,7.60,Activo,,Cortado,4,1.90
+10/02/2026,Madrid Sol,F-1230,Carlos M.,96.00,Activo,,Solomillo Iberico,4,24.00
+03/02/2026,Madrid Sol,F-1094,Sofia N.,7.50,Activo,,Agua Mineral,3,2.50
+02/02/2026,Malasaña,F-1087,Miguel A.,22.50,Activo,,Gazpacho,3,7.50
+21/02/2026,Madrid Sol,F-1143,Sofia N.,17.00,Activo,,Mojito,2,8.50
+25/03/2026,Madrid Sol,F-1082,Carlos M.,9.00,Activo,,Refresco,3,3.00
+20/02/2026,Malasaña,F-1179,Maria G.,5.00,Activo,,Agua Mineral,2,2.50
+06/02/2026,Malasaña,F-1004,David L.,35.00,Activo,,Dorada al Horno,2,17.50
+11/03/2026,Malasaña,F-1197,Laura F.,28.50,Activo,,Gin Tonic,3,9.50
+02/03/2026,Madrid Sol,F-1244,Maria G.,7.20,Activo,,Cafe Solo,4,1.80
+08/02/2026,Malasaña,F-1105,Carlos M.,24.00,Activo,,Solomillo Iberico,1,24.00
+09/02/2026,Madrid Sol,F-1212,David L.,5.70,Activo,,Cortado,3,1.90
+27/02/2026,Madrid Sol,F-1033,Sofia N.,42.00,Activo,,Calamares Fritos,4,10.50
+15/03/2026,Malasaña,F-1341,Maria G.,9.50,Activo,,Ensalada Mixta,1,9.50
+24/02/2026,Malasaña,F-1058,Miguel A.,10.50,Activo,,Cerveza Estrella,3,3.50
+28/02/2026,Madrid Sol,F-1150,Miguel A.,36.00,Activo,,Sangria Jarra,3,12.00
+13/02/2026,Madrid Sol,F-1398,Javier R.,22.00,Eliminado,Despues del cobro,Entrecot,1,22.00
+01/02/2026,Madrid Sol,F-1374,Javier R.,12.00,Eliminado,Despues de la cocina,Sangria Jarra,1,12.00
+27/02/2026,Madrid Sol,F-1295,Laura F.,54.00,Activo,,Lubina a la Plancha,3,18.00
+16/03/2026,Madrid Sol,F-1404,Javier R.,16.00,Eliminado,Despues del cobro,Arroz Negro,1,16.00
+18/03/2026,Malasaña,F-1014,David L.,20.00,Activo,,Cerveza Artesana,4,5.00
+09/03/2026,Malasaña,F-1272,David L.,36.00,Activo,,Sangria Jarra,3,12.00
+03/03/2026,Madrid Sol,F-1010,Sofia N.,35.00,Activo,,Dorada al Horno,2,17.50
+20/02/2026,Madrid Sol,F-1360,Javier R.,16.00,Eliminado,Despues del cobro,Arroz Negro,1,16.00
+21/03/2026,Malasaña,F-1345,David L.,5.00,Activo,,Cerveza Artesana,1,5.00
+30/03/2026,Malasaña,F-1273,Sofia N.,10.00,Activo,,Agua Mineral,4,2.50
+15/03/2026,Madrid Sol,F-1346,Carlos M.,19.00,Activo,,Ensalada Mixta,2,9.50
+17/02/2026,Malasaña,F-1211,Miguel A.,43.50,Activo,,Paella Valenciana,3,14.50
+27/03/2026,Malasaña,F-1180,Sofia N.,14.00,Activo,,Cerveza Estrella,4,3.50
+15/02/2026,Madrid Sol,F-1271,David L.,20.00,Activo,,Cerveza Artesana,4,5.00
+19/02/2026,Malasaña,F-1217,David L.,48.00,Activo,,Jamon Iberico,3,16.00
+23/03/2026,Malasaña,F-1361,Javier R.,45.00,Eliminado,Despues de la cocina,Pulpo a la Gallega,3,15.00
+21/03/2026,Malasaña,F-1093,Carlos M.,3.50,Activo,,Tostada,1,3.50
+09/02/2026,Madrid Sol,F-1090,Maria G.,21.00,Activo,,Croquetas Jamon,3,7.00
+18/03/2026,Madrid Sol,F-1289,Sofia N.,24.00,Activo,,Solomillo Iberico,1,24.00
+15/03/2026,Madrid Sol,F-1153,Carlos M.,11.00,Activo,,Crema Catalana,2,5.50
+04/02/2026,Malasaña,F-1393,Javier R.,14.50,Eliminado,Despues del cobro,Paella Valenciana,1,14.50
+30/03/2026,Malasaña,F-1038,Laura F.,32.00,Activo,,Jamon Iberico,2,16.00
+28/02/2026,Madrid Sol,F-1349,Sofia N.,15.00,Activo,,Cerveza Artesana,3,5.00
+02/02/2026,Madrid Sol,F-1354,Miguel A.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+17/02/2026,Malasaña,F-1364,Maria G.,32.00,Eliminado,Despues de la cocina,Arroz Negro,2,16.00
+12/03/2026,Madrid Sol,F-1396,Javier R.,66.00,Eliminado,Despues del cobro,Entrecot,3,22.00
+02/02/2026,Madrid Sol,F-1195,Carlos M.,48.00,Activo,,Solomillo Iberico,2,24.00
+09/02/2026,Madrid Sol,F-1062,Laura F.,19.50,Activo,,Patatas Bravas,3,6.50
+09/02/2026,Malasaña,F-1012,Miguel A.,8.00,Activo,,Tortilla Espanola,1,8.00
+28/03/2026,Madrid Sol,F-1342,Maria G.,15.00,Activo,,Cerveza Artesana,3,5.00
+21/03/2026,Madrid Sol,F-1025,Miguel A.,31.50,Activo,,Calamares Fritos,3,10.50
+04/03/2026,Madrid Sol,F-1047,Sofia N.,27.00,Activo,,Gambas al Ajillo,2,13.50
+07/02/2026,Malasaña,F-1250,Maria G.,48.00,Activo,,Jamon Iberico,3,16.00
+18/02/2026,Madrid Sol,F-1149,David L.,22.00,Activo,,Crema Catalana,4,5.50
+27/02/2026,Malasaña,F-1304,Maria G.,13.50,Activo,,Helado Artesano,3,4.50
+07/02/2026,Madrid Sol,F-1209,Carlos M.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+21/02/2026,Madrid Sol,F-1355,Miguel A.,16.00,Eliminado,Despues del cobro,Jamon Iberico,1,16.00
+09/03/2026,Madrid Sol,F-1380,Javier R.,27.00,Eliminado,Despues del cobro,Gambas al Ajillo,2,13.50
+23/02/2026,Madrid Sol,F-1045,Miguel A.,44.00,Activo,,Entrecot,2,22.00
+18/03/2026,Malasaña,F-1320,Sofia N.,9.50,Activo,,Gin Tonic,1,9.50
+16/03/2026,Malasaña,F-1247,Laura F.,22.00,Activo,,Crema Catalana,4,5.50
+12/02/2026,Malasaña,F-1089,Carlos M.,5.00,Activo,,Agua Mineral,2,2.50
+29/03/2026,Malasaña,F-1278,Maria G.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+24/02/2026,Madrid Sol,F-1074,Miguel A.,2.20,Activo,,Cafe con Leche,1,2.20
+25/03/2026,Madrid Sol,F-1378,Javier R.,32.00,Eliminado,Despues del cobro,Arroz Negro,2,16.00
+06/02/2026,Madrid Sol,F-1011,Maria G.,31.00,Activo,,Paella Mixta,2,15.50
+10/02/2026,Malasaña,F-1119,Carlos M.,7.50,Activo,,Agua Mineral,3,2.50
+06/02/2026,Malasaña,F-1235,Miguel A.,3.80,Activo,,Cortado,2,1.90
+24/03/2026,Madrid Sol,F-1234,Maria G.,48.00,Activo,,Sangria Jarra,4,12.00
+25/02/2026,Malasaña,F-1357,Javier R.,14.50,Eliminado,Despues del cobro,Paella Valenciana,1,14.50
+09/03/2026,Malasaña,F-1336,Miguel A.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+03/02/2026,Madrid Sol,F-1377,Maria G.,12.00,Eliminado,Despues del cobro,Sangria Jarra,1,12.00
+01/02/2026,Malasaña,F-1064,Maria G.,38.00,Activo,,Ensalada Mixta,4,9.50
+19/03/2026,Malasaña,F-1305,Miguel A.,10.50,Activo,,Cerveza Estrella,3,3.50
+19/02/2026,Malasaña,F-1268,Carlos M.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+22/02/2026,Madrid Sol,F-1115,David L.,14.50,Activo,,Paella Valenciana,1,14.50
+03/02/2026,Malasaña,F-1309,Sofia N.,9.00,Activo,,Refresco,3,3.00
+21/03/2026,Malasaña,F-1002,Laura F.,22.00,Activo,,Ensalada Cesar,2,11.00
+09/02/2026,Malasaña,F-1216,Miguel A.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+18/03/2026,Malasaña,F-1297,Miguel A.,16.00,Activo,,Tortilla Espanola,2,8.00
+08/03/2026,Madrid Sol,F-1343,Maria G.,4.50,Activo,,Helado Artesano,1,4.50
+26/03/2026,Madrid Sol,F-1415,Javier R.,27.00,Eliminado,Despues del cobro,Gambas al Ajillo,2,13.50
+12/03/2026,Madrid Sol,F-1052,Sofia N.,10.50,Activo,,Calamares Fritos,1,10.50
+06/03/2026,Madrid Sol,F-1245,Miguel A.,96.00,Activo,,Solomillo Iberico,4,24.00
+07/02/2026,Madrid Sol,F-1172,Laura F.,38.00,Activo,,Ensalada Mixta,4,9.50
+12/03/2026,Madrid Sol,F-1148,Maria G.,25.50,Activo,,Mojito,3,8.50
+14/03/2026,Malasaña,F-1370,Javier R.,27.00,Eliminado,Antes de la cocina,Gambas al Ajillo,2,13.50
+29/03/2026,Malasaña,F-1183,Carlos M.,9.50,Activo,,Ensalada Mixta,1,9.50
+17/02/2026,Madrid Sol,F-1221,Maria G.,96.00,Activo,,Solomillo Iberico,4,24.00
+16/03/2026,Malasaña,F-1111,Laura F.,14.00,Activo,,Cerveza Estrella,4,3.50
+28/03/2026,Malasaña,F-1080,Maria G.,22.50,Activo,,Gazpacho,3,7.50
+03/02/2026,Madrid Sol,F-1413,Javier R.,37.50,Eliminado,Despues de la cocina,Hamburguesa Clasica,3,12.50
+13/02/2026,Madrid Sol,F-1344,David L.,11.00,Activo,,Crema Catalana,2,5.50
+11/02/2026,Madrid Sol,F-1198,Carlos M.,22.00,Activo,,Crema Catalana,4,5.50
+25/03/2026,Madrid Sol,F-1100,David L.,13.00,Activo,,Patatas Bravas,2,6.50
+03/02/2026,Madrid Sol,F-1253,Sofia N.,22.50,Activo,,Gazpacho,3,7.50
+20/02/2026,Madrid Sol,F-1123,Carlos M.,22.00,Activo,,Crema Catalana,4,5.50
+07/02/2026,Malasaña,F-1269,Sofia N.,52.50,Activo,,Dorada al Horno,3,17.50
+06/02/2026,Malasaña,F-1376,Laura F.,31.00,Eliminado,Despues del cobro,Paella Mixta,2,15.50
+07/02/2026,Madrid Sol,F-1394,Javier R.,29.00,Eliminado,Despues del cobro,Paella Valenciana,2,14.50
+13/02/2026,Malasaña,F-1029,Carlos M.,38.00,Activo,,Gin Tonic,4,9.50
+17/02/2026,Malasaña,F-1314,Carlos M.,5.00,Activo,,Copa Vino Blanco,1,5.00
+09/03/2026,Madrid Sol,F-1226,David L.,7.00,Activo,,Cerveza Estrella,2,3.50
+06/03/2026,Madrid Sol,F-1106,Sofia N.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+06/02/2026,Malasaña,F-1246,Miguel A.,3.60,Activo,,Cafe Solo,2,1.80
+11/02/2026,Malasaña,F-1213,Miguel A.,48.00,Activo,,Solomillo Iberico,2,24.00
+23/03/2026,Madrid Sol,F-1003,David L.,9.00,Activo,,Helado Artesano,2,4.50
+10/03/2026,Malasaña,F-1133,David L.,31.50,Activo,,Calamares Fritos,3,10.50
+03/02/2026,Madrid Sol,F-1095,Miguel A.,3.50,Activo,,Cerveza Estrella,1,3.50
+02/03/2026,Madrid Sol,F-1015,Maria G.,29.00,Activo,,Paella Valenciana,2,14.50
+07/03/2026,Madrid Sol,F-1351,Miguel A.,3.60,Activo,,Cafe Solo,2,1.80
+20/03/2026,Malasaña,F-1201,Sofia N.,12.00,Activo,,Refresco,4,3.00
+26/03/2026,Malasaña,F-1135,Miguel A.,15.00,Activo,,Cerveza Artesana,3,5.00
+28/02/2026,Madrid Sol,F-1302,Sofia N.,11.00,Activo,,Copa Vino Tinto,2,5.50
+10/02/2026,Malasaña,F-1075,Sofia N.,9.00,Activo,,Refresco,3,3.00
+14/02/2026,Malasaña,F-1060,Maria G.,62.00,Activo,,Paella Mixta,4,15.50
+01/03/2026,Malasaña,F-1324,Maria G.,31.00,Activo,,Paella Mixta,2,15.50
+09/03/2026,Malasaña,F-1073,Miguel A.,18.00,Activo,,Lubina a la Plancha,1,18.00
+18/03/2026,Malasaña,F-1223,Sofia N.,17.50,Activo,,Dorada al Horno,1,17.50
+19/02/2026,Malasaña,F-1018,Miguel A.,12.00,Activo,,Tiramisu,2,6.00
+06/03/2026,Malasaña,F-1311,Maria G.,2.20,Activo,,Cafe con Leche,1,2.20
+01/02/2026,Malasaña,F-1048,Maria G.,44.00,Activo,,Ensalada Cesar,4,11.00
+22/03/2026,Malasaña,F-1288,Laura F.,6.50,Activo,,Tarta Queso,1,6.50
+13/02/2026,Madrid Sol,F-1419,Javier R.,43.50,Eliminado,Despues del cobro,Paella Valenciana,3,14.50
+28/03/2026,Madrid Sol,F-1233,Maria G.,33.00,Activo,,Ensalada Cesar,3,11.00
+05/03/2026,Madrid Sol,F-1249,David L.,64.00,Activo,,Arroz Negro,4,16.00
+07/02/2026,Madrid Sol,F-1397,Carlos M.,45.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,3,15.00
+07/03/2026,Malasaña,F-1046,Carlos M.,20.00,Activo,,Cerveza Artesana,4,5.00
+05/03/2026,Madrid Sol,F-1313,Maria G.,15.00,Activo,,Copa Vino Blanco,3,5.00
+26/03/2026,Madrid Sol,F-1337,Laura F.,26.00,Activo,,Tarta Queso,4,6.50
+24/02/2026,Malasaña,F-1027,Sofia N.,17.50,Activo,,Dorada al Horno,1,17.50
+12/03/2026,Malasaña,F-1274,Sofia N.,16.00,Activo,,Arroz Negro,1,16.00
+29/03/2026,Madrid Sol,F-1418,Javier R.,13.50,Eliminado,Despues de la cocina,Gambas al Ajillo,1,13.50
+06/03/2026,Madrid Sol,F-1078,David L.,7.00,Activo,,Tostada,2,3.50
+09/02/2026,Madrid Sol,F-1164,Miguel A.,19.00,Activo,,Ensalada Mixta,2,9.50
+23/02/2026,Malasaña,F-1317,Miguel A.,12.00,Activo,,Refresco,4,3.00
+22/03/2026,Malasaña,F-1236,Carlos M.,10.00,Activo,,Cerveza Artesana,2,5.00
+10/03/2026,Malasaña,F-1277,David L.,48.00,Activo,,Solomillo Iberico,2,24.00
+17/03/2026,Madrid Sol,F-1407,Javier R.,44.00,Eliminado,Despues del cobro,Entrecot,2,22.00
+12/02/2026,Malasaña,F-1122,David L.,27.00,Activo,,Gambas al Ajillo,2,13.50
+30/03/2026,Malasaña,F-1049,David L.,7.20,Activo,,Cafe Solo,4,1.80
+11/02/2026,Madrid Sol,F-1099,David L.,12.00,Activo,,Sangria Jarra,1,12.00
+27/02/2026,Malasaña,F-1137,Carlos M.,16.00,Activo,,Tortilla Espanola,2,8.00
+28/03/2026,Madrid Sol,F-1017,Sofia N.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+26/02/2026,Malasaña,F-1229,David L.,25.50,Activo,,Mojito,3,8.50
+21/02/2026,Madrid Sol,F-1053,David L.,7.00,Activo,,Tostada,2,3.50
+08/03/2026,Malasaña,F-1371,David L.,72.00,Eliminado,Despues de la cocina,Solomillo Iberico,3,24.00
+30/03/2026,Madrid Sol,F-1303,Maria G.,16.50,Activo,,Crema Catalana,3,5.50
+20/03/2026,Madrid Sol,F-1375,Javier R.,15.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,1,15.00
+17/02/2026,Madrid Sol,F-1147,Miguel A.,29.00,Activo,,Paella Valenciana,2,14.50
+24/02/2026,Malasaña,F-1156,Laura F.,16.00,Activo,,Tortilla Espanola,2,8.00
+20/02/2026,Madrid Sol,F-1402,Javier R.,31.00,Eliminado,Despues de la cocina,Paella Mixta,2,15.50
+16/02/2026,Malasaña,F-1205,Laura F.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+02/03/2026,Malasaña,F-1162,David L.,64.00,Activo,,Arroz Negro,4,16.00
+30/03/2026,Madrid Sol,F-1306,Maria G.,58.00,Activo,,Paella Valenciana,4,14.50
+26/03/2026,Madrid Sol,F-1085,David L.,5.50,Activo,,Crema Catalana,1,5.50
+23/02/2026,Malasaña,F-1040,Sofia N.,4.40,Activo,,Cafe con Leche,2,2.20
+10/03/2026,Malasaña,F-1036,Maria G.,54.00,Activo,,Gambas al Ajillo,4,13.50
+23/02/2026,Malasaña,F-1276,Laura F.,13.00,Activo,,Tarta Queso,2,6.50
+03/03/2026,Madrid Sol,F-1009,Sofia N.,22.00,Activo,,Crema Catalana,4,5.50
+27/03/2026,Madrid Sol,F-1202,David L.,19.50,Activo,,Patatas Bravas,3,6.50
+04/03/2026,Madrid Sol,F-1146,David L.,19.50,Activo,,Patatas Bravas,3,6.50
+19/03/2026,Malasaña,F-1006,Maria G.,16.00,Activo,,Tortilla Espanola,2,8.00
+06/03/2026,Madrid Sol,F-1318,Carlos M.,27.00,Activo,,Gambas al Ajillo,2,13.50
+07/02/2026,Madrid Sol,F-1084,Laura F.,13.00,Activo,,Tarta Queso,2,6.50
+24/03/2026,Madrid Sol,F-1285,Miguel A.,16.00,Activo,,Arroz Negro,1,16.00
+05/02/2026,Madrid Sol,F-1372,Maria G.,32.00,Eliminado,Despues del cobro,Jamon Iberico,2,16.00
+25/03/2026,Malasaña,F-1177,Carlos M.,5.50,Activo,,Copa Vino Tinto,1,5.50
+15/02/2026,Madrid Sol,F-1200,Laura F.,28.50,Activo,,Ensalada Mixta,3,9.50
+14/02/2026,Madrid Sol,F-1369,Javier R.,18.00,Eliminado,Antes de la cocina,Lubina a la Plancha,1,18.00
+14/03/2026,Madrid Sol,F-1363,Javier R.,37.50,Eliminado,Despues del cobro,Hamburguesa Clasica,3,12.50
+13/02/2026,Madrid Sol,F-1193,Sofia N.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+29/03/2026,Madrid Sol,F-1176,Miguel A.,54.00,Activo,,Lubina a la Plancha,3,18.00
+16/03/2026,Malasaña,F-1109,Laura F.,18.00,Activo,,Helado Artesano,4,4.50
+10/02/2026,Malasaña,F-1215,Carlos M.,13.50,Activo,,Gambas al Ajillo,1,13.50
+15/02/2026,Malasaña,F-1116,Maria G.,52.50,Activo,,Dorada al Horno,3,17.50
+07/03/2026,Malasaña,F-1174,Maria G.,7.50,Activo,,Agua Mineral,3,2.50
+20/02/2026,Madrid Sol,F-1182,Laura F.,66.00,Activo,,Entrecot,3,22.00
+11/02/2026,Madrid Sol,F-1388,Javier R.,24.00,Eliminado,Despues del cobro,Sangria Jarra,2,12.00
+25/03/2026,Madrid Sol,F-1294,Carlos M.,14.00,Activo,,Tostada,4,3.50
+03/03/2026,Madrid Sol,F-1358,Javier R.,24.00,Eliminado,Despues del cobro,Sangria Jarra,2,12.00
+12/02/2026,Malasaña,F-1066,Miguel A.,18.00,Activo,,Helado Artesano,4,4.50
+04/03/2026,Madrid Sol,F-1072,David L.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+16/03/2026,Madrid Sol,F-1353,Carlos M.,27.00,Activo,,Gambas al Ajillo,2,13.50
+23/03/2026,Malasaña,F-1016,Maria G.,24.00,Activo,,Solomillo Iberico,1,24.00
+05/02/2026,Madrid Sol,F-1335,Sofia N.,54.00,Activo,,Lubina a la Plancha,3,18.00
+14/02/2026,Malasaña,F-1225,Laura F.,6.60,Activo,,Cafe con Leche,3,2.20
+12/02/2026,Madrid Sol,F-1281,Laura F.,17.50,Activo,,Dorada al Horno,1,17.50
+06/02/2026,Malasaña,F-1214,Maria G.,22.00,Activo,,Crema Catalana,4,5.50
+04/02/2026,Madrid Sol,F-1220,Laura F.,22.00,Activo,,Copa Vino Tinto,4,5.50
+12/02/2026,Madrid Sol,F-1414,Javier R.,12.00,Eliminado,Despues de la cocina,Sangria Jarra,1,12.00
+10/02/2026,Madrid Sol,F-1161,Carlos M.,24.00,Activo,,Tortilla Espanola,3,8.00
+26/02/2026,Madrid Sol,F-1348,Sofia N.,15.00,Activo,,Cerveza Artesana,3,5.00
+07/03/2026,Malasaña,F-1175,Sofia N.,24.00,Activo,,Tortilla Espanola,3,8.00
+11/02/2026,Malasaña,F-1237,Sofia N.,22.00,Activo,,Ensalada Cesar,2,11.00
+25/03/2026,Malasaña,F-1334,Carlos M.,7.50,Activo,,Agua Mineral,3,2.50
+10/02/2026,Malasaña,F-1265,Sofia N.,5.00,Activo,,Cerveza Artesana,1,5.00
+22/02/2026,Madrid Sol,F-1406,Javier R.,46.50,Eliminado,Despues del cobro,Paella Mixta,3,15.50
+30/03/2026,Madrid Sol,F-1399,Javier R.,29.00,Eliminado,Despues del cobro,Paella Valenciana,2,14.50
+19/03/2026,Madrid Sol,F-1400,Javier R.,12.00,Eliminado,Despues de la cocina,Sangria Jarra,1,12.00
+14/02/2026,Madrid Sol,F-1283,Carlos M.,31.50,Activo,,Calamares Fritos,3,10.50
+02/02/2026,Malasaña,F-1312,Laura F.,30.00,Activo,,Gazpacho,4,7.50
+23/03/2026,Madrid Sol,F-1204,Carlos M.,33.00,Activo,,Ensalada Cesar,3,11.00
+03/03/2026,Madrid Sol,F-1410,Miguel A.,14.50,Eliminado,Despues del cobro,Paella Valenciana,1,14.50
+14/03/2026,Madrid Sol,F-1416,Javier R.,25.00,Eliminado,Despues del cobro,Hamburguesa Clasica,2,12.50
+21/03/2026,Malasaña,F-1242,Miguel A.,7.60,Activo,,Cortado,4,1.90
+21/02/2026,Malasaña,F-1007,David L.,14.00,Activo,,Croquetas Jamon,2,7.00
+18/03/2026,Malasaña,F-1208,Maria G.,16.00,Activo,,Jamon Iberico,1,16.00
+17/03/2026,Malasaña,F-1207,Maria G.,26.00,Activo,,Patatas Bravas,4,6.50
+17/03/2026,Madrid Sol,F-1178,Miguel A.,18.00,Activo,,Helado Artesano,4,4.50
+12/03/2026,Malasaña,F-1145,Miguel A.,32.00,Activo,,Arroz Negro,2,16.00
+09/03/2026,Malasaña,F-1154,Laura F.,72.00,Activo,,Solomillo Iberico,3,24.00
+10/03/2026,Malasaña,F-1005,Sofia N.,9.50,Activo,,Ensalada Mixta,1,9.50
+21/02/2026,Madrid Sol,F-1134,Carlos M.,11.00,Activo,,Copa Vino Tinto,2,5.50
+26/03/2026,Malasaña,F-1279,Sofia N.,4.40,Activo,,Cafe con Leche,2,2.20
+31/03/2026,Madrid Sol,F-1071,Carlos M.,7.50,Activo,,Agua Mineral,3,2.50
+27/03/2026,Malasaña,F-1098,David L.,31.50,Activo,,Calamares Fritos,3,10.50
+09/03/2026,Malasaña,F-1141,Miguel A.,20.00,Activo,,Cerveza Artesana,4,5.00
+13/03/2026,Malasaña,F-1155,David L.,10.00,Activo,,Copa Vino Blanco,2,5.00
+29/03/2026,Madrid Sol,F-1129,Sofia N.,32.00,Activo,,Arroz Negro,2,16.00
+06/03/2026,Malasaña,F-1169,Sofia N.,19.00,Activo,,Gin Tonic,2,9.50
+19/02/2026,Madrid Sol,F-1101,David L.,3.50,Activo,,Cerveza Estrella,1,3.50
+24/03/2026,Madrid Sol,F-1171,Sofia N.,13.00,Activo,,Patatas Bravas,2,6.50
+16/03/2026,Madrid Sol,F-1103,Laura F.,42.00,Activo,,Calamares Fritos,4,10.50
+07/02/2026,Madrid Sol,F-1395,Javier R.,52.50,Eliminado,Despues del cobro,Dorada al Horno,3,17.50
+05/03/2026,Malasaña,F-1020,Carlos M.,10.00,Activo,,Agua Mineral,4,2.50
+18/03/2026,Malasaña,F-1185,Carlos M.,6.60,Activo,,Cafe con Leche,3,2.20
+10/03/2026,Malasaña,F-1037,Sofia N.,15.00,Activo,,Gazpacho,2,7.50
+19/02/2026,Madrid Sol,F-1061,Maria G.,64.00,Activo,,Arroz Negro,4,16.00
+09/02/2026,Madrid Sol,F-1051,Miguel A.,20.00,Activo,,Cerveza Artesana,4,5.00
+21/03/2026,Malasaña,F-1117,Maria G.,43.50,Activo,,Paella Valenciana,3,14.50
+10/03/2026,Madrid Sol,F-1142,Miguel A.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+18/03/2026,Malasaña,F-1041,Laura F.,3.80,Activo,,Cortado,2,1.90
+19/02/2026,Madrid Sol,F-1280,Maria G.,36.00,Activo,,Lubina a la Plancha,2,18.00
+28/03/2026,Malasaña,F-1339,Carlos M.,62.00,Activo,,Paella Mixta,4,15.50
+07/03/2026,Madrid Sol,F-1257,Carlos M.,14.50,Activo,,Paella Valenciana,1,14.50
+08/03/2026,Madrid Sol,F-1412,Javier R.,44.00,Eliminado,Despues de la cocina,Entrecot,2,22.00
+09/03/2026,Madrid Sol,F-1043,Sofia N.,48.00,Activo,,Jamon Iberico,3,16.00
+25/03/2026,Malasaña,F-1184,Sofia N.,46.50,Activo,,Paella Mixta,3,15.50
+03/03/2026,Malasaña,F-1039,Miguel A.,10.00,Activo,,Copa Vino Blanco,2,5.00
+25/02/2026,Madrid Sol,F-1136,Sofia N.,31.50,Activo,,Calamares Fritos,3,10.50
+04/03/2026,Malasaña,F-1120,Laura F.,3.00,Activo,,Refresco,1,3.00
+27/02/2026,Madrid Sol,F-1227,Laura F.,17.50,Activo,,Dorada al Horno,1,17.50
+07/03/2026,Madrid Sol,F-1382,Javier R.,24.00,Eliminado,Despues del cobro,Sangria Jarra,2,12.00
+02/02/2026,Malasaña,F-1013,Maria G.,15.00,Activo,,Gazpacho,2,7.50
+17/02/2026,Madrid Sol,F-1196,Carlos M.,58.00,Activo,,Paella Valenciana,4,14.50
+02/02/2026,Malasaña,F-1140,Carlos M.,96.00,Activo,,Solomillo Iberico,4,24.00
+14/03/2026,Madrid Sol,F-1163,Laura F.,6.60,Activo,,Cafe con Leche,3,2.20
+22/02/2026,Madrid Sol,F-1255,Laura F.,1.90,Activo,,Cortado,1,1.90
+13/03/2026,Malasaña,F-1189,Miguel A.,9.50,Activo,,Gin Tonic,1,9.50
+03/03/2026,Malasaña,F-1210,David L.,5.50,Activo,,Copa Vino Tinto,1,5.50
+08/02/2026,Malasaña,F-1222,Carlos M.,66.00,Activo,,Entrecot,3,22.00
+05/03/2026,Madrid Sol,F-1240,Sofia N.,88.00,Activo,,Entrecot,4,22.00
+02/03/2026,Malasaña,F-1231,David L.,10.50,Activo,,Cerveza Estrella,3,3.50
+08/03/2026,Malasaña,F-1219,Carlos M.,7.00,Activo,,Tostada,2,3.50
+27/02/2026,Malasaña,F-1173,David L.,20.00,Activo,,Copa Vino Blanco,4,5.00
+25/03/2026,Malasaña,F-1319,Sofia N.,17.00,Activo,,Mojito,2,8.50
+14/02/2026,Malasaña,F-1263,Maria G.,3.60,Activo,,Cafe Solo,2,1.80
+30/03/2026,Madrid Sol,F-1239,Miguel A.,25.50,Activo,,Mojito,3,8.50
+24/02/2026,Madrid Sol,F-1022,Maria G.,4.50,Activo,,Helado Artesano,1,4.50
+17/02/2026,Malasaña,F-1368,Javier R.,30.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,2,15.00
+03/03/2026,Malasaña,F-1118,Sofia N.,19.50,Activo,,Tarta Queso,3,6.50
+31/03/2026,Malasaña,F-1181,Miguel A.,19.00,Activo,,Gin Tonic,2,9.50
+27/03/2026,Malasaña,F-1384,Javier R.,31.00,Eliminado,Despues del cobro,Paella Mixta,2,15.50
+29/03/2026,Malasaña,F-1228,Carlos M.,11.00,Activo,,Ensalada Cesar,1,11.00
+13/02/2026,Malasaña,F-1152,Sofia N.,64.00,Activo,,Jamon Iberico,4,16.00
+25/02/2026,Malasaña,F-1350,Carlos M.,2.50,Activo,,Agua Mineral,1,2.50
+10/02/2026,Malasaña,F-1069,Miguel A.,18.00,Activo,,Lubina a la Plancha,1,18.00
+12/02/2026,Madrid Sol,F-1044,David L.,16.50,Activo,,Copa Vino Tinto,3,5.50
+23/03/2026,Malasaña,F-1282,Sofia N.,15.00,Activo,,Gazpacho,2,7.50
+15/03/2026,Malasaña,F-1131,Sofia N.,9.00,Activo,,Helado Artesano,2,4.50
+11/02/2026,Madrid Sol,F-1379,Javier R.,72.00,Eliminado,Despues del cobro,Solomillo Iberico,3,24.00
+16/03/2026,Malasaña,F-1081,Carlos M.,18.00,Activo,,Tiramisu,3,6.00
+19/03/2026,Madrid Sol,F-1293,Laura F.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+26/02/2026,Malasaña,F-1194,David L.,7.00,Activo,,Croquetas Jamon,1,7.00
+28/02/2026,Madrid Sol,F-1218,Miguel A.,35.00,Activo,,Dorada al Horno,2,17.50
+20/03/2026,Malasaña,F-1157,Sofia N.,46.50,Activo,,Paella Mixta,3,15.50
+16/03/2026,Madrid Sol,F-1112,Sofia N.,22.00,Activo,,Entrecot,1,22.00
+19/03/2026,Madrid Sol,F-1203,Sofia N.,7.60,Activo,,Cortado,4,1.90
+07/02/2026,Madrid Sol,F-1121,Carlos M.,17.50,Activo,,Dorada al Horno,1,17.50
+03/02/2026,Malasaña,F-1232,Miguel A.,6.00,Activo,,Refresco,2,3.00
+28/02/2026,Madrid Sol,F-1104,David L.,28.00,Activo,,Croquetas Jamon,4,7.00
+08/02/2026,Madrid Sol,F-1113,Sofia N.,14.50,Activo,,Paella Valenciana,1,14.50
+08/03/2026,Madrid Sol,F-1107,Carlos M.,54.00,Activo,,Gambas al Ajillo,4,13.50
+23/03/2026,Madrid Sol,F-1019,David L.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+30/03/2026,Malasaña,F-1333,Miguel A.,13.00,Activo,,Patatas Bravas,2,6.50
+27/02/2026,Malasaña,F-1299,Sofia N.,16.50,Activo,,Crema Catalana,3,5.50
+03/03/2026,Madrid Sol,F-1327,Maria G.,6.60,Activo,,Cafe con Leche,3,2.20
+06/02/2026,Madrid Sol,F-1206,Sofia N.,9.00,Activo,,Refresco,3,3.00
+21/03/2026,Malasaña,F-1298,Laura F.,12.00,Activo,,Refresco,4,3.00
+16/02/2026,Malasaña,F-1138,David L.,9.50,Activo,,Gin Tonic,1,9.50
+13/03/2026,Malasaña,F-1243,Carlos M.,16.50,Activo,,Copa Vino Tinto,3,5.50
+10/03/2026,Malasaña,F-1254,Maria G.,66.00,Activo,,Entrecot,3,22.00
+14/02/2026,Madrid Sol,F-1367,Miguel A.,45.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,3,15.00
+19/02/2026,Madrid Sol,F-1248,David L.,12.00,Activo,,Sangria Jarra,1,12.00
+13/02/2026,Madrid Sol,F-1356,Javier R.,48.00,Eliminado,Despues del cobro,Arroz Negro,3,16.00
+03/02/2026,Malasaña,F-1270,Sofia N.,70.00,Activo,,Dorada al Horno,4,17.50
+01/03/2026,Madrid Sol,F-1386,Javier R.,22.00,Eliminado,Despues del cobro,Entrecot,1,22.00
+03/02/2026,Madrid Sol,F-1365,Javier R.,32.00,Eliminado,Antes de la cocina,Jamon Iberico,2,16.00
+14/03/2026,Madrid Sol,F-1165,Maria G.,17.50,Activo,,Dorada al Horno,1,17.50
+17/03/2026,Madrid Sol,F-1092,Carlos M.,20.00,Activo,,Cerveza Artesana,4,5.00
+08/02/2026,Malasaña,F-1238,Sofia N.,48.00,Activo,,Arroz Negro,3,16.00
+11/02/2026,Madrid Sol,F-1266,Maria G.,88.00,Activo,,Entrecot,4,22.00
+20/03/2026,Malasaña,F-1256,Maria G.,34.00,Activo,,Mojito,4,8.50
+17/02/2026,Madrid Sol,F-1192,Maria G.,40.50,Activo,,Gambas al Ajillo,3,13.50
+04/02/2026,Malasaña,F-1392,Javier R.,16.00,Eliminado,Despues del cobro,Jamon Iberico,1,16.00
+26/03/2026,Madrid Sol,F-1390,Javier R.,48.00,Eliminado,Despues del cobro,Jamon Iberico,3,16.00
+24/02/2026,Malasaña,F-1331,Miguel A.,17.50,Activo,,Dorada al Horno,1,17.50
+06/03/2026,Madrid Sol,F-1385,Laura F.,43.50,Eliminado,Antes de la cocina,Paella Valenciana,3,14.50
+22/03/2026,Malasaña,F-1199,Maria G.,17.50,Activo,,Dorada al Horno,1,17.50
+11/03/2026,Madrid Sol,F-1403,Javier R.,66.00,Eliminado,Antes de la cocina,Entrecot,3,22.00
+27/02/2026,Malasaña,F-1086,Carlos M.,5.00,Activo,,Agua Mineral,2,2.50
+01/03/2026,Madrid Sol,F-1034,Miguel A.,3.50,Activo,,Tostada,1,3.50
+01/03/2026,Malasaña,F-1315,David L.,14.00,Activo,,Cerveza Estrella,4,3.50
+15/02/2026,Malasaña,F-1340,Miguel A.,6.00,Activo,,Tiramisu,1,6.00
+03/03/2026,Malasaña,F-1241,David L.,16.00,Activo,,Arroz Negro,1,16.00
+11/02/2026,Madrid Sol,F-1042,Carlos M.,16.50,Activo,,Copa Vino Tinto,3,5.50
+25/03/2026,Madrid Sol,F-1373,Javier R.,52.50,Eliminado,Despues del cobro,Dorada al Horno,3,17.50
+08/02/2026,Malasaña,F-1108,Miguel A.,72.00,Activo,,Solomillo Iberico,3,24.00
+17/02/2026,Madrid Sol,F-1251,David L.,5.00,Activo,,Cerveza Artesana,1,5.00
+02/02/2026,Malasaña,F-1300,Laura F.,3.50,Activo,,Cerveza Estrella,1,3.50
+06/02/2026,Madrid Sol,F-1261,Laura F.,7.00,Activo,,Cerveza Estrella,2,3.50
+12/02/2026,Malasaña,F-1065,Maria G.,6.00,Activo,,Refresco,2,3.00
+22/02/2026,Malasaña,F-1144,David L.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+10/03/2026,Malasaña,F-1323,Miguel A.,70.00,Activo,,Dorada al Horno,4,17.50
+03/03/2026,Malasaña,F-1028,Sofia N.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+01/03/2026,Malasaña,F-1127,Sofia N.,88.00,Activo,,Entrecot,4,22.00
+26/03/2026,Madrid Sol,F-1168,Laura F.,2.50,Activo,,Agua Mineral,1,2.50
+13/03/2026,Malasaña,F-1077,Carlos M.,33.00,Activo,,Ensalada Cesar,3,11.00
+28/02/2026,Madrid Sol,F-1405,Maria G.,17.50,Eliminado,Despues del cobro,Dorada al Horno,1,17.50
+05/03/2026,Malasaña,F-1151,Sofia N.,18.00,Activo,,Tiramisu,3,6.00
+11/02/2026,Malasaña,F-1275,Maria G.,14.00,Activo,,Tostada,4,3.50
+12/02/2026,Malasaña,F-1097,Carlos M.,19.00,Activo,,Gin Tonic,2,9.50
+06/02/2026,Malasaña,F-1301,Miguel A.,29.00,Activo,,Paella Valenciana,2,14.50
+22/02/2026,Madrid Sol,F-1316,Maria G.,12.00,Activo,,Tiramisu,2,6.00
+12/03/2026,Madrid Sol,F-1391,Javier R.,16.00,Eliminado,Despues del cobro,Jamon Iberico,1,16.00
+07/03/2026,Madrid Sol,F-1024,Maria G.,36.00,Activo,,Lubina a la Plancha,2,18.00
+21/03/2026,Madrid Sol,F-1126,Sofia N.,10.00,Activo,,Agua Mineral,4,2.50

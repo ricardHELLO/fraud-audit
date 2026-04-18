@@ -1,0 +1,1455 @@
+Fecha,Local,Ventas Brutas,Ventas Netas,Efectivo Esperado,Efectivo Real,Descuadre
+01/12/2025,Diagonal,4025.00,3651.05,1395.68,1397.95,2.27
+01/12/2025,Sarria,4249.35,3889.87,1515.13,1515.41,0.28
+01/12/2025,Pedralbes,3464.82,2970.78,1135.84,1131.99,-3.85
+01/12/2025,Sant Gervasi,4307.99,3665.40,1360.88,1359.08,-1.80
+02/12/2025,Diagonal,4315.92,3752.66,1547.56,1544.00,-3.56
+02/12/2025,Sarria,4770.92,4192.57,1789.20,1790.20,1.00
+02/12/2025,Pedralbes,4980.95,4482.24,1923.45,1928.67,5.22
+02/12/2025,Sant Gervasi,4138.41,3590.63,1290.74,1289.98,-0.76
+03/12/2025,Diagonal,4261.75,3738.41,1654.08,1657.79,3.71
+03/12/2025,Sarria,3265.86,2816.06,1200.12,1203.00,2.88
+03/12/2025,Pedralbes,4956.04,4443.81,1585.34,1581.52,-3.82
+03/12/2025,Sant Gervasi,4824.21,4252.17,1705.56,1708.98,3.42
+04/12/2025,Diagonal,4006.84,3603.45,1266.00,1262.21,-3.79
+04/12/2025,Sarria,4517.88,3879.43,1449.51,1449.79,0.28
+04/12/2025,Pedralbes,3487.09,2983.41,1085.23,1086.22,0.99
+04/12/2025,Sant Gervasi,3404.02,2982.95,1235.55,1233.93,-1.62
+05/12/2025,Diagonal,4450.62,4091.00,1613.38,1618.15,4.77
+05/12/2025,Sarria,3268.53,2850.90,1222.17,1218.57,-3.60
+05/12/2025,Pedralbes,4583.56,4029.14,1737.65,1741.16,3.51
+05/12/2025,Sant Gervasi,3458.02,3116.72,1197.67,1195.73,-1.94
+06/12/2025,Diagonal,3108.15,2841.59,1275.41,1279.42,4.01
+06/12/2025,Sarria,4392.56,3802.07,1662.53,1663.74,1.21
+06/12/2025,Pedralbes,3367.09,3010.46,1073.11,1074.03,0.92
+06/12/2025,Sant Gervasi,4907.32,4189.12,1881.76,1887.14,5.38
+07/12/2025,Diagonal,3251.12,2802.98,1134.88,1138.83,3.95
+07/12/2025,Sarria,3408.75,3018.52,1185.14,1185.81,0.67
+07/12/2025,Pedralbes,3328.32,2875.09,1128.19,1130.25,2.06
+07/12/2025,Sant Gervasi,3606.20,3210.78,1434.49,1432.50,-1.99
+08/12/2025,Diagonal,4724.85,4175.26,1858.41,1858.01,-0.40
+08/12/2025,Sarria,3755.43,3315.86,1300.71,1302.80,2.09
+08/12/2025,Pedralbes,3866.86,3329.02,1482.66,1483.48,0.82
+08/12/2025,Sant Gervasi,4523.86,3980.62,1426.35,1431.41,5.06
+09/12/2025,Diagonal,3600.46,3195.78,1295.20,1292.96,-2.24
+09/12/2025,Sarria,3760.90,3277.28,1239.87,1241.49,1.62
+09/12/2025,Pedralbes,3961.69,3459.85,1458.28,1456.24,-2.04
+09/12/2025,Sant Gervasi,4832.26,4108.84,1792.13,1795.43,3.30
+10/12/2025,Diagonal,3748.52,3292.40,1289.24,1289.19,-0.05
+10/12/2025,Sarria,4484.39,3932.28,1497.34,1503.22,5.88
+10/12/2025,Pedralbes,3142.47,2865.78,1287.44,1284.68,-2.76
+10/12/2025,Sant Gervasi,4864.26,4189.91,1786.14,1791.71,5.57
+11/12/2025,Diagonal,4542.54,4100.14,1577.97,1581.06,3.09
+11/12/2025,Sarria,4269.96,3739.51,1330.41,1330.26,-0.15
+11/12/2025,Pedralbes,3848.08,3337.35,1327.51,1332.72,5.21
+11/12/2025,Sant Gervasi,3722.83,3348.53,1181.45,1184.11,2.66
+12/12/2025,Diagonal,3295.77,2941.08,1307.09,1304.56,-2.53
+12/12/2025,Sarria,3494.83,3112.09,1295.44,1293.05,-2.39
+12/12/2025,Pedralbes,3233.46,2769.33,1166.33,1166.17,-0.16
+12/12/2025,Sant Gervasi,4412.14,4051.18,1450.46,1455.56,5.10
+13/12/2025,Diagonal,4752.01,4094.37,1607.81,1610.73,2.92
+13/12/2025,Sarria,4001.29,3550.44,1557.45,1559.31,1.86
+13/12/2025,Pedralbes,4467.87,4033.02,1784.34,1789.03,4.69
+13/12/2025,Sant Gervasi,3218.55,2864.78,1231.15,1235.29,4.14
+14/12/2025,Diagonal,3538.04,3059.23,1299.65,1302.64,2.99
+14/12/2025,Sarria,3012.84,2596.43,1036.42,1033.39,-3.03
+14/12/2025,Pedralbes,4547.49,3998.37,1566.10,1564.98,-1.12
+14/12/2025,Sant Gervasi,3861.90,3330.30,1227.68,1225.02,-2.66
+15/12/2025,Diagonal,3972.94,3516.78,1269.64,1271.31,1.67
+15/12/2025,Sarria,3425.15,2959.56,1257.79,1261.88,4.09
+15/12/2025,Pedralbes,3383.77,3109.03,1359.15,1359.56,0.41
+15/12/2025,Sant Gervasi,4825.94,4138.94,1712.05,1708.85,-3.20
+16/12/2025,Diagonal,3171.41,2723.38,970.68,966.98,-3.70
+16/12/2025,Sarria,3469.56,3066.96,1306.69,1302.79,-3.90
+16/12/2025,Pedralbes,3532.16,3238.51,1348.94,1352.83,3.89
+16/12/2025,Sant Gervasi,3083.72,2666.72,1144.50,1144.26,-0.24
+17/12/2025,Diagonal,4040.15,3706.21,1395.70,1396.56,0.86
+17/12/2025,Sarria,4513.82,4027.71,1545.25,1548.07,2.82
+17/12/2025,Pedralbes,3686.15,3214.56,1202.12,1201.73,-0.39
+17/12/2025,Sant Gervasi,3796.94,3389.74,1517.01,1521.74,4.73
+18/12/2025,Diagonal,4612.54,3921.65,1713.97,1713.99,0.02
+18/12/2025,Sarria,4670.84,4272.66,1506.40,1503.63,-2.77
+18/12/2025,Pedralbes,4061.26,3722.45,1582.58,1581.07,-1.51
+18/12/2025,Sant Gervasi,3903.84,3505.78,1531.97,1533.12,1.15
+19/12/2025,Diagonal,4320.46,3673.34,1520.06,1525.48,5.42
+19/12/2025,Sarria,3644.37,3259.39,1425.47,1431.17,5.70
+19/12/2025,Pedralbes,4471.63,4013.09,1498.31,1499.16,0.85
+19/12/2025,Sant Gervasi,4478.41,4055.55,1560.71,1566.10,5.39
+20/12/2025,Diagonal,4882.96,4313.26,1793.60,1796.59,2.99
+20/12/2025,Sarria,3200.91,2807.01,1152.89,1156.01,3.12
+20/12/2025,Pedralbes,4739.72,4319.48,1850.84,1854.01,3.17
+20/12/2025,Sant Gervasi,3063.49,2710.74,972.37,976.69,4.32
+21/12/2025,Diagonal,4992.61,4588.73,1820.26,1825.22,4.96
+21/12/2025,Sarria,4910.10,4339.31,1753.37,1751.80,-1.57
+21/12/2025,Pedralbes,3340.87,3060.55,1285.40,1282.45,-2.95
+21/12/2025,Sant Gervasi,4986.72,4248.91,1881.84,1881.11,-0.73
+22/12/2025,Diagonal,3766.98,3275.86,1382.14,1384.80,2.66
+22/12/2025,Sarria,4903.01,4397.72,1831.86,1837.09,5.23
+22/12/2025,Pedralbes,4267.10,3773.98,1621.13,1620.46,-0.67
+22/12/2025,Sant Gervasi,3447.61,3069.47,1357.89,1354.54,-3.35
+23/12/2025,Diagonal,3686.45,3368.35,1429.18,1432.43,3.25
+23/12/2025,Sarria,4307.84,3898.40,1741.12,1741.49,0.37
+23/12/2025,Pedralbes,3466.73,3009.60,1140.93,1138.04,-2.89
+23/12/2025,Sant Gervasi,3680.48,3280.98,1210.08,1215.50,5.42
+24/12/2025,Diagonal,4145.68,3560.80,1357.87,1357.67,-0.20
+24/12/2025,Sarria,4473.84,3900.10,1595.16,1593.06,-2.10
+24/12/2025,Pedralbes,3776.29,3321.85,1418.86,1422.84,3.98
+24/12/2025,Sant Gervasi,4867.85,4180.71,1740.74,1742.65,1.91
+25/12/2025,Diagonal,3213.17,2733.26,1189.61,1188.77,-0.84
+25/12/2025,Sarria,4632.30,4033.70,1500.09,1502.89,2.80
+25/12/2025,Pedralbes,3294.85,2865.98,1217.20,1221.69,4.49
+25/12/2025,Sant Gervasi,4655.50,3968.37,1515.97,1516.99,1.02
+26/12/2025,Diagonal,4377.20,3804.41,1654.03,1655.77,1.74
+26/12/2025,Sarria,4262.15,3687.18,1397.99,1403.65,5.66
+26/12/2025,Pedralbes,3117.63,2826.80,1032.55,1035.72,3.17
+26/12/2025,Sant Gervasi,4696.14,4298.89,1601.37,1604.73,3.36
+27/12/2025,Diagonal,4846.32,4382.64,1909.42,1912.69,3.27
+27/12/2025,Sarria,3598.20,3263.75,1440.09,1437.68,-2.41
+27/12/2025,Pedralbes,3043.13,2670.22,1047.38,1048.11,0.73
+27/12/2025,Sant Gervasi,3696.61,3243.39,1158.48,1161.75,3.27
+28/12/2025,Diagonal,3564.73,3260.35,1369.71,1371.19,1.48
+28/12/2025,Sarria,3194.64,2787.77,1196.31,1200.97,4.66
+28/12/2025,Pedralbes,3108.25,2845.36,1082.40,1084.95,2.55
+28/12/2025,Sant Gervasi,4154.31,3659.66,1457.44,1462.41,4.97
+29/12/2025,Diagonal,3419.53,3099.14,1145.34,1147.85,2.51
+29/12/2025,Sarria,3724.45,3388.99,1220.70,1224.55,3.85
+29/12/2025,Pedralbes,4716.86,4133.66,1853.00,1855.79,2.79
+29/12/2025,Sant Gervasi,3336.45,2849.14,1098.51,1099.25,0.74
+30/12/2025,Diagonal,4890.13,4196.78,1685.19,1684.57,-0.62
+30/12/2025,Sarria,3867.64,3327.72,1405.15,1403.60,-1.55
+30/12/2025,Pedralbes,3237.61,2841.86,1080.67,1082.63,1.96
+30/12/2025,Sant Gervasi,3344.97,3017.71,1290.33,1296.24,5.91
+31/12/2025,Diagonal,4341.47,3717.48,1473.49,1477.67,4.18
+31/12/2025,Sarria,3764.20,3366.19,1328.00,1324.12,-3.88
+31/12/2025,Pedralbes,3233.26,2775.89,1149.61,1154.69,5.08
+31/12/2025,Sant Gervasi,3449.87,3074.11,1379.46,1380.25,0.79
+01/01/2026,Diagonal,4387.45,3758.37,1538.26,1538.10,-0.16
+01/01/2026,Sarria,4999.91,4495.88,1707.70,1704.95,-2.75
+01/01/2026,Pedralbes,3650.46,3285.28,1433.11,1434.49,1.38
+01/01/2026,Sant Gervasi,3810.66,3425.98,1334.01,1338.18,4.17
+02/01/2026,Diagonal,4566.95,4051.37,1443.88,1448.25,4.37
+02/01/2026,Sarria,4077.96,3700.01,1536.13,1539.67,3.54
+02/01/2026,Pedralbes,3414.93,3060.12,1106.95,1111.57,4.62
+02/01/2026,Sant Gervasi,4390.43,3733.50,1473.70,1472.84,-0.86
+03/01/2026,Diagonal,3078.29,2740.47,1138.02,1134.90,-3.12
+03/01/2026,Sarria,3513.52,3171.71,1136.93,1134.18,-2.75
+03/01/2026,Pedralbes,3597.16,3300.90,1211.96,1217.73,5.77
+03/01/2026,Sant Gervasi,4316.32,3743.91,1327.65,1333.11,5.46
+04/01/2026,Diagonal,4809.24,4186.63,1688.93,1686.33,-2.60
+04/01/2026,Sarria,3980.89,3470.96,1530.97,1536.94,5.97
+04/01/2026,Pedralbes,4212.34,3731.04,1562.53,1565.16,2.63
+04/01/2026,Sant Gervasi,3089.47,2633.99,959.21,963.77,4.56
+05/01/2026,Diagonal,3430.43,2948.09,1194.59,1196.51,1.92
+05/01/2026,Sarria,3554.79,3203.00,1256.22,1257.72,1.50
+05/01/2026,Pedralbes,3521.35,3153.31,1155.16,1155.72,0.56
+05/01/2026,Sant Gervasi,4889.48,4387.61,1948.19,1945.62,-2.57
+06/01/2026,Diagonal,3407.53,3046.57,1148.37,1150.70,2.33
+06/01/2026,Sarria,4291.14,3862.07,1569.41,1571.89,2.48
+06/01/2026,Pedralbes,4022.85,3465.62,1497.69,1496.85,-0.84
+06/01/2026,Sant Gervasi,4575.57,4010.61,1790.34,1788.81,-1.53
+07/01/2026,Diagonal,3540.25,3140.92,1314.15,1314.22,0.07
+07/01/2026,Sarria,3658.72,3132.70,1381.28,1385.06,3.78
+07/01/2026,Pedralbes,3292.66,2982.71,1125.57,1122.55,-3.02
+07/01/2026,Sant Gervasi,4958.97,4292.27,1910.83,1914.66,3.83
+08/01/2026,Diagonal,3247.01,2879.62,1259.98,1261.87,1.89
+08/01/2026,Sarria,4613.60,3952.42,1521.25,1522.97,1.72
+08/01/2026,Pedralbes,3563.99,3097.01,1114.63,1111.11,-3.52
+08/01/2026,Sant Gervasi,3635.99,3281.96,1207.98,1212.04,4.06
+09/01/2026,Diagonal,4355.62,3942.76,1597.48,1602.30,4.82
+09/01/2026,Sarria,3805.30,3392.28,1275.18,1278.05,2.87
+09/01/2026,Pedralbes,4426.45,3966.23,1444.77,1446.45,1.68
+09/01/2026,Sant Gervasi,3534.74,3231.78,1337.70,1337.40,-0.30
+10/01/2026,Diagonal,4555.06,4088.05,1601.80,1602.38,0.58
+10/01/2026,Sarria,3877.92,3392.33,1346.30,1345.17,-1.13
+10/01/2026,Pedralbes,4905.23,4348.20,1834.27,1839.51,5.24
+10/01/2026,Sant Gervasi,3457.53,3092.74,1109.35,1108.41,-0.94
+11/01/2026,Diagonal,4541.16,4128.67,1707.07,1703.84,-3.23
+11/01/2026,Sarria,3480.07,2980.87,1214.80,1211.65,-3.15
+11/01/2026,Pedralbes,3571.70,3268.36,1408.12,1404.23,-3.89
+11/01/2026,Sant Gervasi,4896.79,4394.34,1947.77,1945.13,-2.64
+12/01/2026,Diagonal,3995.61,3587.89,1498.58,1499.90,1.32
+12/01/2026,Sarria,3249.38,2765.13,1020.38,1024.69,4.31
+12/01/2026,Pedralbes,3014.58,2652.07,1069.93,1069.38,-0.55
+12/01/2026,Sant Gervasi,4988.44,4471.05,1976.41,1982.40,5.99
+13/01/2026,Diagonal,4889.88,4390.55,1555.29,1555.78,0.49
+13/01/2026,Sarria,3337.06,3053.79,1302.05,1307.09,5.04
+13/01/2026,Pedralbes,3349.63,2933.25,1065.74,1065.27,-0.47
+13/01/2026,Sant Gervasi,3101.81,2744.13,1007.23,1012.93,5.70
+14/01/2026,Diagonal,3675.92,3299.26,1429.15,1433.66,4.51
+14/01/2026,Sarria,4715.61,4104.02,1634.68,1633.33,-1.35
+14/01/2026,Pedralbes,3004.47,2686.54,1046.04,1051.27,5.23
+14/01/2026,Sant Gervasi,4858.22,4455.67,1789.19,1794.12,4.93
+15/01/2026,Diagonal,4870.83,4444.51,1932.63,1929.20,-3.43
+15/01/2026,Sarria,3011.78,2657.07,1009.25,1006.32,-2.93
+15/01/2026,Pedralbes,3699.44,3331.61,1300.02,1296.11,-3.91
+15/01/2026,Sant Gervasi,3861.61,3335.77,1344.01,1349.00,4.99
+16/01/2026,Diagonal,3821.44,3492.48,1224.78,1228.47,3.69
+16/01/2026,Sarria,3500.27,3090.56,1197.38,1197.02,-0.36
+16/01/2026,Pedralbes,4784.39,4246.38,1600.67,1606.56,5.89
+16/01/2026,Sant Gervasi,4312.56,3798.31,1382.54,1386.01,3.47
+17/01/2026,Diagonal,3011.62,2746.15,1155.91,1153.02,-2.89
+17/01/2026,Sarria,3569.80,3067.73,1202.87,1202.18,-0.69
+17/01/2026,Pedralbes,3063.21,2746.58,1221.78,1227.38,5.60
+17/01/2026,Sant Gervasi,4965.86,4262.27,1700.25,1701.21,0.96
+18/01/2026,Diagonal,4363.47,3747.87,1593.25,1597.05,3.80
+18/01/2026,Sarria,3799.75,3422.89,1451.95,1456.21,4.26
+18/01/2026,Pedralbes,3262.84,2992.15,1284.44,1281.70,-2.74
+18/01/2026,Sant Gervasi,3688.24,3138.53,1313.30,1309.82,-3.48
+19/01/2026,Diagonal,4659.67,4100.87,1680.16,1676.24,-3.92
+19/01/2026,Sarria,3960.39,3444.57,1234.06,1234.35,0.29
+19/01/2026,Pedralbes,4235.23,3816.14,1406.96,1405.77,-1.19
+19/01/2026,Sant Gervasi,3230.04,2805.12,1178.42,1181.08,2.66
+20/01/2026,Diagonal,3858.32,3407.56,1459.36,1456.39,-2.97
+20/01/2026,Sarria,4460.91,3982.60,1469.05,1473.60,4.55
+20/01/2026,Pedralbes,4257.82,3663.47,1326.35,1326.36,0.01
+20/01/2026,Sant Gervasi,3547.72,3063.29,1116.94,1113.12,-3.82
+21/01/2026,Diagonal,3399.29,3095.07,1201.00,1202.25,1.25
+21/01/2026,Sarria,4400.32,4042.17,1504.40,1504.66,0.26
+21/01/2026,Pedralbes,3122.70,2747.65,975.87,972.97,-2.90
+21/01/2026,Sant Gervasi,3727.15,3414.11,1437.88,1436.35,-1.53
+22/01/2026,Diagonal,4790.21,4132.62,1446.64,1449.24,2.60
+22/01/2026,Sarria,3643.28,3169.55,1198.14,1200.21,2.07
+22/01/2026,Pedralbes,3861.82,3350.74,1337.38,1336.72,-0.66
+22/01/2026,Sant Gervasi,3223.06,2890.53,1209.10,1212.80,3.70
+23/01/2026,Diagonal,3260.62,2853.82,1230.01,1233.44,3.43
+23/01/2026,Sarria,4177.82,3727.99,1393.62,1392.38,-1.24
+23/01/2026,Pedralbes,4168.65,3568.81,1287.04,1289.34,2.30
+23/01/2026,Sant Gervasi,4203.67,3585.20,1601.99,1606.83,4.84
+24/01/2026,Diagonal,4634.82,4002.19,1579.17,1576.16,-3.01
+24/01/2026,Sarria,4883.64,4362.71,1658.47,1659.21,0.74
+24/01/2026,Pedralbes,4521.98,4012.57,1466.06,1463.34,-2.72
+24/01/2026,Sant Gervasi,3836.43,3452.07,1516.01,1519.60,3.59
+25/01/2026,Diagonal,4692.18,4172.40,1605.26,1604.92,-0.34
+25/01/2026,Sarria,4259.73,3655.79,1438.96,1439.79,0.83
+25/01/2026,Pedralbes,4047.53,3710.25,1592.03,1589.70,-2.33
+25/01/2026,Sant Gervasi,3548.30,3256.36,1234.05,1239.61,5.56
+26/01/2026,Diagonal,3121.59,2865.85,1057.55,1061.70,4.15
+26/01/2026,Sarria,3990.05,3540.26,1420.88,1417.63,-3.25
+26/01/2026,Pedralbes,3875.49,3432.33,1394.38,1394.28,-0.10
+26/01/2026,Sant Gervasi,4214.44,3643.32,1276.47,1278.19,1.72
+27/01/2026,Diagonal,4184.23,3559.19,1576.23,1577.36,1.13
+27/01/2026,Sarria,4007.64,3608.64,1356.43,1360.95,4.52
+27/01/2026,Pedralbes,3592.73,3121.35,1129.65,1127.89,-1.76
+27/01/2026,Sant Gervasi,4067.13,3540.15,1465.49,1470.91,5.42
+28/01/2026,Diagonal,3555.51,3055.28,1336.19,1332.71,-3.48
+28/01/2026,Sarria,4960.05,4559.61,1691.60,1688.76,-2.84
+28/01/2026,Pedralbes,4297.29,3843.01,1718.68,1717.93,-0.75
+28/01/2026,Sant Gervasi,4892.86,4461.70,1679.40,1676.74,-2.66
+29/01/2026,Diagonal,4796.67,4176.19,1873.13,1875.39,2.26
+29/01/2026,Sarria,3020.82,2642.87,1118.06,1116.86,-1.20
+29/01/2026,Pedralbes,3511.97,2989.02,1242.63,1247.31,4.68
+29/01/2026,Sant Gervasi,4878.03,4345.49,1834.93,1837.81,2.88
+30/01/2026,Diagonal,4891.31,4245.73,1751.89,1753.93,2.04
+30/01/2026,Sarria,3412.32,3006.09,1149.61,1147.65,-1.96
+30/01/2026,Pedralbes,4259.60,3876.56,1510.10,1510.56,0.46
+30/01/2026,Sant Gervasi,4459.62,3926.13,1432.38,1433.17,0.79
+31/01/2026,Diagonal,3991.92,3521.50,1519.74,1517.50,-2.24
+31/01/2026,Sarria,4139.32,3791.76,1395.52,1394.34,-1.18
+31/01/2026,Pedralbes,3620.32,3301.61,1425.47,1428.34,2.87
+31/01/2026,Sant Gervasi,3375.70,2903.26,1139.93,1140.48,0.55
+01/02/2026,Diagonal,4290.24,3767.58,1591.54,1588.91,-2.63
+01/02/2026,Sarria,4500.89,3829.47,1378.51,1378.35,-0.16
+01/02/2026,Pedralbes,3220.07,2740.11,1186.61,1191.96,5.35
+01/02/2026,Sant Gervasi,3264.36,2950.68,1111.71,1117.10,5.39
+02/02/2026,Diagonal,4199.27,3802.30,1334.38,1338.30,3.92
+02/02/2026,Sarria,4084.74,3705.99,1613.11,1609.96,-3.15
+02/02/2026,Pedralbes,3278.46,2961.03,1300.60,1304.75,4.15
+02/02/2026,Sant Gervasi,3614.77,3193.73,1195.67,1197.11,1.44
+03/02/2026,Diagonal,3534.91,3139.19,1105.37,1101.82,-3.55
+03/02/2026,Sarria,4089.28,3505.25,1537.56,1537.71,0.15
+03/02/2026,Pedralbes,3002.42,2599.20,968.64,968.49,-0.15
+03/02/2026,Sant Gervasi,3706.62,3225.05,1426.02,1428.86,2.84
+04/02/2026,Diagonal,4373.53,3936.35,1732.63,1733.55,0.92
+04/02/2026,Sarria,4981.54,4312.60,1921.90,1920.72,-1.18
+04/02/2026,Pedralbes,3152.58,2753.34,1062.93,1068.18,5.25
+04/02/2026,Sant Gervasi,3169.61,2703.79,987.18,987.47,0.29
+05/02/2026,Diagonal,3669.69,3165.83,1242.67,1247.60,4.93
+05/02/2026,Sarria,4374.32,3909.47,1480.52,1485.27,4.75
+05/02/2026,Pedralbes,3542.19,3134.65,1212.83,1211.48,-1.35
+05/02/2026,Sant Gervasi,4813.97,4361.01,1870.37,1874.99,4.62
+06/02/2026,Diagonal,4956.10,4482.52,1634.59,1632.07,-2.52
+06/02/2026,Sarria,3893.39,3526.55,1578.60,1582.75,4.15
+06/02/2026,Pedralbes,3226.33,2838.92,1199.93,1197.38,-2.55
+06/02/2026,Sant Gervasi,3646.11,3131.74,1336.48,1336.01,-0.47
+07/02/2026,Diagonal,3988.41,3524.52,1576.46,1578.48,2.02
+07/02/2026,Sarria,4273.21,3673.57,1632.55,1637.77,5.22
+07/02/2026,Pedralbes,3766.37,3346.25,1351.47,1352.40,0.93
+07/02/2026,Sant Gervasi,4072.43,3527.16,1264.00,1267.15,3.15
+08/02/2026,Diagonal,4053.89,3666.18,1580.60,1578.79,-1.81
+08/02/2026,Sarria,3174.50,2778.70,1029.03,1033.54,4.51
+08/02/2026,Pedralbes,3724.80,3289.65,1195.32,1192.42,-2.90
+08/02/2026,Sant Gervasi,4822.72,4221.13,1835.91,1839.70,3.79
+09/02/2026,Diagonal,3278.70,2892.56,1254.00,1255.52,1.52
+09/02/2026,Sarria,4862.68,4276.61,1586.94,1585.19,-1.75
+09/02/2026,Pedralbes,4493.99,3856.77,1618.22,1615.65,-2.57
+09/02/2026,Sant Gervasi,4466.16,4013.87,1575.33,1571.87,-3.46
+10/02/2026,Diagonal,3212.02,2860.99,1137.77,1139.71,1.94
+10/02/2026,Sarria,3316.35,2853.00,1038.86,1037.31,-1.55
+10/02/2026,Pedralbes,3024.96,2747.19,1075.94,1079.59,3.65
+10/02/2026,Sant Gervasi,3939.53,3387.24,1364.19,1369.68,5.49
+11/02/2026,Diagonal,3940.37,3548.61,1399.56,1402.01,2.45
+11/02/2026,Sarria,3026.42,2596.03,924.19,926.61,2.42
+11/02/2026,Pedralbes,4208.35,3628.23,1328.06,1328.02,-0.04
+11/02/2026,Sant Gervasi,3847.24,3525.52,1394.10,1397.21,3.11
+12/02/2026,Diagonal,3516.11,3129.49,1191.09,1189.36,-1.73
+12/02/2026,Sarria,4862.90,4226.00,1517.95,1517.73,-0.22
+12/02/2026,Pedralbes,4902.15,4421.83,1724.69,1721.25,-3.44
+12/02/2026,Sant Gervasi,3784.58,3434.79,1537.41,1539.46,2.05
+13/02/2026,Diagonal,3154.42,2834.15,1127.26,1129.79,2.53
+13/02/2026,Sarria,3810.20,3340.15,1187.31,1187.02,-0.29
+13/02/2026,Pedralbes,3848.44,3343.89,1205.27,1204.90,-0.37
+13/02/2026,Sant Gervasi,4557.59,3980.98,1488.70,1486.33,-2.37
+14/02/2026,Diagonal,3212.93,2778.65,975.58,980.68,5.10
+14/02/2026,Sarria,3375.49,2916.83,1291.92,1290.32,-1.60
+14/02/2026,Pedralbes,3170.08,2821.08,1000.04,1005.90,5.86
+14/02/2026,Sant Gervasi,3967.61,3385.81,1216.59,1215.68,-0.91
+15/02/2026,Diagonal,4961.08,4477.96,1996.61,1997.61,1.00
+15/02/2026,Sarria,3628.94,3183.83,1227.63,1224.93,-2.70
+15/02/2026,Pedralbes,4349.37,3797.84,1669.72,1670.76,1.04
+15/02/2026,Sant Gervasi,4004.35,3620.95,1275.91,1279.87,3.96
+16/02/2026,Diagonal,3953.91,3601.29,1273.92,1271.53,-2.39
+16/02/2026,Sarria,4364.75,3734.10,1540.67,1546.20,5.53
+16/02/2026,Pedralbes,3463.14,2995.95,1252.74,1250.15,-2.59
+16/02/2026,Sant Gervasi,4437.11,4080.10,1632.70,1638.62,5.92
+17/02/2026,Diagonal,4217.48,3739.34,1596.19,1596.66,0.47
+17/02/2026,Sarria,3262.40,2839.46,1170.84,1176.24,5.40
+17/02/2026,Pedralbes,3080.03,2771.70,1159.37,1157.76,-1.61
+17/02/2026,Sant Gervasi,4994.02,4457.07,1986.97,1988.64,1.67
+18/02/2026,Diagonal,4988.81,4274.50,1502.46,1506.12,3.66
+18/02/2026,Sarria,3619.08,3296.00,1416.42,1421.37,4.95
+18/02/2026,Pedralbes,3997.82,3525.42,1293.73,1292.69,-1.04
+18/02/2026,Sant Gervasi,3136.32,2792.44,1076.03,1072.74,-3.29
+19/02/2026,Diagonal,4421.31,3900.71,1749.91,1755.69,5.78
+19/02/2026,Sarria,4526.29,3987.40,1764.09,1769.49,5.40
+19/02/2026,Pedralbes,4943.36,4370.81,1688.65,1687.52,-1.13
+19/02/2026,Sant Gervasi,3818.07,3410.98,1425.99,1426.40,0.41
+20/02/2026,Diagonal,4024.96,3597.20,1371.84,1368.67,-3.17
+20/02/2026,Sarria,3826.39,3372.99,1476.50,1482.41,5.91
+20/02/2026,Pedralbes,3085.35,2833.65,1007.95,1011.86,3.91
+20/02/2026,Sant Gervasi,4399.49,3912.27,1429.76,1426.81,-2.95
+21/02/2026,Diagonal,3751.64,3338.62,1453.58,1451.81,-1.77
+21/02/2026,Sarria,4748.32,4258.49,1639.07,1639.75,0.68
+21/02/2026,Pedralbes,4070.23,3692.84,1332.79,1330.59,-2.20
+21/02/2026,Sant Gervasi,3216.70,2950.26,1149.70,1150.03,0.33
+22/02/2026,Diagonal,3803.04,3249.75,1248.69,1250.73,2.04
+22/02/2026,Sarria,3425.27,3089.22,1116.54,1117.09,0.55
+22/02/2026,Pedralbes,4090.16,3748.21,1366.42,1364.55,-1.87
+22/02/2026,Sant Gervasi,4136.41,3801.97,1625.04,1621.66,-3.38
+23/02/2026,Diagonal,4617.07,4179.69,1871.90,1870.03,-1.87
+23/02/2026,Sarria,3422.99,2915.04,1241.40,1241.63,0.23
+23/02/2026,Pedralbes,3504.14,3021.72,1100.43,1099.17,-1.26
+23/02/2026,Sant Gervasi,3163.42,2882.40,1138.96,1139.16,0.20
+24/02/2026,Diagonal,3428.21,3128.29,1152.49,1149.03,-3.46
+24/02/2026,Sarria,4789.91,4215.11,1881.36,1880.33,-1.03
+24/02/2026,Pedralbes,3397.21,3111.63,1238.93,1240.29,1.36
+24/02/2026,Sant Gervasi,4567.71,4191.29,1650.02,1655.15,5.13
+25/02/2026,Diagonal,4140.63,3758.08,1526.12,1531.06,4.94
+25/02/2026,Sarria,3397.12,3059.41,1247.78,1245.23,-2.55
+25/02/2026,Pedralbes,4328.13,3928.41,1663.43,1667.68,4.25
+25/02/2026,Sant Gervasi,4466.25,3800.75,1671.00,1676.34,5.34
+26/02/2026,Diagonal,3998.89,3487.63,1496.90,1499.64,2.74
+26/02/2026,Sarria,3525.61,3175.02,1425.02,1430.45,5.43
+26/02/2026,Pedralbes,4714.53,4216.68,1745.25,1747.03,1.78
+26/02/2026,Sant Gervasi,3072.97,2772.43,1022.38,1025.34,2.96
+27/02/2026,Diagonal,4548.77,4057.80,1507.93,1506.03,-1.90
+27/02/2026,Sarria,3382.32,3035.88,1352.52,1352.22,-0.30
+27/02/2026,Pedralbes,3727.59,3247.24,1236.21,1240.40,4.19
+27/02/2026,Sant Gervasi,3249.49,2875.60,1293.75,1293.89,0.14
+28/02/2026,Diagonal,3703.46,3362.64,1320.12,1325.86,5.74
+28/02/2026,Sarria,3671.65,3358.99,1329.76,1329.49,-0.27
+28/02/2026,Pedralbes,4105.51,3536.43,1391.90,1390.75,-1.15
+28/02/2026,Sant Gervasi,4319.21,3877.01,1602.80,1605.82,3.02
+
+Fecha,Local,Nº Factura,Empleado,Importe,Estado,Fase Eliminación,Producto,Cantidad,Precio Unitario
+25/12/2025,Pedralbes,F-1037,Miguel A.,10.50,Activo,,Tostada,3,3.50
+15/02/2026,Sant Gervasi,F-1856,Maria G.,25.50,Activo,,Mojito,3,8.50
+08/12/2025,Diagonal,F-2054,Pedro S.,19.50,Activo,,Patatas Bravas,3,6.50
+20/12/2025,Diagonal,F-1433,Maria G.,32.00,Activo,,Jamon Iberico,2,16.00
+14/12/2025,Sarria,F-1884,Sofia N.,15.00,Activo,,Gazpacho,2,7.50
+01/02/2026,Pedralbes,F-1359,Laura F.,18.00,Activo,,Helado Artesano,4,4.50
+16/02/2026,Diagonal,F-1445,Javier R.,6.50,Activo,,Tarta Queso,1,6.50
+19/02/2026,Sant Gervasi,F-1176,Laura F.,19.00,Activo,,Gin Tonic,2,9.50
+08/02/2026,Pedralbes,F-1106,Ana P.,48.00,Activo,,Jamon Iberico,3,16.00
+21/01/2026,Sarria,F-1954,Miguel A.,2.50,Activo,,Agua Mineral,1,2.50
+29/12/2025,Pedralbes,F-2003,Laura F.,7.00,Activo,,Cerveza Estrella,2,3.50
+12/01/2026,Pedralbes,F-1914,Ana P.,44.00,Activo,,Entrecot,2,22.00
+27/12/2025,Sant Gervasi,F-1578,Carlos M.,88.00,Activo,,Entrecot,4,22.00
+01/02/2026,Sant Gervasi,F-2080,Elena V.,26.00,Activo,,Patatas Bravas,4,6.50
+21/12/2025,Sarria,F-1028,David L.,7.00,Activo,,Cerveza Estrella,2,3.50
+20/02/2026,Sarria,F-2044,Ana P.,9.00,Activo,,Refresco,3,3.00
+21/01/2026,Diagonal,F-1633,Elena V.,3.60,Activo,,Cafe Solo,2,1.80
+02/02/2026,Sarria,F-1335,Pedro S.,35.00,Activo,,Dorada al Horno,2,17.50
+05/02/2026,Pedralbes,F-1177,Laura F.,10.00,Activo,,Agua Mineral,4,2.50
+11/12/2025,Sarria,F-1462,Pedro S.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+21/01/2026,Sarria,F-1080,Laura F.,38.00,Activo,,Ensalada Mixta,4,9.50
+24/01/2026,Diagonal,F-2016,Javier R.,48.00,Activo,,Jamon Iberico,3,16.00
+22/01/2026,Diagonal,F-1227,Elena V.,28.50,Activo,,Gin Tonic,3,9.50
+13/02/2026,Pedralbes,F-1899,David L.,20.00,Activo,,Cerveza Artesana,4,5.00
+16/01/2026,Diagonal,F-1471,Maria G.,26.00,Activo,,Tarta Queso,4,6.50
+09/02/2026,Pedralbes,F-1619,Miguel A.,31.50,Activo,,Calamares Fritos,3,10.50
+20/12/2025,Sant Gervasi,F-1459,Ana P.,13.00,Activo,,Patatas Bravas,2,6.50
+03/01/2026,Pedralbes,F-2068,Maria G.,11.00,Activo,,Crema Catalana,2,5.50
+16/02/2026,Diagonal,F-1488,Ana P.,18.00,Activo,,Lubina a la Plancha,1,18.00
+11/01/2026,Sant Gervasi,F-1064,Sofia N.,2.20,Activo,,Cafe con Leche,1,2.20
+21/01/2026,Pedralbes,F-2012,Sofia N.,22.00,Activo,,Ensalada Cesar,2,11.00
+23/12/2025,Pedralbes,F-1438,Maria G.,15.50,Activo,,Paella Mixta,1,15.50
+07/02/2026,Diagonal,F-1058,Maria G.,5.00,Activo,,Cerveza Artesana,1,5.00
+11/12/2025,Diagonal,F-1644,Laura F.,35.00,Activo,,Dorada al Horno,2,17.50
+20/12/2025,Pedralbes,F-2022,Miguel A.,48.00,Activo,,Arroz Negro,3,16.00
+12/12/2025,Sarria,F-1580,Pedro S.,5.50,Activo,,Crema Catalana,1,5.50
+16/01/2026,Sarria,F-1025,Javier R.,34.00,Activo,,Mojito,4,8.50
+01/12/2025,Pedralbes,F-1529,Pedro S.,72.00,Activo,,Lubina a la Plancha,4,18.00
+03/02/2026,Pedralbes,F-1533,Maria G.,22.00,Activo,,Crema Catalana,4,5.50
+14/02/2026,Pedralbes,F-1374,Pedro S.,14.00,Activo,,Cerveza Estrella,4,3.50
+23/12/2025,Sarria,F-2029,Pedro S.,3.80,Activo,,Cortado,2,1.90
+05/01/2026,Sant Gervasi,F-2061,Sofia N.,5.50,Activo,,Copa Vino Tinto,1,5.50
+15/02/2026,Sant Gervasi,F-1813,Pedro S.,22.00,Activo,,Ensalada Cesar,2,11.00
+10/02/2026,Sarria,F-1348,Laura F.,1.80,Activo,,Cafe Solo,1,1.80
+08/12/2025,Diagonal,F-1146,David L.,58.00,Activo,,Paella Valenciana,4,14.50
+20/01/2026,Sant Gervasi,F-1828,Miguel A.,28.50,Activo,,Ensalada Mixta,3,9.50
+30/12/2025,Pedralbes,F-2017,Maria G.,64.00,Activo,,Jamon Iberico,4,16.00
+16/02/2026,Diagonal,F-1558,Miguel A.,10.00,Activo,,Agua Mineral,4,2.50
+26/01/2026,Pedralbes,F-2046,Ana P.,58.00,Activo,,Paella Valenciana,4,14.50
+06/01/2026,Sarria,F-2090,Laura F.,16.00,Eliminado,Antes de la cocina,Jamon Iberico,1,16.00
+27/01/2026,Sarria,F-1969,Miguel A.,72.00,Activo,,Lubina a la Plancha,4,18.00
+09/01/2026,Sarria,F-1499,Elena V.,30.00,Activo,,Gazpacho,4,7.50
+16/01/2026,Sarria,F-1248,Ana P.,13.50,Activo,,Gambas al Ajillo,1,13.50
+13/01/2026,Pedralbes,F-1742,Miguel A.,42.00,Activo,,Calamares Fritos,4,10.50
+22/01/2026,Sant Gervasi,F-2075,Javier R.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+06/12/2025,Pedralbes,F-1649,Ana P.,24.00,Activo,,Solomillo Iberico,1,24.00
+27/01/2026,Sant Gervasi,F-1846,Sofia N.,19.00,Activo,,Ensalada Mixta,2,9.50
+19/12/2025,Diagonal,F-1153,David L.,24.00,Activo,,Solomillo Iberico,1,24.00
+18/02/2026,Pedralbes,F-1996,David L.,32.00,Activo,,Arroz Negro,2,16.00
+15/01/2026,Sant Gervasi,F-1787,Carlos M.,31.00,Activo,,Paella Mixta,2,15.50
+28/12/2025,Sarria,F-2005,Laura F.,38.00,Activo,,Gin Tonic,4,9.50
+28/02/2026,Pedralbes,F-1779,Sofia N.,5.00,Activo,,Agua Mineral,2,2.50
+13/01/2026,Sant Gervasi,F-1695,Laura F.,16.50,Activo,,Crema Catalana,3,5.50
+27/02/2026,Diagonal,F-1449,Maria G.,36.00,Activo,,Lubina a la Plancha,2,18.00
+06/02/2026,Sant Gervasi,F-1506,Miguel A.,72.00,Activo,,Lubina a la Plancha,4,18.00
+04/12/2025,Sant Gervasi,F-1854,Laura F.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+20/12/2025,Sant Gervasi,F-2059,Maria G.,66.00,Activo,,Entrecot,3,22.00
+21/01/2026,Diagonal,F-1867,Pedro S.,62.00,Activo,,Paella Mixta,4,15.50
+13/01/2026,Diagonal,F-1419,Elena V.,14.50,Activo,,Paella Valenciana,1,14.50
+24/02/2026,Pedralbes,F-2004,Javier R.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+07/12/2025,Sant Gervasi,F-2032,Miguel A.,6.00,Activo,,Refresco,2,3.00
+18/01/2026,Pedralbes,F-1266,Ana P.,5.70,Activo,,Cortado,3,1.90
+31/01/2026,Sarria,F-1072,Laura F.,48.00,Activo,,Jamon Iberico,3,16.00
+19/12/2025,Diagonal,F-1758,Ana P.,31.00,Activo,,Paella Mixta,2,15.50
+07/01/2026,Pedralbes,F-1543,Carlos M.,54.00,Activo,,Gambas al Ajillo,4,13.50
+13/12/2025,Pedralbes,F-1692,Maria G.,7.60,Activo,,Cortado,4,1.90
+04/02/2026,Diagonal,F-1158,Miguel A.,5.40,Activo,,Cafe Solo,3,1.80
+30/01/2026,Sarria,F-1286,Ana P.,7.60,Activo,,Cortado,4,1.90
+25/02/2026,Sant Gervasi,F-1912,Pedro S.,46.50,Activo,,Paella Mixta,3,15.50
+22/01/2026,Diagonal,F-1748,Elena V.,6.60,Activo,,Cafe con Leche,3,2.20
+21/12/2025,Sant Gervasi,F-1480,Maria G.,16.00,Activo,,Tortilla Espanola,2,8.00
+04/01/2026,Sarria,F-1386,Miguel A.,33.00,Activo,,Ensalada Cesar,3,11.00
+12/12/2025,Sarria,F-2084,Carlos M.,1.90,Eliminado,Antes de la cocina,Cortado,1,1.90
+24/01/2026,Diagonal,F-1429,David L.,48.00,Activo,,Arroz Negro,3,16.00
+07/02/2026,Diagonal,F-1942,David L.,10.00,Activo,,Agua Mineral,4,2.50
+07/02/2026,Sarria,F-1390,Javier R.,31.50,Activo,,Calamares Fritos,3,10.50
+20/12/2025,Sant Gervasi,F-1625,Sofia N.,9.50,Activo,,Ensalada Mixta,1,9.50
+23/01/2026,Diagonal,F-1465,David L.,18.00,Activo,,Helado Artesano,4,4.50
+17/02/2026,Diagonal,F-1115,Javier R.,72.00,Activo,,Solomillo Iberico,3,24.00
+27/01/2026,Sarria,F-1869,Laura F.,32.00,Activo,,Jamon Iberico,2,16.00
+24/02/2026,Pedralbes,F-2069,Elena V.,16.00,Activo,,Tortilla Espanola,2,8.00
+02/12/2025,Pedralbes,F-2030,Miguel A.,9.50,Activo,,Ensalada Mixta,1,9.50
+03/01/2026,Diagonal,F-1066,Laura F.,15.00,Activo,,Copa Vino Blanco,3,5.00
+14/01/2026,Pedralbes,F-2056,David L.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+26/12/2025,Pedralbes,F-1880,Maria G.,10.50,Activo,,Tostada,3,3.50
+15/02/2026,Diagonal,F-1187,Pedro S.,36.00,Activo,,Lubina a la Plancha,2,18.00
+14/02/2026,Pedralbes,F-1782,Ana P.,7.60,Activo,,Cortado,4,1.90
+01/12/2025,Pedralbes,F-2036,Ana P.,22.00,Activo,,Crema Catalana,4,5.50
+11/12/2025,Pedralbes,F-1073,Pedro S.,16.00,Activo,,Tortilla Espanola,2,8.00
+21/02/2026,Diagonal,F-1369,Carlos M.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+10/01/2026,Diagonal,F-1844,Javier R.,5.40,Activo,,Cafe Solo,3,1.80
+26/01/2026,Sarria,F-1809,Pedro S.,3.50,Activo,,Cerveza Estrella,1,3.50
+19/12/2025,Pedralbes,F-1756,Miguel A.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+10/12/2025,Diagonal,F-1186,Maria G.,48.00,Activo,,Sangria Jarra,4,12.00
+31/01/2026,Sarria,F-1504,Maria G.,5.40,Activo,,Cafe Solo,3,1.80
+05/01/2026,Sarria,F-1093,Elena V.,58.00,Activo,,Paella Valenciana,4,14.50
+08/02/2026,Sarria,F-1521,Elena V.,52.50,Activo,,Dorada al Horno,3,17.50
+11/02/2026,Pedralbes,F-1699,Laura F.,3.80,Activo,,Cortado,2,1.90
+25/01/2026,Sant Gervasi,F-1279,David L.,19.00,Activo,,Gin Tonic,2,9.50
+08/02/2026,Sant Gervasi,F-1457,Ana P.,4.50,Activo,,Helado Artesano,1,4.50
+17/02/2026,Sarria,F-1981,David L.,10.50,Activo,,Tostada,3,3.50
+08/01/2026,Sarria,F-1959,Javier R.,10.50,Activo,,Cerveza Estrella,3,3.50
+22/12/2025,Pedralbes,F-1358,Miguel A.,64.00,Activo,,Arroz Negro,4,16.00
+04/02/2026,Pedralbes,F-1721,Carlos M.,6.50,Activo,,Patatas Bravas,1,6.50
+20/01/2026,Sarria,F-1408,Ana P.,7.00,Activo,,Cerveza Estrella,2,3.50
+16/02/2026,Sarria,F-1677,Maria G.,9.00,Activo,,Helado Artesano,2,4.50
+15/12/2025,Sarria,F-1661,Elena V.,22.50,Activo,,Gazpacho,3,7.50
+16/12/2025,Pedralbes,F-1896,Miguel A.,64.00,Activo,,Jamon Iberico,4,16.00
+23/01/2026,Sant Gervasi,F-1294,Maria G.,32.00,Activo,,Tortilla Espanola,4,8.00
+26/01/2026,Sarria,F-1523,Elena V.,24.00,Activo,,Solomillo Iberico,1,24.00
+12/12/2025,Diagonal,F-1380,Laura F.,1.90,Activo,,Cortado,1,1.90
+23/01/2026,Diagonal,F-1642,Laura F.,28.50,Activo,,Ensalada Mixta,3,9.50
+05/12/2025,Pedralbes,F-1795,Javier R.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+11/12/2025,Pedralbes,F-1250,Pedro S.,6.50,Activo,,Tarta Queso,1,6.50
+21/12/2025,Sarria,F-1530,Laura F.,48.00,Activo,,Arroz Negro,3,16.00
+21/02/2026,Sant Gervasi,F-1155,Carlos M.,21.00,Activo,,Calamares Fritos,2,10.50
+10/12/2025,Diagonal,F-1802,Carlos M.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+03/12/2025,Diagonal,F-1696,Pedro S.,15.00,Activo,,Copa Vino Blanco,3,5.00
+04/12/2025,Sant Gervasi,F-2055,Javier R.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+24/12/2025,Pedralbes,F-1045,Javier R.,5.70,Activo,,Cortado,3,1.90
+24/12/2025,Sarria,F-1147,Pedro S.,64.00,Activo,,Jamon Iberico,4,16.00
+22/02/2026,Sarria,F-1020,David L.,7.00,Activo,,Tostada,2,3.50
+21/12/2025,Sant Gervasi,F-1631,Javier R.,7.00,Activo,,Tostada,2,3.50
+14/01/2026,Diagonal,F-1632,Sofia N.,19.00,Activo,,Ensalada Mixta,2,9.50
+26/01/2026,Pedralbes,F-1500,Miguel A.,6.00,Activo,,Refresco,2,3.00
+19/02/2026,Sant Gervasi,F-1263,Javier R.,44.00,Activo,,Ensalada Cesar,4,11.00
+21/01/2026,Sarria,F-1759,Maria G.,26.00,Activo,,Patatas Bravas,4,6.50
+19/01/2026,Sarria,F-1975,Ana P.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+16/02/2026,Sant Gervasi,F-1451,Miguel A.,33.00,Activo,,Ensalada Cesar,3,11.00
+28/12/2025,Sant Gervasi,F-1545,David L.,8.50,Activo,,Mojito,1,8.50
+10/01/2026,Diagonal,F-1519,Sofia N.,18.00,Activo,,Lubina a la Plancha,1,18.00
+25/02/2026,Sant Gervasi,F-1460,David L.,14.50,Activo,,Paella Valenciana,1,14.50
+09/12/2025,Sarria,F-1988,David L.,70.00,Activo,,Dorada al Horno,4,17.50
+05/01/2026,Sant Gervasi,F-1895,Carlos M.,7.50,Activo,,Gazpacho,1,7.50
+27/01/2026,Sarria,F-1473,Miguel A.,43.50,Activo,,Paella Valenciana,3,14.50
+15/12/2025,Sarria,F-1091,Laura F.,5.00,Activo,,Copa Vino Blanco,1,5.00
+27/12/2025,Sant Gervasi,F-1039,Javier R.,88.00,Activo,,Entrecot,4,22.00
+27/12/2025,Pedralbes,F-1391,Pedro S.,13.50,Activo,,Helado Artesano,3,4.50
+26/01/2026,Diagonal,F-1520,Ana P.,3.50,Activo,,Tostada,1,3.50
+10/02/2026,Sarria,F-1662,Javier R.,24.00,Activo,,Sangria Jarra,2,12.00
+15/02/2026,Sarria,F-1727,Elena V.,64.00,Activo,,Jamon Iberico,4,16.00
+25/02/2026,Sant Gervasi,F-1901,Carlos M.,22.00,Activo,,Copa Vino Tinto,4,5.50
+03/12/2025,Sant Gervasi,F-1026,Laura F.,17.50,Activo,,Dorada al Horno,1,17.50
+09/12/2025,Pedralbes,F-1345,Pedro S.,21.00,Activo,,Croquetas Jamon,3,7.00
+06/12/2025,Pedralbes,F-1915,Pedro S.,5.40,Activo,,Cafe Solo,3,1.80
+18/01/2026,Sant Gervasi,F-1161,Elena V.,5.70,Activo,,Cortado,3,1.90
+03/02/2026,Diagonal,F-1403,Javier R.,48.00,Activo,,Arroz Negro,3,16.00
+11/01/2026,Pedralbes,F-1910,Javier R.,7.60,Activo,,Cortado,4,1.90
+26/12/2025,Sant Gervasi,F-1334,Laura F.,22.00,Activo,,Copa Vino Tinto,4,5.50
+03/12/2025,Diagonal,F-1773,Carlos M.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+23/02/2026,Diagonal,F-1201,Laura F.,36.00,Activo,,Sangria Jarra,3,12.00
+25/01/2026,Pedralbes,F-1450,Miguel A.,9.50,Activo,,Ensalada Mixta,1,9.50
+13/12/2025,Diagonal,F-1164,Ana P.,54.00,Activo,,Lubina a la Plancha,3,18.00
+29/12/2025,Pedralbes,F-1007,David L.,48.00,Activo,,Jamon Iberico,3,16.00
+11/01/2026,Sant Gervasi,F-1569,Miguel A.,32.00,Activo,,Jamon Iberico,2,16.00
+27/12/2025,Pedralbes,F-1741,Carlos M.,7.00,Activo,,Cerveza Estrella,2,3.50
+26/01/2026,Sarria,F-1740,Ana P.,11.00,Activo,,Copa Vino Tinto,2,5.50
+21/12/2025,Sant Gervasi,F-1611,Maria G.,14.00,Activo,,Cerveza Estrella,4,3.50
+28/02/2026,Sant Gervasi,F-1387,David L.,38.00,Activo,,Gin Tonic,4,9.50
+26/02/2026,Sant Gervasi,F-1753,Ana P.,32.00,Activo,,Tortilla Espanola,4,8.00
+05/01/2026,Pedralbes,F-1980,Elena V.,32.00,Activo,,Arroz Negro,2,16.00
+13/02/2026,Diagonal,F-1503,David L.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+18/01/2026,Pedralbes,F-1021,Carlos M.,9.50,Activo,,Ensalada Mixta,1,9.50
+21/01/2026,Sarria,F-1694,Sofia N.,10.50,Activo,,Calamares Fritos,1,10.50
+24/12/2025,Pedralbes,F-1607,Maria G.,72.00,Activo,,Solomillo Iberico,3,24.00
+26/12/2025,Diagonal,F-1829,Ana P.,29.00,Activo,,Paella Valenciana,2,14.50
+24/12/2025,Pedralbes,F-1381,Elena V.,10.00,Activo,,Cerveza Artesana,2,5.00
+10/02/2026,Sarria,F-1849,David L.,54.00,Activo,,Gambas al Ajillo,4,13.50
+17/01/2026,Sant Gervasi,F-1838,Laura F.,20.00,Activo,,Cerveza Artesana,4,5.00
+09/02/2026,Pedralbes,F-2064,Sofia N.,3.50,Activo,,Cerveza Estrella,1,3.50
+23/01/2026,Diagonal,F-1375,Laura F.,7.00,Activo,,Tostada,2,3.50
+12/01/2026,Diagonal,F-1344,Carlos M.,48.00,Activo,,Solomillo Iberico,2,24.00
+21/12/2025,Sant Gervasi,F-1733,Laura F.,5.70,Activo,,Cortado,3,1.90
+19/02/2026,Diagonal,F-1324,Laura F.,9.00,Activo,,Helado Artesano,2,4.50
+03/02/2026,Diagonal,F-1484,Elena V.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+29/01/2026,Sant Gervasi,F-1036,Javier R.,26.00,Activo,,Tarta Queso,4,6.50
+25/02/2026,Sant Gervasi,F-2037,Pedro S.,24.00,Activo,,Tiramisu,4,6.00
+11/02/2026,Sarria,F-1406,Miguel A.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+26/01/2026,Diagonal,F-1577,Javier R.,20.00,Activo,,Cerveza Artesana,4,5.00
+12/02/2026,Sant Gervasi,F-1012,Miguel A.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+14/12/2025,Sant Gervasi,F-1332,Laura F.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+28/12/2025,Sant Gervasi,F-1613,Elena V.,64.00,Activo,,Jamon Iberico,4,16.00
+23/02/2026,Sarria,F-1453,David L.,38.00,Activo,,Ensalada Mixta,4,9.50
+25/01/2026,Pedralbes,F-1270,Elena V.,13.50,Activo,,Gambas al Ajillo,1,13.50
+30/12/2025,Sant Gervasi,F-1948,Laura F.,17.00,Activo,,Mojito,2,8.50
+30/01/2026,Sant Gervasi,F-1991,Javier R.,13.50,Activo,,Gambas al Ajillo,1,13.50
+27/12/2025,Sarria,F-1883,Laura F.,22.00,Activo,,Copa Vino Tinto,4,5.50
+26/01/2026,Pedralbes,F-1203,Maria G.,13.50,Activo,,Helado Artesano,3,4.50
+13/02/2026,Pedralbes,F-1135,Miguel A.,18.00,Activo,,Tiramisu,3,6.00
+23/12/2025,Diagonal,F-2028,Ana P.,13.50,Activo,,Helado Artesano,3,4.50
+11/12/2025,Sant Gervasi,F-1866,Maria G.,48.00,Activo,,Sangria Jarra,4,12.00
+04/12/2025,Pedralbes,F-1651,Laura F.,44.00,Activo,,Ensalada Cesar,4,11.00
+07/01/2026,Sarria,F-1339,Elena V.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+07/12/2025,Pedralbes,F-1719,Javier R.,10.50,Activo,,Tostada,3,3.50
+21/02/2026,Pedralbes,F-1366,Ana P.,14.50,Activo,,Paella Valenciana,1,14.50
+16/12/2025,Sant Gervasi,F-1637,Miguel A.,36.00,Activo,,Sangria Jarra,3,12.00
+29/01/2026,Sant Gervasi,F-1156,David L.,7.00,Activo,,Cerveza Estrella,2,3.50
+29/12/2025,Sant Gervasi,F-2066,Miguel A.,17.50,Activo,,Dorada al Horno,1,17.50
+21/01/2026,Pedralbes,F-1013,Pedro S.,8.80,Activo,,Cafe con Leche,4,2.20
+29/01/2026,Pedralbes,F-1361,Javier R.,13.00,Activo,,Patatas Bravas,2,6.50
+02/02/2026,Sarria,F-1924,Laura F.,15.00,Activo,,Gazpacho,2,7.50
+28/02/2026,Diagonal,F-1396,Maria G.,7.00,Activo,,Cerveza Estrella,2,3.50
+10/01/2026,Pedralbes,F-1060,Javier R.,28.50,Activo,,Gin Tonic,3,9.50
+22/02/2026,Sant Gervasi,F-1587,Ana P.,15.00,Activo,,Cerveza Artesana,3,5.00
+19/12/2025,Pedralbes,F-1047,Laura F.,10.50,Activo,,Cerveza Estrella,3,3.50
+09/12/2025,Sarria,F-1864,Miguel A.,17.00,Activo,,Mojito,2,8.50
+29/01/2026,Sant Gervasi,F-1764,Maria G.,15.00,Activo,,Gazpacho,2,7.50
+26/12/2025,Diagonal,F-1035,Maria G.,13.50,Activo,,Helado Artesano,3,4.50
+01/01/2026,Sarria,F-1546,Maria G.,72.00,Activo,,Lubina a la Plancha,4,18.00
+08/02/2026,Diagonal,F-1234,Elena V.,24.00,Activo,,Tortilla Espanola,3,8.00
+20/12/2025,Sarria,F-1824,Javier R.,15.50,Activo,,Paella Mixta,1,15.50
+12/01/2026,Sant Gervasi,F-1239,Maria G.,54.00,Activo,,Lubina a la Plancha,3,18.00
+09/12/2025,Pedralbes,F-1574,Maria G.,14.00,Activo,,Croquetas Jamon,2,7.00
+04/02/2026,Pedralbes,F-2071,Ana P.,14.50,Activo,,Paella Valenciana,1,14.50
+10/01/2026,Sant Gervasi,F-1582,Sofia N.,6.50,Activo,,Patatas Bravas,1,6.50
+03/12/2025,Sant Gervasi,F-1783,Elena V.,31.50,Activo,,Calamares Fritos,3,10.50
+23/02/2026,Diagonal,F-1029,Laura F.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+31/12/2025,Sarria,F-1220,Carlos M.,28.50,Activo,,Ensalada Mixta,3,9.50
+10/01/2026,Sarria,F-1269,Miguel A.,11.00,Activo,,Copa Vino Tinto,2,5.50
+15/01/2026,Diagonal,F-1180,Miguel A.,11.00,Activo,,Ensalada Cesar,1,11.00
+21/01/2026,Pedralbes,F-1626,Javier R.,22.00,Activo,,Crema Catalana,4,5.50
+30/01/2026,Diagonal,F-1059,Javier R.,22.50,Activo,,Gazpacho,3,7.50
+09/02/2026,Sarria,F-1667,David L.,20.00,Activo,,Cerveza Artesana,4,5.00
+26/01/2026,Pedralbes,F-1363,Pedro S.,3.50,Activo,,Tostada,1,3.50
+13/01/2026,Sarria,F-1767,Javier R.,22.00,Activo,,Crema Catalana,4,5.50
+30/12/2025,Diagonal,F-1178,Elena V.,18.00,Activo,,Tiramisu,3,6.00
+17/02/2026,Pedralbes,F-1754,Maria G.,96.00,Activo,,Solomillo Iberico,4,24.00
+31/01/2026,Diagonal,F-1030,Miguel A.,16.50,Activo,,Crema Catalana,3,5.50
+24/12/2025,Sarria,F-1149,Sofia N.,4.40,Activo,,Cafe con Leche,2,2.20
+19/12/2025,Sarria,F-1572,David L.,1.90,Activo,,Cortado,1,1.90
+03/02/2026,Sant Gervasi,F-1310,Ana P.,11.00,Activo,,Copa Vino Tinto,2,5.50
+24/12/2025,Pedralbes,F-1447,Laura F.,16.00,Activo,,Arroz Negro,1,16.00
+27/02/2026,Sant Gervasi,F-1515,Miguel A.,16.50,Activo,,Copa Vino Tinto,3,5.50
+01/01/2026,Sant Gervasi,F-1483,Sofia N.,7.60,Activo,,Cortado,4,1.90
+21/02/2026,Pedralbes,F-1718,Carlos M.,6.00,Activo,,Tiramisu,1,6.00
+14/12/2025,Sant Gervasi,F-1646,Pedro S.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+17/01/2026,Diagonal,F-2079,David L.,32.00,Activo,,Tortilla Espanola,4,8.00
+06/02/2026,Sarria,F-1104,Miguel A.,8.50,Activo,,Mojito,1,8.50
+25/02/2026,Diagonal,F-1818,Maria G.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+08/12/2025,Sarria,F-1851,Pedro S.,19.50,Activo,,Tarta Queso,3,6.50
+23/02/2026,Sant Gervasi,F-1214,Pedro S.,15.00,Activo,,Copa Vino Blanco,3,5.00
+13/02/2026,Diagonal,F-1961,David L.,9.00,Activo,,Refresco,3,3.00
+28/02/2026,Diagonal,F-1205,Carlos M.,42.00,Activo,,Calamares Fritos,4,10.50
+13/01/2026,Sarria,F-1328,Carlos M.,54.00,Activo,,Gambas al Ajillo,4,13.50
+17/12/2025,Diagonal,F-2040,Sofia N.,36.00,Activo,,Sangria Jarra,3,12.00
+07/12/2025,Pedralbes,F-1907,Maria G.,28.50,Activo,,Gin Tonic,3,9.50
+23/01/2026,Diagonal,F-1134,Miguel A.,15.00,Activo,,Gazpacho,2,7.50
+17/12/2025,Pedralbes,F-1162,Elena V.,42.00,Activo,,Calamares Fritos,4,10.50
+08/12/2025,Sant Gervasi,F-1327,David L.,46.50,Activo,,Paella Mixta,3,15.50
+27/02/2026,Diagonal,F-1922,Sofia N.,48.00,Activo,,Solomillo Iberico,2,24.00
+17/12/2025,Pedralbes,F-1313,Laura F.,12.00,Activo,,Sangria Jarra,1,12.00
+26/02/2026,Diagonal,F-1425,Ana P.,28.50,Activo,,Gin Tonic,3,9.50
+25/12/2025,Sarria,F-1905,Ana P.,3.50,Activo,,Cerveza Estrella,1,3.50
+13/12/2025,Sant Gervasi,F-1690,Elena V.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+19/01/2026,Diagonal,F-1964,Miguel A.,6.00,Activo,,Refresco,2,3.00
+09/12/2025,Pedralbes,F-1617,Javier R.,10.00,Activo,,Cerveza Artesana,2,5.00
+18/12/2025,Sarria,F-1169,Sofia N.,64.00,Activo,,Jamon Iberico,4,16.00
+13/12/2025,Sarria,F-1267,David L.,52.50,Activo,,Dorada al Horno,3,17.50
+04/12/2025,Diagonal,F-1573,Miguel A.,18.00,Activo,,Tiramisu,3,6.00
+30/01/2026,Sant Gervasi,F-1340,Sofia N.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+10/12/2025,Sant Gervasi,F-1487,David L.,6.00,Activo,,Tiramisu,1,6.00
+04/01/2026,Pedralbes,F-1223,Elena V.,3.50,Activo,,Cerveza Estrella,1,3.50
+28/12/2025,Sant Gervasi,F-1684,David L.,18.00,Activo,,Tiramisu,3,6.00
+06/12/2025,Sarria,F-1213,Sofia N.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+18/01/2026,Sant Gervasi,F-1691,Miguel A.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+16/01/2026,Pedralbes,F-1557,Sofia N.,48.00,Activo,,Jamon Iberico,3,16.00
+19/12/2025,Sant Gervasi,F-1109,Sofia N.,5.40,Activo,,Cafe Solo,3,1.80
+05/12/2025,Pedralbes,F-1312,Laura F.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+16/02/2026,Pedralbes,F-1641,Sofia N.,70.00,Activo,,Dorada al Horno,4,17.50
+27/12/2025,Sarria,F-1508,Miguel A.,9.50,Activo,,Ensalada Mixta,1,9.50
+01/12/2025,Sant Gervasi,F-1568,Carlos M.,7.00,Activo,,Cerveza Estrella,2,3.50
+05/02/2026,Sant Gervasi,F-1090,Laura F.,10.00,Activo,,Copa Vino Blanco,2,5.00
+31/01/2026,Pedralbes,F-1985,Elena V.,72.00,Activo,,Solomillo Iberico,3,24.00
+16/12/2025,Pedralbes,F-1983,Sofia N.,19.50,Activo,,Patatas Bravas,3,6.50
+07/12/2025,Sant Gervasi,F-1192,Javier R.,12.00,Activo,,Refresco,4,3.00
+10/01/2026,Pedralbes,F-1978,Sofia N.,10.50,Activo,,Tostada,3,3.50
+01/12/2025,Pedralbes,F-1474,Ana P.,1.90,Activo,,Cortado,1,1.90
+20/12/2025,Sant Gervasi,F-1803,Maria G.,8.50,Activo,,Mojito,1,8.50
+28/12/2025,Sant Gervasi,F-1243,Elena V.,11.00,Activo,,Copa Vino Tinto,2,5.50
+19/12/2025,Pedralbes,F-1664,Pedro S.,42.00,Activo,,Calamares Fritos,4,10.50
+16/02/2026,Diagonal,F-1467,Laura F.,29.00,Activo,,Paella Valenciana,2,14.50
+17/01/2026,Sant Gervasi,F-1839,Sofia N.,19.50,Activo,,Patatas Bravas,3,6.50
+12/02/2026,Sant Gervasi,F-1222,Carlos M.,28.50,Activo,,Ensalada Mixta,3,9.50
+11/02/2026,Sant Gervasi,F-1154,Carlos M.,7.50,Activo,,Gazpacho,1,7.50
+23/02/2026,Diagonal,F-1995,Carlos M.,7.50,Activo,,Agua Mineral,3,2.50
+13/12/2025,Sant Gervasi,F-1531,Maria G.,12.00,Activo,,Tiramisu,2,6.00
+23/02/2026,Diagonal,F-1792,Maria G.,4.50,Activo,,Helado Artesano,1,4.50
+20/01/2026,Sarria,F-2045,Miguel A.,10.00,Activo,,Cerveza Artesana,2,5.00
+29/12/2025,Pedralbes,F-1498,Elena V.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+05/02/2026,Diagonal,F-2024,Sofia N.,9.50,Activo,,Gin Tonic,1,9.50
+06/01/2026,Pedralbes,F-1423,Javier R.,18.00,Activo,,Lubina a la Plancha,1,18.00
+05/02/2026,Sarria,F-1032,Sofia N.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+04/02/2026,Diagonal,F-1236,Sofia N.,19.50,Activo,,Patatas Bravas,3,6.50
+03/02/2026,Diagonal,F-2031,Javier R.,6.00,Activo,,Refresco,2,3.00
+23/02/2026,Pedralbes,F-1909,Pedro S.,12.00,Activo,,Tiramisu,2,6.00
+02/01/2026,Sant Gervasi,F-2039,Miguel A.,26.00,Activo,,Tarta Queso,4,6.50
+18/01/2026,Sant Gervasi,F-1356,Ana P.,31.50,Activo,,Calamares Fritos,3,10.50
+03/02/2026,Diagonal,F-1918,Pedro S.,8.50,Activo,,Mojito,1,8.50
+12/02/2026,Pedralbes,F-1092,Sofia N.,12.00,Activo,,Sangria Jarra,1,12.00
+12/02/2026,Sant Gervasi,F-1404,Elena V.,10.00,Activo,,Cerveza Artesana,2,5.00
+19/02/2026,Sant Gervasi,F-1731,Carlos M.,44.00,Activo,,Entrecot,2,22.00
+23/01/2026,Sarria,F-1671,Javier R.,7.60,Activo,,Cortado,4,1.90
+04/02/2026,Sant Gervasi,F-1796,Javier R.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+06/01/2026,Pedralbes,F-1735,Laura F.,10.00,Activo,,Agua Mineral,4,2.50
+16/12/2025,Sarria,F-1648,Maria G.,62.00,Activo,,Paella Mixta,4,15.50
+18/12/2025,Sant Gervasi,F-1590,Carlos M.,10.00,Activo,,Copa Vino Blanco,2,5.00
+07/01/2026,Diagonal,F-1293,Sofia N.,7.50,Activo,,Agua Mineral,3,2.50
+28/02/2026,Pedralbes,F-1367,David L.,5.00,Activo,,Copa Vino Blanco,1,5.00
+30/12/2025,Diagonal,F-1014,Miguel A.,6.50,Activo,,Tarta Queso,1,6.50
+09/02/2026,Diagonal,F-1085,Maria G.,32.00,Activo,,Arroz Negro,2,16.00
+10/12/2025,Pedralbes,F-1551,Javier R.,3.60,Activo,,Cafe Solo,2,1.80
+13/02/2026,Pedralbes,F-1232,Carlos M.,9.00,Activo,,Helado Artesano,2,4.50
+25/02/2026,Sant Gervasi,F-1402,David L.,11.00,Activo,,Copa Vino Tinto,2,5.50
+03/12/2025,Sarria,F-1179,David L.,64.00,Activo,,Jamon Iberico,4,16.00
+01/12/2025,Diagonal,F-1891,Elena V.,5.00,Activo,,Copa Vino Blanco,1,5.00
+04/02/2026,Sant Gervasi,F-1434,Javier R.,20.00,Activo,,Copa Vino Blanco,4,5.00
+15/12/2025,Diagonal,F-1143,Carlos M.,1.80,Activo,,Cafe Solo,1,1.80
+01/12/2025,Sant Gervasi,F-1452,Sofia N.,20.00,Activo,,Cerveza Artesana,4,5.00
+21/02/2026,Pedralbes,F-1588,Carlos M.,3.60,Activo,,Cafe Solo,2,1.80
+03/01/2026,Pedralbes,F-1299,Javier R.,58.00,Activo,,Paella Valenciana,4,14.50
+17/12/2025,Diagonal,F-1258,Javier R.,10.00,Activo,,Cerveza Artesana,2,5.00
+01/01/2026,Sant Gervasi,F-1966,Maria G.,21.00,Activo,,Croquetas Jamon,3,7.00
+26/02/2026,Sant Gervasi,F-1052,Maria G.,27.00,Activo,,Gambas al Ajillo,2,13.50
+26/01/2026,Pedralbes,F-1170,Sofia N.,7.00,Activo,,Tostada,2,3.50
+18/12/2025,Pedralbes,F-1385,Javier R.,14.00,Activo,,Croquetas Jamon,2,7.00
+27/12/2025,Diagonal,F-1111,Sofia N.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+16/01/2026,Sant Gervasi,F-1251,Elena V.,28.00,Activo,,Croquetas Jamon,4,7.00
+22/02/2026,Sant Gervasi,F-1537,David L.,21.00,Activo,,Croquetas Jamon,3,7.00
+31/12/2025,Diagonal,F-1870,Pedro S.,5.00,Activo,,Cerveza Artesana,1,5.00
+23/12/2025,Sarria,F-1810,David L.,3.60,Activo,,Cafe Solo,2,1.80
+28/01/2026,Pedralbes,F-1278,Laura F.,10.00,Activo,,Agua Mineral,4,2.50
+11/02/2026,Sarria,F-1893,Laura F.,15.00,Activo,,Copa Vino Blanco,3,5.00
+22/12/2025,Pedralbes,F-1734,Javier R.,33.00,Activo,,Ensalada Cesar,3,11.00
+07/12/2025,Sant Gervasi,F-1384,David L.,5.70,Activo,,Cortado,3,1.90
+31/01/2026,Sarria,F-1904,David L.,15.00,Activo,,Cerveza Artesana,3,5.00
+02/01/2026,Diagonal,F-2021,Pedro S.,64.00,Activo,,Jamon Iberico,4,16.00
+09/02/2026,Sarria,F-1275,Carlos M.,11.00,Activo,,Copa Vino Tinto,2,5.50
+21/12/2025,Sant Gervasi,F-1307,Sofia N.,22.00,Activo,,Ensalada Cesar,2,11.00
+19/02/2026,Sant Gervasi,F-1528,Laura F.,7.60,Activo,,Cortado,4,1.90
+08/01/2026,Diagonal,F-1355,Sofia N.,18.00,Activo,,Helado Artesano,4,4.50
+05/01/2026,Sarria,F-1730,Ana P.,16.00,Activo,,Jamon Iberico,1,16.00
+02/12/2025,Diagonal,F-1898,Laura F.,32.00,Activo,,Tortilla Espanola,4,8.00
+02/01/2026,Sarria,F-1122,Maria G.,22.00,Activo,,Ensalada Cesar,2,11.00
+06/01/2026,Diagonal,F-1435,Laura F.,70.00,Activo,,Dorada al Horno,4,17.50
+30/12/2025,Sarria,F-1576,Maria G.,10.00,Activo,,Cerveza Artesana,2,5.00
+26/01/2026,Sant Gervasi,F-2006,Miguel A.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+15/12/2025,Diagonal,F-1231,Miguel A.,26.00,Activo,,Tarta Queso,4,6.50
+27/01/2026,Sant Gervasi,F-1302,Sofia N.,4.40,Activo,,Cafe con Leche,2,2.20
+21/12/2025,Pedralbes,F-1757,Carlos M.,48.00,Activo,,Arroz Negro,3,16.00
+05/02/2026,Diagonal,F-1144,Sofia N.,6.50,Activo,,Patatas Bravas,1,6.50
+26/01/2026,Sarria,F-1553,Maria G.,18.00,Activo,,Tiramisu,3,6.00
+02/02/2026,Diagonal,F-1210,David L.,38.00,Activo,,Ensalada Mixta,4,9.50
+21/02/2026,Sarria,F-1420,Miguel A.,35.00,Activo,,Dorada al Horno,2,17.50
+23/02/2026,Diagonal,F-1616,Maria G.,16.50,Activo,,Crema Catalana,3,5.50
+28/01/2026,Diagonal,F-1584,Carlos M.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+27/02/2026,Sant Gervasi,F-1976,Maria G.,6.00,Activo,,Tiramisu,1,6.00
+01/01/2026,Sarria,F-1411,Pedro S.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+28/01/2026,Sarria,F-1722,Sofia N.,13.50,Activo,,Gambas al Ajillo,1,13.50
+05/01/2026,Sant Gervasi,F-1112,Pedro S.,5.70,Activo,,Cortado,3,1.90
+11/01/2026,Sarria,F-1666,Ana P.,11.00,Activo,,Copa Vino Tinto,2,5.50
+13/01/2026,Pedralbes,F-1527,Pedro S.,19.50,Activo,,Tarta Queso,3,6.50
+04/02/2026,Diagonal,F-2058,Pedro S.,6.50,Activo,,Tarta Queso,1,6.50
+30/01/2026,Sant Gervasi,F-1368,Ana P.,7.60,Activo,,Cortado,4,1.90
+05/12/2025,Pedralbes,F-1226,Ana P.,9.00,Activo,,Helado Artesano,2,4.50
+06/02/2026,Sant Gervasi,F-2038,Pedro S.,42.00,Activo,,Calamares Fritos,4,10.50
+04/12/2025,Diagonal,F-1703,Pedro S.,7.50,Activo,,Agua Mineral,3,2.50
+11/02/2026,Sarria,F-1769,David L.,7.20,Activo,,Cafe Solo,4,1.80
+03/12/2025,Sant Gervasi,F-1752,Elena V.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+16/12/2025,Pedralbes,F-1379,Ana P.,38.00,Activo,,Gin Tonic,4,9.50
+24/02/2026,Pedralbes,F-1274,Miguel A.,17.00,Activo,,Mojito,2,8.50
+27/12/2025,Diagonal,F-1897,Carlos M.,36.00,Activo,,Lubina a la Plancha,2,18.00
+18/02/2026,Diagonal,F-1240,Miguel A.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+08/01/2026,Pedralbes,F-1105,Ana P.,52.50,Activo,,Dorada al Horno,3,17.50
+28/01/2026,Diagonal,F-1023,Laura F.,5.40,Activo,,Cafe Solo,3,1.80
+08/01/2026,Diagonal,F-1211,Carlos M.,38.00,Activo,,Ensalada Mixta,4,9.50
+14/02/2026,Pedralbes,F-1885,Maria G.,24.00,Activo,,Solomillo Iberico,1,24.00
+16/01/2026,Diagonal,F-1826,Javier R.,3.80,Activo,,Cortado,2,1.90
+21/12/2025,Diagonal,F-1955,Elena V.,3.80,Activo,,Cortado,2,1.90
+28/12/2025,Sarria,F-1894,Javier R.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+25/01/2026,Sant Gervasi,F-1713,Laura F.,17.50,Activo,,Dorada al Horno,1,17.50
+29/12/2025,Sarria,F-1872,Miguel A.,9.00,Activo,,Refresco,3,3.00
+18/12/2025,Sarria,F-1497,Pedro S.,11.00,Activo,,Ensalada Cesar,1,11.00
+07/01/2026,Diagonal,F-1704,Maria G.,3.80,Activo,,Cortado,2,1.90
+20/12/2025,Diagonal,F-2074,Pedro S.,19.50,Activo,,Tarta Queso,3,6.50
+01/01/2026,Sant Gervasi,F-1843,Elena V.,18.00,Activo,,Lubina a la Plancha,1,18.00
+22/01/2026,Sarria,F-1253,Elena V.,48.00,Activo,,Jamon Iberico,3,16.00
+25/01/2026,Sarria,F-1171,Laura F.,5.00,Activo,,Cerveza Artesana,1,5.00
+08/01/2026,Diagonal,F-2041,Elena V.,62.00,Activo,,Paella Mixta,4,15.50
+18/12/2025,Pedralbes,F-1825,Javier R.,7.20,Activo,,Cafe Solo,4,1.80
+28/01/2026,Sant Gervasi,F-1706,Ana P.,2.50,Activo,,Agua Mineral,1,2.50
+26/12/2025,Sarria,F-1409,David L.,7.50,Activo,,Gazpacho,1,7.50
+15/02/2026,Sarria,F-1598,Miguel A.,8.50,Activo,,Mojito,1,8.50
+24/12/2025,Sant Gervasi,F-1984,Maria G.,32.00,Activo,,Tortilla Espanola,4,8.00
+02/01/2026,Sant Gervasi,F-1693,Laura F.,5.70,Activo,,Cortado,3,1.90
+18/01/2026,Sarria,F-1794,Ana P.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+24/12/2025,Diagonal,F-1610,Miguel A.,11.00,Activo,,Copa Vino Tinto,2,5.50
+04/02/2026,Sant Gervasi,F-2051,Carlos M.,18.00,Activo,,Lubina a la Plancha,1,18.00
+07/02/2026,Diagonal,F-1720,Javier R.,13.00,Activo,,Tarta Queso,2,6.50
+11/12/2025,Sarria,F-2076,Miguel A.,18.00,Activo,,Lubina a la Plancha,1,18.00
+17/02/2026,Diagonal,F-1772,Laura F.,12.00,Activo,,Sangria Jarra,1,12.00
+19/01/2026,Pedralbes,F-1050,Elena V.,13.00,Activo,,Patatas Bravas,2,6.50
+03/01/2026,Diagonal,F-1183,Carlos M.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+23/12/2025,Diagonal,F-1289,Javier R.,64.00,Activo,,Jamon Iberico,4,16.00
+19/02/2026,Sarria,F-1290,Maria G.,36.00,Activo,,Lubina a la Plancha,2,18.00
+02/12/2025,Diagonal,F-1309,Carlos M.,5.50,Activo,,Crema Catalana,1,5.50
+16/02/2026,Sant Gervasi,F-1456,Elena V.,46.50,Activo,,Paella Mixta,3,15.50
+03/02/2026,Diagonal,F-1512,David L.,4.50,Activo,,Helado Artesano,1,4.50
+24/01/2026,Sant Gervasi,F-1540,Javier R.,14.00,Activo,,Cerveza Estrella,4,3.50
+10/01/2026,Pedralbes,F-1657,Laura F.,38.00,Activo,,Gin Tonic,4,9.50
+01/02/2026,Diagonal,F-1714,Maria G.,18.00,Activo,,Helado Artesano,4,4.50
+20/02/2026,Diagonal,F-1476,Elena V.,14.00,Activo,,Croquetas Jamon,2,7.00
+31/01/2026,Sarria,F-1412,Maria G.,34.00,Activo,,Mojito,4,8.50
+09/02/2026,Pedralbes,F-1516,Laura F.,3.50,Activo,,Tostada,1,3.50
+08/01/2026,Pedralbes,F-1129,Laura F.,30.00,Activo,,Gazpacho,4,7.50
+18/12/2025,Sarria,F-1992,Laura F.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+12/12/2025,Sarria,F-1392,David L.,26.00,Activo,,Patatas Bravas,4,6.50
+07/02/2026,Pedralbes,F-1623,Pedro S.,14.00,Activo,,Croquetas Jamon,2,7.00
+13/12/2025,Sant Gervasi,F-1705,Sofia N.,5.40,Activo,,Cafe Solo,3,1.80
+04/01/2026,Diagonal,F-1376,Miguel A.,22.00,Activo,,Entrecot,1,22.00
+12/02/2026,Diagonal,F-1056,David L.,5.00,Activo,,Cerveza Artesana,1,5.00
+04/12/2025,Sant Gervasi,F-1652,David L.,31.50,Activo,,Calamares Fritos,3,10.50
+20/02/2026,Diagonal,F-1848,Maria G.,42.00,Activo,,Calamares Fritos,4,10.50
+12/02/2026,Pedralbes,F-1247,Sofia N.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+13/12/2025,Diagonal,F-1001,Laura F.,9.50,Activo,,Gin Tonic,1,9.50
+15/01/2026,Sarria,F-1175,Laura F.,88.00,Activo,,Entrecot,4,22.00
+07/01/2026,Pedralbes,F-2049,Carlos M.,42.00,Activo,,Calamares Fritos,4,10.50
+05/12/2025,Pedralbes,F-1215,Carlos M.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+23/01/2026,Sant Gervasi,F-1760,Ana P.,88.00,Activo,,Entrecot,4,22.00
+11/02/2026,Sant Gervasi,F-1395,Elena V.,16.50,Activo,,Copa Vino Tinto,3,5.50
+11/01/2026,Sarria,F-1478,Miguel A.,18.00,Activo,,Lubina a la Plancha,1,18.00
+30/01/2026,Sarria,F-1394,Ana P.,40.50,Activo,,Gambas al Ajillo,3,13.50
+27/01/2026,Pedralbes,F-1956,Pedro S.,64.00,Activo,,Jamon Iberico,4,16.00
+22/01/2026,Diagonal,F-1967,Javier R.,16.50,Activo,,Copa Vino Tinto,3,5.50
+01/12/2025,Pedralbes,F-1698,Javier R.,7.50,Activo,,Gazpacho,1,7.50
+23/12/2025,Diagonal,F-1589,Miguel A.,11.00,Activo,,Crema Catalana,2,5.50
+20/02/2026,Diagonal,F-1635,Pedro S.,7.50,Activo,,Gazpacho,1,7.50
+21/12/2025,Sarria,F-1581,Laura F.,52.50,Activo,,Dorada al Horno,3,17.50
+20/01/2026,Sarria,F-1322,Ana P.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+20/01/2026,Diagonal,F-1094,Sofia N.,38.00,Activo,,Ensalada Mixta,4,9.50
+18/02/2026,Sant Gervasi,F-1931,Elena V.,22.00,Activo,,Copa Vino Tinto,4,5.50
+29/12/2025,Sant Gervasi,F-1472,Ana P.,72.00,Activo,,Solomillo Iberico,3,24.00
+04/02/2026,Pedralbes,F-1526,David L.,32.00,Activo,,Jamon Iberico,2,16.00
+13/12/2025,Sant Gervasi,F-1315,Sofia N.,22.50,Activo,,Gazpacho,3,7.50
+27/01/2026,Pedralbes,F-1439,David L.,5.50,Activo,,Copa Vino Tinto,1,5.50
+11/01/2026,Sarria,F-1812,Miguel A.,43.50,Activo,,Paella Valenciana,3,14.50
+27/12/2025,Diagonal,F-1629,Carlos M.,31.00,Activo,,Paella Mixta,2,15.50
+10/02/2026,Pedralbes,F-1554,Carlos M.,3.00,Activo,,Refresco,1,3.00
+08/12/2025,Diagonal,F-1816,Ana P.,10.50,Activo,,Calamares Fritos,1,10.50
+14/01/2026,Sarria,F-1599,Laura F.,15.50,Activo,,Paella Mixta,1,15.50
+20/01/2026,Sarria,F-1621,Miguel A.,7.00,Activo,,Croquetas Jamon,1,7.00
+14/01/2026,Pedralbes,F-1797,Pedro S.,14.00,Activo,,Tostada,4,3.50
+05/12/2025,Pedralbes,F-1938,David L.,18.00,Activo,,Helado Artesano,4,4.50
+13/02/2026,Diagonal,F-1124,David L.,7.00,Activo,,Croquetas Jamon,1,7.00
+22/12/2025,Pedralbes,F-1055,Elena V.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+15/02/2026,Pedralbes,F-1454,Laura F.,14.00,Activo,,Croquetas Jamon,2,7.00
+18/02/2026,Sant Gervasi,F-1817,Laura F.,22.00,Activo,,Entrecot,1,22.00
+28/12/2025,Diagonal,F-1033,Maria G.,6.00,Activo,,Refresco,2,3.00
+10/02/2026,Sant Gervasi,F-1011,Sofia N.,14.50,Activo,,Paella Valenciana,1,14.50
+26/02/2026,Diagonal,F-1716,Pedro S.,11.00,Activo,,Copa Vino Tinto,2,5.50
+29/01/2026,Pedralbes,F-2047,Sofia N.,48.00,Activo,,Solomillo Iberico,2,24.00
+22/02/2026,Pedralbes,F-1159,Ana P.,9.00,Activo,,Refresco,3,3.00
+24/12/2025,Sarria,F-1410,Sofia N.,16.00,Activo,,Arroz Negro,1,16.00
+01/02/2026,Diagonal,F-1832,Maria G.,8.50,Activo,,Mojito,1,8.50
+17/02/2026,Pedralbes,F-1338,Elena V.,4.40,Activo,,Cafe con Leche,2,2.20
+19/12/2025,Sant Gervasi,F-1442,Javier R.,28.50,Activo,,Ensalada Mixta,3,9.50
+15/12/2025,Sant Gervasi,F-1600,Ana P.,62.00,Activo,,Paella Mixta,4,15.50
+12/01/2026,Pedralbes,F-1539,Maria G.,66.00,Activo,,Entrecot,3,22.00
+04/02/2026,Sant Gervasi,F-1354,Javier R.,54.00,Activo,,Lubina a la Plancha,3,18.00
+18/12/2025,Sant Gervasi,F-1131,Maria G.,19.50,Activo,,Tarta Queso,3,6.50
+07/12/2025,Sant Gervasi,F-1268,David L.,54.00,Activo,,Gambas al Ajillo,4,13.50
+08/02/2026,Pedralbes,F-1982,Sofia N.,48.00,Activo,,Solomillo Iberico,2,24.00
+19/02/2026,Sant Gervasi,F-1639,Javier R.,8.80,Activo,,Cafe con Leche,4,2.20
+26/12/2025,Diagonal,F-1736,Pedro S.,35.00,Activo,,Dorada al Horno,2,17.50
+08/02/2026,Sarria,F-1711,David L.,27.00,Activo,,Gambas al Ajillo,2,13.50
+28/12/2025,Diagonal,F-1075,Sofia N.,96.00,Activo,,Solomillo Iberico,4,24.00
+17/01/2026,Diagonal,F-1479,Elena V.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+01/12/2025,Pedralbes,F-1329,Sofia N.,18.00,Activo,,Helado Artesano,4,4.50
+23/02/2026,Sant Gervasi,F-1929,Carlos M.,22.50,Activo,,Gazpacho,3,7.50
+05/12/2025,Sant Gervasi,F-1283,Laura F.,16.50,Activo,,Crema Catalana,3,5.50
+09/12/2025,Sarria,F-1957,Elena V.,15.50,Activo,,Paella Mixta,1,15.50
+19/12/2025,Pedralbes,F-1986,Elena V.,36.00,Activo,,Sangria Jarra,3,12.00
+22/01/2026,Diagonal,F-1197,Carlos M.,8.00,Activo,,Tortilla Espanola,1,8.00
+20/02/2026,Sant Gervasi,F-1700,Miguel A.,12.00,Activo,,Tiramisu,2,6.00
+29/01/2026,Sant Gervasi,F-1331,Pedro S.,4.50,Activo,,Helado Artesano,1,4.50
+10/01/2026,Diagonal,F-2077,Javier R.,58.00,Activo,,Paella Valenciana,4,14.50
+14/02/2026,Sant Gervasi,F-1400,Javier R.,36.00,Activo,,Lubina a la Plancha,2,18.00
+02/12/2025,Diagonal,F-1009,Miguel A.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+20/01/2026,Sarria,F-1765,Ana P.,34.00,Activo,,Mojito,4,8.50
+12/02/2026,Diagonal,F-1903,Laura F.,28.50,Activo,,Ensalada Mixta,3,9.50
+29/01/2026,Diagonal,F-1225,Ana P.,14.00,Activo,,Cerveza Estrella,4,3.50
+25/02/2026,Pedralbes,F-1113,Maria G.,58.00,Activo,,Paella Valenciana,4,14.50
+02/12/2025,Pedralbes,F-1835,Miguel A.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+28/01/2026,Sarria,F-1083,David L.,20.00,Activo,,Cerveza Artesana,4,5.00
+11/02/2026,Sant Gervasi,F-1139,Maria G.,5.00,Activo,,Copa Vino Blanco,1,5.00
+07/01/2026,Sarria,F-1200,Elena V.,58.00,Activo,,Paella Valenciana,4,14.50
+21/02/2026,Diagonal,F-1494,Ana P.,35.00,Activo,,Dorada al Horno,2,17.50
+16/02/2026,Sant Gervasi,F-1831,Javier R.,32.00,Activo,,Arroz Negro,2,16.00
+19/12/2025,Sarria,F-2060,Sofia N.,38.00,Activo,,Gin Tonic,4,9.50
+08/01/2026,Pedralbes,F-1142,Carlos M.,35.00,Activo,,Dorada al Horno,2,17.50
+16/12/2025,Sant Gervasi,F-1778,Miguel A.,18.00,Activo,,Helado Artesano,4,4.50
+04/02/2026,Diagonal,F-1863,Miguel A.,17.50,Activo,,Dorada al Horno,1,17.50
+06/12/2025,Sarria,F-1875,Elena V.,11.00,Activo,,Copa Vino Tinto,2,5.50
+10/02/2026,Sarria,F-2073,Sofia N.,32.00,Activo,,Tortilla Espanola,4,8.00
+30/12/2025,Sarria,F-1230,Miguel A.,10.00,Activo,,Copa Vino Blanco,2,5.00
+06/01/2026,Pedralbes,F-1311,Carlos M.,14.00,Activo,,Croquetas Jamon,2,7.00
+05/02/2026,Pedralbes,F-1357,Pedro S.,19.00,Activo,,Gin Tonic,2,9.50
+08/01/2026,Pedralbes,F-1974,David L.,72.00,Activo,,Lubina a la Plancha,4,18.00
+10/12/2025,Pedralbes,F-1067,Maria G.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+26/02/2026,Pedralbes,F-1728,Sofia N.,38.00,Activo,,Ensalada Mixta,4,9.50
+03/01/2026,Sant Gervasi,F-1659,Maria G.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+03/01/2026,Sarria,F-1853,Miguel A.,11.00,Activo,,Ensalada Cesar,1,11.00
+28/12/2025,Sarria,F-1878,Pedro S.,10.50,Activo,,Cerveza Estrella,3,3.50
+06/01/2026,Sarria,F-1287,Sofia N.,19.00,Activo,,Gin Tonic,2,9.50
+08/01/2026,Sarria,F-1291,David L.,70.00,Activo,,Dorada al Horno,4,17.50
+30/01/2026,Diagonal,F-1145,Pedro S.,88.00,Activo,,Entrecot,4,22.00
+04/12/2025,Pedralbes,F-1596,Carlos M.,18.00,Activo,,Lubina a la Plancha,1,18.00
+17/01/2026,Sant Gervasi,F-1726,Carlos M.,3.60,Activo,,Cafe Solo,2,1.80
+31/12/2025,Pedralbes,F-1725,Miguel A.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+16/02/2026,Pedralbes,F-2033,Elena V.,38.00,Activo,,Ensalada Mixta,4,9.50
+15/02/2026,Sant Gervasi,F-1297,Sofia N.,15.00,Activo,,Cerveza Artesana,3,5.00
+28/12/2025,Sant Gervasi,F-1470,Elena V.,28.50,Activo,,Ensalada Mixta,3,9.50
+02/02/2026,Diagonal,F-1062,Maria G.,8.50,Activo,,Mojito,1,8.50
+29/12/2025,Diagonal,F-1063,Carlos M.,3.00,Activo,,Refresco,1,3.00
+12/02/2026,Diagonal,F-2086,Carlos M.,15.00,Eliminado,Antes de la cocina,Gazpacho,2,7.50
+15/12/2025,Sarria,F-1738,Carlos M.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+10/12/2025,Pedralbes,F-1444,Maria G.,11.00,Activo,,Copa Vino Tinto,2,5.50
+11/01/2026,Diagonal,F-1862,David L.,13.50,Activo,,Gambas al Ajillo,1,13.50
+14/02/2026,Pedralbes,F-2072,David L.,17.00,Activo,,Mojito,2,8.50
+18/12/2025,Pedralbes,F-2085,Maria G.,31.50,Eliminado,Antes de la cocina,Calamares Fritos,3,10.50
+25/12/2025,Pedralbes,F-1448,David L.,13.00,Activo,,Tarta Queso,2,6.50
+21/12/2025,Diagonal,F-2065,David L.,18.00,Activo,,Lubina a la Plancha,1,18.00
+16/02/2026,Pedralbes,F-1501,Javier R.,32.00,Activo,,Jamon Iberico,2,16.00
+04/12/2025,Sarria,F-1502,Elena V.,15.00,Activo,,Gazpacho,2,7.50
+27/02/2026,Sarria,F-1249,Ana P.,46.50,Activo,,Paella Mixta,3,15.50
+31/01/2026,Pedralbes,F-1612,Sofia N.,58.00,Activo,,Paella Valenciana,4,14.50
+27/12/2025,Diagonal,F-1806,Laura F.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+26/01/2026,Diagonal,F-1780,Carlos M.,12.00,Activo,,Refresco,4,3.00
+18/01/2026,Pedralbes,F-2042,Maria G.,15.00,Activo,,Cerveza Artesana,3,5.00
+17/12/2025,Diagonal,F-1793,Elena V.,15.00,Activo,,Cerveza Artesana,3,5.00
+21/12/2025,Diagonal,F-2000,Elena V.,38.00,Activo,,Ensalada Mixta,4,9.50
+03/12/2025,Pedralbes,F-1455,Sofia N.,36.00,Activo,,Sangria Jarra,3,12.00
+05/01/2026,Sant Gervasi,F-1282,Pedro S.,36.00,Activo,,Sangria Jarra,3,12.00
+25/12/2025,Diagonal,F-1532,Sofia N.,19.50,Activo,,Patatas Bravas,3,6.50
+15/01/2026,Pedralbes,F-1388,Maria G.,22.00,Activo,,Crema Catalana,4,5.50
+06/12/2025,Sarria,F-1421,David L.,16.00,Activo,,Arroz Negro,1,16.00
+02/12/2025,Sarria,F-1333,Pedro S.,5.00,Activo,,Agua Mineral,2,2.50
+31/12/2025,Sant Gervasi,F-2002,Elena V.,4.40,Activo,,Cafe con Leche,2,2.20
+03/02/2026,Sant Gervasi,F-1676,Pedro S.,13.50,Activo,,Gambas al Ajillo,1,13.50
+03/12/2025,Sant Gervasi,F-2070,Ana P.,28.50,Activo,,Ensalada Mixta,3,9.50
+23/02/2026,Diagonal,F-1148,Javier R.,1.80,Activo,,Cafe Solo,1,1.80
+13/01/2026,Pedralbes,F-1458,Maria G.,42.00,Activo,,Calamares Fritos,4,10.50
+02/02/2026,Diagonal,F-1212,Javier R.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+17/12/2025,Sant Gervasi,F-1350,Maria G.,38.00,Activo,,Ensalada Mixta,4,9.50
+29/01/2026,Sarria,F-1771,Miguel A.,52.50,Activo,,Dorada al Horno,3,17.50
+03/01/2026,Sant Gervasi,F-1424,Miguel A.,8.80,Activo,,Cafe con Leche,4,2.20
+02/02/2026,Diagonal,F-1874,Javier R.,4.50,Activo,,Helado Artesano,1,4.50
+05/01/2026,Pedralbes,F-1114,Sofia N.,16.50,Activo,,Copa Vino Tinto,3,5.50
+14/02/2026,Sarria,F-1216,Carlos M.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+27/02/2026,Sant Gervasi,F-1917,Laura F.,15.50,Activo,,Paella Mixta,1,15.50
+06/01/2026,Diagonal,F-1116,Carlos M.,35.00,Activo,,Dorada al Horno,2,17.50
+20/02/2026,Diagonal,F-1951,Javier R.,18.00,Activo,,Lubina a la Plancha,1,18.00
+26/12/2025,Pedralbes,F-1622,Pedro S.,1.80,Activo,,Cafe Solo,1,1.80
+29/01/2026,Sant Gervasi,F-1137,Carlos M.,9.50,Activo,,Gin Tonic,1,9.50
+02/01/2026,Sant Gervasi,F-1928,Laura F.,48.00,Activo,,Arroz Negro,3,16.00
+27/02/2026,Diagonal,F-1074,Laura F.,17.50,Activo,,Dorada al Horno,1,17.50
+27/02/2026,Diagonal,F-1048,Maria G.,26.00,Activo,,Patatas Bravas,4,6.50
+24/12/2025,Sarria,F-2023,Javier R.,15.00,Activo,,Gazpacho,2,7.50
+08/01/2026,Sarria,F-1947,Sofia N.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+10/02/2026,Pedralbes,F-1841,Elena V.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+15/01/2026,Pedralbes,F-2052,Sofia N.,15.00,Activo,,Gazpacho,2,7.50
+23/01/2026,Sarria,F-1255,Elena V.,35.00,Activo,,Dorada al Horno,2,17.50
+27/12/2025,Sant Gervasi,F-1723,Sofia N.,3.50,Activo,,Cerveza Estrella,1,3.50
+03/02/2026,Sarria,F-1189,Maria G.,64.00,Activo,,Arroz Negro,4,16.00
+29/01/2026,Pedralbes,F-1132,Javier R.,96.00,Activo,,Solomillo Iberico,4,24.00
+24/01/2026,Pedralbes,F-1260,Miguel A.,29.00,Activo,,Paella Valenciana,2,14.50
+30/12/2025,Diagonal,F-1196,Elena V.,7.00,Activo,,Cerveza Estrella,2,3.50
+04/01/2026,Diagonal,F-1638,Javier R.,16.00,Activo,,Jamon Iberico,1,16.00
+08/01/2026,Sant Gervasi,F-1118,David L.,36.00,Activo,,Sangria Jarra,3,12.00
+17/02/2026,Sant Gervasi,F-1002,Laura F.,17.50,Activo,,Dorada al Horno,1,17.50
+11/02/2026,Diagonal,F-1510,Pedro S.,14.00,Activo,,Croquetas Jamon,2,7.00
+06/12/2025,Diagonal,F-1262,Maria G.,88.00,Activo,,Entrecot,4,22.00
+12/02/2026,Sarria,F-1770,Miguel A.,46.50,Activo,,Paella Mixta,3,15.50
+02/01/2026,Sarria,F-1128,Javier R.,9.00,Activo,,Helado Artesano,2,4.50
+24/12/2025,Sant Gervasi,F-1256,Carlos M.,2.20,Activo,,Cafe con Leche,1,2.20
+21/01/2026,Sant Gervasi,F-1650,Carlos M.,13.00,Activo,,Patatas Bravas,2,6.50
+04/02/2026,Diagonal,F-1887,David L.,7.00,Activo,,Cerveza Estrella,2,3.50
+24/02/2026,Sarria,F-1593,Maria G.,5.00,Activo,,Agua Mineral,2,2.50
+08/02/2026,Diagonal,F-1936,Laura F.,8.00,Activo,,Tortilla Espanola,1,8.00
+10/01/2026,Sarria,F-1415,Javier R.,40.50,Activo,,Gambas al Ajillo,3,13.50
+18/01/2026,Sant Gervasi,F-2013,Carlos M.,8.00,Activo,,Tortilla Espanola,1,8.00
+01/12/2025,Pedralbes,F-1353,Laura F.,10.00,Activo,,Copa Vino Blanco,2,5.00
+21/12/2025,Sarria,F-1858,Maria G.,5.00,Activo,,Cerveza Artesana,1,5.00
+08/12/2025,Sant Gervasi,F-1541,Maria G.,12.00,Activo,,Refresco,4,3.00
+10/12/2025,Diagonal,F-1198,Miguel A.,44.00,Activo,,Entrecot,2,22.00
+08/12/2025,Sarria,F-1804,Sofia N.,19.00,Activo,,Gin Tonic,2,9.50
+29/12/2025,Sarria,F-1999,Javier R.,6.50,Activo,,Patatas Bravas,1,6.50
+08/02/2026,Sarria,F-1916,Elena V.,6.00,Activo,,Refresco,2,3.00
+02/02/2026,Diagonal,F-1061,Javier R.,30.00,Activo,,Gazpacho,4,7.50
+18/01/2026,Diagonal,F-1244,Laura F.,28.00,Activo,,Croquetas Jamon,4,7.00
+02/02/2026,Diagonal,F-1971,Javier R.,20.00,Activo,,Cerveza Artesana,4,5.00
+05/02/2026,Pedralbes,F-1505,Javier R.,35.00,Activo,,Dorada al Horno,2,17.50
+01/12/2025,Sant Gervasi,F-1750,Carlos M.,20.00,Activo,,Copa Vino Blanco,4,5.00
+07/12/2025,Pedralbes,F-1859,Pedro S.,54.00,Activo,,Lubina a la Plancha,3,18.00
+05/01/2026,Diagonal,F-1280,Maria G.,19.00,Activo,,Gin Tonic,2,9.50
+21/12/2025,Sarria,F-1536,Maria G.,22.00,Activo,,Crema Catalana,4,5.50
+29/01/2026,Sant Gervasi,F-1006,Javier R.,10.50,Activo,,Cerveza Estrella,3,3.50
+01/01/2026,Sant Gervasi,F-1962,Sofia N.,14.00,Activo,,Tostada,4,3.50
+02/01/2026,Sarria,F-1919,Sofia N.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+11/02/2026,Diagonal,F-1522,Elena V.,16.00,Activo,,Arroz Negro,1,16.00
+19/12/2025,Pedralbes,F-1860,Javier R.,4.50,Activo,,Helado Artesano,1,4.50
+08/02/2026,Sarria,F-1130,Javier R.,16.00,Activo,,Arroz Negro,1,16.00
+09/01/2026,Pedralbes,F-1224,David L.,7.60,Activo,,Cortado,4,1.90
+13/12/2025,Diagonal,F-2087,Elena V.,16.50,Eliminado,Antes de la cocina,Copa Vino Tinto,3,5.50
+05/02/2026,Diagonal,F-2057,Ana P.,70.00,Activo,,Dorada al Horno,4,17.50
+08/01/2026,Pedralbes,F-1830,Sofia N.,14.00,Activo,,Tostada,4,3.50
+03/02/2026,Pedralbes,F-1583,Ana P.,16.00,Activo,,Jamon Iberico,1,16.00
+04/12/2025,Sant Gervasi,F-1689,Laura F.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+22/01/2026,Diagonal,F-1173,Maria G.,7.60,Activo,,Cortado,4,1.90
+09/01/2026,Sarria,F-1343,Sofia N.,34.00,Activo,,Mojito,4,8.50
+23/02/2026,Sant Gervasi,F-1084,Maria G.,16.00,Activo,,Jamon Iberico,1,16.00
+13/01/2026,Pedralbes,F-1254,Laura F.,38.00,Activo,,Gin Tonic,4,9.50
+23/02/2026,Sarria,F-1732,Laura F.,2.50,Activo,,Agua Mineral,1,2.50
+23/12/2025,Sant Gervasi,F-1943,David L.,2.20,Activo,,Cafe con Leche,1,2.20
+20/12/2025,Sant Gervasi,F-2078,Ana P.,15.00,Activo,,Cerveza Artesana,3,5.00
+18/02/2026,Sant Gervasi,F-1679,Ana P.,16.00,Activo,,Arroz Negro,1,16.00
+08/12/2025,Diagonal,F-1960,Laura F.,16.50,Activo,,Crema Catalana,3,5.50
+17/12/2025,Diagonal,F-1800,Sofia N.,24.00,Activo,,Sangria Jarra,2,12.00
+25/02/2026,Sant Gervasi,F-1416,Elena V.,14.50,Activo,,Paella Valenciana,1,14.50
+27/01/2026,Diagonal,F-2014,Javier R.,31.50,Activo,,Calamares Fritos,3,10.50
+30/01/2026,Sarria,F-1481,Maria G.,9.00,Activo,,Refresco,3,3.00
+16/02/2026,Pedralbes,F-1044,Javier R.,5.00,Activo,,Cerveza Artesana,1,5.00
+07/01/2026,Sant Gervasi,F-1489,Carlos M.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+27/01/2026,Sarria,F-1712,David L.,64.00,Activo,,Arroz Negro,4,16.00
+25/12/2025,Diagonal,F-1926,Carlos M.,15.00,Activo,,Cerveza Artesana,3,5.00
+17/02/2026,Diagonal,F-1603,Ana P.,35.00,Activo,,Dorada al Horno,2,17.50
+03/02/2026,Sant Gervasi,F-1097,David L.,16.00,Activo,,Tortilla Espanola,2,8.00
+11/02/2026,Sarria,F-2063,Javier R.,7.20,Activo,,Cafe Solo,4,1.80
+14/02/2026,Diagonal,F-1687,Laura F.,48.00,Activo,,Sangria Jarra,4,12.00
+05/01/2026,Sant Gervasi,F-1054,Laura F.,10.00,Activo,,Agua Mineral,4,2.50
+01/12/2025,Sant Gervasi,F-1276,Carlos M.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+11/01/2026,Sant Gervasi,F-1889,Javier R.,8.80,Activo,,Cafe con Leche,4,2.20
+01/12/2025,Sarria,F-2088,Miguel A.,17.50,Eliminado,Despues de la cocina,Dorada al Horno,1,17.50
+30/01/2026,Pedralbes,F-1431,Pedro S.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+12/12/2025,Pedralbes,F-1717,Elena V.,12.00,Activo,,Tiramisu,2,6.00
+27/02/2026,Sarria,F-1923,Carlos M.,6.50,Activo,,Tarta Queso,1,6.50
+29/01/2026,Sarria,F-1414,Laura F.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+15/02/2026,Sant Gervasi,F-1683,Javier R.,12.00,Activo,,Refresco,4,3.00
+16/01/2026,Sarria,F-1660,Miguel A.,13.50,Activo,,Gambas al Ajillo,1,13.50
+24/12/2025,Pedralbes,F-1888,Sofia N.,70.00,Activo,,Dorada al Horno,4,17.50
+25/01/2026,Sarria,F-2081,David L.,4.40,Eliminado,Antes de la cocina,Cafe con Leche,2,2.20
+28/01/2026,Sant Gervasi,F-1908,Pedro S.,6.60,Activo,,Cafe con Leche,3,2.20
+23/01/2026,Sarria,F-1592,Miguel A.,11.00,Activo,,Crema Catalana,2,5.50
+10/02/2026,Diagonal,F-1563,Pedro S.,2.20,Activo,,Cafe con Leche,1,2.20
+21/02/2026,Sarria,F-1871,Ana P.,5.50,Activo,,Copa Vino Tinto,1,5.50
+28/02/2026,Pedralbes,F-1555,Maria G.,44.00,Activo,,Entrecot,2,22.00
+12/02/2026,Sant Gervasi,F-1564,Elena V.,3.50,Activo,,Tostada,1,3.50
+10/02/2026,Pedralbes,F-1319,Ana P.,22.00,Activo,,Ensalada Cesar,2,11.00
+25/12/2025,Diagonal,F-1284,Carlos M.,16.00,Activo,,Tortilla Espanola,2,8.00
+14/12/2025,Pedralbes,F-1051,Elena V.,48.00,Activo,,Sangria Jarra,4,12.00
+06/01/2026,Sarria,F-1238,Carlos M.,40.50,Activo,,Gambas al Ajillo,3,13.50
+22/12/2025,Pedralbes,F-1081,Elena V.,17.00,Activo,,Mojito,2,8.50
+19/12/2025,Sant Gervasi,F-1597,Carlos M.,24.00,Activo,,Tiramisu,4,6.00
+20/01/2026,Diagonal,F-1968,Sofia N.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+23/02/2026,Pedralbes,F-1591,Maria G.,31.00,Activo,,Paella Mixta,2,15.50
+04/01/2026,Diagonal,F-1188,Laura F.,22.00,Activo,,Copa Vino Tinto,4,5.50
+23/12/2025,Sant Gervasi,F-1127,Maria G.,6.00,Activo,,Refresco,2,3.00
+19/12/2025,Sant Gervasi,F-1326,Elena V.,36.00,Activo,,Lubina a la Plancha,2,18.00
+23/12/2025,Sarria,F-1342,Ana P.,12.00,Activo,,Sangria Jarra,1,12.00
+14/01/2026,Pedralbes,F-1271,Miguel A.,7.50,Activo,,Agua Mineral,3,2.50
+10/01/2026,Diagonal,F-1098,Miguel A.,5.70,Activo,,Cortado,3,1.90
+14/02/2026,Sarria,F-1827,Sofia N.,8.50,Activo,,Mojito,1,8.50
+10/01/2026,Diagonal,F-1372,Pedro S.,19.00,Activo,,Ensalada Mixta,2,9.50
+15/12/2025,Diagonal,F-1103,Carlos M.,22.00,Activo,,Ensalada Cesar,2,11.00
+16/12/2025,Pedralbes,F-1614,Pedro S.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+13/12/2025,Sarria,F-1618,Ana P.,2.50,Activo,,Agua Mineral,1,2.50
+30/01/2026,Pedralbes,F-1538,Maria G.,5.40,Activo,,Cafe Solo,3,1.80
+01/02/2026,Sarria,F-1708,Javier R.,16.50,Activo,,Copa Vino Tinto,3,5.50
+15/02/2026,Pedralbes,F-1096,Carlos M.,17.00,Activo,,Mojito,2,8.50
+08/01/2026,Sarria,F-1190,Carlos M.,5.00,Activo,,Copa Vino Blanco,1,5.00
+09/02/2026,Sant Gervasi,F-1336,Javier R.,10.50,Activo,,Cerveza Estrella,3,3.50
+09/12/2025,Sant Gervasi,F-1965,Pedro S.,24.00,Activo,,Sangria Jarra,2,12.00
+27/12/2025,Sant Gervasi,F-1027,Javier R.,54.00,Activo,,Gambas al Ajillo,4,13.50
+03/01/2026,Sarria,F-1024,Laura F.,48.00,Activo,,Sangria Jarra,4,12.00
+14/01/2026,Sant Gervasi,F-1417,Elena V.,10.00,Activo,,Cerveza Artesana,2,5.00
+23/02/2026,Pedralbes,F-1710,Pedro S.,24.00,Activo,,Tiramisu,4,6.00
+24/01/2026,Diagonal,F-1316,David L.,38.00,Activo,,Ensalada Mixta,4,9.50
+16/01/2026,Diagonal,F-1511,Javier R.,25.50,Activo,,Mojito,3,8.50
+14/01/2026,Diagonal,F-1701,Miguel A.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+22/02/2026,Diagonal,F-1373,Maria G.,27.00,Activo,,Gambas al Ajillo,2,13.50
+21/01/2026,Pedralbes,F-1925,Sofia N.,6.00,Activo,,Tiramisu,1,6.00
+14/02/2026,Pedralbes,F-1077,David L.,48.00,Activo,,Solomillo Iberico,2,24.00
+13/01/2026,Sant Gervasi,F-1422,Miguel A.,32.00,Activo,,Arroz Negro,2,16.00
+18/01/2026,Sarria,F-1724,Laura F.,11.00,Activo,,Ensalada Cesar,1,11.00
+16/02/2026,Diagonal,F-2027,Laura F.,25.50,Activo,,Mojito,3,8.50
+15/01/2026,Sarria,F-1157,Maria G.,22.00,Activo,,Crema Catalana,4,5.50
+19/02/2026,Sarria,F-1389,Carlos M.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+19/02/2026,Sant Gervasi,F-1861,Maria G.,29.00,Activo,,Paella Valenciana,2,14.50
+10/02/2026,Sant Gervasi,F-1141,Miguel A.,14.00,Activo,,Croquetas Jamon,2,7.00
+12/01/2026,Sant Gervasi,F-1745,Carlos M.,22.00,Activo,,Entrecot,1,22.00
+28/12/2025,Sant Gervasi,F-1939,Laura F.,7.00,Activo,,Cerveza Estrella,2,3.50
+29/01/2026,Pedralbes,F-1057,Miguel A.,14.50,Activo,,Paella Valenciana,1,14.50
+02/02/2026,Diagonal,F-1110,Sofia N.,48.00,Activo,,Arroz Negro,3,16.00
+05/12/2025,Sant Gervasi,F-1935,Laura F.,54.00,Activo,,Lubina a la Plancha,3,18.00
+01/02/2026,Sarria,F-1301,Maria G.,16.50,Activo,,Copa Vino Tinto,3,5.50
+16/01/2026,Diagonal,F-1436,Elena V.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+26/01/2026,Pedralbes,F-1550,Laura F.,36.00,Activo,,Lubina a la Plancha,2,18.00
+18/01/2026,Diagonal,F-1320,Ana P.,43.50,Activo,,Paella Valenciana,3,14.50
+27/02/2026,Sarria,F-1868,Pedro S.,19.00,Activo,,Gin Tonic,2,9.50
+27/12/2025,Sant Gervasi,F-1325,Elena V.,8.00,Activo,,Tortilla Espanola,1,8.00
+11/01/2026,Sant Gervasi,F-1654,David L.,4.40,Activo,,Cafe con Leche,2,2.20
+11/12/2025,Sarria,F-1034,David L.,38.00,Activo,,Ensalada Mixta,4,9.50
+07/01/2026,Sarria,F-1640,Pedro S.,8.50,Activo,,Mojito,1,8.50
+12/12/2025,Pedralbes,F-1123,Miguel A.,14.00,Activo,,Tostada,4,3.50
+30/01/2026,Sant Gervasi,F-1781,Ana P.,2.20,Activo,,Cafe con Leche,1,2.20
+26/02/2026,Sant Gervasi,F-1565,David L.,96.00,Activo,,Solomillo Iberico,4,24.00
+28/01/2026,Sant Gervasi,F-1567,Carlos M.,43.50,Activo,,Paella Valenciana,3,14.50
+19/01/2026,Sant Gervasi,F-1761,Maria G.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+01/01/2026,Sant Gervasi,F-1485,Laura F.,3.50,Activo,,Cerveza Estrella,1,3.50
+13/02/2026,Diagonal,F-1140,Sofia N.,11.00,Activo,,Crema Catalana,2,5.50
+17/12/2025,Pedralbes,F-1608,Javier R.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+14/02/2026,Diagonal,F-1120,Carlos M.,52.50,Activo,,Dorada al Horno,3,17.50
+03/01/2026,Sant Gervasi,F-1881,Laura F.,44.00,Activo,,Ensalada Cesar,4,11.00
+14/12/2025,Pedralbes,F-1534,Elena V.,13.00,Activo,,Patatas Bravas,2,6.50
+13/02/2026,Diagonal,F-1609,Javier R.,10.00,Activo,,Copa Vino Blanco,2,5.00
+28/01/2026,Sarria,F-1099,Carlos M.,72.00,Activo,,Lubina a la Plancha,4,18.00
+04/01/2026,Diagonal,F-1138,Maria G.,25.50,Activo,,Mojito,3,8.50
+07/12/2025,Sant Gervasi,F-1088,Javier R.,10.50,Activo,,Tostada,3,3.50
+09/12/2025,Diagonal,F-1953,David L.,42.00,Activo,,Calamares Fritos,4,10.50
+21/12/2025,Pedralbes,F-2082,Elena V.,9.50,Eliminado,Antes de la cocina,Gin Tonic,1,9.50
+23/01/2026,Sarria,F-1008,Carlos M.,15.50,Activo,,Paella Mixta,1,15.50
+07/01/2026,Pedralbes,F-1944,Javier R.,5.00,Activo,,Agua Mineral,2,2.50
+24/01/2026,Pedralbes,F-1347,Maria G.,43.50,Activo,,Paella Valenciana,3,14.50
+18/12/2025,Sant Gervasi,F-1665,Laura F.,11.00,Activo,,Ensalada Cesar,1,11.00
+03/02/2026,Sant Gervasi,F-2009,Ana P.,19.50,Activo,,Patatas Bravas,3,6.50
+14/01/2026,Sant Gervasi,F-1681,Miguel A.,36.00,Activo,,Sangria Jarra,3,12.00
+18/02/2026,Diagonal,F-1018,Elena V.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+14/02/2026,Pedralbes,F-1364,Maria G.,25.50,Activo,,Mojito,3,8.50
+21/01/2026,Diagonal,F-1585,Maria G.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+26/02/2026,Sant Gervasi,F-1836,Elena V.,5.00,Activo,,Agua Mineral,2,2.50
+28/02/2026,Sant Gervasi,F-1193,Pedro S.,3.00,Activo,,Refresco,1,3.00
+20/12/2025,Sarria,F-1464,Elena V.,42.00,Activo,,Calamares Fritos,4,10.50
+20/01/2026,Diagonal,F-1038,Elena V.,15.00,Activo,,Gazpacho,2,7.50
+04/02/2026,Pedralbes,F-1043,Elena V.,46.50,Activo,,Paella Mixta,3,15.50
+22/02/2026,Sarria,F-1204,Pedro S.,28.50,Activo,,Ensalada Mixta,3,9.50
+20/02/2026,Diagonal,F-1378,David L.,28.50,Activo,,Ensalada Mixta,3,9.50
+10/01/2026,Sant Gervasi,F-1658,Miguel A.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+08/02/2026,Sant Gervasi,F-1330,Maria G.,24.00,Activo,,Tortilla Espanola,3,8.00
+23/01/2026,Sant Gervasi,F-1397,Maria G.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+21/12/2025,Sant Gervasi,F-1469,Pedro S.,46.50,Activo,,Paella Mixta,3,15.50
+12/02/2026,Pedralbes,F-1571,Elena V.,3.60,Activo,,Cafe Solo,2,1.80
+02/12/2025,Diagonal,F-1507,Maria G.,21.00,Activo,,Croquetas Jamon,3,7.00
+25/01/2026,Pedralbes,F-1673,Maria G.,24.00,Activo,,Tortilla Espanola,3,8.00
+08/12/2025,Pedralbes,F-1233,David L.,15.00,Activo,,Cerveza Artesana,3,5.00
+01/01/2026,Sarria,F-1763,Sofia N.,10.50,Activo,,Tostada,3,3.50
+17/12/2025,Pedralbes,F-1069,Miguel A.,62.00,Activo,,Paella Mixta,4,15.50
+17/02/2026,Sant Gervasi,F-1715,David L.,52.50,Activo,,Dorada al Horno,3,17.50
+08/01/2026,Sant Gervasi,F-1766,Carlos M.,7.00,Activo,,Tostada,2,3.50
+18/12/2025,Diagonal,F-1601,David L.,72.00,Activo,,Lubina a la Plancha,4,18.00
+27/01/2026,Pedralbes,F-1496,Elena V.,9.50,Activo,,Ensalada Mixta,1,9.50
+15/01/2026,Sarria,F-1653,David L.,22.00,Activo,,Entrecot,1,22.00
+11/01/2026,Sant Gervasi,F-1833,Elena V.,22.00,Activo,,Ensalada Cesar,2,11.00
+25/12/2025,Pedralbes,F-1195,Javier R.,10.00,Activo,,Copa Vino Blanco,2,5.00
+27/12/2025,Diagonal,F-1172,Miguel A.,10.50,Activo,,Cerveza Estrella,3,3.50
+25/02/2026,Pedralbes,F-1218,Pedro S.,96.00,Activo,,Solomillo Iberico,4,24.00
+09/02/2026,Sant Gervasi,F-1413,Sofia N.,72.00,Activo,,Lubina a la Plancha,4,18.00
+19/02/2026,Sarria,F-1525,Maria G.,26.00,Activo,,Tarta Queso,4,6.50
+28/01/2026,Diagonal,F-1107,Maria G.,22.50,Activo,,Gazpacho,3,7.50
+28/01/2026,Sarria,F-1443,Pedro S.,24.00,Activo,,Solomillo Iberico,1,24.00
+09/01/2026,Diagonal,F-1775,Maria G.,54.00,Activo,,Gambas al Ajillo,4,13.50
+04/12/2025,Sant Gervasi,F-1882,Elena V.,26.00,Activo,,Tarta Queso,4,6.50
+28/12/2025,Pedralbes,F-1349,Miguel A.,16.00,Activo,,Jamon Iberico,1,16.00
+16/12/2025,Sarria,F-1031,Elena V.,5.00,Activo,,Cerveza Artesana,1,5.00
+22/02/2026,Pedralbes,F-1360,Miguel A.,15.00,Activo,,Cerveza Artesana,3,5.00
+12/02/2026,Sarria,F-2025,David L.,18.00,Activo,,Helado Artesano,4,4.50
+30/01/2026,Pedralbes,F-1776,Miguel A.,33.00,Activo,,Ensalada Cesar,3,11.00
+19/12/2025,Pedralbes,F-1491,Elena V.,5.00,Activo,,Agua Mineral,2,2.50
+06/01/2026,Diagonal,F-1199,Maria G.,21.00,Activo,,Calamares Fritos,2,10.50
+11/02/2026,Pedralbes,F-1819,Maria G.,66.00,Activo,,Entrecot,3,22.00
+02/12/2025,Diagonal,F-2053,Miguel A.,13.50,Activo,,Helado Artesano,3,4.50
+11/01/2026,Sarria,F-1535,Sofia N.,29.00,Activo,,Paella Valenciana,2,14.50
+30/12/2025,Sarria,F-1165,Laura F.,7.60,Activo,,Cortado,4,1.90
+27/12/2025,Sarria,F-1351,Carlos M.,14.00,Activo,,Croquetas Jamon,2,7.00
+30/01/2026,Sant Gervasi,F-1150,David L.,11.00,Activo,,Ensalada Cesar,1,11.00
+05/12/2025,Diagonal,F-1167,Ana P.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+10/02/2026,Diagonal,F-1958,Sofia N.,7.00,Activo,,Tostada,2,3.50
+25/12/2025,Sant Gervasi,F-1089,Miguel A.,38.00,Activo,,Ensalada Mixta,4,9.50
+10/01/2026,Sarria,F-1821,Sofia N.,2.20,Activo,,Cafe con Leche,1,2.20
+19/02/2026,Sant Gervasi,F-1636,Sofia N.,66.00,Activo,,Entrecot,3,22.00
+31/01/2026,Sant Gervasi,F-1963,Sofia N.,17.00,Activo,,Mojito,2,8.50
+26/12/2025,Diagonal,F-1743,Javier R.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+23/01/2026,Pedralbes,F-1257,Pedro S.,18.00,Activo,,Lubina a la Plancha,1,18.00
+13/02/2026,Pedralbes,F-1877,Pedro S.,8.80,Activo,,Cafe con Leche,4,2.20
+26/01/2026,Diagonal,F-1194,Elena V.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+24/12/2025,Pedralbes,F-1398,David L.,8.80,Activo,,Cafe con Leche,4,2.20
+07/02/2026,Sarria,F-1181,Pedro S.,19.50,Activo,,Tarta Queso,3,6.50
+18/01/2026,Pedralbes,F-1362,Miguel A.,7.00,Activo,,Cerveza Estrella,2,3.50
+27/12/2025,Sarria,F-1095,Sofia N.,31.50,Activo,,Calamares Fritos,3,10.50
+16/02/2026,Sarria,F-1808,Ana P.,11.00,Activo,,Ensalada Cesar,1,11.00
+02/01/2026,Diagonal,F-1365,Elena V.,9.50,Activo,,Ensalada Mixta,1,9.50
+20/12/2025,Sant Gervasi,F-1086,Pedro S.,48.00,Activo,,Arroz Negro,3,16.00
+12/12/2025,Diagonal,F-1805,Carlos M.,32.00,Activo,,Arroz Negro,2,16.00
+14/02/2026,Sant Gervasi,F-1285,Sofia N.,10.50,Activo,,Tostada,3,3.50
+19/12/2025,Diagonal,F-2010,Elena V.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+05/12/2025,Sant Gervasi,F-1932,Maria G.,10.50,Activo,,Calamares Fritos,1,10.50
+11/12/2025,Diagonal,F-2083,Carlos M.,32.00,Eliminado,Antes de la cocina,Arroz Negro,2,16.00
+21/01/2026,Diagonal,F-1126,David L.,22.50,Activo,,Gazpacho,3,7.50
+02/01/2026,Sant Gervasi,F-1524,Elena V.,38.00,Activo,,Ensalada Mixta,4,9.50
+17/02/2026,Diagonal,F-1477,Elena V.,15.50,Activo,,Paella Mixta,1,15.50
+16/02/2026,Sant Gervasi,F-1548,Carlos M.,8.50,Activo,,Mojito,1,8.50
+21/02/2026,Sarria,F-1886,Elena V.,32.00,Activo,,Jamon Iberico,2,16.00
+18/02/2026,Pedralbes,F-1785,Javier R.,1.80,Activo,,Cafe Solo,1,1.80
+08/12/2025,Sant Gervasi,F-1513,Elena V.,11.00,Activo,,Crema Catalana,2,5.50
+24/01/2026,Pedralbes,F-1934,Ana P.,20.00,Activo,,Cerveza Artesana,4,5.00
+06/02/2026,Pedralbes,F-2008,Maria G.,20.00,Activo,,Cerveza Artesana,4,5.00
+07/01/2026,Pedralbes,F-1463,Ana P.,24.00,Activo,,Solomillo Iberico,1,24.00
+16/01/2026,Diagonal,F-1847,Ana P.,16.00,Activo,,Tortilla Espanola,2,8.00
+29/01/2026,Sarria,F-1117,Pedro S.,22.00,Activo,,Ensalada Cesar,2,11.00
+03/01/2026,Sarria,F-1184,Maria G.,10.00,Activo,,Copa Vino Blanco,2,5.00
+06/01/2026,Sant Gervasi,F-1277,Ana P.,11.00,Activo,,Crema Catalana,2,5.50
+13/12/2025,Sarria,F-1777,Miguel A.,8.80,Activo,,Cafe con Leche,4,2.20
+25/01/2026,Sant Gervasi,F-1902,Javier R.,1.90,Activo,,Cortado,1,1.90
+09/01/2026,Sarria,F-1979,Maria G.,22.00,Activo,,Crema Catalana,4,5.50
+23/01/2026,Diagonal,F-2048,Sofia N.,1.80,Activo,,Cafe Solo,1,1.80
+28/02/2026,Sarria,F-1068,Miguel A.,24.00,Activo,,Solomillo Iberico,1,24.00
+23/02/2026,Sant Gervasi,F-1246,Maria G.,19.00,Activo,,Ensalada Mixta,2,9.50
+23/01/2026,Sarria,F-1004,Sofia N.,96.00,Activo,,Solomillo Iberico,4,24.00
+30/01/2026,Pedralbes,F-1125,Sofia N.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+23/02/2026,Pedralbes,F-1160,Javier R.,48.00,Activo,,Sangria Jarra,4,12.00
+19/01/2026,Sant Gervasi,F-1079,Elena V.,13.00,Activo,,Tarta Queso,2,6.50
+12/02/2026,Sant Gervasi,F-1071,Ana P.,28.50,Activo,,Ensalada Mixta,3,9.50
+10/02/2026,Pedralbes,F-1655,Javier R.,21.00,Activo,,Calamares Fritos,2,10.50
+12/02/2026,Pedralbes,F-1562,Laura F.,12.00,Activo,,Sangria Jarra,1,12.00
+08/12/2025,Sant Gervasi,F-1709,Elena V.,8.50,Activo,,Mojito,1,8.50
+24/12/2025,Pedralbes,F-1556,Ana P.,28.00,Activo,,Croquetas Jamon,4,7.00
+26/12/2025,Diagonal,F-1317,David L.,72.00,Activo,,Lubina a la Plancha,4,18.00
+14/01/2026,Sant Gervasi,F-1296,Miguel A.,72.00,Activo,,Lubina a la Plancha,4,18.00
+11/12/2025,Pedralbes,F-1784,Laura F.,3.80,Activo,,Cortado,2,1.90
+12/01/2026,Diagonal,F-1100,Miguel A.,16.00,Activo,,Jamon Iberico,1,16.00
+23/01/2026,Diagonal,F-1371,Carlos M.,22.00,Activo,,Entrecot,1,22.00
+23/12/2025,Pedralbes,F-1168,Laura F.,88.00,Activo,,Entrecot,4,22.00
+09/02/2026,Pedralbes,F-1747,Carlos M.,2.50,Activo,,Agua Mineral,1,2.50
+28/02/2026,Sant Gervasi,F-1209,Ana P.,2.50,Activo,,Agua Mineral,1,2.50
+24/01/2026,Pedralbes,F-1437,David L.,15.00,Activo,,Cerveza Artesana,3,5.00
+23/01/2026,Diagonal,F-1166,Carlos M.,16.00,Activo,,Jamon Iberico,1,16.00
+26/02/2026,Diagonal,F-1426,Javier R.,7.00,Activo,,Cerveza Estrella,2,3.50
+28/02/2026,Sarria,F-1264,Miguel A.,6.50,Activo,,Tarta Queso,1,6.50
+21/12/2025,Sarria,F-1688,Sofia N.,3.80,Activo,,Cortado,2,1.90
+24/01/2026,Sant Gervasi,F-1300,David L.,15.00,Activo,,Copa Vino Blanco,3,5.00
+08/02/2026,Pedralbes,F-1674,Laura F.,9.00,Activo,,Refresco,3,3.00
+25/12/2025,Sarria,F-1174,Elena V.,54.00,Activo,,Lubina a la Plancha,3,18.00
+20/12/2025,Diagonal,F-1265,Elena V.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+02/01/2026,Pedralbes,F-1977,David L.,22.00,Activo,,Ensalada Cesar,2,11.00
+24/12/2025,Sant Gervasi,F-1768,Carlos M.,26.00,Activo,,Patatas Bravas,4,6.50
+22/01/2026,Sant Gervasi,F-1133,Carlos M.,4.50,Activo,,Helado Artesano,1,4.50
+13/02/2026,Diagonal,F-1102,Ana P.,32.00,Activo,,Tortilla Espanola,4,8.00
+19/12/2025,Diagonal,F-1022,Elena V.,8.50,Activo,,Mojito,1,8.50
+24/01/2026,Sarria,F-2026,Sofia N.,10.00,Activo,,Cerveza Artesana,2,5.00
+08/01/2026,Diagonal,F-2062,Miguel A.,14.00,Activo,,Tostada,4,3.50
+20/01/2026,Pedralbes,F-2092,Miguel A.,44.00,Eliminado,Antes de la cocina,Entrecot,2,22.00
+17/12/2025,Diagonal,F-1994,Javier R.,6.50,Activo,,Patatas Bravas,1,6.50
+29/01/2026,Diagonal,F-1082,Laura F.,8.00,Activo,,Tortilla Espanola,1,8.00
+15/01/2026,Diagonal,F-1440,Pedro S.,29.00,Activo,,Paella Valenciana,2,14.50
+26/01/2026,Sarria,F-1702,Pedro S.,7.20,Activo,,Cafe Solo,4,1.80
+19/02/2026,Sant Gervasi,F-1015,David L.,9.00,Activo,,Helado Artesano,2,4.50
+18/02/2026,Sant Gervasi,F-1206,David L.,19.00,Activo,,Gin Tonic,2,9.50
+19/02/2026,Sant Gervasi,F-1672,David L.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+24/01/2026,Sant Gervasi,F-1559,Ana P.,5.00,Activo,,Copa Vino Blanco,1,5.00
+21/01/2026,Diagonal,F-1182,Pedro S.,10.00,Activo,,Agua Mineral,4,2.50
+21/12/2025,Diagonal,F-2035,Laura F.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+07/01/2026,Diagonal,F-1744,Sofia N.,3.80,Activo,,Cortado,2,1.90
+26/12/2025,Pedralbes,F-1575,Miguel A.,48.00,Activo,,Arroz Negro,3,16.00
+08/02/2026,Sarria,F-1399,Carlos M.,88.00,Activo,,Entrecot,4,22.00
+07/01/2026,Sarria,F-1241,Elena V.,5.00,Activo,,Cerveza Artesana,1,5.00
+30/12/2025,Sant Gervasi,F-1876,Carlos M.,10.50,Activo,,Calamares Fritos,1,10.50
+02/12/2025,Sant Gervasi,F-1119,Carlos M.,19.50,Activo,,Patatas Bravas,3,6.50
+24/02/2026,Pedralbes,F-1799,Pedro S.,2.50,Activo,,Agua Mineral,1,2.50
+15/12/2025,Sarria,F-1295,Ana P.,13.50,Activo,,Gambas al Ajillo,1,13.50
+20/12/2025,Pedralbes,F-1566,Laura F.,5.70,Activo,,Cortado,3,1.90
+29/01/2026,Pedralbes,F-1678,Elena V.,20.00,Activo,,Copa Vino Blanco,4,5.00
+06/12/2025,Sant Gervasi,F-1547,Ana P.,24.00,Activo,,Tortilla Espanola,3,8.00
+12/02/2026,Pedralbes,F-1219,Miguel A.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+19/02/2026,Pedralbes,F-1595,David L.,13.50,Activo,,Gambas al Ajillo,1,13.50
+22/02/2026,Sarria,F-1509,Maria G.,70.00,Activo,,Dorada al Horno,4,17.50
+26/12/2025,Diagonal,F-1053,Ana P.,17.50,Activo,,Dorada al Horno,1,17.50
+22/12/2025,Diagonal,F-1680,Pedro S.,22.00,Activo,,Entrecot,1,22.00
+24/12/2025,Pedralbes,F-1615,Maria G.,70.00,Activo,,Dorada al Horno,4,17.50
+16/01/2026,Pedralbes,F-1788,Sofia N.,19.50,Activo,,Tarta Queso,3,6.50
+03/02/2026,Sant Gervasi,F-1314,Carlos M.,7.00,Activo,,Cerveza Estrella,2,3.50
+19/02/2026,Sarria,F-1807,Ana P.,14.00,Activo,,Tostada,4,3.50
+11/12/2025,Sant Gervasi,F-2067,Maria G.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+24/02/2026,Sarria,F-1786,Maria G.,11.00,Activo,,Ensalada Cesar,1,11.00
+24/01/2026,Pedralbes,F-1814,Maria G.,8.00,Activo,,Tortilla Espanola,1,8.00
+11/02/2026,Diagonal,F-1751,Sofia N.,5.50,Activo,,Copa Vino Tinto,1,5.50
+31/01/2026,Pedralbes,F-1890,Sofia N.,12.00,Activo,,Sangria Jarra,1,12.00
+16/12/2025,Diagonal,F-2001,Sofia N.,31.00,Activo,,Paella Mixta,2,15.50
+25/01/2026,Diagonal,F-1017,Elena V.,1.80,Activo,,Cafe Solo,1,1.80
+10/01/2026,Sarria,F-1427,Elena V.,26.00,Activo,,Tarta Queso,4,6.50
+04/02/2026,Pedralbes,F-1560,Carlos M.,16.00,Activo,,Arroz Negro,1,16.00
+31/12/2025,Sant Gervasi,F-1834,Sofia N.,62.00,Activo,,Paella Mixta,4,15.50
+20/02/2026,Pedralbes,F-1549,David L.,18.00,Activo,,Tiramisu,3,6.00
+04/01/2026,Diagonal,F-1990,Javier R.,17.50,Activo,,Dorada al Horno,1,17.50
+11/01/2026,Sant Gervasi,F-1823,Ana P.,96.00,Activo,,Solomillo Iberico,4,24.00
+04/01/2026,Pedralbes,F-2089,Elena V.,36.00,Eliminado,Despues de la cocina,Sangria Jarra,3,12.00
+03/02/2026,Diagonal,F-1078,Miguel A.,21.00,Activo,,Croquetas Jamon,3,7.00
+11/02/2026,Pedralbes,F-1049,Sofia N.,4.50,Activo,,Helado Artesano,1,4.50
+23/12/2025,Diagonal,F-1441,Pedro S.,17.00,Activo,,Mojito,2,8.50
+03/12/2025,Pedralbes,F-2007,Sofia N.,70.00,Activo,,Dorada al Horno,4,17.50
+12/12/2025,Pedralbes,F-1407,Miguel A.,42.00,Activo,,Calamares Fritos,4,10.50
+07/02/2026,Diagonal,F-1245,Pedro S.,20.00,Activo,,Copa Vino Blanco,4,5.00
+03/02/2026,Sarria,F-1941,Ana P.,38.00,Activo,,Ensalada Mixta,4,9.50
+17/12/2025,Pedralbes,F-1842,Elena V.,14.00,Activo,,Croquetas Jamon,2,7.00
+17/02/2026,Pedralbes,F-1228,Laura F.,44.00,Activo,,Entrecot,2,22.00
+19/02/2026,Diagonal,F-1042,Ana P.,2.20,Activo,,Cafe con Leche,1,2.20
+02/01/2026,Sant Gervasi,F-1933,Javier R.,6.00,Activo,,Tiramisu,1,6.00
+09/02/2026,Pedralbes,F-1989,Pedro S.,31.00,Activo,,Paella Mixta,2,15.50
+15/12/2025,Sarria,F-1005,Ana P.,7.50,Activo,,Agua Mineral,3,2.50
+14/02/2026,Diagonal,F-1940,Pedro S.,22.00,Activo,,Entrecot,1,22.00
+04/02/2026,Sarria,F-1405,David L.,11.00,Activo,,Crema Catalana,2,5.50
+07/01/2026,Diagonal,F-1261,Maria G.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+04/12/2025,Sant Gervasi,F-1594,Sofia N.,30.00,Activo,,Gazpacho,4,7.50
+16/12/2025,Sarria,F-1927,Miguel A.,12.00,Activo,,Sangria Jarra,1,12.00
+12/01/2026,Sarria,F-1685,Elena V.,26.00,Activo,,Tarta Queso,4,6.50
+14/12/2025,Diagonal,F-1235,Pedro S.,22.00,Activo,,Entrecot,1,22.00
+06/02/2026,Pedralbes,F-1837,Maria G.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+21/12/2025,Sarria,F-2018,Sofia N.,11.00,Activo,,Crema Catalana,2,5.50
+11/01/2026,Sant Gervasi,F-1873,Javier R.,15.00,Activo,,Cerveza Artesana,3,5.00
+29/12/2025,Sarria,F-1668,Sofia N.,28.00,Activo,,Croquetas Jamon,4,7.00
+25/01/2026,Diagonal,F-1913,Elena V.,32.00,Activo,,Jamon Iberico,2,16.00
+17/01/2026,Pedralbes,F-1308,Javier R.,13.00,Activo,,Patatas Bravas,2,6.50
+05/01/2026,Sant Gervasi,F-1272,Ana P.,14.00,Activo,,Croquetas Jamon,2,7.00
+23/02/2026,Diagonal,F-1461,Ana P.,13.50,Activo,,Helado Artesano,3,4.50
+03/01/2026,Pedralbes,F-1229,David L.,35.00,Activo,,Dorada al Horno,2,17.50
+09/12/2025,Diagonal,F-1972,Miguel A.,16.50,Activo,,Copa Vino Tinto,3,5.50
+19/12/2025,Sant Gervasi,F-1855,Javier R.,9.00,Activo,,Helado Artesano,2,4.50
+11/02/2026,Diagonal,F-1323,David L.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+01/12/2025,Sant Gervasi,F-1946,Miguel A.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+12/02/2026,Pedralbes,F-1237,Javier R.,48.00,Activo,,Sangria Jarra,4,12.00
+09/12/2025,Sant Gervasi,F-1586,David L.,7.00,Activo,,Croquetas Jamon,1,7.00
+17/01/2026,Sarria,F-1624,Laura F.,4.40,Activo,,Cafe con Leche,2,2.20
+11/02/2026,Sant Gervasi,F-1906,Pedro S.,35.00,Activo,,Dorada al Horno,2,17.50
+28/01/2026,Sant Gervasi,F-1937,Maria G.,32.00,Activo,,Tortilla Espanola,4,8.00
+19/01/2026,Sant Gervasi,F-1475,Javier R.,31.00,Activo,,Paella Mixta,2,15.50
+05/01/2026,Sant Gervasi,F-1952,Pedro S.,16.00,Activo,,Arroz Negro,1,16.00
+05/12/2025,Sant Gervasi,F-2019,Maria G.,10.00,Activo,,Copa Vino Blanco,2,5.00
+09/12/2025,Sarria,F-1900,Sofia N.,48.00,Activo,,Sangria Jarra,4,12.00
+10/01/2026,Sarria,F-1850,Sofia N.,7.50,Activo,,Agua Mineral,3,2.50
+26/02/2026,Sant Gervasi,F-1486,Pedro S.,72.00,Activo,,Lubina a la Plancha,4,18.00
+19/01/2026,Sant Gervasi,F-2050,Laura F.,33.00,Activo,,Ensalada Cesar,3,11.00
+28/02/2026,Diagonal,F-1811,Laura F.,7.00,Activo,,Tostada,2,3.50
+02/01/2026,Pedralbes,F-1643,Javier R.,48.00,Activo,,Jamon Iberico,3,16.00
+17/12/2025,Sarria,F-1604,Pedro S.,6.00,Activo,,Refresco,2,3.00
+16/02/2026,Sarria,F-1418,Sofia N.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+17/12/2025,Sant Gervasi,F-1019,Maria G.,3.80,Activo,,Cortado,2,1.90
+30/12/2025,Sarria,F-1997,Elena V.,28.50,Activo,,Ensalada Mixta,3,9.50
+19/02/2026,Sant Gervasi,F-1292,Elena V.,42.00,Activo,,Calamares Fritos,4,10.50
+01/01/2026,Diagonal,F-1046,Sofia N.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+28/12/2025,Diagonal,F-1468,Elena V.,22.00,Activo,,Ensalada Cesar,2,11.00
+10/01/2026,Pedralbes,F-1774,Sofia N.,3.60,Activo,,Cafe Solo,2,1.80
+14/02/2026,Pedralbes,F-1552,Elena V.,3.50,Activo,,Tostada,1,3.50
+04/01/2026,Sarria,F-1298,Javier R.,15.00,Activo,,Copa Vino Blanco,3,5.00
+03/02/2026,Pedralbes,F-1561,Pedro S.,52.50,Activo,,Dorada al Horno,3,17.50
+17/02/2026,Diagonal,F-1606,Sofia N.,21.00,Activo,,Croquetas Jamon,3,7.00
+17/12/2025,Diagonal,F-1737,Ana P.,18.00,Activo,,Lubina a la Plancha,1,18.00
+31/12/2025,Sant Gervasi,F-1466,Pedro S.,12.00,Activo,,Refresco,4,3.00
+24/01/2026,Sarria,F-1041,Elena V.,31.50,Activo,,Calamares Fritos,3,10.50
+21/01/2026,Sarria,F-2011,Sofia N.,40.50,Activo,,Gambas al Ajillo,3,13.50
+17/01/2026,Diagonal,F-1749,Miguel A.,17.00,Activo,,Mojito,2,8.50
+05/01/2026,Sant Gervasi,F-1973,David L.,72.00,Activo,,Solomillo Iberico,3,24.00
+05/02/2026,Diagonal,F-1789,Ana P.,27.00,Activo,,Gambas al Ajillo,2,13.50
+13/01/2026,Pedralbes,F-1446,Javier R.,14.50,Activo,,Paella Valenciana,1,14.50
+08/02/2026,Sarria,F-1202,Ana P.,21.00,Activo,,Calamares Fritos,2,10.50
+30/01/2026,Sant Gervasi,F-1627,Maria G.,9.00,Activo,,Refresco,3,3.00
+18/12/2025,Sarria,F-1949,Elena V.,20.00,Activo,,Cerveza Artesana,4,5.00
+21/02/2026,Diagonal,F-2091,Ana P.,11.00,Eliminado,Antes de la cocina,Ensalada Cesar,1,11.00
+29/12/2025,Diagonal,F-1605,Laura F.,43.50,Activo,,Paella Valenciana,3,14.50
+05/01/2026,Diagonal,F-1542,Sofia N.,19.50,Activo,,Patatas Bravas,3,6.50
+17/01/2026,Sant Gervasi,F-1911,Maria G.,22.00,Activo,,Ensalada Cesar,2,11.00
+02/01/2026,Pedralbes,F-1401,Elena V.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+18/01/2026,Pedralbes,F-1544,Pedro S.,9.00,Activo,,Helado Artesano,2,4.50
+10/12/2025,Pedralbes,F-1281,Miguel A.,19.50,Activo,,Tarta Queso,3,6.50
+01/01/2026,Sant Gervasi,F-1518,Ana P.,8.50,Activo,,Mojito,1,8.50
+24/02/2026,Sant Gervasi,F-1762,Miguel A.,11.00,Activo,,Crema Catalana,2,5.50
+20/12/2025,Sant Gervasi,F-1755,Pedro S.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+04/01/2026,Pedralbes,F-1879,Pedro S.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+28/02/2026,Sarria,F-1675,Pedro S.,3.00,Activo,,Refresco,1,3.00
+13/12/2025,Sarria,F-1697,Carlos M.,5.50,Activo,,Crema Catalana,1,5.50
+22/12/2025,Sant Gervasi,F-1341,Carlos M.,54.00,Activo,,Gambas al Ajillo,4,13.50
+19/01/2026,Diagonal,F-1152,Ana P.,62.00,Activo,,Paella Mixta,4,15.50
+24/01/2026,Diagonal,F-1217,Laura F.,18.00,Activo,,Helado Artesano,4,4.50
+18/12/2025,Sarria,F-1207,David L.,9.00,Activo,,Helado Artesano,2,4.50
+01/01/2026,Sant Gervasi,F-2034,Miguel A.,5.00,Activo,,Agua Mineral,2,2.50
+06/12/2025,Diagonal,F-1993,David L.,25.50,Activo,,Mojito,3,8.50
+11/12/2025,Sant Gervasi,F-1845,Ana P.,9.50,Activo,,Ensalada Mixta,1,9.50
+25/01/2026,Pedralbes,F-1791,Carlos M.,38.00,Activo,,Ensalada Mixta,4,9.50
+03/01/2026,Pedralbes,F-1495,David L.,66.00,Activo,,Entrecot,3,22.00
+05/02/2026,Sant Gervasi,F-1108,Laura F.,9.50,Activo,,Ensalada Mixta,1,9.50
+20/02/2026,Sant Gervasi,F-1003,Pedro S.,16.50,Activo,,Copa Vino Tinto,3,5.50
+19/02/2026,Diagonal,F-1346,Sofia N.,28.50,Activo,,Ensalada Mixta,3,9.50
+02/12/2025,Sarria,F-1382,Maria G.,24.00,Activo,,Solomillo Iberico,1,24.00
+19/12/2025,Sant Gervasi,F-1630,Miguel A.,32.00,Activo,,Tortilla Espanola,4,8.00
+31/01/2026,Pedralbes,F-1820,Ana P.,30.00,Activo,,Gazpacho,4,7.50
+12/12/2025,Sarria,F-1352,Miguel A.,8.80,Activo,,Cafe con Leche,4,2.20
+27/02/2026,Diagonal,F-1729,Javier R.,62.00,Activo,,Paella Mixta,4,15.50
+17/02/2026,Sarria,F-1370,Miguel A.,3.00,Activo,,Refresco,1,3.00
+06/12/2025,Diagonal,F-1647,Elena V.,8.50,Activo,,Mojito,1,8.50
+12/01/2026,Sarria,F-1010,Elena V.,32.00,Activo,,Arroz Negro,2,16.00
+07/12/2025,Sarria,F-1790,David L.,64.00,Activo,,Jamon Iberico,4,16.00
+15/02/2026,Pedralbes,F-1040,Maria G.,34.00,Activo,,Mojito,4,8.50
+26/02/2026,Sant Gervasi,F-1428,Carlos M.,70.00,Activo,,Dorada al Horno,4,17.50
+27/12/2025,Pedralbes,F-1185,Carlos M.,32.00,Activo,,Tortilla Espanola,4,8.00
+11/12/2025,Diagonal,F-1739,Sofia N.,48.00,Activo,,Arroz Negro,3,16.00
+16/12/2025,Pedralbes,F-1208,Miguel A.,11.00,Activo,,Copa Vino Tinto,2,5.50
+19/01/2026,Pedralbes,F-1930,Sofia N.,30.00,Activo,,Gazpacho,4,7.50
+13/02/2026,Pedralbes,F-1570,Pedro S.,48.00,Activo,,Solomillo Iberico,2,24.00
+18/01/2026,Diagonal,F-2015,Ana P.,64.00,Activo,,Arroz Negro,4,16.00
+16/01/2026,Sant Gervasi,F-1492,Maria G.,3.60,Activo,,Cafe Solo,2,1.80
+01/12/2025,Sant Gervasi,F-1288,Laura F.,35.00,Activo,,Dorada al Horno,2,17.50
+07/12/2025,Sant Gervasi,F-1087,David L.,12.50,Activo,,Hamburguesa Clasica,1,12.50
+16/02/2026,Diagonal,F-1304,Carlos M.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+19/12/2025,Pedralbes,F-1686,Carlos M.,15.00,Activo,,Copa Vino Blanco,3,5.00
+31/12/2025,Sarria,F-1998,Carlos M.,13.50,Activo,,Helado Artesano,3,4.50
+26/12/2025,Sant Gervasi,F-1191,Carlos M.,18.00,Activo,,Helado Artesano,4,4.50
+01/01/2026,Sant Gervasi,F-1852,Javier R.,10.50,Activo,,Cerveza Estrella,3,3.50
+01/01/2026,Pedralbes,F-1514,Miguel A.,16.00,Activo,,Tortilla Espanola,2,8.00
+16/12/2025,Sant Gervasi,F-1337,David L.,28.50,Activo,,Ensalada Mixta,3,9.50
+11/01/2026,Sarria,F-1016,Laura F.,9.50,Activo,,Gin Tonic,1,9.50
+05/01/2026,Sarria,F-1377,Pedro S.,31.00,Activo,,Paella Mixta,2,15.50
+13/02/2026,Sant Gervasi,F-1645,Sofia N.,48.00,Activo,,Arroz Negro,3,16.00
+31/12/2025,Diagonal,F-1865,Maria G.,31.50,Activo,,Calamares Fritos,3,10.50
+01/01/2026,Diagonal,F-1670,Elena V.,72.00,Activo,,Lubina a la Plancha,4,18.00
+06/01/2026,Pedralbes,F-1273,Elena V.,17.00,Activo,,Mojito,2,8.50
+05/02/2026,Sant Gervasi,F-1921,Sofia N.,42.00,Activo,,Calamares Fritos,4,10.50
+12/12/2025,Diagonal,F-1663,Elena V.,43.50,Activo,,Paella Valenciana,3,14.50
+22/02/2026,Pedralbes,F-1815,David L.,2.20,Activo,,Cafe con Leche,1,2.20
+02/02/2026,Pedralbes,F-1950,Javier R.,15.00,Activo,,Cerveza Artesana,3,5.00
+12/12/2025,Sarria,F-2020,Laura F.,4.50,Activo,,Helado Artesano,1,4.50
+01/01/2026,Pedralbes,F-1383,Sofia N.,9.00,Activo,,Refresco,3,3.00
+06/01/2026,Pedralbes,F-1798,Laura F.,22.00,Activo,,Entrecot,1,22.00
+17/12/2025,Pedralbes,F-1517,Carlos M.,13.00,Activo,,Patatas Bravas,2,6.50
+25/12/2025,Pedralbes,F-1065,Pedro S.,3.50,Activo,,Cerveza Estrella,1,3.50
+22/12/2025,Diagonal,F-1101,Elena V.,42.00,Activo,,Calamares Fritos,4,10.50
+07/12/2025,Sant Gervasi,F-1136,Miguel A.,14.50,Activo,,Paella Valenciana,1,14.50
+13/01/2026,Sarria,F-1707,Maria G.,3.60,Activo,,Cafe Solo,2,1.80
+03/01/2026,Diagonal,F-1393,Laura F.,11.00,Activo,,Crema Catalana,2,5.50
+17/01/2026,Diagonal,F-1801,Miguel A.,8.00,Activo,,Tortilla Espanola,1,8.00
+08/02/2026,Diagonal,F-1321,Ana P.,7.00,Activo,,Croquetas Jamon,1,7.00
+01/01/2026,Pedralbes,F-1746,Pedro S.,4.40,Activo,,Cafe con Leche,2,2.20
+24/02/2026,Diagonal,F-1070,Pedro S.,11.00,Activo,,Crema Catalana,2,5.50
+21/02/2026,Sarria,F-1970,Sofia N.,16.50,Activo,,Crema Catalana,3,5.50
+20/02/2026,Diagonal,F-1430,Elena V.,66.00,Activo,,Entrecot,3,22.00
+27/01/2026,Sant Gervasi,F-1620,Pedro S.,19.00,Activo,,Gin Tonic,2,9.50
+23/01/2026,Sarria,F-1252,Elena V.,6.00,Activo,,Refresco,2,3.00
+27/02/2026,Sarria,F-1840,Maria G.,54.00,Activo,,Lubina a la Plancha,3,18.00
+05/01/2026,Diagonal,F-1892,David L.,88.00,Activo,,Entrecot,4,22.00
+16/12/2025,Sant Gervasi,F-1987,Pedro S.,14.50,Activo,,Paella Valenciana,1,14.50
+04/02/2026,Sant Gervasi,F-1490,Javier R.,2.50,Activo,,Agua Mineral,1,2.50
+02/02/2026,Diagonal,F-1656,Maria G.,21.00,Activo,,Calamares Fritos,2,10.50
+09/12/2025,Pedralbes,F-1682,Elena V.,16.00,Activo,,Jamon Iberico,1,16.00
+21/01/2026,Sarria,F-1579,Sofia N.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+14/02/2026,Sant Gervasi,F-1151,Maria G.,38.00,Activo,,Ensalada Mixta,4,9.50
+05/02/2026,Sarria,F-1306,Maria G.,12.00,Activo,,Tiramisu,2,6.00
+10/12/2025,Sarria,F-1259,Pedro S.,22.00,Activo,,Crema Catalana,4,5.50
+15/12/2025,Pedralbes,F-1920,Maria G.,18.00,Activo,,Helado Artesano,4,4.50
+11/12/2025,Sarria,F-1221,Pedro S.,33.00,Activo,,Ensalada Cesar,3,11.00
+19/02/2026,Diagonal,F-1303,Elena V.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+16/02/2026,Sarria,F-1242,Maria G.,19.50,Activo,,Tarta Queso,3,6.50
+01/12/2025,Sant Gervasi,F-1121,Maria G.,3.50,Activo,,Cerveza Estrella,1,3.50
+09/12/2025,Diagonal,F-1163,Carlos M.,4.40,Activo,,Cafe con Leche,2,2.20
+25/12/2025,Sant Gervasi,F-1076,Laura F.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+07/01/2026,Sant Gervasi,F-1318,Laura F.,28.00,Activo,,Croquetas Jamon,4,7.00
+12/01/2026,Pedralbes,F-1305,Pedro S.,12.00,Activo,,Sangria Jarra,1,12.00
+10/12/2025,Sarria,F-1945,Ana P.,35.00,Activo,,Dorada al Horno,2,17.50
+31/01/2026,Sarria,F-1493,David L.,25.50,Activo,,Mojito,3,8.50
+23/12/2025,Sant Gervasi,F-1432,Pedro S.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+21/02/2026,Sarria,F-1669,Miguel A.,10.50,Activo,,Cerveza Estrella,3,3.50
+26/01/2026,Sarria,F-1634,David L.,13.50,Activo,,Gambas al Ajillo,1,13.50
+09/12/2025,Diagonal,F-1482,Sofia N.,96.00,Activo,,Solomillo Iberico,4,24.00
+28/01/2026,Pedralbes,F-1857,Sofia N.,72.00,Activo,,Solomillo Iberico,3,24.00
+27/02/2026,Pedralbes,F-1822,Javier R.,96.00,Activo,,Solomillo Iberico,4,24.00
+02/01/2026,Sarria,F-1602,Maria G.,18.00,Activo,,Tiramisu,3,6.00
+01/12/2025,Diagonal,F-1628,David L.,13.50,Activo,,Helado Artesano,3,4.50
+01/02/2026,Sarria,F-2043,Carlos M.,26.00,Activo,,Patatas Bravas,4,6.50

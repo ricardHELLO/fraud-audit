@@ -1,0 +1,665 @@
+Fecha,Local,Ventas Brutas,Ventas Netas,Efectivo Esperado,Efectivo Real,Descuadre
+01/01/2026,Malaga Centro,4746.89,4308.00,1633.43,1601.83,-31.60
+01/01/2026,Puerto,4279.76,3744.05,1591.33,1554.37,-36.96
+01/01/2026,Pedregalejo,3299.41,2814.27,1098.49,1049.94,-48.55
+02/01/2026,Malaga Centro,4351.50,3802.32,1590.58,1497.02,-93.56
+02/01/2026,Puerto,5418.44,4951.37,1744.50,1660.42,-84.08
+02/01/2026,Pedregalejo,2565.91,2254.88,852.30,806.83,-45.47
+03/01/2026,Malaga Centro,4151.42,3765.46,1508.15,1470.77,-37.38
+03/01/2026,Puerto,5044.07,4545.49,1758.36,1707.29,-51.07
+03/01/2026,Pedregalejo,2751.45,2373.10,1063.69,1020.27,-43.42
+04/01/2026,Malaga Centro,4944.95,4364.40,1890.55,1776.09,-114.46
+04/01/2026,Puerto,4876.51,4157.85,1740.82,1654.85,-85.97
+04/01/2026,Pedregalejo,3279.45,2842.36,1255.32,1205.77,-49.55
+05/01/2026,Malaga Centro,4530.09,3963.17,1715.47,1618.66,-96.81
+05/01/2026,Puerto,4130.15,3715.57,1447.11,1372.64,-74.47
+05/01/2026,Pedregalejo,2212.12,1896.12,681.57,651.56,-30.01
+06/01/2026,Malaga Centro,4052.42,3649.15,1564.53,1493.52,-71.01
+06/01/2026,Puerto,4712.91,4071.50,1666.59,1620.75,-45.84
+06/01/2026,Pedregalejo,2296.99,1987.30,776.04,732.19,-43.85
+07/01/2026,Malaga Centro,3451.44,3146.91,1370.42,1315.52,-54.90
+07/01/2026,Puerto,5412.42,4948.41,2034.72,1980.06,-54.66
+07/01/2026,Pedregalejo,3137.60,2738.88,1065.24,1028.33,-36.91
+08/01/2026,Malaga Centro,4001.37,3515.22,1424.56,1382.32,-42.24
+08/01/2026,Puerto,5283.65,4495.05,1656.35,1623.77,-32.58
+08/01/2026,Pedregalejo,3495.89,2978.70,1074.34,1053.27,-21.07
+09/01/2026,Malaga Centro,3224.03,2769.29,1134.63,1097.82,-36.81
+09/01/2026,Puerto,3988.77,3495.80,1388.63,1347.83,-40.80
+09/01/2026,Pedregalejo,2395.83,2084.03,933.44,879.43,-54.01
+10/01/2026,Malaga Centro,4449.56,3911.54,1370.24,1306.14,-64.10
+10/01/2026,Puerto,3927.40,3439.43,1476.23,1395.60,-80.63
+10/01/2026,Pedregalejo,2086.92,1819.35,649.67,595.83,-53.84
+11/01/2026,Malaga Centro,4051.92,3663.06,1387.14,1315.67,-71.47
+11/01/2026,Puerto,3951.69,3468.75,1379.64,1348.30,-31.34
+11/01/2026,Pedregalejo,2879.84,2600.37,1016.04,964.57,-51.47
+12/01/2026,Malaga Centro,4445.91,4072.06,1672.22,1597.75,-74.47
+12/01/2026,Puerto,3647.00,3215.16,1233.08,1172.36,-60.72
+12/01/2026,Pedregalejo,2138.34,1957.36,821.19,804.05,-17.14
+13/01/2026,Malaga Centro,3587.90,3180.23,1242.59,1189.83,-52.76
+13/01/2026,Puerto,5159.17,4612.99,1973.45,1907.07,-66.38
+13/01/2026,Pedregalejo,2738.56,2403.59,945.90,925.44,-20.46
+14/01/2026,Malaga Centro,3092.72,2778.99,1005.03,896.62,-108.41
+14/01/2026,Puerto,5060.61,4307.88,1525.92,1449.43,-76.49
+14/01/2026,Pedregalejo,3485.39,3089.51,1144.10,1103.63,-40.47
+15/01/2026,Malaga Centro,4769.08,4083.22,1784.87,1667.32,-117.55
+15/01/2026,Puerto,3807.98,3358.23,1282.97,1245.13,-37.84
+15/01/2026,Pedregalejo,2149.92,1853.84,689.37,674.24,-15.13
+16/01/2026,Malaga Centro,3711.59,3367.22,1349.94,1246.45,-103.49
+16/01/2026,Puerto,4644.08,4105.26,1784.73,1724.44,-60.29
+16/01/2026,Pedregalejo,2842.06,2595.28,1069.56,1058.76,-10.80
+17/01/2026,Malaga Centro,4662.78,4058.15,1811.20,1701.62,-109.58
+17/01/2026,Puerto,4108.01,3651.27,1567.79,1546.75,-21.04
+17/01/2026,Pedregalejo,3170.36,2770.84,1035.58,1018.72,-16.86
+18/01/2026,Malaga Centro,4825.45,4350.46,1752.63,1669.30,-83.33
+18/01/2026,Puerto,3923.92,3512.53,1445.23,1363.92,-81.31
+18/01/2026,Pedregalejo,2153.71,1886.52,790.66,731.56,-59.10
+19/01/2026,Malaga Centro,4644.51,4112.80,1847.96,1780.24,-67.72
+19/01/2026,Puerto,3629.68,3158.75,1286.90,1262.35,-24.55
+19/01/2026,Pedregalejo,3071.98,2708.62,1017.15,997.52,-19.63
+20/01/2026,Malaga Centro,3805.71,3394.12,1382.35,1347.18,-35.17
+20/01/2026,Puerto,4341.48,3880.04,1671.55,1642.42,-29.13
+20/01/2026,Pedregalejo,2985.16,2710.88,1122.78,1100.75,-22.03
+21/01/2026,Malaga Centro,4492.04,4030.77,1717.55,1674.43,-43.12
+21/01/2026,Puerto,3679.31,3261.91,1189.03,1153.88,-35.15
+21/01/2026,Pedregalejo,2868.92,2566.46,1044.23,991.58,-52.65
+22/01/2026,Malaga Centro,4130.68,3596.21,1536.41,1496.27,-40.14
+22/01/2026,Puerto,4638.96,4200.40,1830.04,1806.77,-23.27
+22/01/2026,Pedregalejo,3335.81,2860.74,1241.33,1221.68,-19.65
+23/01/2026,Malaga Centro,3446.06,3117.43,1333.10,1251.79,-81.31
+23/01/2026,Puerto,4627.83,4244.85,1508.95,1462.51,-46.44
+23/01/2026,Pedregalejo,2034.44,1808.73,661.09,633.10,-27.99
+24/01/2026,Malaga Centro,3914.36,3441.66,1511.44,1449.21,-62.23
+24/01/2026,Puerto,3847.83,3328.81,1352.05,1331.68,-20.37
+24/01/2026,Pedregalejo,2342.17,2090.32,799.71,772.84,-26.87
+25/01/2026,Malaga Centro,4815.72,4312.54,1896.88,1823.70,-73.18
+25/01/2026,Puerto,4814.52,4281.46,1506.00,1473.31,-32.69
+25/01/2026,Pedregalejo,2427.05,2063.51,793.35,753.72,-39.63
+26/01/2026,Malaga Centro,4327.17,3975.42,1750.08,1681.04,-69.04
+26/01/2026,Puerto,4368.30,3722.21,1602.26,1567.15,-35.11
+26/01/2026,Pedregalejo,2609.35,2357.33,953.42,900.75,-52.67
+27/01/2026,Malaga Centro,4321.84,3701.85,1499.48,1431.04,-68.44
+27/01/2026,Puerto,4189.43,3745.87,1656.97,1582.13,-74.84
+27/01/2026,Pedregalejo,2842.69,2577.22,927.35,908.88,-18.47
+28/01/2026,Malaga Centro,4764.57,4305.52,1854.49,1762.72,-91.77
+28/01/2026,Puerto,4173.70,3817.55,1382.02,1351.05,-30.97
+28/01/2026,Pedregalejo,3165.83,2779.30,1014.15,983.53,-30.62
+29/01/2026,Malaga Centro,4546.29,4134.78,1559.60,1520.51,-39.09
+29/01/2026,Puerto,5209.27,4731.46,1733.72,1696.38,-37.34
+29/01/2026,Pedregalejo,2001.47,1794.80,720.41,690.43,-29.98
+30/01/2026,Malaga Centro,4814.68,4223.68,1900.00,1790.51,-109.49
+30/01/2026,Puerto,5459.30,4788.37,1772.68,1688.36,-84.32
+30/01/2026,Pedregalejo,2290.00,2044.59,883.99,865.16,-18.83
+31/01/2026,Malaga Centro,3050.97,2795.22,1083.20,968.24,-114.96
+31/01/2026,Puerto,4796.57,4103.98,1694.89,1610.01,-84.88
+31/01/2026,Pedregalejo,3106.60,2652.42,1036.51,985.37,-51.14
+01/02/2026,Malaga Centro,4259.07,3678.61,1501.78,1421.68,-80.10
+01/02/2026,Puerto,4322.27,3717.39,1572.45,1497.89,-74.56
+01/02/2026,Pedregalejo,2419.70,2059.59,822.86,784.99,-37.87
+02/02/2026,Malaga Centro,3563.00,3069.03,1293.39,1213.80,-79.59
+02/02/2026,Puerto,3779.46,3319.22,1448.18,1405.18,-43.00
+02/02/2026,Pedregalejo,2894.47,2530.11,1026.08,970.68,-55.40
+03/02/2026,Malaga Centro,4744.90,4273.96,1848.92,1811.97,-36.95
+03/02/2026,Puerto,5346.18,4911.74,1996.83,1972.10,-24.73
+03/02/2026,Pedregalejo,2100.19,1899.50,669.14,655.97,-13.17
+04/02/2026,Malaga Centro,4349.26,3776.88,1688.38,1586.24,-102.14
+04/02/2026,Puerto,4407.73,3774.09,1371.00,1346.20,-24.80
+04/02/2026,Pedregalejo,2536.82,2321.55,859.58,845.37,-14.21
+05/02/2026,Malaga Centro,3802.62,3356.59,1486.02,1407.80,-78.22
+05/02/2026,Puerto,3909.83,3595.98,1584.98,1542.44,-42.54
+05/02/2026,Pedregalejo,2117.89,1824.43,707.85,658.79,-49.06
+06/02/2026,Malaga Centro,3843.80,3489.25,1563.02,1471.62,-91.40
+06/02/2026,Puerto,4435.46,3939.70,1763.58,1699.90,-63.68
+06/02/2026,Pedregalejo,2285.58,2014.34,884.58,851.84,-32.74
+07/02/2026,Malaga Centro,3614.20,3221.98,1361.60,1256.78,-104.82
+07/02/2026,Puerto,4657.61,3974.55,1734.54,1665.12,-69.42
+07/02/2026,Pedregalejo,2064.50,1872.96,736.29,690.53,-45.76
+08/02/2026,Malaga Centro,3105.80,2738.14,1145.10,1099.98,-45.12
+08/02/2026,Puerto,4296.72,3812.88,1688.22,1661.57,-26.65
+08/02/2026,Pedregalejo,3111.37,2753.49,1105.08,1090.84,-14.24
+09/02/2026,Malaga Centro,3150.36,2861.71,1184.48,1143.52,-40.96
+09/02/2026,Puerto,5288.53,4713.29,2039.59,1956.75,-82.84
+09/02/2026,Pedregalejo,2290.08,2029.83,908.08,856.66,-51.42
+10/02/2026,Malaga Centro,4092.25,3688.83,1472.32,1418.13,-54.19
+10/02/2026,Puerto,4712.99,4083.20,1603.07,1570.91,-32.16
+10/02/2026,Pedregalejo,3312.10,2940.33,1286.88,1269.28,-17.60
+11/02/2026,Malaga Centro,3354.43,3011.30,1149.85,1032.47,-117.38
+11/02/2026,Puerto,3957.82,3572.01,1593.03,1504.63,-88.40
+11/02/2026,Pedregalejo,3178.41,2832.61,1195.13,1156.56,-38.57
+12/02/2026,Malaga Centro,4361.49,4010.88,1585.73,1528.74,-56.99
+12/02/2026,Puerto,4305.32,3942.27,1472.81,1411.17,-61.64
+12/02/2026,Pedregalejo,3169.83,2726.87,1170.48,1128.73,-41.75
+13/02/2026,Malaga Centro,3004.50,2667.53,956.14,911.80,-44.34
+13/02/2026,Puerto,3860.90,3451.81,1321.32,1242.47,-78.85
+13/02/2026,Pedregalejo,3488.23,3130.73,1302.24,1242.98,-59.26
+14/02/2026,Malaga Centro,3670.10,3373.63,1496.90,1438.71,-58.19
+14/02/2026,Puerto,4309.87,3708.75,1325.09,1280.68,-44.41
+14/02/2026,Pedregalejo,3405.60,2912.10,1185.40,1141.77,-43.63
+15/02/2026,Malaga Centro,3795.86,3347.84,1370.66,1254.21,-116.45
+15/02/2026,Puerto,4681.27,4232.24,1594.93,1535.03,-59.90
+15/02/2026,Pedregalejo,2913.44,2535.32,1025.97,966.78,-59.19
+16/02/2026,Malaga Centro,3316.67,3026.30,1070.64,980.42,-90.22
+16/02/2026,Puerto,3567.82,3183.79,1346.63,1302.99,-43.64
+16/02/2026,Pedregalejo,2813.42,2583.42,1058.74,1033.31,-25.43
+17/02/2026,Malaga Centro,4014.72,3494.54,1268.51,1227.93,-40.58
+17/02/2026,Puerto,4175.44,3764.07,1510.22,1464.29,-45.93
+17/02/2026,Pedregalejo,2970.91,2584.24,1021.26,988.54,-32.72
+18/02/2026,Malaga Centro,3915.77,3550.50,1566.81,1509.39,-57.42
+18/02/2026,Puerto,4382.81,3834.90,1410.88,1383.54,-27.34
+18/02/2026,Pedregalejo,2602.48,2283.25,843.89,822.35,-21.54
+19/02/2026,Malaga Centro,4313.45,3674.35,1512.21,1416.95,-95.26
+19/02/2026,Puerto,5060.50,4642.74,1654.43,1608.38,-46.05
+19/02/2026,Pedregalejo,3460.04,3060.90,1234.22,1193.44,-40.78
+20/02/2026,Malaga Centro,3299.83,2948.91,1302.04,1227.56,-74.48
+20/02/2026,Puerto,4937.08,4249.71,1841.86,1774.27,-67.59
+20/02/2026,Pedregalejo,2865.21,2534.49,1077.10,1056.63,-20.47
+21/02/2026,Malaga Centro,4064.28,3648.54,1277.23,1215.15,-62.08
+21/02/2026,Puerto,4864.68,4404.81,1704.08,1662.77,-41.31
+21/02/2026,Pedregalejo,3324.53,2980.27,1301.72,1279.50,-22.22
+22/02/2026,Malaga Centro,3780.31,3405.83,1305.07,1226.17,-78.90
+22/02/2026,Puerto,3576.63,3208.63,1176.90,1149.88,-27.02
+22/02/2026,Pedregalejo,2263.86,2042.57,889.02,842.44,-46.58
+23/02/2026,Malaga Centro,3365.11,2983.68,1181.74,1097.21,-84.53
+23/02/2026,Puerto,3780.71,3432.33,1411.16,1334.16,-77.00
+23/02/2026,Pedregalejo,2369.94,2172.32,908.80,885.77,-23.03
+24/02/2026,Malaga Centro,4693.49,4248.86,1839.89,1739.89,-100.00
+24/02/2026,Puerto,5381.21,4779.77,2103.82,2053.90,-49.92
+24/02/2026,Pedregalejo,2154.65,1892.52,711.73,685.95,-25.78
+25/02/2026,Malaga Centro,4831.99,4170.31,1777.18,1722.20,-54.98
+25/02/2026,Puerto,5364.32,4626.47,2056.48,1993.72,-62.76
+25/02/2026,Pedregalejo,3452.94,2976.54,1323.39,1274.47,-48.92
+26/02/2026,Malaga Centro,4389.20,3836.30,1575.93,1517.71,-58.22
+26/02/2026,Puerto,3704.44,3371.90,1496.98,1414.41,-82.57
+26/02/2026,Pedregalejo,3065.92,2685.27,946.73,919.02,-27.71
+27/02/2026,Malaga Centro,4037.87,3702.48,1647.45,1577.73,-69.72
+27/02/2026,Puerto,3531.26,3080.78,1228.54,1186.15,-42.39
+27/02/2026,Pedregalejo,3237.29,2802.50,1035.29,1006.70,-28.59
+28/02/2026,Malaga Centro,3239.96,2907.15,1166.44,1098.37,-68.07
+28/02/2026,Puerto,5352.64,4592.16,1828.24,1772.14,-56.10
+28/02/2026,Pedregalejo,2070.33,1835.36,771.71,740.81,-30.90
+
+Fecha,Local,Nº Factura,Empleado,Importe,Estado,Fase Eliminación,Producto,Cantidad,Precio Unitario
+25/02/2026,Puerto,F-5408,Carmen B.,35.00,Eliminado,Despues de la cocina,Dorada al Horno,2,17.50
+09/02/2026,Malaga Centro,F-5482,Roberto T.,48.00,Eliminado,Despues de la cocina,Jamon Iberico,3,16.00
+20/02/2026,Puerto,F-5343,Maria G.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+17/02/2026,Puerto,F-5459,Carmen B.,33.00,Eliminado,Despues del cobro,Ensalada Cesar,3,11.00
+26/01/2026,Puerto,F-5002,Laura F.,40.50,Activo,,Gambas al Ajillo,3,13.50
+17/01/2026,Pedregalejo,F-5383,Sofia N.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+30/01/2026,Pedregalejo,F-5481,Luis H.,15.50,Eliminado,Despues de la cocina,Paella Mixta,1,15.50
+17/02/2026,Puerto,F-5474,Carmen B.,36.00,Eliminado,Antes de la cocina,Sangria Jarra,3,12.00
+11/01/2026,Pedregalejo,F-5362,David L.,44.00,Activo,,Entrecot,2,22.00
+01/02/2026,Malaga Centro,F-5235,Carlos M.,15.00,Activo,,Cerveza Artesana,3,5.00
+10/02/2026,Malaga Centro,F-5085,Carmen B.,1.80,Activo,,Cafe Solo,1,1.80
+13/02/2026,Malaga Centro,F-5279,Laura F.,54.00,Activo,,Lubina a la Plancha,3,18.00
+06/02/2026,Puerto,F-5243,David L.,27.00,Activo,,Gambas al Ajillo,2,13.50
+02/02/2026,Pedregalejo,F-5295,Roberto T.,64.00,Activo,,Jamon Iberico,4,16.00
+04/01/2026,Malaga Centro,F-5075,Sofia N.,15.00,Activo,,Cerveza Artesana,3,5.00
+06/01/2026,Malaga Centro,F-5398,Ana P.,26.00,Activo,,Tarta Queso,4,6.50
+27/01/2026,Malaga Centro,F-5014,Maria G.,26.00,Activo,,Tarta Queso,4,6.50
+09/02/2026,Pedregalejo,F-5442,David L.,35.00,Eliminado,Despues de la cocina,Dorada al Horno,2,17.50
+11/02/2026,Malaga Centro,F-5316,Elena V.,6.50,Activo,,Tarta Queso,1,6.50
+23/02/2026,Malaga Centro,F-5053,Maria G.,3.80,Activo,,Cortado,2,1.90
+08/02/2026,Puerto,F-5180,Laura F.,19.00,Activo,,Gin Tonic,2,9.50
+28/02/2026,Malaga Centro,F-5090,Carlos M.,2.50,Activo,,Agua Mineral,1,2.50
+21/01/2026,Malaga Centro,F-5151,Roberto T.,36.00,Activo,,Sangria Jarra,3,12.00
+08/01/2026,Pedregalejo,F-5472,Luis H.,31.50,Eliminado,Despues del cobro,Calamares Fritos,3,10.50
+21/01/2026,Puerto,F-5178,Roberto T.,19.00,Activo,,Gin Tonic,2,9.50
+25/01/2026,Pedregalejo,F-5333,Ana P.,7.00,Activo,,Cerveza Estrella,2,3.50
+12/02/2026,Puerto,F-5414,Carmen B.,24.00,Eliminado,Antes de la cocina,Sangria Jarra,2,12.00
+08/01/2026,Puerto,F-5060,Carmen B.,96.00,Activo,,Solomillo Iberico,4,24.00
+31/01/2026,Pedregalejo,F-5207,Javier R.,10.50,Activo,,Cerveza Estrella,3,3.50
+07/01/2026,Pedregalejo,F-5168,Laura F.,24.00,Activo,,Tortilla Espanola,3,8.00
+23/01/2026,Malaga Centro,F-5376,Elena V.,48.00,Activo,,Jamon Iberico,3,16.00
+29/01/2026,Puerto,F-5444,Carmen B.,11.00,Eliminado,Despues del cobro,Ensalada Cesar,1,11.00
+03/01/2026,Malaga Centro,F-5370,Ana P.,48.00,Activo,,Sangria Jarra,4,12.00
+10/01/2026,Malaga Centro,F-5304,Roberto T.,18.00,Activo,,Helado Artesano,4,4.50
+27/01/2026,Puerto,F-5358,Carlos M.,48.00,Activo,,Solomillo Iberico,2,24.00
+22/01/2026,Malaga Centro,F-5265,Javier R.,42.00,Activo,,Calamares Fritos,4,10.50
+19/01/2026,Malaga Centro,F-5251,Ana P.,64.00,Activo,,Arroz Negro,4,16.00
+07/02/2026,Pedregalejo,F-5162,Laura F.,22.00,Activo,,Entrecot,1,22.00
+11/02/2026,Pedregalejo,F-5294,Laura F.,7.20,Activo,,Cafe Solo,4,1.80
+08/02/2026,Pedregalejo,F-5182,Javier R.,9.00,Activo,,Helado Artesano,2,4.50
+08/02/2026,Pedregalejo,F-5011,Miguel A.,18.00,Activo,,Lubina a la Plancha,1,18.00
+04/02/2026,Malaga Centro,F-5390,Maria G.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+20/02/2026,Malaga Centro,F-5220,Maria G.,7.60,Activo,,Cortado,4,1.90
+29/01/2026,Puerto,F-5426,Carmen B.,22.00,Eliminado,Antes de la cocina,Entrecot,1,22.00
+14/01/2026,Malaga Centro,F-5125,Carmen B.,31.00,Activo,,Paella Mixta,2,15.50
+23/01/2026,Pedregalejo,F-5073,Sofia N.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+09/02/2026,Malaga Centro,F-5110,Ana P.,28.00,Activo,,Croquetas Jamon,4,7.00
+11/01/2026,Malaga Centro,F-5307,Laura F.,5.50,Activo,,Copa Vino Tinto,1,5.50
+12/02/2026,Pedregalejo,F-5056,Laura F.,15.00,Activo,,Gazpacho,2,7.50
+05/01/2026,Pedregalejo,F-5163,David L.,8.80,Activo,,Cafe con Leche,4,2.20
+21/02/2026,Malaga Centro,F-5036,Carmen B.,6.00,Activo,,Tiramisu,1,6.00
+01/01/2026,Malaga Centro,F-5361,Laura F.,35.00,Activo,,Dorada al Horno,2,17.50
+21/01/2026,Pedregalejo,F-5059,David L.,38.00,Activo,,Ensalada Mixta,4,9.50
+07/02/2026,Malaga Centro,F-5149,Pedro S.,4.50,Activo,,Helado Artesano,1,4.50
+07/01/2026,Malaga Centro,F-5132,Carlos M.,48.00,Activo,,Solomillo Iberico,2,24.00
+30/01/2026,Malaga Centro,F-5003,Maria G.,27.00,Activo,,Gambas al Ajillo,2,13.50
+11/01/2026,Malaga Centro,F-5446,Roberto T.,18.00,Eliminado,Despues de la cocina,Lubina a la Plancha,1,18.00
+27/02/2026,Puerto,F-5173,David L.,12.00,Activo,,Tiramisu,2,6.00
+16/01/2026,Puerto,F-5006,Ana P.,13.50,Activo,,Gambas al Ajillo,1,13.50
+06/02/2026,Pedregalejo,F-5424,Luis H.,31.00,Eliminado,Antes de la cocina,Paella Mixta,2,15.50
+02/01/2026,Pedregalejo,F-5338,Elena V.,16.00,Activo,,Tortilla Espanola,2,8.00
+14/01/2026,Puerto,F-5232,Maria G.,32.00,Activo,,Tortilla Espanola,4,8.00
+30/01/2026,Puerto,F-5009,Elena V.,5.50,Activo,,Crema Catalana,1,5.50
+11/01/2026,Malaga Centro,F-5066,Maria G.,32.00,Activo,,Tortilla Espanola,4,8.00
+15/02/2026,Malaga Centro,F-5255,Laura F.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+02/01/2026,Malaga Centro,F-5339,Miguel A.,48.00,Activo,,Arroz Negro,3,16.00
+20/02/2026,Puerto,F-5262,Miguel A.,16.00,Activo,,Arroz Negro,1,16.00
+21/01/2026,Malaga Centro,F-5047,Elena V.,38.00,Activo,,Gin Tonic,4,9.50
+06/01/2026,Malaga Centro,F-5363,Javier R.,48.00,Activo,,Sangria Jarra,4,12.00
+12/01/2026,Malaga Centro,F-5449,Roberto T.,15.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,1,15.00
+31/01/2026,Malaga Centro,F-5378,David L.,6.00,Activo,,Tiramisu,1,6.00
+17/02/2026,Malaga Centro,F-5413,Roberto T.,12.00,Eliminado,Despues de la cocina,Sangria Jarra,1,12.00
+25/02/2026,Puerto,F-5025,Laura F.,6.50,Activo,,Patatas Bravas,1,6.50
+24/02/2026,Pedregalejo,F-5164,Miguel A.,10.00,Activo,,Cerveza Artesana,2,5.00
+13/02/2026,Puerto,F-5353,Maria G.,17.50,Activo,,Dorada al Horno,1,17.50
+04/02/2026,Pedregalejo,F-5217,Carmen B.,14.00,Activo,,Cerveza Estrella,4,3.50
+05/01/2026,Pedregalejo,F-5108,Miguel A.,10.00,Activo,,Cerveza Artesana,2,5.00
+13/02/2026,Malaga Centro,F-5422,Roberto T.,21.00,Eliminado,Despues de la cocina,Calamares Fritos,2,10.50
+29/01/2026,Malaga Centro,F-5129,Miguel A.,5.00,Activo,,Cerveza Artesana,1,5.00
+16/01/2026,Malaga Centro,F-5117,Laura F.,15.00,Activo,,Cerveza Artesana,3,5.00
+06/01/2026,Puerto,F-5219,David L.,15.50,Activo,,Paella Mixta,1,15.50
+02/02/2026,Malaga Centro,F-5440,Roberto T.,17.50,Eliminado,Antes de la cocina,Dorada al Horno,1,17.50
+05/01/2026,Malaga Centro,F-5419,Roberto T.,15.50,Eliminado,Despues de la cocina,Paella Mixta,1,15.50
+24/02/2026,Puerto,F-5367,Laura F.,28.50,Activo,,Gin Tonic,3,9.50
+02/01/2026,Pedregalejo,F-5100,Sofia N.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+14/02/2026,Pedregalejo,F-5460,Luis H.,36.00,Eliminado,Despues del cobro,Sangria Jarra,3,12.00
+25/01/2026,Malaga Centro,F-5300,Carlos M.,38.00,Activo,,Gin Tonic,4,9.50
+02/01/2026,Puerto,F-5483,Carmen B.,32.00,Eliminado,Despues del cobro,Jamon Iberico,2,16.00
+21/02/2026,Pedregalejo,F-5374,Miguel A.,22.00,Activo,,Crema Catalana,4,5.50
+27/02/2026,Malaga Centro,F-5302,Pedro S.,28.00,Activo,,Croquetas Jamon,4,7.00
+14/01/2026,Pedregalejo,F-5161,Carmen B.,19.50,Activo,,Tarta Queso,3,6.50
+08/01/2026,Puerto,F-5077,Laura F.,21.00,Activo,,Calamares Fritos,2,10.50
+21/02/2026,Pedregalejo,F-5409,Luis H.,30.00,Eliminado,Despues del cobro,Pulpo a la Gallega,2,15.00
+28/01/2026,Puerto,F-5349,Miguel A.,4.40,Activo,,Cafe con Leche,2,2.20
+21/02/2026,Puerto,F-5023,Maria G.,14.00,Activo,,Croquetas Jamon,2,7.00
+22/01/2026,Pedregalejo,F-5247,David L.,5.00,Activo,,Copa Vino Blanco,1,5.00
+19/02/2026,Pedregalejo,F-5216,Miguel A.,16.00,Activo,,Jamon Iberico,1,16.00
+02/02/2026,Malaga Centro,F-5020,David L.,2.50,Activo,,Agua Mineral,1,2.50
+08/02/2026,Pedregalejo,F-5292,Sofia N.,22.00,Activo,,Entrecot,1,22.00
+28/01/2026,Pedregalejo,F-5418,Luis H.,48.00,Eliminado,Despues del cobro,Solomillo Iberico,2,24.00
+22/02/2026,Malaga Centro,F-5282,David L.,30.00,Activo,,Pulpo a la Gallega,2,15.00
+31/01/2026,Pedregalejo,F-5335,Roberto T.,17.50,Activo,,Dorada al Horno,1,17.50
+31/01/2026,Pedregalejo,F-5159,David L.,16.00,Activo,,Tortilla Espanola,2,8.00
+28/02/2026,Malaga Centro,F-5311,Pedro S.,18.00,Activo,,Helado Artesano,4,4.50
+16/02/2026,Pedregalejo,F-5284,Pedro S.,5.40,Activo,,Cafe Solo,3,1.80
+21/01/2026,Puerto,F-5026,Ana P.,11.00,Activo,,Copa Vino Tinto,2,5.50
+26/02/2026,Pedregalejo,F-5297,Elena V.,15.00,Activo,,Copa Vino Blanco,3,5.00
+09/01/2026,Malaga Centro,F-5022,Carlos M.,11.00,Activo,,Copa Vino Tinto,2,5.50
+26/01/2026,Pedregalejo,F-5248,Maria G.,21.00,Activo,,Calamares Fritos,2,10.50
+25/02/2026,Pedregalejo,F-5266,Carlos M.,72.00,Activo,,Solomillo Iberico,3,24.00
+31/01/2026,Malaga Centro,F-5122,Miguel A.,64.00,Activo,,Jamon Iberico,4,16.00
+31/01/2026,Puerto,F-5081,Roberto T.,13.00,Activo,,Tarta Queso,2,6.50
+04/02/2026,Puerto,F-5334,Pedro S.,4.50,Activo,,Helado Artesano,1,4.50
+15/01/2026,Puerto,F-5369,Carlos M.,6.00,Activo,,Refresco,2,3.00
+04/01/2026,Malaga Centro,F-5249,Carmen B.,32.00,Activo,,Arroz Negro,2,16.00
+22/01/2026,Puerto,F-5400,Carmen B.,88.00,Activo,,Entrecot,4,22.00
+13/02/2026,Malaga Centro,F-5028,David L.,22.50,Activo,,Gazpacho,3,7.50
+05/02/2026,Pedregalejo,F-5373,Maria G.,22.00,Activo,,Ensalada Cesar,2,11.00
+10/01/2026,Pedregalejo,F-5099,David L.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+21/02/2026,Pedregalejo,F-5153,David L.,70.00,Activo,,Dorada al Horno,4,17.50
+15/02/2026,Pedregalejo,F-5102,Elena V.,21.00,Activo,,Calamares Fritos,2,10.50
+08/01/2026,Puerto,F-5089,Javier R.,17.00,Activo,,Mojito,2,8.50
+14/01/2026,Pedregalejo,F-5475,David L.,13.50,Eliminado,Despues del cobro,Gambas al Ajillo,1,13.50
+13/01/2026,Pedregalejo,F-5244,Elena V.,20.00,Activo,,Cerveza Artesana,4,5.00
+11/01/2026,Pedregalejo,F-5303,Sofia N.,8.00,Activo,,Tortilla Espanola,1,8.00
+28/02/2026,Malaga Centro,F-5321,Carlos M.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+07/01/2026,Malaga Centro,F-5004,Carmen B.,5.70,Activo,,Cortado,3,1.90
+31/01/2026,Malaga Centro,F-5109,Javier R.,7.50,Activo,,Agua Mineral,3,2.50
+22/02/2026,Pedregalejo,F-5267,Miguel A.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+14/01/2026,Puerto,F-5158,David L.,20.00,Activo,,Copa Vino Blanco,4,5.00
+02/01/2026,Malaga Centro,F-5309,Carmen B.,22.00,Activo,,Crema Catalana,4,5.50
+28/01/2026,Puerto,F-5239,Javier R.,15.00,Activo,,Copa Vino Blanco,3,5.00
+25/01/2026,Pedregalejo,F-5048,Pedro S.,8.00,Activo,,Tortilla Espanola,1,8.00
+08/01/2026,Puerto,F-5344,Ana P.,72.00,Activo,,Solomillo Iberico,3,24.00
+02/02/2026,Pedregalejo,F-5457,Luis H.,31.50,Eliminado,Despues del cobro,Calamares Fritos,3,10.50
+02/01/2026,Pedregalejo,F-5430,Luis H.,12.50,Eliminado,Despues del cobro,Hamburguesa Clasica,1,12.50
+28/01/2026,Puerto,F-5324,Roberto T.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+20/02/2026,Puerto,F-5405,Carmen B.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+09/02/2026,Malaga Centro,F-5039,Carlos M.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+26/02/2026,Puerto,F-5246,Miguel A.,7.60,Activo,,Cortado,4,1.90
+14/02/2026,Pedregalejo,F-5010,Pedro S.,18.00,Activo,,Lubina a la Plancha,1,18.00
+24/01/2026,Puerto,F-5392,Elena V.,45.00,Activo,,Pulpo a la Gallega,3,15.00
+22/01/2026,Malaga Centro,F-5133,Carlos M.,33.00,Activo,,Ensalada Cesar,3,11.00
+14/01/2026,Puerto,F-5468,Carmen B.,16.00,Eliminado,Despues del cobro,Arroz Negro,1,16.00
+20/02/2026,Malaga Centro,F-5314,David L.,10.00,Activo,,Copa Vino Blanco,2,5.00
+17/01/2026,Pedregalejo,F-5433,Luis H.,15.00,Eliminado,Despues de la cocina,Pulpo a la Gallega,1,15.00
+02/02/2026,Puerto,F-5017,Carmen B.,28.50,Activo,,Ensalada Mixta,3,9.50
+15/02/2026,Puerto,F-5312,Laura F.,3.50,Activo,,Cerveza Estrella,1,3.50
+18/01/2026,Puerto,F-5417,Carmen B.,17.50,Eliminado,Despues del cobro,Dorada al Horno,1,17.50
+05/02/2026,Malaga Centro,F-5331,David L.,9.00,Activo,,Helado Artesano,2,4.50
+17/01/2026,Malaga Centro,F-5212,Elena V.,34.00,Activo,,Mojito,4,8.50
+02/02/2026,Malaga Centro,F-5288,Javier R.,21.00,Activo,,Calamares Fritos,2,10.50
+20/01/2026,Malaga Centro,F-5016,Miguel A.,52.50,Activo,,Dorada al Horno,3,17.50
+18/01/2026,Puerto,F-5194,Pedro S.,15.00,Activo,,Gazpacho,2,7.50
+02/02/2026,Puerto,F-5181,Roberto T.,19.00,Activo,,Ensalada Mixta,2,9.50
+18/01/2026,Malaga Centro,F-5001,Laura F.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+22/01/2026,Malaga Centro,F-5443,Roberto T.,43.50,Eliminado,Despues del cobro,Paella Valenciana,3,14.50
+23/02/2026,Malaga Centro,F-5179,Javier R.,28.50,Activo,,Gin Tonic,3,9.50
+26/01/2026,Malaga Centro,F-5049,Pedro S.,7.60,Activo,,Cortado,4,1.90
+10/01/2026,Puerto,F-5105,Sofia N.,48.00,Activo,,Arroz Negro,3,16.00
+31/01/2026,Malaga Centro,F-5083,Sofia N.,17.50,Activo,,Dorada al Horno,1,17.50
+01/01/2026,Malaga Centro,F-5404,Roberto T.,35.00,Eliminado,Despues de la cocina,Dorada al Horno,2,17.50
+29/01/2026,Puerto,F-5276,Javier R.,13.00,Activo,,Patatas Bravas,2,6.50
+28/02/2026,Puerto,F-5148,Carlos M.,15.00,Activo,,Cerveza Artesana,3,5.00
+24/02/2026,Pedregalejo,F-5034,Carmen B.,6.60,Activo,,Cafe con Leche,3,2.20
+13/02/2026,Pedregalejo,F-5231,Carlos M.,28.00,Activo,,Croquetas Jamon,4,7.00
+28/01/2026,Puerto,F-5119,Elena V.,36.00,Activo,,Sangria Jarra,3,12.00
+09/01/2026,Malaga Centro,F-5114,David L.,5.50,Activo,,Crema Catalana,1,5.50
+24/02/2026,Pedregalejo,F-5228,Ana P.,25.00,Activo,,Hamburguesa Clasica,2,12.50
+13/01/2026,Pedregalejo,F-5038,Miguel A.,10.50,Activo,,Cerveza Estrella,3,3.50
+08/02/2026,Pedregalejo,F-5088,Roberto T.,9.50,Activo,,Gin Tonic,1,9.50
+13/02/2026,Pedregalejo,F-5484,Roberto T.,30.00,Eliminado,Antes de la cocina,Pulpo a la Gallega,2,15.00
+21/01/2026,Pedregalejo,F-5213,Carlos M.,10.50,Activo,,Tostada,3,3.50
+02/02/2026,Malaga Centro,F-5268,David L.,3.00,Activo,,Refresco,1,3.00
+21/01/2026,Puerto,F-5234,Elena V.,20.00,Activo,,Copa Vino Blanco,4,5.00
+30/01/2026,Pedregalejo,F-5218,Miguel A.,25.50,Activo,,Mojito,3,8.50
+18/01/2026,Puerto,F-5465,Carmen B.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+09/01/2026,Malaga Centro,F-5476,Roberto T.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+08/01/2026,Pedregalejo,F-5050,Ana P.,1.90,Activo,,Cortado,1,1.90
+30/01/2026,Pedregalejo,F-5183,Javier R.,18.00,Activo,,Lubina a la Plancha,1,18.00
+24/01/2026,Puerto,F-5456,Carmen B.,24.00,Eliminado,Despues del cobro,Solomillo Iberico,1,24.00
+26/01/2026,Malaga Centro,F-5013,Miguel A.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+04/02/2026,Malaga Centro,F-5128,Pedro S.,25.50,Activo,,Mojito,3,8.50
+27/01/2026,Pedregalejo,F-5375,Pedro S.,26.00,Activo,,Patatas Bravas,4,6.50
+14/02/2026,Pedregalejo,F-5252,Ana P.,30.00,Activo,,Gazpacho,4,7.50
+09/02/2026,Pedregalejo,F-5222,Pedro S.,32.00,Activo,,Tortilla Espanola,4,8.00
+19/01/2026,Puerto,F-5346,Elena V.,1.90,Activo,,Cortado,1,1.90
+26/02/2026,Malaga Centro,F-5428,Roberto T.,30.00,Eliminado,Despues del cobro,Pulpo a la Gallega,2,15.00
+21/01/2026,Puerto,F-5225,Elena V.,48.00,Activo,,Jamon Iberico,3,16.00
+22/01/2026,Pedregalejo,F-5130,Carlos M.,24.00,Activo,,Solomillo Iberico,1,24.00
+25/01/2026,Pedregalejo,F-5389,David L.,29.00,Activo,,Paella Valenciana,2,14.50
+06/01/2026,Puerto,F-5393,Javier R.,4.40,Activo,,Cafe con Leche,2,2.20
+15/01/2026,Pedregalejo,F-5436,Luis H.,18.00,Eliminado,Despues de la cocina,Lubina a la Plancha,1,18.00
+13/01/2026,Pedregalejo,F-5320,Carlos M.,96.00,Activo,,Solomillo Iberico,4,24.00
+12/01/2026,Malaga Centro,F-5237,David L.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+06/02/2026,Pedregalejo,F-5260,Maria G.,22.00,Activo,,Entrecot,1,22.00
+10/01/2026,Pedregalejo,F-5054,Elena V.,26.00,Activo,,Patatas Bravas,4,6.50
+02/01/2026,Malaga Centro,F-5254,Laura F.,5.70,Activo,,Cortado,3,1.90
+13/02/2026,Puerto,F-5238,Carmen B.,18.00,Activo,,Helado Artesano,4,4.50
+08/02/2026,Pedregalejo,F-5072,Ana P.,22.00,Activo,,Crema Catalana,4,5.50
+03/02/2026,Malaga Centro,F-5143,Miguel A.,18.00,Activo,,Lubina a la Plancha,1,18.00
+05/01/2026,Malaga Centro,F-5024,Miguel A.,7.50,Activo,,Agua Mineral,3,2.50
+22/01/2026,Puerto,F-5115,David L.,2.20,Activo,,Cafe con Leche,1,2.20
+11/01/2026,Puerto,F-5141,David L.,64.00,Activo,,Arroz Negro,4,16.00
+30/01/2026,Pedregalejo,F-5340,Pedro S.,9.00,Activo,,Helado Artesano,2,4.50
+15/02/2026,Malaga Centro,F-5280,Roberto T.,6.00,Activo,,Tiramisu,1,6.00
+07/02/2026,Puerto,F-5371,Roberto T.,3.50,Activo,,Cerveza Estrella,1,3.50
+14/02/2026,Puerto,F-5477,Sofia N.,12.00,Eliminado,Despues del cobro,Sangria Jarra,1,12.00
+17/02/2026,Malaga Centro,F-5037,Sofia N.,24.00,Activo,,Sangria Jarra,2,12.00
+26/01/2026,Pedregalejo,F-5043,Carmen B.,38.00,Activo,,Gin Tonic,4,9.50
+16/01/2026,Malaga Centro,F-5092,Elena V.,6.50,Activo,,Patatas Bravas,1,6.50
+05/02/2026,Puerto,F-5388,Miguel A.,27.00,Activo,,Gambas al Ajillo,2,13.50
+02/01/2026,Malaga Centro,F-5136,Elena V.,32.00,Activo,,Arroz Negro,2,16.00
+02/02/2026,Pedregalejo,F-5478,Luis H.,24.00,Eliminado,Despues de la cocina,Sangria Jarra,2,12.00
+27/02/2026,Pedregalejo,F-5032,Ana P.,44.00,Activo,,Ensalada Cesar,4,11.00
+19/02/2026,Pedregalejo,F-5329,Ana P.,5.50,Activo,,Copa Vino Tinto,1,5.50
+10/02/2026,Malaga Centro,F-5410,Maria G.,24.00,Eliminado,Despues del cobro,Sangria Jarra,2,12.00
+12/02/2026,Puerto,F-5277,Roberto T.,8.80,Activo,,Cafe con Leche,4,2.20
+03/01/2026,Puerto,F-5283,Elena V.,21.00,Activo,,Croquetas Jamon,3,7.00
+05/02/2026,Malaga Centro,F-5458,Roberto T.,31.50,Eliminado,Despues del cobro,Calamares Fritos,3,10.50
+11/01/2026,Puerto,F-5453,Carmen B.,66.00,Eliminado,Despues del cobro,Entrecot,3,22.00
+21/02/2026,Malaga Centro,F-5281,Elena V.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+08/01/2026,Pedregalejo,F-5366,Maria G.,7.00,Activo,,Cerveza Estrella,2,3.50
+26/02/2026,Puerto,F-5270,Maria G.,9.50,Activo,,Ensalada Mixta,1,9.50
+28/02/2026,Puerto,F-5118,Ana P.,66.00,Activo,,Entrecot,3,22.00
+05/02/2026,Malaga Centro,F-5259,Sofia N.,19.00,Activo,,Gin Tonic,2,9.50
+13/02/2026,Pedregalejo,F-5169,Elena V.,26.00,Activo,,Tarta Queso,4,6.50
+05/02/2026,Pedregalejo,F-5057,Miguel A.,16.00,Activo,,Tortilla Espanola,2,8.00
+05/02/2026,Puerto,F-5106,Pedro S.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+18/02/2026,Malaga Centro,F-5146,Laura F.,20.00,Activo,,Copa Vino Blanco,4,5.00
+15/01/2026,Pedregalejo,F-5381,Miguel A.,48.00,Activo,,Sangria Jarra,4,12.00
+18/01/2026,Malaga Centro,F-5325,Laura F.,14.00,Activo,,Cerveza Estrella,4,3.50
+31/01/2026,Puerto,F-5372,Carmen B.,28.50,Activo,,Gin Tonic,3,9.50
+18/01/2026,Malaga Centro,F-5184,Elena V.,21.00,Activo,,Calamares Fritos,2,10.50
+26/02/2026,Malaga Centro,F-5055,Laura F.,48.00,Activo,,Arroz Negro,3,16.00
+12/02/2026,Malaga Centro,F-5080,Laura F.,15.00,Activo,,Gazpacho,2,7.50
+09/02/2026,Malaga Centro,F-5227,Carmen B.,1.90,Activo,,Cortado,1,1.90
+04/01/2026,Pedregalejo,F-5082,Sofia N.,14.00,Activo,,Cerveza Estrella,4,3.50
+18/01/2026,Malaga Centro,F-5470,Roberto T.,16.00,Eliminado,Despues del cobro,Arroz Negro,1,16.00
+31/01/2026,Malaga Centro,F-5377,Javier R.,19.00,Activo,,Gin Tonic,2,9.50
+27/02/2026,Puerto,F-5387,Pedro S.,13.00,Activo,,Tarta Queso,2,6.50
+19/02/2026,Pedregalejo,F-5210,Carlos M.,6.60,Activo,,Cafe con Leche,3,2.20
+21/02/2026,Pedregalejo,F-5296,Elena V.,32.00,Activo,,Arroz Negro,2,16.00
+22/02/2026,Puerto,F-5241,Maria G.,48.00,Activo,,Arroz Negro,3,16.00
+24/02/2026,Pedregalejo,F-5355,Miguel A.,9.00,Activo,,Refresco,3,3.00
+08/01/2026,Malaga Centro,F-5230,Ana P.,38.00,Activo,,Gin Tonic,4,9.50
+09/02/2026,Malaga Centro,F-5203,Laura F.,7.50,Activo,,Gazpacho,1,7.50
+27/02/2026,Puerto,F-5064,Elena V.,22.00,Activo,,Entrecot,1,22.00
+04/01/2026,Puerto,F-5365,Pedro S.,5.00,Activo,,Copa Vino Blanco,1,5.00
+22/02/2026,Pedregalejo,F-5150,Elena V.,9.50,Activo,,Ensalada Mixta,1,9.50
+22/01/2026,Malaga Centro,F-5140,Roberto T.,14.00,Activo,,Tostada,4,3.50
+12/02/2026,Pedregalejo,F-5167,Roberto T.,15.00,Activo,,Cerveza Artesana,3,5.00
+01/02/2026,Pedregalejo,F-5068,Maria G.,6.00,Activo,,Refresco,2,3.00
+09/01/2026,Malaga Centro,F-5245,Maria G.,64.00,Activo,,Jamon Iberico,4,16.00
+27/02/2026,Puerto,F-5382,Sofia N.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+10/02/2026,Pedregalejo,F-5027,Javier R.,9.00,Activo,,Helado Artesano,2,4.50
+17/01/2026,Puerto,F-5290,Carlos M.,12.00,Activo,,Tiramisu,2,6.00
+06/02/2026,Puerto,F-5063,Elena V.,5.00,Activo,,Agua Mineral,2,2.50
+22/02/2026,Puerto,F-5313,Sofia N.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+19/01/2026,Pedregalejo,F-5093,Sofia N.,64.00,Activo,,Arroz Negro,4,16.00
+23/02/2026,Malaga Centro,F-5323,Maria G.,5.00,Activo,,Cerveza Artesana,1,5.00
+06/02/2026,Malaga Centro,F-5394,Carmen B.,3.50,Activo,,Cerveza Estrella,1,3.50
+18/02/2026,Malaga Centro,F-5452,Roberto T.,37.50,Eliminado,Despues de la cocina,Hamburguesa Clasica,3,12.50
+12/02/2026,Pedregalejo,F-5269,Carmen B.,21.00,Activo,,Croquetas Jamon,3,7.00
+20/02/2026,Puerto,F-5070,Javier R.,10.00,Activo,,Copa Vino Blanco,2,5.00
+08/02/2026,Malaga Centro,F-5473,Roberto T.,16.00,Eliminado,Despues del cobro,Arroz Negro,1,16.00
+27/02/2026,Pedregalejo,F-5315,David L.,27.00,Activo,,Gambas al Ajillo,2,13.50
+02/01/2026,Pedregalejo,F-5007,David L.,1.80,Activo,,Cafe Solo,1,1.80
+01/02/2026,Malaga Centro,F-5356,Carmen B.,5.00,Activo,,Cerveza Artesana,1,5.00
+21/01/2026,Pedregalejo,F-5058,Maria G.,16.00,Activo,,Tortilla Espanola,2,8.00
+22/01/2026,Malaga Centro,F-5094,Pedro S.,7.00,Activo,,Cerveza Estrella,2,3.50
+14/02/2026,Puerto,F-5229,Carmen B.,16.50,Activo,,Copa Vino Tinto,3,5.50
+01/01/2026,Pedregalejo,F-5406,Luis H.,72.00,Eliminado,Despues del cobro,Solomillo Iberico,3,24.00
+14/01/2026,Malaga Centro,F-5204,Elena V.,24.00,Activo,,Tortilla Espanola,3,8.00
+07/01/2026,Puerto,F-5299,Ana P.,9.00,Activo,,Refresco,3,3.00
+19/01/2026,Pedregalejo,F-5191,Carlos M.,46.50,Activo,,Paella Mixta,3,15.50
+07/01/2026,Malaga Centro,F-5166,Javier R.,10.00,Activo,,Copa Vino Blanco,2,5.00
+12/01/2026,Malaga Centro,F-5074,Roberto T.,24.00,Activo,,Tiramisu,4,6.00
+12/02/2026,Pedregalejo,F-5205,Roberto T.,4.40,Activo,,Cafe con Leche,2,2.20
+30/01/2026,Pedregalejo,F-5095,Roberto T.,7.50,Activo,,Gazpacho,1,7.50
+06/02/2026,Puerto,F-5175,Pedro S.,50.00,Activo,,Hamburguesa Clasica,4,12.50
+21/01/2026,Puerto,F-5045,Carmen B.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+21/02/2026,Puerto,F-5261,Ana P.,12.00,Activo,,Refresco,4,3.00
+01/01/2026,Malaga Centro,F-5416,Roberto T.,16.00,Eliminado,Despues del cobro,Jamon Iberico,1,16.00
+02/01/2026,Pedregalejo,F-5171,Pedro S.,19.50,Activo,,Tarta Queso,3,6.50
+28/02/2026,Malaga Centro,F-5407,Roberto T.,10.50,Eliminado,Despues de la cocina,Calamares Fritos,1,10.50
+19/02/2026,Pedregalejo,F-5275,Elena V.,17.50,Activo,,Dorada al Horno,1,17.50
+18/01/2026,Puerto,F-5012,Miguel A.,24.00,Activo,,Tortilla Espanola,3,8.00
+03/02/2026,Pedregalejo,F-5306,Carlos M.,9.00,Activo,,Helado Artesano,2,4.50
+07/02/2026,Puerto,F-5429,Carmen B.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+25/02/2026,Malaga Centro,F-5485,Roberto T.,33.00,Eliminado,Despues del cobro,Ensalada Cesar,3,11.00
+29/01/2026,Malaga Centro,F-5091,Carmen B.,60.00,Activo,,Pulpo a la Gallega,4,15.00
+24/01/2026,Pedregalejo,F-5330,Sofia N.,64.00,Activo,,Arroz Negro,4,16.00
+12/01/2026,Pedregalejo,F-5065,Miguel A.,22.00,Activo,,Entrecot,1,22.00
+03/01/2026,Malaga Centro,F-5144,David L.,58.00,Activo,,Paella Valenciana,4,14.50
+20/01/2026,Malaga Centro,F-5107,Sofia N.,15.00,Activo,,Cerveza Artesana,3,5.00
+15/01/2026,Pedregalejo,F-5420,Maria G.,33.00,Eliminado,Despues del cobro,Ensalada Cesar,3,11.00
+10/01/2026,Pedregalejo,F-5033,Carlos M.,9.00,Activo,,Refresco,3,3.00
+07/01/2026,Puerto,F-5196,Miguel A.,6.60,Activo,,Cafe con Leche,3,2.20
+07/02/2026,Pedregalejo,F-5258,Javier R.,72.00,Activo,,Lubina a la Plancha,4,18.00
+12/02/2026,Pedregalejo,F-5397,Laura F.,7.00,Activo,,Croquetas Jamon,1,7.00
+12/01/2026,Puerto,F-5435,Carmen B.,24.00,Eliminado,Despues del cobro,Solomillo Iberico,1,24.00
+02/01/2026,Malaga Centro,F-5139,Laura F.,4.50,Activo,,Helado Artesano,1,4.50
+01/02/2026,Puerto,F-5242,Maria G.,6.00,Activo,,Tiramisu,1,6.00
+04/02/2026,Puerto,F-5364,Carlos M.,18.00,Activo,,Lubina a la Plancha,1,18.00
+22/01/2026,Pedregalejo,F-5322,Elena V.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+02/02/2026,Puerto,F-5224,Elena V.,7.50,Activo,,Gazpacho,1,7.50
+07/01/2026,Pedregalejo,F-5347,Roberto T.,9.00,Activo,,Helado Artesano,2,4.50
+15/02/2026,Malaga Centro,F-5185,David L.,38.00,Activo,,Gin Tonic,4,9.50
+21/01/2026,Puerto,F-5354,Pedro S.,3.00,Activo,,Refresco,1,3.00
+12/02/2026,Pedregalejo,F-5172,Carlos M.,48.00,Activo,,Sangria Jarra,4,12.00
+16/02/2026,Puerto,F-5471,Carmen B.,43.50,Eliminado,Despues del cobro,Paella Valenciana,3,14.50
+15/02/2026,Puerto,F-5301,Miguel A.,19.00,Activo,,Ensalada Mixta,2,9.50
+15/02/2026,Puerto,F-5206,Laura F.,14.00,Activo,,Croquetas Jamon,2,7.00
+04/01/2026,Malaga Centro,F-5401,Roberto T.,16.00,Eliminado,Despues de la cocina,Arroz Negro,1,16.00
+27/02/2026,Malaga Centro,F-5170,Laura F.,38.00,Activo,,Gin Tonic,4,9.50
+15/02/2026,Malaga Centro,F-5327,David L.,14.00,Activo,,Cerveza Estrella,4,3.50
+28/01/2026,Pedregalejo,F-5138,Javier R.,64.00,Activo,,Jamon Iberico,4,16.00
+18/01/2026,Puerto,F-5289,David L.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+09/02/2026,Malaga Centro,F-5200,Javier R.,9.00,Activo,,Refresco,3,3.00
+20/02/2026,Puerto,F-5240,David L.,2.20,Activo,,Cafe con Leche,1,2.20
+19/02/2026,Puerto,F-5190,Elena V.,29.00,Activo,,Paella Valenciana,2,14.50
+04/02/2026,Puerto,F-5385,Carlos M.,64.00,Activo,,Arroz Negro,4,16.00
+23/02/2026,Pedregalejo,F-5192,Javier R.,30.00,Activo,,Hamburguesa Gourmet,2,15.00
+23/01/2026,Puerto,F-5480,Carmen B.,35.00,Eliminado,Despues del cobro,Dorada al Horno,2,17.50
+11/01/2026,Pedregalejo,F-5454,Luis H.,14.50,Eliminado,Despues del cobro,Paella Valenciana,1,14.50
+04/02/2026,Pedregalejo,F-5256,Roberto T.,15.00,Activo,,Hamburguesa Gourmet,1,15.00
+03/01/2026,Pedregalejo,F-5271,Javier R.,48.00,Activo,,Jamon Iberico,3,16.00
+18/02/2026,Pedregalejo,F-5342,Maria G.,3.00,Activo,,Refresco,1,3.00
+17/01/2026,Puerto,F-5041,Miguel A.,26.00,Activo,,Patatas Bravas,4,6.50
+26/02/2026,Malaga Centro,F-5040,Pedro S.,32.00,Activo,,Tortilla Espanola,4,8.00
+19/02/2026,Malaga Centro,F-5124,Pedro S.,2.50,Activo,,Agua Mineral,1,2.50
+16/02/2026,Pedregalejo,F-5018,Javier R.,37.50,Activo,,Hamburguesa Clasica,3,12.50
+31/01/2026,Puerto,F-5462,Carmen B.,15.50,Eliminado,Despues del cobro,Paella Mixta,1,15.50
+03/02/2026,Puerto,F-5134,Ana P.,15.00,Activo,,Gazpacho,2,7.50
+07/01/2026,Puerto,F-5126,Javier R.,9.50,Activo,,Ensalada Mixta,1,9.50
+28/02/2026,Malaga Centro,F-5464,Roberto T.,72.00,Eliminado,Despues del cobro,Solomillo Iberico,3,24.00
+19/01/2026,Puerto,F-5121,Miguel A.,24.00,Activo,,Tortilla Espanola,3,8.00
+17/02/2026,Malaga Centro,F-5273,Sofia N.,12.00,Activo,,Sangria Jarra,1,12.00
+27/02/2026,Pedregalejo,F-5187,Roberto T.,16.00,Activo,,Tortilla Espanola,2,8.00
+07/02/2026,Pedregalejo,F-5030,Carmen B.,35.00,Activo,,Dorada al Horno,2,17.50
+03/02/2026,Malaga Centro,F-5455,Roberto T.,36.00,Eliminado,Despues del cobro,Sangria Jarra,3,12.00
+10/01/2026,Puerto,F-5096,Miguel A.,8.50,Activo,,Mojito,1,8.50
+27/01/2026,Puerto,F-5447,Carmen B.,24.00,Eliminado,Despues del cobro,Solomillo Iberico,1,24.00
+28/01/2026,Malaga Centro,F-5145,David L.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+01/02/2026,Pedregalejo,F-5396,Carmen B.,7.50,Activo,,Gazpacho,1,7.50
+02/02/2026,Malaga Centro,F-5360,Pedro S.,40.50,Activo,,Gambas al Ajillo,3,13.50
+11/01/2026,Malaga Centro,F-5174,Ana P.,21.00,Activo,,Calamares Fritos,2,10.50
+15/02/2026,Puerto,F-5287,Ana P.,54.00,Activo,,Lubina a la Plancha,3,18.00
+19/02/2026,Pedregalejo,F-5103,Elena V.,17.50,Activo,,Dorada al Horno,1,17.50
+25/02/2026,Pedregalejo,F-5113,Carlos M.,31.00,Activo,,Paella Mixta,2,15.50
+17/01/2026,Malaga Centro,F-5479,Roberto T.,18.00,Eliminado,Antes de la cocina,Lubina a la Plancha,1,18.00
+05/01/2026,Puerto,F-5195,Carlos M.,5.40,Activo,,Cafe Solo,3,1.80
+08/02/2026,Puerto,F-5350,Maria G.,6.50,Activo,,Tarta Queso,1,6.50
+11/02/2026,Pedregalejo,F-5438,Javier R.,13.50,Eliminado,Antes de la cocina,Gambas al Ajillo,1,13.50
+01/01/2026,Malaga Centro,F-5308,Sofia N.,1.90,Activo,,Cortado,1,1.90
+24/01/2026,Puerto,F-5337,Laura F.,96.00,Activo,,Solomillo Iberico,4,24.00
+10/02/2026,Pedregalejo,F-5439,Luis H.,35.00,Eliminado,Despues del cobro,Dorada al Horno,2,17.50
+23/02/2026,Malaga Centro,F-5160,Maria G.,32.00,Activo,,Arroz Negro,2,16.00
+28/01/2026,Malaga Centro,F-5123,Laura F.,5.50,Activo,,Copa Vino Tinto,1,5.50
+04/02/2026,Puerto,F-5328,Laura F.,43.50,Activo,,Paella Valenciana,3,14.50
+31/01/2026,Pedregalejo,F-5427,Luis H.,33.00,Eliminado,Despues del cobro,Ensalada Cesar,3,11.00
+05/02/2026,Pedregalejo,F-5209,Laura F.,43.50,Activo,,Paella Valenciana,3,14.50
+23/02/2026,Pedregalejo,F-5319,Laura F.,5.50,Activo,,Copa Vino Tinto,1,5.50
+30/01/2026,Pedregalejo,F-5051,Sofia N.,14.00,Activo,,Tostada,4,3.50
+20/02/2026,Puerto,F-5317,David L.,31.00,Activo,,Paella Mixta,2,15.50
+18/01/2026,Malaga Centro,F-5352,Laura F.,13.50,Activo,,Helado Artesano,3,4.50
+02/01/2026,Puerto,F-5305,Miguel A.,13.00,Activo,,Patatas Bravas,2,6.50
+09/01/2026,Puerto,F-5253,Elena V.,48.00,Activo,,Sangria Jarra,4,12.00
+09/01/2026,Malaga Centro,F-5274,Miguel A.,66.00,Activo,,Entrecot,3,22.00
+05/01/2026,Pedregalejo,F-5463,Luis H.,33.00,Eliminado,Despues de la cocina,Ensalada Cesar,3,11.00
+28/02/2026,Puerto,F-5326,David L.,9.50,Activo,,Gin Tonic,1,9.50
+05/01/2026,Malaga Centro,F-5437,Roberto T.,15.50,Eliminado,Despues del cobro,Paella Mixta,1,15.50
+14/01/2026,Pedregalejo,F-5264,David L.,28.00,Activo,,Croquetas Jamon,4,7.00
+18/01/2026,Malaga Centro,F-5348,Elena V.,29.00,Activo,,Paella Valenciana,2,14.50
+20/02/2026,Pedregalejo,F-5052,Carmen B.,13.00,Activo,,Patatas Bravas,2,6.50
+18/02/2026,Malaga Centro,F-5467,Roberto T.,33.00,Eliminado,Antes de la cocina,Ensalada Cesar,3,11.00
+15/02/2026,Malaga Centro,F-5345,Roberto T.,12.00,Activo,,Refresco,4,3.00
+23/01/2026,Pedregalejo,F-5137,Pedro S.,42.00,Activo,,Calamares Fritos,4,10.50
+30/01/2026,Malaga Centro,F-5165,Pedro S.,48.00,Activo,,Solomillo Iberico,2,24.00
+05/01/2026,Pedregalejo,F-5357,Javier R.,21.00,Activo,,Croquetas Jamon,3,7.00
+09/02/2026,Malaga Centro,F-5285,Maria G.,21.00,Activo,,Croquetas Jamon,3,7.00
+05/01/2026,Puerto,F-5423,Carmen B.,45.00,Eliminado,Despues del cobro,Hamburguesa Gourmet,3,15.00
+01/01/2026,Pedregalejo,F-5176,Miguel A.,5.00,Activo,,Copa Vino Blanco,1,5.00
+14/01/2026,Pedregalejo,F-5379,Laura F.,16.50,Activo,,Copa Vino Tinto,3,5.50
+12/01/2026,Malaga Centro,F-5071,Carlos M.,64.00,Activo,,Jamon Iberico,4,16.00
+25/01/2026,Malaga Centro,F-5341,David L.,9.50,Activo,,Gin Tonic,1,9.50
+28/02/2026,Puerto,F-5211,David L.,35.00,Activo,,Dorada al Horno,2,17.50
+18/01/2026,Malaga Centro,F-5111,Miguel A.,20.00,Activo,,Copa Vino Blanco,4,5.00
+28/02/2026,Malaga Centro,F-5425,Pedro S.,37.50,Eliminado,Antes de la cocina,Hamburguesa Clasica,3,12.50
+20/01/2026,Malaga Centro,F-5076,Javier R.,28.50,Activo,,Gin Tonic,3,9.50
+20/02/2026,Malaga Centro,F-5152,Carlos M.,16.00,Activo,,Jamon Iberico,1,16.00
+31/01/2026,Malaga Centro,F-5046,Javier R.,1.80,Activo,,Cafe Solo,1,1.80
+04/01/2026,Malaga Centro,F-5461,Roberto T.,17.50,Eliminado,Despues del cobro,Dorada al Horno,1,17.50
+14/02/2026,Pedregalejo,F-5223,Pedro S.,66.00,Activo,,Entrecot,3,22.00
+09/01/2026,Malaga Centro,F-5069,Carlos M.,17.00,Activo,,Mojito,2,8.50
+04/02/2026,Pedregalejo,F-5198,Miguel A.,7.00,Activo,,Cerveza Estrella,2,3.50
+30/01/2026,Pedregalejo,F-5087,Miguel A.,5.00,Activo,,Copa Vino Blanco,1,5.00
+18/02/2026,Pedregalejo,F-5067,Ana P.,5.00,Activo,,Agua Mineral,2,2.50
+22/01/2026,Malaga Centro,F-5098,Elena V.,27.00,Activo,,Gambas al Ajillo,2,13.50
+15/02/2026,Pedregalejo,F-5233,Miguel A.,25.50,Activo,,Mojito,3,8.50
+14/01/2026,Malaga Centro,F-5086,Laura F.,96.00,Activo,,Solomillo Iberico,4,24.00
+16/02/2026,Puerto,F-5193,Elena V.,16.00,Activo,,Arroz Negro,1,16.00
+19/01/2026,Malaga Centro,F-5415,Elena V.,72.00,Eliminado,Despues del cobro,Solomillo Iberico,3,24.00
+25/01/2026,Pedregalejo,F-5332,Carmen B.,29.00,Activo,,Paella Valenciana,2,14.50
+11/02/2026,Malaga Centro,F-5155,Sofia N.,96.00,Activo,,Solomillo Iberico,4,24.00
+09/02/2026,Malaga Centro,F-5005,Javier R.,18.00,Activo,,Lubina a la Plancha,1,18.00
+17/01/2026,Pedregalejo,F-5177,Carlos M.,62.00,Activo,,Paella Mixta,4,15.50
+14/02/2026,Puerto,F-5450,Carmen B.,15.00,Eliminado,Antes de la cocina,Hamburguesa Gourmet,1,15.00
+12/02/2026,Pedregalejo,F-5466,Luis H.,33.00,Eliminado,Despues del cobro,Ensalada Cesar,3,11.00
+15/01/2026,Pedregalejo,F-5116,Carmen B.,11.00,Activo,,Ensalada Cesar,1,11.00
+12/01/2026,Puerto,F-5368,Laura F.,16.50,Activo,,Copa Vino Tinto,3,5.50
+19/01/2026,Malaga Centro,F-5097,Pedro S.,29.00,Activo,,Paella Valenciana,2,14.50
+04/02/2026,Puerto,F-5395,Maria G.,8.50,Activo,,Mojito,1,8.50
+30/01/2026,Puerto,F-5310,Javier R.,2.50,Activo,,Agua Mineral,1,2.50
+07/01/2026,Puerto,F-5157,Javier R.,17.00,Activo,,Mojito,2,8.50
+29/01/2026,Malaga Centro,F-5351,Carmen B.,48.00,Activo,,Jamon Iberico,3,16.00
+16/02/2026,Puerto,F-5101,Laura F.,7.00,Activo,,Cerveza Estrella,2,3.50
+09/01/2026,Pedregalejo,F-5469,Luis H.,15.00,Eliminado,Despues de la cocina,Pulpo a la Gallega,1,15.00
+10/02/2026,Puerto,F-5221,David L.,24.00,Activo,,Tiramisu,4,6.00
+21/02/2026,Pedregalejo,F-5226,Carlos M.,2.50,Activo,,Agua Mineral,1,2.50
+20/02/2026,Pedregalejo,F-5019,Elena V.,22.00,Activo,,Ensalada Cesar,2,11.00
+24/01/2026,Malaga Centro,F-5336,Maria G.,32.00,Activo,,Arroz Negro,2,16.00
+20/02/2026,Pedregalejo,F-5154,Pedro S.,35.00,Activo,,Dorada al Horno,2,17.50
+13/01/2026,Pedregalejo,F-5131,Carlos M.,62.00,Activo,,Paella Mixta,4,15.50
+26/01/2026,Puerto,F-5402,Carmen B.,27.00,Eliminado,Despues de la cocina,Gambas al Ajillo,2,13.50
+29/01/2026,Puerto,F-5391,David L.,20.00,Activo,,Copa Vino Blanco,4,5.00
+07/01/2026,Pedregalejo,F-5399,Roberto T.,10.00,Activo,,Cerveza Artesana,2,5.00
+07/02/2026,Puerto,F-5147,Roberto T.,24.00,Activo,,Solomillo Iberico,1,24.00
+21/01/2026,Puerto,F-5298,Elena V.,12.00,Activo,,Refresco,4,3.00
+13/02/2026,Malaga Centro,F-5156,Javier R.,45.00,Activo,,Hamburguesa Gourmet,3,15.00
+01/02/2026,Pedregalejo,F-5031,Sofia N.,64.00,Activo,,Arroz Negro,4,16.00
+30/01/2026,Malaga Centro,F-5434,Roberto T.,36.00,Eliminado,Despues de la cocina,Sangria Jarra,3,12.00
+08/01/2026,Puerto,F-5186,Javier R.,22.00,Activo,,Copa Vino Tinto,4,5.50
+06/01/2026,Puerto,F-5441,Carmen B.,24.00,Eliminado,Despues del cobro,Solomillo Iberico,1,24.00
+30/01/2026,Pedregalejo,F-5412,Luis H.,31.50,Eliminado,Antes de la cocina,Calamares Fritos,3,10.50
+10/01/2026,Pedregalejo,F-5263,Laura F.,2.20,Activo,,Cafe con Leche,1,2.20
+01/01/2026,Pedregalejo,F-5293,Roberto T.,27.00,Activo,,Gambas al Ajillo,2,13.50
+12/01/2026,Malaga Centro,F-5044,Maria G.,72.00,Activo,,Lubina a la Plancha,4,18.00
+19/02/2026,Malaga Centro,F-5079,Roberto T.,6.60,Activo,,Cafe con Leche,3,2.20
+26/02/2026,Pedregalejo,F-5448,Luis H.,31.50,Eliminado,Despues del cobro,Calamares Fritos,3,10.50
+14/01/2026,Malaga Centro,F-5359,David L.,36.00,Activo,,Lubina a la Plancha,2,18.00
+29/01/2026,Pedregalejo,F-5120,Roberto T.,31.50,Activo,,Calamares Fritos,3,10.50
+07/02/2026,Malaga Centro,F-5197,Roberto T.,46.50,Activo,,Paella Mixta,3,15.50
+21/02/2026,Pedregalejo,F-5021,Javier R.,15.00,Activo,,Pulpo a la Gallega,1,15.00
+13/01/2026,Pedregalejo,F-5386,Pedro S.,21.00,Activo,,Croquetas Jamon,3,7.00
+21/02/2026,Malaga Centro,F-5236,David L.,16.50,Activo,,Crema Catalana,3,5.50
+08/02/2026,Pedregalejo,F-5202,Laura F.,16.00,Activo,,Arroz Negro,1,16.00
+06/01/2026,Pedregalejo,F-5451,Luis H.,40.50,Eliminado,Despues del cobro,Gambas al Ajillo,3,13.50
+18/01/2026,Malaga Centro,F-5214,Elena V.,62.00,Activo,,Paella Mixta,4,15.50
+22/01/2026,Malaga Centro,F-5431,Roberto T.,32.00,Eliminado,Despues de la cocina,Arroz Negro,2,16.00
+22/01/2026,Pedregalejo,F-5189,Javier R.,10.50,Activo,,Calamares Fritos,1,10.50
+01/01/2026,Malaga Centro,F-5286,Carmen B.,8.50,Activo,,Mojito,1,8.50
+12/01/2026,Malaga Centro,F-5208,Carlos M.,48.00,Activo,,Jamon Iberico,3,16.00
+01/02/2026,Puerto,F-5188,Roberto T.,9.00,Activo,,Helado Artesano,2,4.50
+24/02/2026,Pedregalejo,F-5029,Pedro S.,60.00,Activo,,Hamburguesa Gourmet,4,15.00
+01/01/2026,Pedregalejo,F-5257,Carlos M.,34.00,Activo,,Mojito,4,8.50
+19/01/2026,Malaga Centro,F-5008,Carlos M.,21.00,Activo,,Calamares Fritos,2,10.50
+24/02/2026,Malaga Centro,F-5250,Laura F.,3.80,Activo,,Cortado,2,1.90
+24/02/2026,Malaga Centro,F-5215,Ana P.,18.00,Activo,,Lubina a la Plancha,1,18.00
+15/01/2026,Malaga Centro,F-5061,Javier R.,22.00,Activo,,Ensalada Cesar,2,11.00
+19/02/2026,Malaga Centro,F-5104,Sofia N.,24.00,Activo,,Solomillo Iberico,1,24.00
+11/01/2026,Pedregalejo,F-5445,Luis H.,25.00,Eliminado,Despues del cobro,Hamburguesa Clasica,2,12.50
+07/01/2026,Puerto,F-5411,Carmen B.,18.00,Eliminado,Despues del cobro,Lubina a la Plancha,1,18.00
+23/01/2026,Malaga Centro,F-5042,Pedro S.,8.80,Activo,,Cafe con Leche,4,2.20
+22/02/2026,Pedregalejo,F-5291,Maria G.,48.00,Activo,,Sangria Jarra,4,12.00
+14/01/2026,Pedregalejo,F-5078,Elena V.,9.50,Activo,,Gin Tonic,1,9.50
+08/02/2026,Malaga Centro,F-5084,Miguel A.,14.50,Activo,,Paella Valenciana,1,14.50
+26/01/2026,Puerto,F-5201,Miguel A.,22.00,Activo,,Crema Catalana,4,5.50
+18/01/2026,Pedregalejo,F-5199,Javier R.,12.00,Activo,,Tiramisu,2,6.00
+13/01/2026,Puerto,F-5318,David L.,46.50,Activo,,Paella Mixta,3,15.50
+19/01/2026,Malaga Centro,F-5035,Laura F.,11.00,Activo,,Crema Catalana,2,5.50
+28/01/2026,Malaga Centro,F-5142,Laura F.,10.50,Activo,,Calamares Fritos,1,10.50
+23/01/2026,Pedregalejo,F-5421,Luis H.,35.00,Eliminado,Despues del cobro,Dorada al Horno,2,17.50
+11/01/2026,Malaga Centro,F-5278,Sofia N.,18.00,Activo,,Helado Artesano,4,4.50
+22/01/2026,Malaga Centro,F-5380,Miguel A.,42.00,Activo,,Calamares Fritos,4,10.50
+23/02/2026,Puerto,F-5432,Carmen B.,25.00,Eliminado,Despues del cobro,Hamburguesa Clasica,2,12.50
+01/02/2026,Malaga Centro,F-5127,Javier R.,5.50,Activo,,Crema Catalana,1,5.50
+21/02/2026,Puerto,F-5135,Miguel A.,5.00,Activo,,Agua Mineral,2,2.50
+20/02/2026,Puerto,F-5015,Pedro S.,66.00,Activo,,Entrecot,3,22.00
+22/02/2026,Pedregalejo,F-5403,David L.,16.00,Eliminado,Despues del cobro,Arroz Negro,1,16.00
+02/01/2026,Pedregalejo,F-5062,Maria G.,48.00,Activo,,Jamon Iberico,3,16.00
+16/02/2026,Pedregalejo,F-5112,Laura F.,64.00,Activo,,Arroz Negro,4,16.00
+11/02/2026,Puerto,F-5272,David L.,72.00,Activo,,Solomillo Iberico,3,24.00
+27/01/2026,Pedregalejo,F-5384,Carlos M.,43.50,Activo,,Paella Valenciana,3,14.50

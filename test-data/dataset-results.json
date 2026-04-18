@@ -1,0 +1,38 @@
+[
+  {
+    "name": "dataset-1-paella-dorada",
+    "slug": "ji5h_yp3r-C2",
+    "report_id": "61b7a33b-6239-4a68-b41b-aeb424b3b997",
+    "upload_id": "13e8f743-de46-4b4e-af45-e439c7a4b2dc"
+  },
+  {
+    "name": "dataset-2-tapas-co",
+    "slug": "8AYk5T7nVhPL",
+    "report_id": "a3ffb360-10fa-4b32-b0a9-e893ec624f1a",
+    "upload_id": "f4eca6a0-04f8-468f-84cb-cdc17ce095f5"
+  },
+  {
+    "name": "dataset-3-sushi-zen",
+    "slug": "CAli1L4ig3OZ",
+    "report_id": "f538492d-fb85-4d52-9de6-5f60c5185e35",
+    "upload_id": "93459063-0ba3-4eae-b618-43c9dc19390c"
+  },
+  {
+    "name": "dataset-4-el-asador",
+    "slug": "8Pw9BKrlvtKi",
+    "report_id": "cebbe0be-a7a1-4009-8c08-e75728b14a3d",
+    "upload_id": "335f3abb-4746-4bab-a7cd-380c3d3876ad"
+  },
+  {
+    "name": "dataset-5-cafe-puerto",
+    "slug": "EtYbM0MJXjaP",
+    "report_id": "8d81b120-1ed9-4e70-ae6e-40b48551c893",
+    "upload_id": "cdacf87b-9e0a-4964-a6d9-a1b04c602128"
+  },
+  {
+    "name": "dataset-6-restaurante-luna",
+    "slug": "qns2hAMw-JA0",
+    "report_id": "26ff422a-6ff8-4371-82ed-32109513c27b",
+    "upload_id": "81352791-7170-4965-89db-be2cf0bcb7e4"
+  }
+]
