@@ -5,6 +5,12 @@ import { createServerClient } from '@/lib/supabase';
 import { deductCredit } from '@/lib/credits';
 import { inngest } from '@/lib/inngest/client';
 import { serverTrackAnalysisStarted, serverTrackCreditSpent } from '@/lib/posthog-server-events';
+import {
+  isPOSConnector,
+  isInventoryConnector,
+  POS_CONNECTOR_IDS,
+  INVENTORY_CONNECTOR_IDS,
+} from '@/lib/types/connectors';
 
 export async function POST(req: NextRequest) {
   try {
@@ -30,6 +36,26 @@ export async function POST(req: NextRequest) {
     if (!posUploadId || !posConnector) {
       return NextResponse.json(
         { error: 'posUploadId and posConnector are required' },
+        { status: 400 }
+      );
+    }
+
+    // SEC-02: allowlist de conectores. Rechazamos en la frontera cualquier valor
+    // fuera de la unión conocida para que nada raro llegue al parser o a Inngest.
+    if (!isPOSConnector(posConnector)) {
+      return NextResponse.json(
+        {
+          error: `Invalid posConnector. Must be one of: ${POS_CONNECTOR_IDS.join(', ')}`,
+        },
+        { status: 400 }
+      );
+    }
+
+    if (inventoryConnector != null && !isInventoryConnector(inventoryConnector)) {
+      return NextResponse.json(
+        {
+          error: `Invalid inventoryConnector. Must be one of: ${INVENTORY_CONNECTOR_IDS.join(', ')}`,
+        },
         { status: 400 }
       );
     }

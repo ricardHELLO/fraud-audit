@@ -33,13 +33,17 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // BIZ-07: el constraint de DB (CHECK BETWEEN 1 AND 5) se pensó para ints 1..5,
+    // pero sin validar `Number.isInteger` llegaban 3.5 al insert y fallaba con 500.
+    // Validamos en la frontera con mensaje claro.
     if (
       typeof accuracy_rating !== 'number' ||
+      !Number.isInteger(accuracy_rating) ||
       accuracy_rating < 1 ||
       accuracy_rating > 5
     ) {
       return NextResponse.json(
-        { error: 'accuracy_rating must be a number between 1 and 5' },
+        { error: 'accuracy_rating must be an integer between 1 and 5' },
         { status: 400 }
       );
     }

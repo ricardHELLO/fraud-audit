@@ -2,6 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { createServerClient } from '@/lib/supabase';
 import { detectVolume } from '@/lib/volume-detector';
+import {
+  isConnectorType,
+  isSourceCategory,
+  ALL_CONNECTOR_IDS,
+  SOURCE_CATEGORIES,
+} from '@/lib/types/connectors';
 
 export async function POST(req: NextRequest) {
   try {
@@ -46,6 +52,26 @@ export async function POST(req: NextRequest) {
     if (!sourceCategory) {
       return NextResponse.json(
         { error: 'sourceCategory is required' },
+        { status: 400 }
+      );
+    }
+
+    // SEC-02: allowlist de conectores y categorías. Rechazamos input desconocido
+    // antes de tocar Storage o DB para evitar filas envenenadas y runs fallidos.
+    if (!isConnectorType(connectorType)) {
+      return NextResponse.json(
+        {
+          error: `Invalid connectorType. Must be one of: ${ALL_CONNECTOR_IDS.join(', ')}`,
+        },
+        { status: 400 }
+      );
+    }
+
+    if (!isSourceCategory(sourceCategory)) {
+      return NextResponse.json(
+        {
+          error: `Invalid sourceCategory. Must be one of: ${SOURCE_CATEGORIES.join(', ')}`,
+        },
         { status: 400 }
       );
     }

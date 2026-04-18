@@ -62,6 +62,37 @@ export async function POST(req: NextRequest) {
           return NextResponse.json({ error: 'Missing userId in session metadata' }, { status: 400 });
         }
 
+        // SEC-05: Stripe puede emitir `checkout.session.completed` con
+        // `payment_status` distinto de 'paid' (trials, async payment methods).
+        // No otorgamos créditos hasta que el cobro esté confirmado.
+        if (session.payment_status !== 'paid') {
+          console.info(
+            `Stripe session ${session.id} not paid (status: ${session.payment_status}), skipping credit award`
+          );
+          return NextResponse.json({ received: true, skipped: 'unpaid' }, { status: 200 });
+        }
+
+        // INT-04: antes de pegarle a Stripe con listLineItems (latency + quota),
+        // detectamos webhooks duplicados consultando credit_transactions por
+        // `reference_id`. El PG function ya es idempotente, pero ahorra la
+        // round-trip innecesaria en reintentos de Stripe.
+        {
+          const { createServerClient } = await import('@/lib/supabase');
+          const supabase = createServerClient();
+          const { data: existing } = await supabase
+            .from('credit_transactions')
+            .select('id')
+            .eq('reason', 'purchase')
+            .eq('reference_id', session.id)
+            .limit(1)
+            .maybeSingle();
+
+          if (existing) {
+            console.info(`Duplicate Stripe webhook for session ${session.id}, skipping listLineItems`);
+            return NextResponse.json({ received: true, duplicate: true }, { status: 200 });
+          }
+        }
+
         const lineItems = await stripe.checkout.sessions.listLineItems(session.id, { limit: 10 });
         const priceToCredits = getPriceToCredits();
         let totalCreditsAwarded = 0;
