@@ -1,6 +1,6 @@
 # Estado de los findings de auditoría QA
 
-**Última actualización:** 2026-04-18
+**Última actualización:** 2026-04-18 (post commit `3d333d7`)
 **Alcance:** 64 findings (31 backend + 33 frontend) de las auditorías QA
 del 2026-03-28.
 
@@ -30,11 +30,11 @@ del 2026-03-28.
 | ID | Sev | Título | Estado | Ref. |
 |---|---|---|---|---|
 | SEC-01 | 🔴 CRIT | `isDemo` bypass: saltar cobro de créditos | ✅ | `2d13334` — límite server-side de 1 demo/usuario |
-| SEC-02 | 🟠 HIGH | Sin validación de `posConnector`/`inventoryConnector` | 🟡 | **fix en esta PR (FASE 2.2)** |
+| SEC-02 | 🟠 HIGH | Sin validación de `posConnector`/`inventoryConnector` | ✅ | `3d333d7` — type guards + allowlist en analyze/upload |
 | SEC-03 | 🟠 HIGH | Sin límite de tamaño en uploads | ✅ | `4fa4bd5` + `58b44c0` — validación 50MB client+API |
 | SEC-04 | 🟠 HIGH | Sin rate limiting en ningún endpoint | 🔵 | Requiere Upstash/Vercel KV — decisión de infra |
-| SEC-05 | 🟡 MED | Stripe webhook: no verifica `payment_status` | 🟡 | **fix en esta PR (FASE 2.3)** |
-| SEC-06 | 🟡 MED | Sin headers de seguridad HTTP | 🟡 | **fix en esta PR (FASE 2.3)** — `next.config.js` headers() |
+| SEC-05 | 🟡 MED | Stripe webhook: no verifica `payment_status` | ✅ | `3d333d7` — skip si `payment_status !== 'paid'` |
+| SEC-06 | 🟡 MED | Sin headers de seguridad HTTP | ✅ | `3d333d7` — `next.config.js` `headers()` con XFO/nosniff/Referrer/Permissions |
 | SEC-07 | 🟡 MED | RLS en Storage bucket no visible/verificado | 🔵 | Requiere verificación en Supabase Dashboard |
 
 ### Lógica de negocio (BIZ)
@@ -47,7 +47,7 @@ del 2026-03-28.
 | BIZ-04 | 🟡 MED | Waste-analysis underreporting con datos vacíos | ❔ | Verificar si la guard se añadió en `a93800d`/`a142e35` |
 | BIZ-05 | 🟡 MED | Crash en `conclusions.ts` con `by_local[0]` vacío | ✅ | `6e16e24` — null check en SummaryTab + guards similares |
 | BIZ-06 | 🟡 MED | Correlation: inventory score constante entre locales | ✅ | `2c0b15c` — score inventario por local deshabilitado |
-| BIZ-07 | 🟡 MED | `feedback/route.ts`: `accuracy_rating` sin rango | ✅ | `8f07780` (NM-04) — reject fuera de 1-5 |
+| BIZ-07 | 🟡 MED | `feedback/route.ts`: `accuracy_rating` sin rango | ✅ | `8f07780` (NM-04) + `3d333d7` — refuerzo con `Number.isInteger` |
 | BIZ-08 | 🟡 MED | `alerts/route.ts`: race en límite de 10 reglas | 🟡 | Pendiente — requiere lock atómico o constraint DB |
 | BIZ-09 | 🟢 LOW | `inventory-deviation.ts`: absolute values ocultan dirección | ✅ | `2c0b15c` — `net_deviation` añadido |
 
@@ -56,18 +56,18 @@ del 2026-03-28.
 | ID | Sev | Título | Estado | Ref. |
 |---|---|---|---|---|
 | INN-01 | 🟠 HIGH | Sin `onFailure` handler: créditos perdidos | ✅ | Sprint QA — onFailure implementado |
-| INN-02 | 🟡 MED | Paso 7: N queries secuenciales para `last_triggered_at` | 🟡 | **fix en esta PR (FASE 2.3)** — batch update |
+| INN-02 | 🟡 MED | Paso 7: N queries secuenciales para `last_triggered_at` | ✅ | `3d333d7` — batch `UPDATE ... .in('id', triggeredIds)` |
 | INN-03 | 🟡 MED | Paso 5: analytics dentro del step causa doble marcado | ❔ | Requiere verificación en código actual |
-| INN-04 | 🟢 LOW | Paso 1 `update-status-processing` redundante | 🟡 | **fix en esta PR (FASE 2.3)** — eliminar step |
+| INN-04 | 🟢 LOW | Paso 1 `update-status-processing` redundante | ✅ | `3d333d7` — step eliminado, renumerados 1..7 |
 
 ### Integraciones externas (INT)
 
 | ID | Sev | Título | Estado | Ref. |
 |---|---|---|---|---|
 | INT-01 | 🟠 HIGH | Claude API: truncación JSON produce payload inválido | ✅ | `519537a` — AI insights payload truncation |
-| INT-02 | 🟡 MED | Claude API: sin timeout configurado | 🟡 | **fix en esta PR (FASE 2.3)** |
+| INT-02 | 🟡 MED | Claude API: sin timeout configurado | ✅ | `3d333d7` — `new Anthropic({ timeout: 60_000 })` |
 | INT-03 | 🟡 MED | Resend: FROM address es sandbox | 🔵 | Requiere configurar dominio en Resend Dashboard |
-| INT-04 | 🟢 LOW | Stripe: `listLineItems` antes del check de duplicados | 🟡 | **fix en esta PR (FASE 2.3)** — reordenar |
+| INT-04 | 🟢 LOW | Stripe: `listLineItems` antes del check de duplicados | ✅ | `3d333d7` — pre-check DB por `reference_id` |
 
 ### Performance (PERF)
 
@@ -75,7 +75,7 @@ del 2026-03-28.
 |---|---|---|---|---|
 | PERF-01 | 🟠 HIGH | Upload: archivo completo en memoria sin límite (OOM) | ✅ | `58b44c0` — límite 50MB previene OOM |
 | PERF-02 | 🟡 MED | PapaParse sin límite de filas | 🟡 | Pendiente — añadir `preview` o `step` option |
-| PERF-03 | 🟡 MED | `canEarnReward` hace query completa sin LIMIT | 🟡 | **fix en esta PR (FASE 2.3)** |
+| PERF-03 | 🟡 MED | `canEarnReward` hace query completa sin LIMIT | ✅ | `3d333d7` — `count: 'exact', head: true` |
 
 ### Error handling (ERR)
 
@@ -84,7 +84,7 @@ del 2026-03-28.
 | ERR-01 | 🟠 HIGH | Routes no destructuran el error de Supabase | ❔ | Requiere barrido del código |
 | ERR-02 | 🟡 MED | `feedback/route.ts`: feedback guardado pero 500 si crédito falla | 🟡 | Pendiente — reordenar commit/rollback |
 | ERR-03 | 🟡 MED | `console.log`/`console.error` en producción | 🟡 | Pendiente — migrar a logger estructurado |
-| ERR-04 | 🟢 LOW | `bug-report/route.ts`: silencia errores de crédito | 🟡 | **fix en esta PR (FASE 2.3)** |
+| ERR-04 | 🟢 LOW | `bug-report/route.ts`: silencia errores de crédito | ✅ | Ya cerrado — `catch` actual sí loguea con `console.error` |
 
 ---
 
@@ -132,21 +132,27 @@ del 2026-03-28.
 
 | Estado | Backend | Frontend | Total |
 |---|---|---|---|
-| ✅ Cerrado | 11 | 11 | **22** |
-| 🟡 Abierto | 13 | 21 | **34** |
+| ✅ Cerrado | 20 | 11 | **31** |
+| 🟡 Abierto | 5 | 22 | **27** |
 | 🔵 Requiere infra | 3 | 0 | **3** |
-| ❔ Incierto | 4 | 0 | **4** |
+| ❔ Incierto | 3 | 0 | **3** |
 | 🟣 No aplica | 0 | 0 | **0** |
 | **TOTAL** | **31** | **33** | **64** |
 
 ## Plan para esta PR (`hardening/phase-2-3`)
 
-Cierra o avanza los siguientes items dentro del alcance acordado:
+Cerrado hasta ahora en la rama:
 
-- **SEC-02** (FASE 2.2) — allowlist de conectores.
-- **SEC-05, SEC-06, INN-02, INN-04, INT-02, INT-04, PERF-03, ERR-04** (FASE 2.3) — 8 fixes triviales.
+- ✅ **SEC-02** (FASE 2.2) — allowlist de conectores (`3d333d7`).
+- ✅ **SEC-05, SEC-06, INN-02, INN-04, INT-02, INT-04, PERF-03** (FASE 2.3) — 7 fixes (`3d333d7`).
+- ✅ **BIZ-07** — refuerzo con `Number.isInteger` (`3d333d7`).
+- ✅ **ERR-04** — verificado ya cerrado en `catch` actual del bug-report.
+
+Pendiente en la rama:
+
 - **AUDIT-012 refuerzo** + **AUDIT-014** (FASE 3.1, 3.2) — error boundaries de ruta.
+- **FASE 3.3** — edge-case tests (n<4 correlation, empty states, guard 50MB).
 
-Post-PR, quedarán ~26 findings abiertos. Los de severidad alta pendientes
-son todos de accesibilidad/UX (no críticos) o decisiones de negocio
-(BIZ-01) / infra (SEC-04, SEC-07, INT-03).
+Post-PR, quedan 27 findings abiertos. Los pendientes de severidad alta son
+todos de accesibilidad/UX (no críticos) o decisiones de negocio (BIZ-01,
+BIZ-08) / infra (SEC-04, SEC-07, INT-03).
