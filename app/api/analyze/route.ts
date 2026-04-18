@@ -69,7 +69,15 @@ export async function POST(req: NextRequest) {
       .eq('clerk_id', userId)
       .single();
 
-    if (userError || !user) {
+    // ERR-01: PGRST116 (no rows) → 404 legítimo; otros errores → 500 con log.
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (analyze):', userError.message);
+      return NextResponse.json(
+        { error: 'Database error' },
+        { status: 500 }
+      );
+    }
+    if (!user) {
       return NextResponse.json(
         { error: 'User not found' },
         { status: 404 }

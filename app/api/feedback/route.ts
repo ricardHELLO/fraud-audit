@@ -50,14 +50,22 @@ export async function POST(req: NextRequest) {
 
     const supabase = createServerClient();
 
-    // Look up the internal user ID from Clerk ID
+    // Look up the internal user ID from Clerk ID.
+    // ERR-01: PGRST116 (no rows) sigue siendo 404; otros errores → 500.
     const { data: user, error: userError } = await supabase
       .from('users')
       .select('id')
       .eq('clerk_id', clerkId)
       .single();
 
-    if (userError || !user) {
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (feedback):', userError.message);
+      return NextResponse.json(
+        { error: 'Database error' },
+        { status: 500 }
+      );
+    }
+    if (!user) {
       return NextResponse.json(
         { error: 'User not found' },
         { status: 404 }

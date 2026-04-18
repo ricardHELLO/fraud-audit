@@ -21,12 +21,17 @@ export async function GET() {
 
     const supabase = createServerClient()
 
-    const { data: user } = await supabase
+    // ERR-01: separar 404 "no existe" de 500 "DB rota".
+    const { data: user, error: userError } = await supabase
       .from('users')
       .select('id')
       .eq('clerk_id', clerkId)
       .single()
 
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (alerts GET):', userError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
@@ -108,12 +113,17 @@ export async function POST(req: NextRequest) {
 
     const supabase = createServerClient()
 
-    const { data: user } = await supabase
+    // ERR-01: idem GET.
+    const { data: user, error: userError } = await supabase
       .from('users')
       .select('id')
       .eq('clerk_id', clerkId)
       .single()
 
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (alerts POST):', userError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }

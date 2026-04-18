@@ -1,6 +1,6 @@
 # Estado de los findings de auditoría QA
 
-**Última actualización:** 2026-04-18 (post commit `3d333d7`)
+**Última actualización:** 2026-04-18 (post commit `3d333d7` + INN-03/ERR-01 en WIP)
 **Alcance:** 64 findings (31 backend + 33 frontend) de las auditorías QA
 del 2026-03-28.
 
@@ -57,7 +57,7 @@ del 2026-03-28.
 |---|---|---|---|---|
 | INN-01 | 🟠 HIGH | Sin `onFailure` handler: créditos perdidos | ✅ | Sprint QA — onFailure implementado |
 | INN-02 | 🟡 MED | Paso 7: N queries secuenciales para `last_triggered_at` | ✅ | `3d333d7` — batch `UPDATE ... .in('id', triggeredIds)` |
-| INN-03 | 🟡 MED | Paso 5: analytics dentro del step causa doble marcado | ❔ | Requiere verificación en código actual |
+| INN-03 | 🟡 MED | Paso 5: analytics dentro del step causa doble marcado | ✅ | **esta PR** — analytics separado en `track-analysis-completed` step |
 | INN-04 | 🟢 LOW | Paso 1 `update-status-processing` redundante | ✅ | `3d333d7` — step eliminado, renumerados 1..7 |
 
 ### Integraciones externas (INT)
@@ -81,7 +81,7 @@ del 2026-03-28.
 
 | ID | Sev | Título | Estado | Ref. |
 |---|---|---|---|---|
-| ERR-01 | 🟠 HIGH | Routes no destructuran el error de Supabase | ❔ | Requiere barrido del código |
+| ERR-01 | 🟠 HIGH | Routes no destructuran el error de Supabase | ✅ | **esta PR** — barrido en 12 routes: 500 si `error.code !== 'PGRST116'`, 404 si no hay fila |
 | ERR-02 | 🟡 MED | `feedback/route.ts`: feedback guardado pero 500 si crédito falla | 🟡 | Pendiente — reordenar commit/rollback |
 | ERR-03 | 🟡 MED | `console.log`/`console.error` en producción | 🟡 | Pendiente — migrar a logger estructurado |
 | ERR-04 | 🟢 LOW | `bug-report/route.ts`: silencia errores de crédito | ✅ | Ya cerrado — `catch` actual sí loguea con `console.error` |
@@ -132,10 +132,10 @@ del 2026-03-28.
 
 | Estado | Backend | Frontend | Total |
 |---|---|---|---|
-| ✅ Cerrado | 20 | 11 | **31** |
+| ✅ Cerrado | 22 | 11 | **33** |
 | 🟡 Abierto | 5 | 22 | **27** |
 | 🔵 Requiere infra | 3 | 0 | **3** |
-| ❔ Incierto | 3 | 0 | **3** |
+| ❔ Incierto | 1 | 0 | **1** |
 | 🟣 No aplica | 0 | 0 | **0** |
 | **TOTAL** | **31** | **33** | **64** |
 
@@ -147,11 +147,17 @@ Cerrado hasta ahora en la rama:
 - ✅ **SEC-05, SEC-06, INN-02, INN-04, INT-02, INT-04, PERF-03** (FASE 2.3) — 7 fixes (`3d333d7`).
 - ✅ **BIZ-07** — refuerzo con `Number.isInteger` (`3d333d7`).
 - ✅ **ERR-04** — verificado ya cerrado en `catch` actual del bug-report.
+- ✅ **INN-03** — analytics extraído a su propio step (`track-analysis-completed`) para que retries del UPDATE no reenvíen el evento.
+- ✅ **ERR-01** — barrido en 12 routes: discriminación `PGRST116` (404 "no rows") vs otros codes (500 "DB rota").
 
 Pendiente en la rama:
 
 - **AUDIT-012 refuerzo** + **AUDIT-014** (FASE 3.1, 3.2) — error boundaries de ruta.
 - **FASE 3.3** — edge-case tests (n<4 correlation, empty states, guard 50MB).
+
+Finding abierto con restricción explícita "no tocar calculators":
+
+- ❔ **BIZ-04** (waste-analysis underreporting con datos vacíos) — verificado **abierto** (`lib/calculators/waste-analysis.ts:78` sin guard de datos). Deferido: el usuario pidió no tocar calculators en esta PR.
 
 Post-PR, quedan 27 findings abiertos. Los pendientes de severidad alta son
 todos de accesibilidad/UX (no críticos) o decisiones de negocio (BIZ-01,

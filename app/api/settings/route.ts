@@ -12,14 +12,19 @@ export async function GET() {
 
     const supabase = createServerClient();
 
-    // Look up user
+    // Look up user.
+    // ERR-01: separar 404 "no hay fila" (PGRST116) de 500 "DB rota".
     const { data: user, error: userError } = await supabase
       .from('users')
       .select('id, email, name, credits_balance, organization_id')
       .eq('clerk_id', clerkId)
       .single();
 
-    if (userError || !user) {
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (settings GET):', userError.message);
+      return NextResponse.json({ error: 'Database error' }, { status: 500 });
+    }
+    if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
@@ -90,14 +95,19 @@ export async function PATCH(req: NextRequest) {
 
     const supabase = createServerClient();
 
-    // Look up user
+    // Look up user.
+    // ERR-01: idem GET.
     const { data: user, error: userError } = await supabase
       .from('users')
       .select('id')
       .eq('clerk_id', clerkId)
       .single();
 
-    if (userError || !user) {
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (settings PATCH):', userError.message);
+      return NextResponse.json({ error: 'Database error' }, { status: 500 });
+    }
+    if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 

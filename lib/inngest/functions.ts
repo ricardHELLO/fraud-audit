@@ -85,14 +85,20 @@ export const analyzeReport = inngest.createFunction(
       });
     });
 
-    // Step 4: Mark complete
+    // Step 4a: Mark complete in DB
     await step.run('update-status-completed', async () => {
       await supabase
         .from('reports')
         .update({ status: 'completed' })
         .eq('id', reportId);
+    });
 
-      // Track completion
+    // Step 4b: Track completion in PostHog.
+    // INN-03: analytics vive en su propio step para que un retry del UPDATE
+    // de arriba no re-envíe el evento `analysis_completed`. Cada step tiene su
+    // propia frontera de idempotencia; una vez que este callback retorna OK,
+    // Inngest memoíza el resultado y no lo vuelve a ejecutar.
+    await step.run('track-analysis-completed', async () => {
       serverTrackAnalysisCompleted(userId, {
         processing_time_seconds: 0, // Inngest doesn't easily expose total duration
         report_slug: slug,

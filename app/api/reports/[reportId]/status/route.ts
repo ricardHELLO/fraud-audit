@@ -31,7 +31,12 @@ export async function GET(
       .eq('clerk_id', clerkId)
       .single();
 
-    if (userError || !user) {
+    // ERR-01: PGRST116 (no rows) → 404; otros errores → 500 con log.
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (status):', userError.message);
+      return NextResponse.json({ error: 'Database error' }, { status: 500 });
+    }
+    if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
@@ -43,7 +48,11 @@ export async function GET(
       .eq('user_id', user.id)
       .single();
 
-    if (reportError || !report) {
+    if (reportError && reportError.code !== 'PGRST116') {
+      console.error('DB error fetching report (status):', reportError.message);
+      return NextResponse.json({ error: 'Database error' }, { status: 500 });
+    }
+    if (!report) {
       return NextResponse.json(
         { error: 'Report not found' },
         { status: 404 }

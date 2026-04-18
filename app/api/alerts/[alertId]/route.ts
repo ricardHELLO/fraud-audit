@@ -28,23 +28,36 @@ export async function PATCH(
     const body = await req.json()
     const supabase = createServerClient()
 
-    // Verify ownership
-    const { data: user } = await supabase
+    // Verify ownership.
+    // ERR-01: 404 vs 500. El alertId puede no existir legítimamente (el usuario
+    // borró la regla desde otra pestaña); eso sigue siendo 404. Pero un error
+    // de BD no debe enmascararse como "not found".
+    const { data: user, error: userError } = await supabase
       .from('users')
       .select('id')
       .eq('clerk_id', clerkId)
       .single()
 
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (alerts PATCH):', userError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    const { data: existingRule } = await supabase
+    const { data: existingRule, error: ruleError } = await supabase
       .from('alert_rules')
       .select('id, user_id')
       .eq('id', alertId)
       .single()
 
+    // PGRST116 = "no rows" en PostgREST → legítimamente 404.
+    // Cualquier otro code es un error real → 500.
+    if (ruleError && ruleError.code !== 'PGRST116') {
+      console.error('DB error fetching alert rule (PATCH):', ruleError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!existingRule || existingRule.user_id !== user.id) {
       return NextResponse.json(
         { error: 'Alert rule not found' },
@@ -115,23 +128,32 @@ export async function DELETE(
 
     const supabase = createServerClient()
 
-    // Verify ownership
-    const { data: user } = await supabase
+    // Verify ownership.
+    // ERR-01: mismo patrón que PATCH — 404 (fila inexistente) vs 500 (DB rota).
+    const { data: user, error: userError } = await supabase
       .from('users')
       .select('id')
       .eq('clerk_id', clerkId)
       .single()
 
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (alerts DELETE):', userError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    const { data: existingRule } = await supabase
+    const { data: existingRule, error: ruleError } = await supabase
       .from('alert_rules')
       .select('id, user_id')
       .eq('id', alertId)
       .single()
 
+    if (ruleError && ruleError.code !== 'PGRST116') {
+      console.error('DB error fetching alert rule (DELETE):', ruleError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!existingRule || existingRule.user_id !== user.id) {
       return NextResponse.json(
         { error: 'Alert rule not found' },
