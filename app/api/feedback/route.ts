@@ -4,6 +4,7 @@ import { createServerClient } from '@/lib/supabase';
 import { awardCredit } from '@/lib/credits';
 import { serverTrackFeedbackSubmitted, serverTrackCreditEarned } from '@/lib/posthog-server-events';
 import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
+import { parseJsonBody, FeedbackBodySchema } from '@/lib/api-validation';
 
 export async function POST(req: NextRequest) {
   try {
@@ -30,7 +31,12 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const body = await req.json();
+    // P2 + BIZ-07 fix: validación centralizada con zod.
+    // `accuracy_rating` como `z.number().int().min(1).max(5)` cierra el
+    // caso antiguo de 3.5 llegando al INSERT (DB constraint lo rechazaba
+    // con 500 sin explicación útil). Ahora sale 400 con mensaje claro.
+    const parsed = await parseJsonBody(req, FeedbackBodySchema);
+    if (!parsed.success) return parsed.response;
     const {
       reportId,
       accuracy_rating,
@@ -39,29 +45,7 @@ export async function POST(req: NextRequest) {
       would_share,
       would_share_reason,
       general_comments,
-    } = body;
-
-    if (!reportId) {
-      return NextResponse.json(
-        { error: 'reportId is required' },
-        { status: 400 }
-      );
-    }
-
-    // BIZ-07: el constraint de DB (CHECK BETWEEN 1 AND 5) se pensó para ints 1..5,
-    // pero sin validar `Number.isInteger` llegaban 3.5 al insert y fallaba con 500.
-    // Validamos en la frontera con mensaje claro.
-    if (
-      typeof accuracy_rating !== 'number' ||
-      !Number.isInteger(accuracy_rating) ||
-      accuracy_rating < 1 ||
-      accuracy_rating > 5
-    ) {
-      return NextResponse.json(
-        { error: 'accuracy_rating must be an integer between 1 and 5' },
-        { status: 400 }
-      );
-    }
+    } = parsed.data;
 
     const supabase = createServerClient();
 
