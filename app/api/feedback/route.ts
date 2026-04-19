@@ -5,8 +5,10 @@ import { awardCredit } from '@/lib/credits';
 import { serverTrackFeedbackSubmitted, serverTrackCreditEarned } from '@/lib/posthog-server-events';
 import { rateLimit, identifierFromRequest, rateLimitHeaders } from '@/lib/rate-limit';
 import { parseJsonBody, FeedbackBodySchema } from '@/lib/api-validation';
+import { logger } from '@/lib/logger';
 
 export async function POST(req: NextRequest) {
+  const log = logger.forRequest(req, { route: '/api/feedback' });
   try {
     const { userId: clerkId } = await auth();
 
@@ -63,7 +65,7 @@ export async function POST(req: NextRequest) {
       .single();
 
     if (userError && userError.code !== 'PGRST116') {
-      console.error('DB error fetching user (feedback):', userError.message);
+      log.error('DB error fetching user', { code: userError.code, message: userError.message });
       return NextResponse.json(
         { error: 'Database error' },
         { status: 500, headers: rlHeaders }
@@ -100,7 +102,7 @@ export async function POST(req: NextRequest) {
     });
 
     if (feedbackError) {
-      console.error('Failed to save feedback:', feedbackError.message);
+      log.error('Failed to save feedback', { message: feedbackError.message, reportId });
       return NextResponse.json(
         { error: 'Failed to save feedback' },
         { status: 500, headers: rlHeaders }
@@ -120,11 +122,11 @@ export async function POST(req: NextRequest) {
           serverTrackCreditEarned(user.id, 'feedback', 0); // Balance will be fetched
         }
       } catch (creditErr) {
-        console.error(
-          'Failed to award feedback credit (feedback ya guardado):',
-          creditErr instanceof Error ? creditErr.message : creditErr
-        );
-        // No fallar la request — el feedback se guardó correctamente.
+        // Post-success: feedback ya persistido. No fallar la request.
+        log.exception(creditErr, 'Failed to award feedback credit (feedback ya guardado)', {
+          reportId,
+          userId: user.id,
+        });
       }
     }
 
@@ -136,10 +138,8 @@ export async function POST(req: NextRequest) {
         would_share: would_share ?? undefined,
       });
     } catch (trackErr) {
-      console.error(
-        'Failed to track feedback event:',
-        trackErr instanceof Error ? trackErr.message : trackErr
-      );
+      // PostHog best-effort — no debe romper la respuesta.
+      log.exception(trackErr, 'Failed to track feedback event', { reportId });
     }
 
     return NextResponse.json(
@@ -150,7 +150,7 @@ export async function POST(req: NextRequest) {
       { status: 200, headers: rlHeaders }
     );
   } catch (err) {
-    console.error('Feedback error:', err);
+    log.exception(err, 'Unhandled feedback error');
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { logger } from '@/lib/logger';
 
 /**
  * Stripe webhook handler — processes checkout.session.completed events
@@ -9,6 +10,7 @@ import { NextRequest, NextResponse } from 'next/server';
  * even if Stripe delivers the same webhook multiple times.
  */
 export async function POST(req: NextRequest) {
+  const log = logger.forRequest(req, { route: '/api/webhooks/stripe' });
   const STRIPE_SECRET = process.env.STRIPE_SECRET_KEY;
   const WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET;
 
@@ -48,7 +50,8 @@ export async function POST(req: NextRequest) {
     event = stripe.webhooks.constructEvent(body, signature, WEBHOOK_SECRET);
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Unknown error';
-    console.error('Stripe webhook signature verification failed:', message);
+    // Nota: 400 es intencional — firma inválida = cliente mal, no bug. No a Sentry.
+    log.warn('Stripe webhook signature verification failed', { message });
     return NextResponse.json({ error: 'Invalid webhook signature' }, { status: 400 });
   }
 
@@ -58,7 +61,7 @@ export async function POST(req: NextRequest) {
         const session = event.data.object as import('stripe').Stripe.Checkout.Session;
         const userId = session.metadata?.userId;
         if (!userId) {
-          console.error('Stripe checkout session missing userId in metadata');
+          log.error('Stripe checkout session missing userId in metadata', { sessionId: session.id });
           return NextResponse.json({ error: 'Missing userId in session metadata' }, { status: 400 });
         }
 
@@ -66,9 +69,10 @@ export async function POST(req: NextRequest) {
         // `payment_status` distinto de 'paid' (trials, async payment methods).
         // No otorgamos créditos hasta que el cobro esté confirmado.
         if (session.payment_status !== 'paid') {
-          console.info(
-            `Stripe session ${session.id} not paid (status: ${session.payment_status}), skipping credit award`
-          );
+          log.info('Stripe session not paid, skipping credit award', {
+            sessionId: session.id,
+            paymentStatus: session.payment_status,
+          });
           return NextResponse.json({ received: true, skipped: 'unpaid' }, { status: 200 });
         }
 
@@ -88,7 +92,7 @@ export async function POST(req: NextRequest) {
             .maybeSingle();
 
           if (existing) {
-            console.info(`Duplicate Stripe webhook for session ${session.id}, skipping listLineItems`);
+            log.info('Duplicate Stripe webhook, skipping listLineItems', { sessionId: session.id });
             return NextResponse.json({ received: true, duplicate: true }, { status: 200 });
           }
         }
@@ -101,7 +105,7 @@ export async function POST(req: NextRequest) {
           const priceId = item.price?.id;
           if (!priceId) continue;
           const creditAmount = priceToCredits[priceId];
-          if (!creditAmount) { console.warn(`Unknown price ID: ${priceId}`); continue; }
+          if (!creditAmount) { log.warn('Unknown Stripe price ID', { priceId, sessionId: session.id }); continue; }
           const quantity = item.quantity ?? 1;
           const totalCredits = creditAmount * quantity;
 
@@ -115,7 +119,7 @@ export async function POST(req: NextRequest) {
 
           if (newBalance === -1) {
             // Already processed — Stripe delivered duplicate webhook
-            console.info(`Duplicate Stripe webhook for session ${session.id}, ignoring`);
+            log.info('Duplicate Stripe webhook, ignoring', { sessionId: session.id });
             return NextResponse.json({ received: true, duplicate: true }, { status: 200 });
           }
 
@@ -147,7 +151,8 @@ export async function POST(req: NextRequest) {
               await sendEmail({ to: userData.email, subject: template.subject, html: template.html });
             }
           } catch (emailErr) {
-            console.error('Failed to send purchase email:', emailErr);
+            // Post-credit: email es best-effort, no debe romper el 200 al webhook.
+            log.exception(emailErr, 'Failed to send purchase email', { sessionId: session.id, userId });
           }
         }
         break;
@@ -158,7 +163,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ received: true }, { status: 200 });
   } catch (err) {
-    console.error('Stripe webhook error:', err);
+    log.exception(err, 'Unhandled Stripe webhook error', { eventType: event.type });
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

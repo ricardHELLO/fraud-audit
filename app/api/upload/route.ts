@@ -10,8 +10,10 @@ import {
 } from '@/lib/types/connectors';
 import { UPLOAD_MAX_BYTES, UPLOAD_MAX_MB, UPLOAD_MAX_ROWS } from '@/lib/constants/upload';
 import { rateLimit, identifierFromRequest, rateLimitHeaders } from '@/lib/rate-limit';
+import { logger } from '@/lib/logger';
 
 export async function POST(req: NextRequest) {
+  const log = logger.forRequest(req, { route: '/api/upload' });
   try {
     const { userId } = await auth();
 
@@ -109,7 +111,7 @@ export async function POST(req: NextRequest) {
 
     // ERR-01: PGRST116 (no rows) → 404 legítimo; otros errores → 500 con log.
     if (userError && userError.code !== 'PGRST116') {
-      console.error('DB error fetching user (upload):', userError.message);
+      log.error('DB error fetching user', { code: userError.code, message: userError.message });
       return NextResponse.json(
         { error: 'Database error' },
         { status: 500, headers: rlHeaders }
@@ -139,7 +141,7 @@ export async function POST(req: NextRequest) {
       });
 
     if (uploadError) {
-      console.error('Storage upload error:', uploadError.message);
+      log.error('Storage upload error', { message: uploadError.message, storagePath });
       return NextResponse.json(
         { error: 'Failed to upload file' },
         { status: 500, headers: rlHeaders }
@@ -151,11 +153,11 @@ export async function POST(req: NextRequest) {
     try {
       volumeInfo = detectVolume(fileContent, connectorType);
     } catch (err) {
-      console.error('Volume detection error:', err);
+      log.exception(err, 'Volume detection error', { storagePath, connectorType });
       // Clean up the uploaded file before returning the error
       const { error: removeError } = await supabase.storage.from('uploads').remove([storagePath]);
       if (removeError) {
-        console.error('Failed to remove orphaned storage file:', storagePath, removeError.message);
+        log.error('Failed to remove orphaned storage file', { storagePath, message: removeError.message });
       }
       return NextResponse.json(
         { error: 'No se pudo analizar la estructura del archivo. Verifica que sea un CSV válido para el conector seleccionado.' },
@@ -173,7 +175,7 @@ export async function POST(req: NextRequest) {
     if (volumeInfo.totalRows > UPLOAD_MAX_ROWS) {
       const { error: removeError } = await supabase.storage.from('uploads').remove([storagePath]);
       if (removeError) {
-        console.error('Failed to remove orphaned storage file:', storagePath, removeError.message);
+        log.error('Failed to remove orphaned storage file', { storagePath, message: removeError.message });
       }
       return NextResponse.json(
         {
@@ -209,11 +211,11 @@ export async function POST(req: NextRequest) {
       .single();
 
     if (dbError) {
-      console.error('Database insert error:', dbError.message);
+      log.error('Database insert error', { message: dbError.message });
       // Clean up the already-uploaded file to prevent orphans in storage
       const { error: removeError } = await supabase.storage.from('uploads').remove([storagePath]);
       if (removeError) {
-        console.error('Failed to remove orphaned storage file:', storagePath, removeError.message);
+        log.error('Failed to remove orphaned storage file', { storagePath, message: removeError.message });
       }
       return NextResponse.json(
         { error: 'Failed to save upload record' },
@@ -229,7 +231,7 @@ export async function POST(req: NextRequest) {
       { status: 200, headers: rlHeaders }
     );
   } catch (err) {
-    console.error('Upload error:', err);
+    log.exception(err, 'Unhandled upload error');
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }

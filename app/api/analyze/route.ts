@@ -7,8 +7,10 @@ import { inngest } from '@/lib/inngest/client';
 import { serverTrackAnalysisStarted, serverTrackCreditSpent } from '@/lib/posthog-server-events';
 import { rateLimit, identifierFromRequest, rateLimitHeaders } from '@/lib/rate-limit';
 import { parseJsonBody, AnalyzeBodySchema } from '@/lib/api-validation';
+import { logger } from '@/lib/logger';
 
 export async function POST(req: NextRequest) {
+  const log = logger.forRequest(req, { route: '/api/analyze' });
   try {
     const { userId } = await auth();
 
@@ -64,7 +66,7 @@ export async function POST(req: NextRequest) {
 
     // ERR-01: PGRST116 (no rows) → 404 legítimo; otros errores → 500 con log.
     if (userError && userError.code !== 'PGRST116') {
-      console.error('DB error fetching user (analyze):', userError.message);
+      log.error('DB error fetching user', { code: userError.code, message: userError.message });
       return NextResponse.json(
         { error: 'Database error' },
         { status: 500, headers: rlHeaders }
@@ -129,7 +131,7 @@ export async function POST(req: NextRequest) {
       .single();
 
     if (reportError || !report) {
-      console.error('Failed to create report:', reportError?.message);
+      log.error('Failed to create report', { message: reportError?.message, slug });
       return NextResponse.json(
         { error: 'Failed to create report' },
         { status: 500, headers: rlHeaders }
@@ -155,7 +157,9 @@ export async function POST(req: NextRequest) {
         },
       });
     } catch (inngestErr) {
-      console.error('Failed to send Inngest event:', inngestErr);
+      // Crítico: Inngest caído con credit ya deducido + report creado.
+      // Marcamos failed para que no quede zombie en 'processing' y avisamos a Sentry.
+      log.exception(inngestErr, 'Failed to send Inngest event', { reportId: report.id, slug });
       await supabase.from('reports').update({ status: 'failed' }).eq('id', report.id);
       return NextResponse.json(
         { error: 'Failed to queue analysis. Please try again.' },
@@ -181,7 +185,7 @@ export async function POST(req: NextRequest) {
       { status: 200, headers: rlHeaders }
     );
   } catch (err) {
-    console.error('Analyze error:', err);
+    log.exception(err, 'Unhandled analyze error');
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
