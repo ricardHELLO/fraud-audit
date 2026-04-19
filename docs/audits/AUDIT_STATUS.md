@@ -1,6 +1,6 @@
 # Estado de los findings de auditoría QA
 
-**Última actualización:** 2026-04-18 (Cubo 2: SEC-07/BIZ-08/SEC-04/INT-03)
+**Última actualización:** 2026-04-19 (BIZ-01 resuelto — opción 2 aplicada)
 **Alcance:** 64 findings (31 backend + 33 frontend) de las auditorías QA
 del 2026-03-28.
 
@@ -41,7 +41,7 @@ del 2026-03-28.
 
 | ID | Sev | Título | Estado | Ref. |
 |---|---|---|---|---|
-| BIZ-01 | 🟠 HIGH | Umbrales inconsistentes `cash-discrepancy` vs `conclusions` | 🟡 | Pendiente — decisión de negocio sobre qué umbral es el correcto |
+| BIZ-01 | 🟠 HIGH | Umbrales inconsistentes `cash-discrepancy` vs `conclusions` | ✅ | **esta PR** — unificado a 1000€ (opción 2, decisión de usuario): `CRITICAL_SHORTAGE_THRESHOLD` en `cash-discrepancy.ts` pasa de 500 → 1000 para coincidir con `CASH_CRITICAL_THRESHOLD` de `conclusions.ts`. Test de regresión nuevo para la zona gris 500-1000€ |
 | BIZ-02 | 🟠 HIGH | Crédito deducido pero análisis no ejecutado si Inngest falla | ✅ | INN-01 cubre el mismo caso (onFailure handler) |
 | BIZ-03 | 🟠 HIGH | Inngest sin handler de fallo: reportes zombies | ✅ | INN-01 `onFailure` + `fix: extend AI insights grace period` `63edd6e` |
 | BIZ-04 | 🟡 MED | Waste-analysis underreporting con datos vacíos | ❔ | Verificar si la guard se añadió en `a93800d`/`a142e35` |
@@ -132,8 +132,8 @@ del 2026-03-28.
 
 | Estado | Backend | Frontend | Total |
 |---|---|---|---|
-| ✅ Cerrado | 28 | 11 | **39** |
-| 🟡 Abierto | 2 | 22 | **24** |
+| ✅ Cerrado | 29 | 11 | **40** |
+| 🟡 Abierto | 1 | 22 | **23** |
 | 🔵 Requiere infra | 0 | 0 | **0** |
 | ❔ Incierto | 1 | 0 | **1** |
 | 🟣 No aplica | 0 | 0 | **0** |
@@ -155,6 +155,7 @@ Cerrado hasta ahora en la rama:
 - ✅ **BIZ-08** (Cubo 2) — `alerts/route.ts` POST añade post-insert verification + self-rollback para cerrar la ventana de race común sin tocar schema.
 - ✅ **SEC-04** (Cubo 2) — nuevo `lib/rate-limit.ts` con `@upstash/ratelimit` en 5 routes (upload/analyze/feedback/alerts/bug-report). Presets por familia. Fail-open + graceful degradation si Upstash no está configurado. 9 nuevos tests.
 - ✅ **INT-03** (Cubo 2) — `lib/email.ts` lee `RESEND_FROM` de entorno; warn-once si se queda en sandbox. Acción pendiente del usuario: verificar dominio en Resend Dashboard + setear env var en Vercel.
+- ✅ **BIZ-01** — umbral crítico de caja unificado a 1000€ por decisión de usuario (opción 2). Un descuadre entre 200-1000€ ahora es "ALERTA" moderada y uno > 1000€ es "CRÍTICA", coherente con `conclusions.ts`. 1 test nuevo de regresión para la zona gris.
 
 Pendiente en la rama:
 
@@ -165,13 +166,19 @@ Finding abierto con restricción explícita "no tocar calculators":
 
 - ❔ **BIZ-04** (waste-analysis underreporting con datos vacíos) — verificado **abierto** (`lib/calculators/waste-analysis.ts:78` sin guard de datos). Deferido: el usuario pidió no tocar calculators en esta PR.
 
-Post-PR, quedan 24 findings abiertos. El resumen es:
+Post-PR, quedan 23 findings abiertos. El resumen es:
 
 - **Frontend (22)**: todos de accesibilidad/UX (no críticos para producción).
-- **Backend (2)**: **BIZ-01** (requiere tu decisión sobre el threshold de cash-discrepancy, implica tocar calculators) y **ERR-03** (migración a logger estructurado — tamaño suficiente para su propia PR).
+- **Backend (1)**: **ERR-03** (migración a logger estructurado — tamaño suficiente para su propia PR).
 - **Incierto (1)**: **BIZ-04** — deferido por la restricción "no tocar calculators".
 
-Tras Cubo 1 y Cubo 2, el único bloqueador backend para ir a producción es
-activar **Upstash** (crear instancia + env vars) y **Resend domain**
-(verificar dominio + setear `RESEND_FROM`). El código ya está listo para
-ambos; solo requiere provisión externa.
+Con BIZ-01 resuelto, no queda **ningún finding backend** crítico o high
+que requiera código. Los únicos bloqueadores para activar todo en
+producción son provisiones externas:
+
+- **Upstash Redis** (activa SEC-04): crear instancia + setear
+  `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN` en Vercel.
+- **Resend domain** (activa INT-03): verificar dominio en resend.com +
+  setear `RESEND_FROM` en Vercel.
+
+El código ya está listo para ambos; solo requiere provisión externa.

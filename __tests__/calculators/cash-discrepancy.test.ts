@@ -15,7 +15,11 @@ function makeSale(location: string, discrepancy: number): NormalizedDailySales {
 }
 
 describe('calculateCashDiscrepancy — sobrantes positivos', () => {
-  it('BUG-C01: debe alertar CRÍTICA cuando un sobrante supera 500€', () => {
+  // BIZ-01: el umbral CRÍTICO está unificado con conclusions.ts en 1000€.
+  // Estos tests usan valores explícitamente por encima (1500) para
+  // disparar CRÍTICA; los cambios de umbral requieren actualizar esos
+  // valores en lockstep.
+  it('BUG-C01: debe alertar CRÍTICA cuando un sobrante supera 1000€', () => {
     const sales = [makeSale('Local A', 1500)]
     const result = calculateCashDiscrepancy(sales)
     expect(result.alert_message).toContain('CRÍTICA')
@@ -37,17 +41,30 @@ describe('calculateCashDiscrepancy — sobrantes positivos', () => {
   })
 
   it('faltante grande también debe alertar CRÍTICA', () => {
-    const sales = [makeSale('Local A', -800)]
+    // BIZ-01: antes de unificar el umbral, -800 disparaba CRÍTICA. Con
+    // umbral 1000 hace falta -1500 para seguir testeando el mismo caso.
+    const sales = [makeSale('Local A', -1500)]
     const result = calculateCashDiscrepancy(sales)
     expect(result.alert_message).toContain('CRÍTICA')
   })
 
   it('worst_local con faltante grande y sobrante pequeño apunta al faltante', () => {
     const sales = [
-      makeSale('Local A', -800),  // faltante grande
+      makeSale('Local A', -800),  // faltante grande (pero no CRÍTICO tras BIZ-01)
       makeSale('Local B', 200),   // sobrante pequeño
     ]
     const result = calculateCashDiscrepancy(sales)
+    // Test de ordenación — no depende del umbral crítico; sigue válido.
     expect(result.worst_local).toBe('Local A')
+  })
+
+  it('BIZ-01: descuadre de 600€ NO debe ser "CRÍTICO" (entre los dos umbrales 200/1000)', () => {
+    // Regresión contra el caso que disparó BIZ-01: un descuadre en la
+    // zona gris 500-1000€ ya no debe decir "CRÍTICA". Queda como
+    // "ALERTA" moderada, coherente con conclusions.ts.
+    const sales = [makeSale('Local A', 600)]
+    const result = calculateCashDiscrepancy(sales)
+    expect(result.alert_message).not.toContain('CRÍTICA')
+    expect(result.alert_message).toContain('ALERTA')
   })
 })

@@ -2,7 +2,13 @@ import { NormalizedDailySales } from '@/lib/types/normalized';
 import { CashDiscrepancyResult, CashDiscrepancyLocal } from '@/lib/types/report';
 
 const SHORTAGE_THRESHOLD = -10;
-const CRITICAL_SHORTAGE_THRESHOLD = 500;
+// BIZ-01: unificado con CASH_CRITICAL_THRESHOLD en `conclusions.ts`.
+// Antes: 500 aquí y 1000 en conclusions → un descuadre de 600€
+// disparaba "ALERTA CRÍTICA" en la pestaña Caja pero NO aparecía como
+// conclusión crítica en el Executive Summary. La palabra "crítico" la
+// reservamos ahora para descuadres verdaderamente graves (>1000€);
+// entre 200 y 1000€ seguimos mostrando "ALERTA" moderada.
+const CRITICAL_SHORTAGE_THRESHOLD = 1000;
 const MODERATE_SHORTAGE_THRESHOLD = 200;
 
 export function calculateCashDiscrepancy(
