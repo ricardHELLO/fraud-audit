@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { createServerClient } from '@/lib/supabase';
 import { awardCredit } from '@/lib/credits';
+import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,6 +10,21 @@ export async function POST(req: NextRequest) {
 
     if (!clerkId) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    // SEC-04: rate limit agresivo — endpoint de bug reports es blanco
+    // típico de spam. 5/10min.
+    const rl = await rateLimit('bugReport', identifierFromRequest(req, clerkId));
+    if (!rl.success) {
+      return NextResponse.json(
+        { error: 'Demasiados reportes recientes. Intenta de nuevo en unos minutos.' },
+        {
+          status: 429,
+          headers: rl.reset
+            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+            : undefined,
+        }
+      );
     }
 
     const body = await req.json();
@@ -37,7 +53,12 @@ export async function POST(req: NextRequest) {
       .eq('clerk_id', clerkId)
       .single();
 
-    if (userError || !user) {
+    // ERR-01: PGRST116 → 404; otros errores → 500 con log.
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (bug-report):', userError.message);
+      return NextResponse.json({ error: 'Database error' }, { status: 500 });
+    }
+    if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 

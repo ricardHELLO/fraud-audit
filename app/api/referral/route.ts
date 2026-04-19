@@ -16,14 +16,22 @@ export async function GET() {
 
     const supabase = createServerClient();
 
-    // Look up the internal user ID
+    // Look up the internal user ID.
+    // ERR-01: 404 solo cuando PGRST116 (no rows). Otros errores → 500.
     const { data: user, error: userError } = await supabase
       .from('users')
       .select('id, referral_code')
       .eq('clerk_id', clerkId)
       .single();
 
-    if (userError || !user) {
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (referral GET):', userError.message);
+      return NextResponse.json(
+        { error: 'Database error' },
+        { status: 500 }
+      );
+    }
+    if (!user) {
       return NextResponse.json(
         { error: 'User not found' },
         { status: 404 }
@@ -87,14 +95,22 @@ export async function POST(_req: NextRequest) {
 
     const supabase = createServerClient();
 
-    // Look up the internal user
+    // Look up the internal user.
+    // ERR-01: idem GET — 404 solo ante PGRST116.
     const { data: user, error: userError } = await supabase
       .from('users')
       .select('id, referral_code')
       .eq('clerk_id', clerkId)
       .single();
 
-    if (userError || !user) {
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (referral POST):', userError.message);
+      return NextResponse.json(
+        { error: 'Database error' },
+        { status: 500 }
+      );
+    }
+    if (!user) {
       return NextResponse.json(
         { error: 'User not found' },
         { status: 404 }

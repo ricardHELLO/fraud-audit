@@ -12,14 +12,21 @@ export async function GET() {
 
     const supabase = createServerClient();
 
-    // Look up internal user from Clerk ID
+    // Look up internal user from Clerk ID.
+    // ERR-01: el bug anterior era devolver 404 ante CUALQUIER error (incluido
+    // un DB timeout). Ahora PGRST116 (no rows) → 404 legítimo; otros errores
+    // → 500 con log, para no enmascarar fallos de infraestructura.
     const { data: user, error: userError } = await supabase
       .from('users')
       .select('id, credits_balance')
       .eq('clerk_id', clerkId)
       .single();
 
-    if (userError || !user) {
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (dashboard):', userError.message);
+      return NextResponse.json({ error: 'Database error' }, { status: 500 });
+    }
+    if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 

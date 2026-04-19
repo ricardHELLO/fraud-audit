@@ -5,6 +5,13 @@ import { createServerClient } from '@/lib/supabase';
 import { deductCredit } from '@/lib/credits';
 import { inngest } from '@/lib/inngest/client';
 import { serverTrackAnalysisStarted, serverTrackCreditSpent } from '@/lib/posthog-server-events';
+import {
+  isPOSConnector,
+  isInventoryConnector,
+  POS_CONNECTOR_IDS,
+  INVENTORY_CONNECTOR_IDS,
+} from '@/lib/types/connectors';
+import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,6 +21,20 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
+      );
+    }
+
+    // SEC-04: rate limit — Anthropic calls are the most expensive path.
+    const rl = await rateLimit('analyze', identifierFromRequest(req, userId));
+    if (!rl.success) {
+      return NextResponse.json(
+        { error: 'Demasiadas peticiones de análisis. Intenta en unos segundos.' },
+        {
+          status: 429,
+          headers: rl.reset
+            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+            : undefined,
+        }
       );
     }
 
@@ -34,6 +55,26 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // SEC-02: allowlist de conectores. Rechazamos en la frontera cualquier valor
+    // fuera de la unión conocida para que nada raro llegue al parser o a Inngest.
+    if (!isPOSConnector(posConnector)) {
+      return NextResponse.json(
+        {
+          error: `Invalid posConnector. Must be one of: ${POS_CONNECTOR_IDS.join(', ')}`,
+        },
+        { status: 400 }
+      );
+    }
+
+    if (inventoryConnector != null && !isInventoryConnector(inventoryConnector)) {
+      return NextResponse.json(
+        {
+          error: `Invalid inventoryConnector. Must be one of: ${INVENTORY_CONNECTOR_IDS.join(', ')}`,
+        },
+        { status: 400 }
+      );
+    }
+
     // Look up the internal user ID from Clerk ID
     const supabase = createServerClient();
 
@@ -43,7 +84,15 @@ export async function POST(req: NextRequest) {
       .eq('clerk_id', userId)
       .single();
 
-    if (userError || !user) {
+    // ERR-01: PGRST116 (no rows) → 404 legítimo; otros errores → 500 con log.
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (analyze):', userError.message);
+      return NextResponse.json(
+        { error: 'Database error' },
+        { status: 500 }
+      );
+    }
+    if (!user) {
       return NextResponse.json(
         { error: 'User not found' },
         { status: 404 }

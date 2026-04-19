@@ -22,15 +22,11 @@ export const analyzeReport = inngest.createFunction(
 
     const supabase = createServerClient();
 
-    // Step 1: Update status to processing
-    await step.run('update-status-processing', async () => {
-      await supabase
-        .from('reports')
-        .update({ status: 'processing' })
-        .eq('id', reportId);
-    });
+    // INN-04: el reporte se crea con status:'processing' en /api/analyze,
+    // así que el antiguo step "update-status-processing" era una escritura DB
+    // sin efecto. Eliminado. Pasamos directo a parsear.
 
-    // Step 2: Download POS file from storage and parse
+    // Step 1: Download POS file from storage and parse
     const posData = await step.run('parse-pos-data', async () => {
       const { data: upload } = await supabase
         .from('uploads')
@@ -51,7 +47,7 @@ export const analyzeReport = inngest.createFunction(
       return parser(text);
     });
 
-    // Step 3: Download and parse inventory file (optional)
+    // Step 2: Download and parse inventory file (optional)
     let inventoryData = undefined;
     if (inventoryUploadId && inventoryConnector) {
       inventoryData = await step.run('parse-inventory-data', async () => {
@@ -75,7 +71,7 @@ export const analyzeReport = inngest.createFunction(
       });
     }
 
-    // Step 4: Merge datasets and generate the report
+    // Step 3: Merge datasets and generate the report
     const reportSlug = await step.run('generate-report', async () => {
       const dataset = mergeDatasets(posData, inventoryData);
       return generateReport({
@@ -89,21 +85,27 @@ export const analyzeReport = inngest.createFunction(
       });
     });
 
-    // Step 5: Mark complete
+    // Step 4a: Mark complete in DB
     await step.run('update-status-completed', async () => {
       await supabase
         .from('reports')
         .update({ status: 'completed' })
         .eq('id', reportId);
+    });
 
-      // Track completion
+    // Step 4b: Track completion in PostHog.
+    // INN-03: analytics vive en su propio step para que un retry del UPDATE
+    // de arriba no re-envíe el evento `analysis_completed`. Cada step tiene su
+    // propia frontera de idempotencia; una vez que este callback retorna OK,
+    // Inngest memoíza el resultado y no lo vuelve a ejecutar.
+    await step.run('track-analysis-completed', async () => {
       serverTrackAnalysisCompleted(userId, {
         processing_time_seconds: 0, // Inngest doesn't easily expose total duration
         report_slug: slug,
       });
     });
 
-    // Step 6: Send notification email (fire-and-forget)
+    // Step 5: Send notification email (fire-and-forget)
     await step.run('send-report-email', async () => {
       try {
         const { data: userData } = await supabase
@@ -143,7 +145,7 @@ export const analyzeReport = inngest.createFunction(
       }
     });
 
-    // Step 7: Evaluate alert rules (fire-and-forget)
+    // Step 6: Evaluate alert rules (fire-and-forget)
     await step.run('evaluate-alert-rules', async () => {
       try {
         // Fetch completed report data
@@ -180,13 +182,13 @@ export const analyzeReport = inngest.createFunction(
 
         await supabase.from('alert_history').insert(historyRecords);
 
-        // Update last_triggered_at for each triggered rule
-        for (const t of triggered) {
-          await supabase
-            .from('alert_rules')
-            .update({ last_triggered_at: new Date().toISOString() })
-            .eq('id', t.ruleId);
-        }
+        // INN-02: en vez de N queries secuenciales (una por alerta disparada),
+        // un solo UPDATE con `.in('id', ids)` actualiza todas las reglas a la vez.
+        const triggeredIds = triggered.map((t) => t.ruleId);
+        await supabase
+          .from('alert_rules')
+          .update({ last_triggered_at: new Date().toISOString() })
+          .in('id', triggeredIds);
 
         // Send alert email
         const { data: userData } = await supabase
@@ -231,7 +233,7 @@ export const analyzeReport = inngest.createFunction(
       }
     });
 
-    // Step 8: Generate AI insights (fire-and-forget)
+    // Step 7: Generate AI insights (fire-and-forget)
     await step.run('generate-ai-insights', async () => {
       try {
         if (!process.env.ANTHROPIC_API_KEY) {

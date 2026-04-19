@@ -20,23 +20,34 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
     const { reportId } = await params
     const supabase = createServerClient()
 
-    const { data: user } = await supabase
+    // ERR-01: distinguir "no encontrado" (404) de "error de infraestructura" (500).
+    // Si no destructuramos `error`, un DB timeout devuelve data=null y el cliente
+    // ve "User not found", enmascarando problemas reales de Supabase.
+    const { data: user, error: userError } = await supabase
       .from('users')
       .select('id')
       .eq('clerk_id', clerkId)
       .single()
 
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (ai-insights GET):', userError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    const { data: report } = await supabase
+    const { data: report, error: reportError } = await supabase
       .from('reports')
       .select('id, status, ai_insights, created_at')
       .eq('id', reportId)
       .eq('user_id', user.id)
       .single()
 
+    if (reportError && reportError.code !== 'PGRST116') {
+      console.error('DB error fetching report (ai-insights GET):', reportError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!report) {
       return NextResponse.json({ error: 'Report not found' }, { status: 404 })
     }
@@ -92,23 +103,32 @@ export async function POST(_req: NextRequest, { params }: RouteParams) {
     const { reportId } = await params
     const supabase = createServerClient()
 
-    const { data: user } = await supabase
+    // ERR-01: mismo patrón que el GET — separamos 404 de 500.
+    const { data: user, error: userError } = await supabase
       .from('users')
       .select('id')
       .eq('clerk_id', clerkId)
       .single()
 
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (ai-insights POST):', userError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    const { data: report } = await supabase
+    const { data: report, error: reportError } = await supabase
       .from('reports')
       .select('id, report_data, user_id')
       .eq('id', reportId)
       .eq('user_id', user.id)
       .single()
 
+    if (reportError && reportError.code !== 'PGRST116') {
+      console.error('DB error fetching report (ai-insights POST):', reportError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!report) {
       return NextResponse.json({ error: 'Report not found' }, { status: 404 })
     }

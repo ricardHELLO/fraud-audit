@@ -35,13 +35,18 @@ export async function GET(req: NextRequest) {
 
     const supabase = createServerClient()
 
-    // Lookup user
-    const { data: user } = await supabase
+    // Lookup user.
+    // ERR-01: distinguimos 404 (no hay fila) de 500 (la query falló).
+    const { data: user, error: userError } = await supabase
       .from('users')
       .select('id')
       .eq('clerk_id', clerkId)
       .single()
 
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (compare):', userError.message)
+      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+    }
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }

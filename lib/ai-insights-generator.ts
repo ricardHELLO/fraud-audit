@@ -57,7 +57,10 @@ export async function generateAIInsights(
   }
 
   try {
-    const client = new Anthropic({ apiKey })
+    // INT-02: el SDK oficial deja el timeout abierto por defecto (~10 min),
+    // lo que puede bloquear el step de Inngest si la API tiene latencia alta.
+    // 60s es holgado para 2000 max_tokens con un prompt de ~80k chars.
+    const client = new Anthropic({ apiKey, timeout: 60_000 })
 
     // Serialize and truncate if needed to avoid exceeding context limits
     let serialized = JSON.stringify(reportData, null, 2)

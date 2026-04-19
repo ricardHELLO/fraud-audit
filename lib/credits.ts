@@ -203,10 +203,13 @@ export async function canEarnReward(
 ): Promise<boolean> {
   const supabase = createServerClient()
 
-  // Query existing transactions of this reward type
-  const { data: existing, error } = await supabase
+  // PERF-03: pedimos sólo el COUNT con head:true. La query original hacía
+  // SELECT de id+reference_id sin LIMIT, cargando todas las filas del tipo.
+  // Con `{ count: 'exact', head: true }` Postgres devuelve sólo el contador
+  // (tráfico mínimo, sin deserializar rows).
+  const { count: rawCount, error } = await supabase
     .from('credit_transactions')
-    .select('id, reference_id')
+    .select('id', { count: 'exact', head: true })
     .eq('user_id', userId)
     .eq('reason', rewardType)
 
@@ -214,7 +217,7 @@ export async function canEarnReward(
     throw new Error(`Failed to check reward eligibility: ${error.message}`)
   }
 
-  const count = existing?.length ?? 0
+  const count = rawCount ?? 0
 
   switch (rewardType) {
     case 'signup_bonus':

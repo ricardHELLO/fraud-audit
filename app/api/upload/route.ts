@@ -2,6 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { createServerClient } from '@/lib/supabase';
 import { detectVolume } from '@/lib/volume-detector';
+import {
+  isConnectorType,
+  isSourceCategory,
+  ALL_CONNECTOR_IDS,
+  SOURCE_CATEGORIES,
+} from '@/lib/types/connectors';
+import { UPLOAD_MAX_BYTES, UPLOAD_MAX_MB, UPLOAD_MAX_ROWS } from '@/lib/constants/upload';
+import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
@@ -11,6 +19,21 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
+      );
+    }
+
+    // SEC-04: rate limit por usuario. Pass-through si Upstash no está
+    // configurado (degradación elegante en deploys sin env vars).
+    const rl = await rateLimit('upload', identifierFromRequest(req, userId));
+    if (!rl.success) {
+      return NextResponse.json(
+        { error: 'Demasiadas peticiones. Intenta de nuevo en unos segundos.' },
+        {
+          status: 429,
+          headers: rl.reset
+            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+            : undefined,
+        }
       );
     }
 
@@ -28,10 +51,10 @@ export async function POST(req: NextRequest) {
 
     // BUG-API03 fix: validate file size before reading into memory.
     // file.text() without a size check allows arbitrary-size uploads (OOM risk).
-    const MAX_FILE_SIZE_BYTES = 50 * 1024 * 1024; // 50 MB
-    if (file.size > MAX_FILE_SIZE_BYTES) {
+    // Constant lives in lib/constants/upload.ts so UI + API + tests agree.
+    if (file.size > UPLOAD_MAX_BYTES) {
       return NextResponse.json(
-        { error: `El archivo es demasiado grande. El tamaño máximo permitido es ${MAX_FILE_SIZE_BYTES / 1024 / 1024}MB.` },
+        { error: `El archivo es demasiado grande. El tamaño máximo permitido es ${UPLOAD_MAX_MB}MB.` },
         { status: 413 }
       );
     }
@@ -50,6 +73,26 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // SEC-02: allowlist de conectores y categorías. Rechazamos input desconocido
+    // antes de tocar Storage o DB para evitar filas envenenadas y runs fallidos.
+    if (!isConnectorType(connectorType)) {
+      return NextResponse.json(
+        {
+          error: `Invalid connectorType. Must be one of: ${ALL_CONNECTOR_IDS.join(', ')}`,
+        },
+        { status: 400 }
+      );
+    }
+
+    if (!isSourceCategory(sourceCategory)) {
+      return NextResponse.json(
+        {
+          error: `Invalid sourceCategory. Must be one of: ${SOURCE_CATEGORIES.join(', ')}`,
+        },
+        { status: 400 }
+      );
+    }
+
     const supabase = createServerClient();
 
     // Look up internal user from Clerk ID
@@ -59,7 +102,15 @@ export async function POST(req: NextRequest) {
       .eq('clerk_id', userId)
       .single();
 
-    if (userError || !user) {
+    // ERR-01: PGRST116 (no rows) → 404 legítimo; otros errores → 500 con log.
+    if (userError && userError.code !== 'PGRST116') {
+      console.error('DB error fetching user (upload):', userError.message);
+      return NextResponse.json(
+        { error: 'Database error' },
+        { status: 500 }
+      );
+    }
+    if (!user) {
       return NextResponse.json(
         { error: 'User not found' },
         { status: 404 }
@@ -104,6 +155,26 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: 'No se pudo analizar la estructura del archivo. Verifica que sea un CSV válido para el conector seleccionado.' },
         { status: 400 }
+      );
+    }
+
+    // PERF-02: cap de filas aparte del cap de bytes. UPLOAD_MAX_BYTES ya
+    // limita el input a 50 MB, pero inputs patológicos (líneas cortas,
+    // muchas celdas vacías) pueden expandirse a millones de filas y
+    // reventar el worker de Inngest downstream. Rechazamos aquí con 413
+    // claro antes de guardar nada en DB. El archivo YA está en Storage
+    // (subido a L113), así que reutilizamos el patrón de cleanup que usa
+    // el catch de detectVolume.
+    if (volumeInfo.totalRows > UPLOAD_MAX_ROWS) {
+      const { error: removeError } = await supabase.storage.from('uploads').remove([storagePath]);
+      if (removeError) {
+        console.error('Failed to remove orphaned storage file:', storagePath, removeError.message);
+      }
+      return NextResponse.json(
+        {
+          error: `El archivo tiene demasiadas filas (${volumeInfo.totalRows.toLocaleString('es-ES')}). El máximo permitido es ${UPLOAD_MAX_ROWS.toLocaleString('es-ES')}.`,
+        },
+        { status: 413 }
       );
     }
 

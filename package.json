@@ -11,11 +11,16 @@
     "test": "vitest run",
     "test:watch": "vitest"
   },
+  "engines": {
+    "node": "20.x || 22.x"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
     "@clerk/nextjs": "^6.39.0",
     "@react-pdf/renderer": "^4.3.2",
     "@supabase/supabase-js": "^2.39.0",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.37.0",
     "autoprefixer": "^10.4.27",
     "clsx": "^2.1.0",
     "inngest": "^3.0.0",
@@ -42,9 +47,11 @@
     "eslint": "^8.0.0",
     "eslint-config-next": "14.2.15",
     "postcss": "^8.4.0",
-    "supabase": "^2.77.0",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.4.0",
     "vitest": "^4.0.18"
+  },
+  "optionalDependencies": {
+    "supabase": "^2.77.0"
   }
 }
