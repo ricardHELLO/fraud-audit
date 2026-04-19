@@ -1,5 +1,10 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import { rateLimit, identifierFromRequest, RATE_LIMITS } from '@/lib/rate-limit'
+import {
+  rateLimit,
+  identifierFromRequest,
+  rateLimitHeaders,
+  RATE_LIMITS,
+} from '@/lib/rate-limit'
 
 describe('rate-limit — sin UPSTASH env vars (graceful degradation)', () => {
   beforeEach(() => {
@@ -85,5 +90,51 @@ describe('identifierFromRequest — preferencia userId > IP > anonymous', () => 
   it('cae a "anonymous" cuando no hay nada', () => {
     const id = identifierFromRequest(makeRequest(), undefined)
     expect(id).toBe('anonymous')
+  })
+})
+
+describe('rateLimitHeaders — IETF draft headers (P3, issue #3)', () => {
+  it('devuelve los 3 headers cuando el resultado tiene todos los campos', () => {
+    // Upstash entrega `reset` en ms. El estándar IETF usa segundos.
+    // La aritmética `Math.ceil(reset/1000)` debe producir un entero.
+    const resetMs = 1_700_000_000_000 // epoch ms conocido
+    const headers = rateLimitHeaders({
+      success: true,
+      limit: 10,
+      remaining: 7,
+      reset: resetMs,
+    })
+    expect(headers['X-RateLimit-Limit']).toBe('10')
+    expect(headers['X-RateLimit-Remaining']).toBe('7')
+    expect(headers['X-RateLimit-Reset']).toBe(String(Math.ceil(resetMs / 1000)))
+  })
+
+  it('devuelve objeto vacío cuando el resultado viene del pass-through (sin Upstash)', () => {
+    // Cuando Upstash no está configurado, `rateLimit()` devuelve
+    // `{ success: true }` sin campos numéricos. El helper NO debe
+    // añadir headers ruidosos con valor "undefined".
+    const headers = rateLimitHeaders({ success: true })
+    expect(headers).toEqual({})
+  })
+
+  it('remaining=0 se serializa como "0" (no se confunde con falsy)', () => {
+    // Regression: una implementación naïve con `if (result.remaining)`
+    // excluiría el header cuando remaining=0 → el cliente no sabría
+    // que ha agotado la ventana hasta el próximo 429. Verificamos la
+    // frontera.
+    const headers = rateLimitHeaders({
+      success: false,
+      limit: 5,
+      remaining: 0,
+      reset: Date.now() + 60_000,
+    })
+    expect(headers['X-RateLimit-Remaining']).toBe('0')
+  })
+
+  it('es seguro usarlo con spread aunque no haya headers', () => {
+    // Las rutas hacen `headers: { ...rateLimitHeaders(rl), 'Retry-After': ... }`.
+    // Un undefined o null rompería el spread. Verificamos forma.
+    const spread = { ...rateLimitHeaders({ success: true }), foo: 'bar' }
+    expect(spread).toEqual({ foo: 'bar' })
   })
 })

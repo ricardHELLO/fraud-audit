@@ -5,7 +5,7 @@ import { createServerClient } from '@/lib/supabase';
 import { deductCredit } from '@/lib/credits';
 import { inngest } from '@/lib/inngest/client';
 import { serverTrackAnalysisStarted, serverTrackCreditSpent } from '@/lib/posthog-server-events';
-import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
+import { rateLimit, identifierFromRequest, rateLimitHeaders } from '@/lib/rate-limit';
 import { parseJsonBody, AnalyzeBodySchema } from '@/lib/api-validation';
 
 export async function POST(req: NextRequest) {
@@ -21,14 +21,19 @@ export async function POST(req: NextRequest) {
 
     // SEC-04: rate limit — Anthropic calls are the most expensive path.
     const rl = await rateLimit('analyze', identifierFromRequest(req, userId));
+    // P3 (issue #3): X-RateLimit-* en todas las respuestas.
+    const rlHeaders = rateLimitHeaders(rl);
     if (!rl.success) {
       return NextResponse.json(
         { error: 'Demasiadas peticiones de análisis. Intenta en unos segundos.' },
         {
           status: 429,
-          headers: rl.reset
-            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
-            : undefined,
+          headers: {
+            ...rlHeaders,
+            ...(rl.reset
+              ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+              : {}),
+          },
         }
       );
     }
@@ -62,13 +67,13 @@ export async function POST(req: NextRequest) {
       console.error('DB error fetching user (analyze):', userError.message);
       return NextResponse.json(
         { error: 'Database error' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       );
     }
     if (!user) {
       return NextResponse.json(
         { error: 'User not found' },
-        { status: 404 }
+        { status: 404, headers: rlHeaders }
       );
     }
 
@@ -85,7 +90,7 @@ export async function POST(req: NextRequest) {
         // BUG-API04 fix: demo limit is not a credits issue; use 400 + clear message.
         return NextResponse.json(
           { error: 'Demo limit reached' },
-          { status: 400 }
+          { status: 400, headers: rlHeaders }
         )
       }
     } else {
@@ -94,7 +99,7 @@ export async function POST(req: NextRequest) {
       if (!deducted) {
         return NextResponse.json(
           { error: 'Insufficient credits' },
-          { status: 402 }
+          { status: 402, headers: rlHeaders }
         )
       }
     }
@@ -127,7 +132,7 @@ export async function POST(req: NextRequest) {
       console.error('Failed to create report:', reportError?.message);
       return NextResponse.json(
         { error: 'Failed to create report' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       );
     }
 
@@ -154,7 +159,7 @@ export async function POST(req: NextRequest) {
       await supabase.from('reports').update({ status: 'failed' }).eq('id', report.id);
       return NextResponse.json(
         { error: 'Failed to queue analysis. Please try again.' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       );
     }
 
@@ -173,7 +178,7 @@ export async function POST(req: NextRequest) {
         slug,
         status: 'processing',
       },
-      { status: 200 }
+      { status: 200, headers: rlHeaders }
     );
   } catch (err) {
     console.error('Analyze error:', err);

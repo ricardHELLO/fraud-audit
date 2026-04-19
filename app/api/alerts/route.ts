@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { createServerClient } from '@/lib/supabase'
 import { MAX_ALERT_RULES_PER_USER } from '@/lib/types/alerts'
-import { rateLimit, identifierFromRequest } from '@/lib/rate-limit'
+import { rateLimit, identifierFromRequest, rateLimitHeaders } from '@/lib/rate-limit'
 import { parseJsonBody, AlertRuleBodySchema } from '@/lib/api-validation'
 
 /* ------------------------------------------------------------------ */
@@ -70,14 +70,19 @@ export async function POST(req: NextRequest) {
 
     // SEC-04: rate limit por usuario.
     const rl = await rateLimit('alerts', identifierFromRequest(req, clerkId))
+    // P3 (issue #3): X-RateLimit-* en todas las respuestas.
+    const rlHeaders = rateLimitHeaders(rl)
     if (!rl.success) {
       return NextResponse.json(
         { error: 'Demasiadas peticiones. Intenta en unos segundos.' },
         {
           status: 429,
-          headers: rl.reset
-            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
-            : undefined,
+          headers: {
+            ...rlHeaders,
+            ...(rl.reset
+              ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+              : {}),
+          },
         }
       )
     }
@@ -101,10 +106,10 @@ export async function POST(req: NextRequest) {
 
     if (userError && userError.code !== 'PGRST116') {
       console.error('DB error fetching user (alerts POST):', userError.message)
-      return NextResponse.json({ error: 'Database error' }, { status: 500 })
+      return NextResponse.json({ error: 'Database error' }, { status: 500, headers: rlHeaders })
     }
     if (!user) {
-      return NextResponse.json({ error: 'User not found' }, { status: 404 })
+      return NextResponse.json({ error: 'User not found' }, { status: 404, headers: rlHeaders })
     }
 
     // Pre-check: rechaza el caso "usuario ya en el límite" sin malgastar
@@ -118,7 +123,7 @@ export async function POST(req: NextRequest) {
     if ((count ?? 0) >= MAX_ALERT_RULES_PER_USER) {
       return NextResponse.json(
         { error: `Maximo ${MAX_ALERT_RULES_PER_USER} alertas por usuario` },
-        { status: 400 }
+        { status: 400, headers: rlHeaders }
       )
     }
 
@@ -139,7 +144,7 @@ export async function POST(req: NextRequest) {
       console.error('Failed to create alert rule:', error.message)
       return NextResponse.json(
         { error: 'Failed to create alert' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       )
     }
 
@@ -174,11 +179,11 @@ export async function POST(req: NextRequest) {
 
       return NextResponse.json(
         { error: `Maximo ${MAX_ALERT_RULES_PER_USER} alertas por usuario` },
-        { status: 400 }
+        { status: 400, headers: rlHeaders }
       )
     }
 
-    return NextResponse.json({ rule }, { status: 201 })
+    return NextResponse.json({ rule }, { status: 201, headers: rlHeaders })
   } catch (err) {
     console.error('Alerts POST error:', err)
     return NextResponse.json(
