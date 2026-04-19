@@ -11,6 +11,7 @@ import {
   POS_CONNECTOR_IDS,
   INVENTORY_CONNECTOR_IDS,
 } from '@/lib/types/connectors';
+import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
@@ -20,6 +21,20 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
+      );
+    }
+
+    // SEC-04: rate limit — Anthropic calls are the most expensive path.
+    const rl = await rateLimit('analyze', identifierFromRequest(req, userId));
+    if (!rl.success) {
+      return NextResponse.json(
+        { error: 'Demasiadas peticiones de análisis. Intenta en unos segundos.' },
+        {
+          status: 429,
+          headers: rl.reset
+            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+            : undefined,
+        }
       );
     }
 

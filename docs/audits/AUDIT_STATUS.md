@@ -1,6 +1,6 @@
 # Estado de los findings de auditoría QA
 
-**Última actualización:** 2026-04-18 (Cubo 1 cerrado: ERR-02 + PERF-02)
+**Última actualización:** 2026-04-18 (Cubo 2: SEC-07/BIZ-08/SEC-04/INT-03)
 **Alcance:** 64 findings (31 backend + 33 frontend) de las auditorías QA
 del 2026-03-28.
 
@@ -32,10 +32,10 @@ del 2026-03-28.
 | SEC-01 | 🔴 CRIT | `isDemo` bypass: saltar cobro de créditos | ✅ | `2d13334` — límite server-side de 1 demo/usuario |
 | SEC-02 | 🟠 HIGH | Sin validación de `posConnector`/`inventoryConnector` | ✅ | `3d333d7` — type guards + allowlist en analyze/upload |
 | SEC-03 | 🟠 HIGH | Sin límite de tamaño en uploads | ✅ | `4fa4bd5` + `58b44c0` — validación 50MB client+API |
-| SEC-04 | 🟠 HIGH | Sin rate limiting en ningún endpoint | 🔵 | Requiere Upstash/Vercel KV — decisión de infra |
+| SEC-04 | 🟠 HIGH | Sin rate limiting en ningún endpoint | ✅ | **esta PR (Cubo 2)** — `lib/rate-limit.ts` con `@upstash/ratelimit` aplicado a upload/analyze/feedback/alerts/bug-report. Fail-open + graceful degradation sin env vars. Activar en prod con `UPSTASH_REDIS_REST_URL`+`_TOKEN` |
 | SEC-05 | 🟡 MED | Stripe webhook: no verifica `payment_status` | ✅ | `3d333d7` — skip si `payment_status !== 'paid'` |
 | SEC-06 | 🟡 MED | Sin headers de seguridad HTTP | ✅ | `3d333d7` — `next.config.js` `headers()` con XFO/nosniff/Referrer/Permissions |
-| SEC-07 | 🟡 MED | RLS en Storage bucket no visible/verificado | 🔵 | Requiere verificación en Supabase Dashboard |
+| SEC-07 | 🟡 MED | RLS en Storage bucket no visible/verificado | ✅ | **esta PR (Cubo 2)** — verificado via Supabase MCP: bucket `uploads` privado, RLS enabled en `storage.objects` con 0 policies = default-deny para anon/authenticated. Solo service-role (server) accede |
 
 ### Lógica de negocio (BIZ)
 
@@ -48,7 +48,7 @@ del 2026-03-28.
 | BIZ-05 | 🟡 MED | Crash en `conclusions.ts` con `by_local[0]` vacío | ✅ | `6e16e24` — null check en SummaryTab + guards similares |
 | BIZ-06 | 🟡 MED | Correlation: inventory score constante entre locales | ✅ | `2c0b15c` — score inventario por local deshabilitado |
 | BIZ-07 | 🟡 MED | `feedback/route.ts`: `accuracy_rating` sin rango | ✅ | `8f07780` (NM-04) + `3d333d7` — refuerzo con `Number.isInteger` |
-| BIZ-08 | 🟡 MED | `alerts/route.ts`: race en límite de 10 reglas | 🟡 | Pendiente — requiere lock atómico o constraint DB |
+| BIZ-08 | 🟡 MED | `alerts/route.ts`: race en límite de 10 reglas | ✅ | **esta PR (Cubo 2)** — post-insert verification + self-rollback. No atómico (restricción "no schema change" descarta UNIQUE INDEX / RPC con `pg_advisory_xact_lock`) pero cierra la ventana de race común (double-click UI) |
 | BIZ-09 | 🟢 LOW | `inventory-deviation.ts`: absolute values ocultan dirección | ✅ | `2c0b15c` — `net_deviation` añadido |
 
 ### Inngest jobs (INN)
@@ -66,7 +66,7 @@ del 2026-03-28.
 |---|---|---|---|---|
 | INT-01 | 🟠 HIGH | Claude API: truncación JSON produce payload inválido | ✅ | `519537a` — AI insights payload truncation |
 | INT-02 | 🟡 MED | Claude API: sin timeout configurado | ✅ | `3d333d7` — `new Anthropic({ timeout: 60_000 })` |
-| INT-03 | 🟡 MED | Resend: FROM address es sandbox | 🔵 | Requiere configurar dominio en Resend Dashboard |
+| INT-03 | 🟡 MED | Resend: FROM address es sandbox | ✅ | **esta PR (Cubo 2)** — FROM configurable vía `RESEND_FROM` env var. Code ready; acción pendiente de usuario: verificar dominio en resend.com/domains + setear env var en Vercel |
 | INT-04 | 🟢 LOW | Stripe: `listLineItems` antes del check de duplicados | ✅ | `3d333d7` — pre-check DB por `reference_id` |
 
 ### Performance (PERF)
@@ -132,9 +132,9 @@ del 2026-03-28.
 
 | Estado | Backend | Frontend | Total |
 |---|---|---|---|
-| ✅ Cerrado | 24 | 11 | **35** |
-| 🟡 Abierto | 3 | 22 | **25** |
-| 🔵 Requiere infra | 3 | 0 | **3** |
+| ✅ Cerrado | 28 | 11 | **39** |
+| 🟡 Abierto | 2 | 22 | **24** |
+| 🔵 Requiere infra | 0 | 0 | **0** |
 | ❔ Incierto | 1 | 0 | **1** |
 | 🟣 No aplica | 0 | 0 | **0** |
 | **TOTAL** | **31** | **33** | **64** |
@@ -151,6 +151,10 @@ Cerrado hasta ahora en la rama:
 - ✅ **ERR-01** — barrido en 12 routes: discriminación `PGRST116` (404 "no rows") vs otros codes (500 "DB rota").
 - ✅ **ERR-02** (Cubo 1) — `feedback/route.ts` reordenado: el insert del feedback es el punto de no retorno; fallos posteriores de crédito/analytics loguean pero devuelven 200 con `creditAwarded:false`.
 - ✅ **PERF-02** (Cubo 1) — `UPLOAD_MAX_ROWS=500_000` enforzado en `/api/upload` tras `detectVolume`, con cleanup de Storage y 413 explícito. Test en `__tests__/volume-detector.test.ts`.
+- ✅ **SEC-07** (Cubo 2) — verificado via Supabase MCP que la config actual es default-deny (bucket privado, RLS enabled, 0 policies → solo service-role accede). No requiere cambio de código; solo documentación del estado.
+- ✅ **BIZ-08** (Cubo 2) — `alerts/route.ts` POST añade post-insert verification + self-rollback para cerrar la ventana de race común sin tocar schema.
+- ✅ **SEC-04** (Cubo 2) — nuevo `lib/rate-limit.ts` con `@upstash/ratelimit` en 5 routes (upload/analyze/feedback/alerts/bug-report). Presets por familia. Fail-open + graceful degradation si Upstash no está configurado. 9 nuevos tests.
+- ✅ **INT-03** (Cubo 2) — `lib/email.ts` lee `RESEND_FROM` de entorno; warn-once si se queda en sandbox. Acción pendiente del usuario: verificar dominio en Resend Dashboard + setear env var en Vercel.
 
 Pendiente en la rama:
 
@@ -161,8 +165,13 @@ Finding abierto con restricción explícita "no tocar calculators":
 
 - ❔ **BIZ-04** (waste-analysis underreporting con datos vacíos) — verificado **abierto** (`lib/calculators/waste-analysis.ts:78` sin guard de datos). Deferido: el usuario pidió no tocar calculators en esta PR.
 
-Post-PR, quedan 25 findings abiertos. Los pendientes de severidad alta son
-todos de accesibilidad/UX (no críticos) o decisiones de negocio (BIZ-01,
-BIZ-08) / infra (SEC-04, SEC-07, INT-03). El único pendiente backend
-propiamente "de código" es **ERR-03** (migración a logger estructurado)
-— tamaño suficiente para justificar su propia PR fuera de este sprint.
+Post-PR, quedan 24 findings abiertos. El resumen es:
+
+- **Frontend (22)**: todos de accesibilidad/UX (no críticos para producción).
+- **Backend (2)**: **BIZ-01** (requiere tu decisión sobre el threshold de cash-discrepancy, implica tocar calculators) y **ERR-03** (migración a logger estructurado — tamaño suficiente para su propia PR).
+- **Incierto (1)**: **BIZ-04** — deferido por la restricción "no tocar calculators".
+
+Tras Cubo 1 y Cubo 2, el único bloqueador backend para ir a producción es
+activar **Upstash** (crear instancia + env vars) y **Resend domain**
+(verificar dominio + setear `RESEND_FROM`). El código ya está listo para
+ambos; solo requiere provisión externa.

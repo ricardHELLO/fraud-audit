@@ -9,6 +9,7 @@ import {
   SOURCE_CATEGORIES,
 } from '@/lib/types/connectors';
 import { UPLOAD_MAX_BYTES, UPLOAD_MAX_MB, UPLOAD_MAX_ROWS } from '@/lib/constants/upload';
+import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
@@ -18,6 +19,21 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
+      );
+    }
+
+    // SEC-04: rate limit por usuario. Pass-through si Upstash no está
+    // configurado (degradación elegante en deploys sin env vars).
+    const rl = await rateLimit('upload', identifierFromRequest(req, userId));
+    if (!rl.success) {
+      return NextResponse.json(
+        { error: 'Demasiadas peticiones. Intenta de nuevo en unos segundos.' },
+        {
+          status: 429,
+          headers: rl.reset
+            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+            : undefined,
+        }
       );
     }
 

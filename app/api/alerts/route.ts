@@ -7,6 +7,7 @@ import {
   MAX_ALERT_RULES_PER_USER,
 } from '@/lib/types/alerts'
 import type { AlertMetric, AlertOperator } from '@/lib/types/alerts'
+import { rateLimit, identifierFromRequest } from '@/lib/rate-limit'
 
 /* ------------------------------------------------------------------ */
 /*  GET /api/alerts — List user's alert rules                          */
@@ -71,6 +72,20 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    // SEC-04: rate limit por usuario.
+    const rl = await rateLimit('alerts', identifierFromRequest(req, clerkId))
+    if (!rl.success) {
+      return NextResponse.json(
+        { error: 'Demasiadas peticiones. Intenta en unos segundos.' },
+        {
+          status: 429,
+          headers: rl.reset
+            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+            : undefined,
+        }
+      )
+    }
+
     const body = await req.json()
     const { name, metric, operator, threshold } = body as {
       name?: string
@@ -128,7 +143,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    // Check max rules limit
+    // Pre-check: rechaza el caso "usuario ya en el límite" sin malgastar
+    // un INSERT. Cierra ~99% de los casos; la ventana de race queda
+    // cubierta por el post-check más abajo.
     const { count } = await supabase
       .from('alert_rules')
       .select('id', { count: 'exact', head: true })
@@ -159,6 +176,41 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: 'Failed to create alert' },
         { status: 500 }
+      )
+    }
+
+    // BIZ-08: dos POST concurrentes del mismo usuario pueden ambos leer
+    // count=9 y ambos insertar, dejando 11 reglas. Con la restricción
+    // actual de "no schema change", la opción atómica (UNIQUE INDEX
+    // WHERE position <= 10 o RPC con pg_advisory_xact_lock) no aplica.
+    // Compromiso: insertamos, recontamos, y si la cuenta final excede el
+    // límite revertimos nuestra propia fila. Cierra la ventana de race
+    // más común (double-click UI) sin tocar schema.
+    const { count: finalCount } = await supabase
+      .from('alert_rules')
+      .select('id', { count: 'exact', head: true })
+      .eq('user_id', user.id)
+
+    if ((finalCount ?? 0) > MAX_ALERT_RULES_PER_USER) {
+      const { error: rollbackError } = await supabase
+        .from('alert_rules')
+        .delete()
+        .eq('id', rule.id)
+
+      if (rollbackError) {
+        // El rollback falló — la fila queda. Logueamos para que monitoreo
+        // detecte el caso raro de count > MAX persistente. Seguimos
+        // devolviendo 400 al cliente (el INSERT fue considerado rechazado).
+        console.error(
+          'BIZ-08 race rollback failed (orphan alert_rule may persist):',
+          rule.id,
+          rollbackError.message
+        )
+      }
+
+      return NextResponse.json(
+        { error: `Maximo ${MAX_ALERT_RULES_PER_USER} alertas por usuario` },
+        { status: 400 }
       )
     }
 
