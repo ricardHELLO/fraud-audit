@@ -193,29 +193,49 @@ export function ReportLayout({ data, reportId, aiInsights }: ReportLayoutProps) 
           </div>
         </div>
 
-        {/* Tab navigation */}
+        {/* Tab navigation — AUDIT-001: patrón ARIA tablist completo. */}
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <nav className="-mb-px flex overflow-x-auto scrollbar-none" aria-label="Tabs">
-            {TABS.map((tab) => (
-              <button
-                key={tab.key}
-                onClick={() => { trackReportTabClicked(tab.key); setActiveTab(tab.key) }}
-                className={cn(
-                  'shrink-0 border-b-2 px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap',
-                  activeTab === tab.key
-                    ? 'border-blue-600 text-blue-600'
-                    : 'border-transparent text-stone-500 hover:border-stone-300 hover:text-stone-700'
-                )}
-              >
-                {tab.label}
-              </button>
-            ))}
+          <nav
+            role="tablist"
+            aria-label="Secciones del informe"
+            className="-mb-px flex overflow-x-auto scrollbar-none"
+          >
+            {TABS.map((tab) => {
+              const selected = activeTab === tab.key
+              return (
+                <button
+                  key={tab.key}
+                  role="tab"
+                  id={`tab-${tab.key}`}
+                  type="button"
+                  aria-selected={selected}
+                  aria-controls={`tabpanel-${tab.key}`}
+                  // tabIndex pattern del WAI-ARIA Tabs: solo el tab activo es
+                  // focusable via tab-key; los otros se alcanzan con flechas.
+                  tabIndex={selected ? 0 : -1}
+                  onClick={() => { trackReportTabClicked(tab.key); setActiveTab(tab.key) }}
+                  className={cn(
+                    'shrink-0 border-b-2 px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap',
+                    selected
+                      ? 'border-blue-600 text-blue-600'
+                      : 'border-transparent text-stone-500 hover:border-stone-300 hover:text-stone-700'
+                  )}
+                >
+                  {tab.label}
+                </button>
+              )
+            })}
           </nav>
         </div>
       </header>
 
       {/* Tab content — wrapped in Error Boundary (BUG-UI02) */}
-      <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+      <main
+        role="tabpanel"
+        id={`tabpanel-${activeTab}`}
+        aria-labelledby={`tab-${activeTab}`}
+        className="mx-auto max-w-5xl px-4 py-8 sm:px-6"
+      >
         <TabErrorBoundary key={activeTab}>
           {renderTab()}
         </TabErrorBoundary>

@@ -18,10 +18,14 @@ export function DashboardNav({ userName }: DashboardNavProps) {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          {/* Compare link */}
+          {/* Compare link — en móvil la etiqueta "Comparar" está oculta,
+              así que el `aria-label` sustituye al texto para lectores de
+              pantalla. El `<svg>` pasa a `aria-hidden` porque el label ya
+              describe la función. */}
           <Link
             href="/dashboard/comparar"
             className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm text-stone-500 transition-colors hover:bg-stone-100 hover:text-stone-700"
+            aria-label="Comparar informes"
             title="Comparar informes"
           >
             <svg
@@ -29,6 +33,7 @@ export function DashboardNav({ userName }: DashboardNavProps) {
               viewBox="0 0 20 20"
               fill="currentColor"
               className="h-4 w-4"
+              aria-hidden="true"
             >
               <path
                 fillRule="evenodd"
@@ -45,10 +50,11 @@ export function DashboardNav({ userName }: DashboardNavProps) {
             </span>
           )}
 
-          {/* Settings gear icon */}
+          {/* Settings gear icon — icon-only link, `aria-label` obligatorio. */}
           <Link
             href="/dashboard/settings"
             className="flex h-8 w-8 items-center justify-center rounded-lg text-stone-400 transition-colors hover:bg-stone-100 hover:text-stone-600"
+            aria-label="Configuración"
             title="Configuracion"
           >
             <svg
@@ -56,6 +62,7 @@ export function DashboardNav({ userName }: DashboardNavProps) {
               viewBox="0 0 20 20"
               fill="currentColor"
               className="h-5 w-5"
+              aria-hidden="true"
             >
               <path
                 fillRule="evenodd"

@@ -323,11 +323,17 @@ export default function UploadPage() {
               </CardDescription>
             </CardHeader>
             <CardContent>
+              {/* AUDIT-023: `maxLength=80` evita que usuarios peguen
+                  descripciones gigantes que luego rompen la UI de la lista
+                  de informes. 80 caracteres cubre marcas largas reales
+                  ("Paella Dorada — Valencia Centro" = 32 chars). */}
               <input
                 type="text"
                 value={restaurantName}
                 onChange={(e) => setRestaurantName(e.target.value)}
                 placeholder="Ej: Paella Dorada — Valencia Centro"
+                maxLength={80}
+                aria-label="Nombre del restaurante (opcional)"
                 className="w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
               />
             </CardContent>
