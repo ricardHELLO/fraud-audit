@@ -7,6 +7,42 @@ Orden: mas reciente primero.
 
 ---
 
+## ADR-008 — BIZ-04: calculators como unica fuente de verdad numerica
+
+**Fecha:** 2026-04-19
+**Contexto:** `lib/ai-insights-generator.ts` pasa un `ReportData` pre-calculado por los `lib/calculators/*.ts` a Claude para generar narrativa, recomendaciones y anomalias. El system prompt original no regulaba los numeros, solo el formato de salida. Riesgo: el LLM puede "redondear", "aproximar" o recalcular cifras — produciendo divergencia entre el informe deterministico (tabs, graficas, PDF) y la narrativa de IA. Para un producto de auditoria de fraude, cualquier inconsistencia numerica erosiona la confianza del cliente y abre riesgo reputacional y legal.
+
+**Decision:** Anadir un bloque `REGLAS DE INTEGRIDAD NUMERICA` al final del `SYSTEM_PROMPT` que:
+
+1. Declara los 7 calculators (`cash_discrepancy`, `deleted_invoices`, `deleted_products`, `waste_analysis`, `inventory_deviation`, `correlation`, `conclusions`) como unica fuente de verdad numerica.
+2. Prohibe recalcular, redondear, aproximar o inventar cifras.
+3. Obliga a citar valores verbatim (permitiendo solo reformato es-ES: coma decimal, punto de miles).
+4. Prohibe inferir benchmarks, estacionalidad o comparaciones no respaldadas por el input.
+5. Trata campos `0` o `null` como "sin datos suficientes" en vez de fabricar narrativa.
+
+**Enforcement:** `__tests__/ai-insights-generator.test.ts` parsea el fuente via `readFileSync` y verifica (8 assertions) que el bloque sigue presente. Si un refactor lo borra, CI bloquea el merge.
+
+**Por que parsear el fuente en vez de exportar `SYSTEM_PROMPT`:** exportarlo solo para testearlo es anti-patron (aumenta superficie API sin razon funcional). Leer el fuente es el enfoque mas barato y robusto.
+
+**Consecuencias:**
+- (+) La narrativa y el informe deterministico son numericamente consistentes por construccion.
+- (+) Auditable: si un numero aparece en la narrativa, existe en `ReportData`.
+- (+) Reduce alucinaciones de magnitud (el modo de fallo mas caro para el negocio).
+- (-) La narrativa pierde "color": no puede decir "esto es alto para el sector" hasta que pasemos benchmarks como input explicito.
+- (-) Refactors que renombren el string del prompt deben actualizar el test al mismo tiempo.
+
+**Alternativas descartadas:**
+- **Validacion post-hoc (regex sobre la narrativa + chequeo contra `ReportData`):** mas trabajo en runtime, no evita que el LLM alucine, solo detecta. Se queda como follow-up (ver mas abajo) pero no sustituye a la regla en prompt.
+- **Entregar a Claude solo los numeros ya formateados (sin el ReportData crudo):** rompe la capacidad del modelo de entender relaciones entre secciones. Ademas no evita reformateos.
+
+**Follow-ups:**
+- [ ] Si queremos comparaciones sectoriales, anadirlas como `ReportData.benchmarks` (campo nuevo) en vez de permitir inferencia libre.
+- [ ] Monitorear respuestas del LLM en Inngest: extraer numeros de la narrativa con regex y loggear cuando no aparezcan en `ReportData` (validacion post-hoc, PostHog event).
+
+**Regla de negocio completa en:** `docs/02_BUSINESS_RULES.md#biz-04`.
+
+---
+
 ## 2026-04-18 — Sprint de bugfix QA completo (33 bugs / 14 tareas)
 
 Tras auditoria externa de QA se identificaron 33 bugs clasificados en 14 tareas. Este sprint introduce 5 patrones arquitectonicos nuevos que afectan al conjunto del frontend y al pipeline de Inngest. Los patrones se documentan individualmente mas abajo; este bloque resume el sprint como unidad.

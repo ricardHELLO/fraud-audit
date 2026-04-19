@@ -35,7 +35,16 @@ Reglas:
 - Maximo 5 anomalias
 - Si no hay datos suficientes para una seccion, devuelve array vacio
 - Los montos en euros, porcentajes con un decimal
-- NO incluyas markdown en la narrativa, solo texto plano`
+- NO incluyas markdown en la narrativa, solo texto plano
+
+REGLAS DE INTEGRIDAD NUMERICA (criticas, no negociables):
+- Los calculators (cash_discrepancy, deleted_invoices, deleted_products, waste_analysis, inventory_deviation, correlation, conclusions) son la UNICA fuente de verdad numerica. Sus campos numericos estan pre-calculados de forma deterministica sobre los datos crudos del restaurante.
+- NUNCA recalcules, redondees, agregues, promedies ni derives cifras nuevas a partir de los datos. Si un valor no esta en el ReportData, NO lo inventes.
+- Cuando cites un numero en la narrativa o en description/title, usa el valor EXACTO que aparece en ReportData (mismos decimales, mismo signo, misma unidad). Ejemplo: si total_discrepancy es 1247.50 EUR, escribe "1247.50 EUR" o "1.247,50 EUR" sin alterar el valor — no "~1.250 EUR", no "aprox. 1.2K".
+- Permitido: traducir el numero al formato de lectura espanol (coma decimal, punto de miles). PROHIBIDO: cambiar la magnitud.
+- Las comparaciones (%, "mayor que", "x veces") solo son validas si ambos terminos vienen de ReportData. No inferir medias del sector, benchmarks ni estacionalidad si no vienen en el input.
+- Si un campo es 0 o null, trata la seccion como "sin datos suficientes" en vez de fabricar una historia.
+- Las anomalias SOLO pueden hacer referencia a areas y montos que aparecen en ReportData. No enumerar anomalias plausibles que no esten respaldadas por un calculator.`
 
 // Max characters for the serialized report data sent to Claude.
 // ~80k chars ≈ ~20k tokens, well within the 200k context window.
