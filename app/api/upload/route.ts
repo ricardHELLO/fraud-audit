@@ -9,7 +9,7 @@ import {
   SOURCE_CATEGORIES,
 } from '@/lib/types/connectors';
 import { UPLOAD_MAX_BYTES, UPLOAD_MAX_MB, UPLOAD_MAX_ROWS } from '@/lib/constants/upload';
-import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
+import { rateLimit, identifierFromRequest, rateLimitHeaders } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
@@ -25,14 +25,19 @@ export async function POST(req: NextRequest) {
     // SEC-04: rate limit por usuario. Pass-through si Upstash no está
     // configurado (degradación elegante en deploys sin env vars).
     const rl = await rateLimit('upload', identifierFromRequest(req, userId));
+    // P3 (issue #3): X-RateLimit-* en todas las respuestas.
+    const rlHeaders = rateLimitHeaders(rl);
     if (!rl.success) {
       return NextResponse.json(
         { error: 'Demasiadas peticiones. Intenta de nuevo en unos segundos.' },
         {
           status: 429,
-          headers: rl.reset
-            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
-            : undefined,
+          headers: {
+            ...rlHeaders,
+            ...(rl.reset
+              ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+              : {}),
+          },
         }
       );
     }
@@ -45,7 +50,7 @@ export async function POST(req: NextRequest) {
     if (!file) {
       return NextResponse.json(
         { error: 'No file provided' },
-        { status: 400 }
+        { status: 400, headers: rlHeaders }
       );
     }
 
@@ -55,21 +60,21 @@ export async function POST(req: NextRequest) {
     if (file.size > UPLOAD_MAX_BYTES) {
       return NextResponse.json(
         { error: `El archivo es demasiado grande. El tamaño máximo permitido es ${UPLOAD_MAX_MB}MB.` },
-        { status: 413 }
+        { status: 413, headers: rlHeaders }
       );
     }
 
     if (!connectorType) {
       return NextResponse.json(
         { error: 'connectorType is required' },
-        { status: 400 }
+        { status: 400, headers: rlHeaders }
       );
     }
 
     if (!sourceCategory) {
       return NextResponse.json(
         { error: 'sourceCategory is required' },
-        { status: 400 }
+        { status: 400, headers: rlHeaders }
       );
     }
 
@@ -80,7 +85,7 @@ export async function POST(req: NextRequest) {
         {
           error: `Invalid connectorType. Must be one of: ${ALL_CONNECTOR_IDS.join(', ')}`,
         },
-        { status: 400 }
+        { status: 400, headers: rlHeaders }
       );
     }
 
@@ -89,7 +94,7 @@ export async function POST(req: NextRequest) {
         {
           error: `Invalid sourceCategory. Must be one of: ${SOURCE_CATEGORIES.join(', ')}`,
         },
-        { status: 400 }
+        { status: 400, headers: rlHeaders }
       );
     }
 
@@ -107,13 +112,13 @@ export async function POST(req: NextRequest) {
       console.error('DB error fetching user (upload):', userError.message);
       return NextResponse.json(
         { error: 'Database error' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       );
     }
     if (!user) {
       return NextResponse.json(
         { error: 'User not found' },
-        { status: 404 }
+        { status: 404, headers: rlHeaders }
       );
     }
 
@@ -137,7 +142,7 @@ export async function POST(req: NextRequest) {
       console.error('Storage upload error:', uploadError.message);
       return NextResponse.json(
         { error: 'Failed to upload file' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       );
     }
 
@@ -154,7 +159,7 @@ export async function POST(req: NextRequest) {
       }
       return NextResponse.json(
         { error: 'No se pudo analizar la estructura del archivo. Verifica que sea un CSV válido para el conector seleccionado.' },
-        { status: 400 }
+        { status: 400, headers: rlHeaders }
       );
     }
 
@@ -174,7 +179,7 @@ export async function POST(req: NextRequest) {
         {
           error: `El archivo tiene demasiadas filas (${volumeInfo.totalRows.toLocaleString('es-ES')}). El máximo permitido es ${UPLOAD_MAX_ROWS.toLocaleString('es-ES')}.`,
         },
-        { status: 413 }
+        { status: 413, headers: rlHeaders }
       );
     }
 
@@ -212,7 +217,7 @@ export async function POST(req: NextRequest) {
       }
       return NextResponse.json(
         { error: 'Failed to save upload record' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       );
     }
 
@@ -221,7 +226,7 @@ export async function POST(req: NextRequest) {
         uploadId: uploadRecord.id,
         volumeInfo,
       },
-      { status: 200 }
+      { status: 200, headers: rlHeaders }
     );
   } catch (err) {
     console.error('Upload error:', err);

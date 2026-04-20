@@ -159,3 +159,38 @@ export function identifierFromRequest(
   if (xff) return `ip:${xff.split(',')[0].trim()}`
   return 'anonymous'
 }
+
+/**
+ * P3 (issue #3): devuelve los tres headers estándar de rate limit para
+ * que los clientes puedan auto-regularse sin golpear el 429.
+ *
+ * Sigue el draft IETF `draft-ietf-httpapi-ratelimit-headers` adoptado
+ * por GitHub, Stripe, Twitter, etc.:
+ *   - `X-RateLimit-Limit`:     peticiones permitidas por ventana
+ *   - `X-RateLimit-Remaining`: peticiones restantes en la ventana actual
+ *   - `X-RateLimit-Reset`:     epoch **segundos** (no ms) del reset
+ *
+ * Notas:
+ *  - Si Upstash no está configurado, `result` viene sin campos numéricos
+ *    y este helper devuelve un objeto vacío → las rutas siguen
+ *    funcionando sin cambios para el consumidor.
+ *  - El standard usa segundos, no ms. Upstash devuelve ms — convertimos.
+ *  - Devolvemos un objeto plano (no Headers) para que las rutas puedan
+ *    hacer spread: `{ ...rateLimitHeaders(rl), 'Retry-After': '30' }`.
+ */
+export function rateLimitHeaders(
+  result: RateLimitResult
+): Record<string, string> {
+  const headers: Record<string, string> = {}
+  if (result.limit !== undefined) {
+    headers['X-RateLimit-Limit'] = String(result.limit)
+  }
+  if (result.remaining !== undefined) {
+    headers['X-RateLimit-Remaining'] = String(result.remaining)
+  }
+  if (result.reset !== undefined) {
+    // Estándar IETF: segundos desde epoch. Upstash da ms → dividimos.
+    headers['X-RateLimit-Reset'] = String(Math.ceil(result.reset / 1000))
+  }
+  return headers
+}

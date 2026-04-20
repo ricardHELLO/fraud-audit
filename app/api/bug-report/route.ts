@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import { createServerClient } from '@/lib/supabase';
 import { awardCredit } from '@/lib/credits';
-import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
+import { rateLimit, identifierFromRequest, rateLimitHeaders } from '@/lib/rate-limit';
 import { parseJsonBody, BugReportBodySchema } from '@/lib/api-validation';
 
 export async function POST(req: NextRequest) {
@@ -16,14 +16,20 @@ export async function POST(req: NextRequest) {
     // SEC-04: rate limit agresivo — endpoint de bug reports es blanco
     // típico de spam. 5/10min.
     const rl = await rateLimit('bugReport', identifierFromRequest(req, clerkId));
+    // P3 (issue #3): exponemos X-RateLimit-* en todas las respuestas,
+    // no solo en 429, para que los clientes puedan auto-regularse.
+    const rlHeaders = rateLimitHeaders(rl);
     if (!rl.success) {
       return NextResponse.json(
         { error: 'Demasiados reportes recientes. Intenta de nuevo en unos minutos.' },
         {
           status: 429,
-          headers: rl.reset
-            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
-            : undefined,
+          headers: {
+            ...rlHeaders,
+            ...(rl.reset
+              ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+              : {}),
+          },
         }
       );
     }
@@ -45,10 +51,10 @@ export async function POST(req: NextRequest) {
     // ERR-01: PGRST116 → 404; otros errores → 500 con log.
     if (userError && userError.code !== 'PGRST116') {
       console.error('DB error fetching user (bug-report):', userError.message);
-      return NextResponse.json({ error: 'Database error' }, { status: 500 });
+      return NextResponse.json({ error: 'Database error' }, { status: 500, headers: rlHeaders });
     }
     if (!user) {
-      return NextResponse.json({ error: 'User not found' }, { status: 404 });
+      return NextResponse.json({ error: 'User not found' }, { status: 404, headers: rlHeaders });
     }
 
     // Insert bug report
@@ -61,7 +67,7 @@ export async function POST(req: NextRequest) {
       console.error('Failed to save bug report:', insertError.message);
       return NextResponse.json(
         { error: 'Failed to save bug report' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       );
     }
 
@@ -75,7 +81,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(
       { success: true, creditAwarded },
-      { status: 200 }
+      { status: 200, headers: rlHeaders }
     );
   } catch (err) {
     console.error('Bug report error:', err);

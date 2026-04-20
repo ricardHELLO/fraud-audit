@@ -3,7 +3,7 @@ import { auth } from '@clerk/nextjs/server';
 import { createServerClient } from '@/lib/supabase';
 import { awardCredit } from '@/lib/credits';
 import { serverTrackFeedbackSubmitted, serverTrackCreditEarned } from '@/lib/posthog-server-events';
-import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
+import { rateLimit, identifierFromRequest, rateLimitHeaders } from '@/lib/rate-limit';
 import { parseJsonBody, FeedbackBodySchema } from '@/lib/api-validation';
 
 export async function POST(req: NextRequest) {
@@ -19,14 +19,19 @@ export async function POST(req: NextRequest) {
 
     // SEC-04: rate limit por usuario.
     const rl = await rateLimit('feedback', identifierFromRequest(req, clerkId));
+    // P3 (issue #3): X-RateLimit-* en todas las respuestas.
+    const rlHeaders = rateLimitHeaders(rl);
     if (!rl.success) {
       return NextResponse.json(
         { error: 'Demasiadas peticiones. Intenta en unos segundos.' },
         {
           status: 429,
-          headers: rl.reset
-            ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
-            : undefined,
+          headers: {
+            ...rlHeaders,
+            ...(rl.reset
+              ? { 'Retry-After': String(Math.ceil((rl.reset - Date.now()) / 1000)) }
+              : {}),
+          },
         }
       );
     }
@@ -61,13 +66,13 @@ export async function POST(req: NextRequest) {
       console.error('DB error fetching user (feedback):', userError.message);
       return NextResponse.json(
         { error: 'Database error' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       );
     }
     if (!user) {
       return NextResponse.json(
         { error: 'User not found' },
-        { status: 404 }
+        { status: 404, headers: rlHeaders }
       );
     }
 
@@ -98,7 +103,7 @@ export async function POST(req: NextRequest) {
       console.error('Failed to save feedback:', feedbackError.message);
       return NextResponse.json(
         { error: 'Failed to save feedback' },
-        { status: 500 }
+        { status: 500, headers: rlHeaders }
       );
     }
 
@@ -142,7 +147,7 @@ export async function POST(req: NextRequest) {
         success: true,
         creditAwarded,
       },
-      { status: 200 }
+      { status: 200, headers: rlHeaders }
     );
   } catch (err) {
     console.error('Feedback error:', err);
