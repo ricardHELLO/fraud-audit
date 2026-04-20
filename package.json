@@ -21,6 +21,7 @@
     "@anthropic-ai/sdk": "^0.78.0",
     "@clerk/nextjs": "^6.39.0",
     "@react-pdf/renderer": "^4.3.2",
+    "@sentry/nextjs": "^10.49.0",
     "@supabase/supabase-js": "^2.39.0",
     "@upstash/ratelimit": "^2.0.8",
     "@upstash/redis": "^1.37.0",
