@@ -70,7 +70,7 @@ export function SummaryTab({ data, cash, invoices, waste }: SummaryTabProps) {
         <Card>
           <CardHeader>
             <CardTitle className="text-sm text-stone-500 font-medium">
-              <span className="mr-1.5">{'💰'}</span>Total Descuadre Caja
+              <span className="mr-1.5" aria-hidden="true">{'💰'}</span>Total Descuadre Caja
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -87,7 +87,7 @@ export function SummaryTab({ data, cash, invoices, waste }: SummaryTabProps) {
         <Card>
           <CardHeader>
             <CardTitle className="text-sm text-stone-500 font-medium">
-              <span className="mr-1.5">{'🧾'}</span>Facturas Eliminadas
+              <span className="mr-1.5" aria-hidden="true">{'🧾'}</span>Facturas Eliminadas
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -103,7 +103,7 @@ export function SummaryTab({ data, cash, invoices, waste }: SummaryTabProps) {
         <Card>
           <CardHeader>
             <CardTitle className="text-sm text-stone-500 font-medium">
-              <span className="mr-1.5">{'🗑️'}</span>Porcentaje de Merma
+              <span className="mr-1.5" aria-hidden="true">{'🗑️'}</span>Porcentaje de Merma
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -125,7 +125,7 @@ export function SummaryTab({ data, cash, invoices, waste }: SummaryTabProps) {
       <Card>
         <CardHeader>
           <CardTitle>
-            <span className="mr-1.5">{'📊'}</span>Hallazgos Principales
+            <span className="mr-1.5" aria-hidden="true">{'📊'}</span>Hallazgos Principales
           </CardTitle>
         </CardHeader>
         <CardContent>
