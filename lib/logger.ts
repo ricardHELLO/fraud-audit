@@ -73,8 +73,11 @@ function serializeError(err: unknown): LogMeta {
       out.stack = err.stack
     }
     // Campos custom (ej. Supabase le añade `code`, `details`, `hint`).
-    for (const key of Object.keys(err) as Array<keyof typeof err>) {
-      if (key !== 'stack') out[key as string] = (err as Record<string, unknown>)[key as string]
+    // TS no permite casting directo de Error a Record<string, unknown> porque
+    // los tipos no se solapan lo suficiente; vamos por `unknown` como puente.
+    const errRecord = err as unknown as Record<string, unknown>
+    for (const key of Object.keys(errRecord)) {
+      if (key !== 'stack') out[key] = errRecord[key]
     }
     return out
   }
