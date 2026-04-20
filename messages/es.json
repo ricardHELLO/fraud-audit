@@ -1,0 +1,307 @@
+{
+  "common": {
+    "appName": "FraudAudit",
+    "buttons": {
+      "save": "Guardar",
+      "saved": "Guardado",
+      "cancel": "Cancelar",
+      "back": "Atras",
+      "next": "Siguiente",
+      "continue": "Continuar",
+      "close": "Cerrar",
+      "delete": "Eliminar",
+      "retry": "Intentar de nuevo",
+      "signIn": "Iniciar sesion",
+      "signOut": "Cerrar sesion",
+      "signUpFree": "Comenzar gratis"
+    },
+    "labels": {
+      "optional": "Opcional",
+      "required": "Obligatorio",
+      "comingSoon": "(Proximamente)",
+      "loading": "Cargando..."
+    },
+    "errors": {
+      "generic": "Error",
+      "connection": "Error de conexion",
+      "tryAgain": "Intentalo de nuevo."
+    }
+  },
+
+  "landing": {
+    "nav": {
+      "signIn": "Iniciar sesion",
+      "ctaPrimary": "Comenzar gratis"
+    },
+    "hero": {
+      "badge": "Plataforma de auditoria para restaurantes",
+      "title": "Detecta fraude operativo en tu restaurante en minutos",
+      "description": "Subi los datos de tu POS y obtene un informe detallado con cancelaciones sospechosas, descuentos irregulares y un ranking de riesgo por empleado. Sin instalar nada.",
+      "ctaPrimary": "Genera tu informe gratis",
+      "ctaSecondary": "Como funciona",
+      "reportPreviewLabel": "Asi se ve tu informe"
+    },
+    "howItWorks": {
+      "sectionLabel": "Como funciona",
+      "title": "De datos crudos a decisiones en 3 pasos",
+      "steps": {
+        "upload": {
+          "title": "Sube tus datos",
+          "description": "Exporta los datos de tu sistema POS en formato CSV o Excel y subilos a la plataforma en segundos."
+        },
+        "analyze": {
+          "title": "Analisis automatico",
+          "description": "Nuestro motor analiza cancelaciones, descuentos, cortesias y patrones sospechosos con inteligencia artificial."
+        },
+        "report": {
+          "title": "Informe compartible",
+          "description": "Recibis un informe visual con hallazgos clave, ranking de riesgo por empleado y recomendaciones accionables."
+        }
+      }
+    },
+    "compatibility": {
+      "sectionLabel": "Compatible con tu sistema",
+      "footerNote": "Mas integraciones proximamente"
+    },
+    "security": {
+      "sectionLabel": "Seguridad de datos",
+      "title": "Tus datos, bajo tu control",
+      "features": {
+        "encryption": {
+          "title": "Subida cifrada",
+          "description": "Tus archivos viajan con cifrado SSL. Nunca se transmiten en texto plano."
+        },
+        "privacy": {
+          "title": "Solo tu accedes",
+          "description": "Tu informe es privado. Solo tu decides si compartirlo via link."
+        },
+        "deletion": {
+          "title": "Borrado inmediato",
+          "description": "Los archivos CSV/Excel se eliminan permanentemente despues del analisis."
+        }
+      },
+      "statement": "FraudAudit esta disenado exclusivamente para hosteleria. Tus datos financieros nunca se comparten con terceros."
+    },
+    "stats": {
+      "title": "Resultados que hablan por si solos",
+      "description": "Restaurantes de toda Latinoamerica ya usan FraudAudit para proteger sus operaciones.",
+      "items": {
+        "reports":     { "value": "2,400+", "label": "Informes generados" },
+        "fraud":       { "value": "$1.2M",  "label": "Fraude detectado" },
+        "restaurants": { "value": "350+",   "label": "Restaurantes protegidos" },
+        "time":        { "value": "< 5 min", "label": "Tiempo de analisis" }
+      }
+    },
+    "finalCta": {
+      "title": "Protege tu restaurante hoy",
+      "description": "Genera tu primer informe de fraude gratis. Sin tarjeta de credito, sin compromisos.",
+      "note": "Tus archivos se eliminan automaticamente. No compartimos tus datos."
+    },
+    "footer": {
+      "copyright": "Todos los derechos reservados."
+    }
+  },
+
+  "dashboard": {
+    "heading": "Dashboard",
+    "subtitle": "Gestiona tus informes de fraude y creditos",
+    "newReport": "Nuevo informe",
+    "purchase": {
+      "success": {
+        "title": "Compra completada",
+        "description": "Tus creditos se han anadido a tu cuenta. Ya puedes ejecutar nuevos analisis."
+      }
+    },
+    "toasts": {
+      "creditEarned": "+1 ejecucion ganada"
+    }
+  },
+
+  "onboarding": {
+    "title": "Configura tu cuenta",
+    "subtitle": "Selecciona tus sistemas para personalizar tu experiencia",
+    "progressLabel": "Progreso",
+    "steps": {
+      "pos":       { "label": "POS",        "description": "Selecciona tu sistema POS" },
+      "inventory": { "label": "Inventario", "description": "Conecta tu inventario (opcional)" },
+      "guide":     { "label": "Guia",       "description": "Como exportar tus datos" }
+    },
+    "buttons": {
+      "back": "Atras",
+      "next": "Siguiente",
+      "complete": "Continuar al dashboard"
+    }
+  },
+
+  "upload": {
+    "breadcrumb": "Nuevo informe",
+    "title": "Subir datos para analisis",
+    "description": "Sube los archivos exportados de tu POS y sistema de inventario",
+
+    "restaurant": {
+      "title": "Nombre del restaurante",
+      "description": "Opcional. Identifica tu informe en el dashboard y en comparativas.",
+      "placeholder": "Ej: Paella Dorada — Valencia Centro"
+    },
+
+    "pos": {
+      "title": "Datos del POS",
+      "description": "Obligatorio. Sube el archivo de ventas exportado de tu sistema POS.",
+      "systemLabel": "Sistema POS",
+      "fileLabel": "Archivo CSV o Excel del POS",
+      "demo": {
+        "heading": "No tienes datos ahora?",
+        "button": "Probar con datos de ejemplo",
+        "description": "Genera un informe demo en 30 segundos",
+        "restaurantName": "Demo — Paella Dorada"
+      }
+    },
+
+    "inventory": {
+      "title": "Datos de Inventario",
+      "description": "Conectar datos de inventario permite un analisis cruzado mas completo.",
+      "systemLabel": "Sistema de inventario",
+      "fileLabel": "Archivo CSV o Excel de inventario"
+    },
+
+    "connectorPicker": {
+      "placeholder": "Selecciona un conector..."
+    },
+
+    "dataHandling": {
+      "heading": "Que pasa con tus datos?",
+      "steps": {
+        "upload":   { "label": "Subes tu archivo",    "description": "CSV o Excel" },
+        "analyze":  { "label": "Analisis automatico", "description": "Sin revision humana" },
+        "generate": { "label": "Informe generado",    "description": "Listo en 30 seg" },
+        "delete":   { "label": "Archivos eliminados", "description": "Borrado permanente" }
+      },
+      "trustBadges": {
+        "encrypted":   "Cifrado seguro",
+        "autoDeleted": "Eliminado tras analisis",
+        "gdpr":        "GDPR compliant",
+        "noHumans":    "Nadie revisa tus datos"
+      },
+      "reassurance": "FraudAudit no almacena ni comparte tus datos financieros con terceros."
+    },
+
+    "submit": "Analizar",
+
+    "errors": {
+      "balanceUnverifiedTitle": "No pudimos verificar tu saldo",
+      "balanceUnverifiedDescription": "Recarga la pagina para intentarlo de nuevo. El analisis no esta disponible hasta confirmar tus creditos.",
+      "insufficientCredits": "Creditos insuficientes. Adquiere mas ejecuciones para continuar.",
+      "invalidFile": "No se pudo analizar el archivo. Asegurate de que el formato sea CSV valido.",
+      "demoLoadFailed": "No se pudo cargar los datos demo"
+    }
+  },
+
+  "processing": {
+    "breadcrumbDashboard": "Dashboard",
+    "breadcrumbCurrent": "Procesando",
+    "heading": "Analizando tus datos",
+    "instruction": "Esto puede tomar unos minutos. No cierres esta pagina.",
+    "progressLabel": "Progreso",
+    "reportIdLabel": "ID de informe:",
+    "steps": {
+      "received":   "Archivos recibidos",
+      "parsing":    "Parseando datos...",
+      "analyzing":  "Analizando patrones de fraude...",
+      "generating": "Generando informe..."
+    },
+    "success": {
+      "title": "Informe generado con exito",
+      "description": "Tu informe de fraude esta listo para revisar",
+      "viewReport": "Ver informe"
+    },
+    "failure": {
+      "title": "Error en el procesamiento",
+      "description": "El analisis fallo. Intentalo de nuevo con un archivo diferente.",
+      "timeout": "El analisis esta tardando mas de lo esperado. Vuelve al dashboard para consultar el estado.",
+      "retry": "Intentar de nuevo",
+      "backToDashboard": "Volver al dashboard"
+    }
+  },
+
+  "report": {
+    "metaTitleFallback": "Informe - FraudAudit",
+    "metaTitle": "Informe de Fraude - {orgName}",
+    "metaDescription": "Informe de analisis de fraude operativo para {orgName}. Generado por FraudAudit.",
+    "ogDescription": "Analisis de fraude operativo con deteccion de cancelaciones sospechosas, descuadres de caja y patrones irregulares.",
+    "slugLabel": "Slug: {slug}",
+    "states": {
+      "processing": {
+        "title": "Informe en proceso",
+        "description": "Tu informe esta siendo generado. Vuelve en unos minutos para ver los resultados."
+      },
+      "failed": {
+        "title": "Error al generar informe",
+        "description": "Hubo un error al procesar tus datos. Contacta con soporte si el problema persiste."
+      },
+      "empty": {
+        "title": "Informe sin datos",
+        "description": "Este informe no contiene datos de analisis. Esto puede ocurrir si el archivo subido no tenia informacion suficiente."
+      }
+    }
+  },
+
+  "compare": {
+    "title": "Comparar Informes",
+    "subtitle": "Selecciona dos informes para ver la evolucion de las metricas",
+    "insufficientReports": "Necesitas al menos 2 informes completados para usar el comparador.",
+    "previousLabel": "Informe anterior",
+    "currentLabel": "Informe posterior",
+    "selectPlaceholder": "Selecciona un informe",
+    "emptyPrompt": "Selecciona dos informes para comparar sus metricas",
+    "errorCompare": "Error al comparar informes",
+    "riskBadges": {
+      "critical": "Critico",
+      "high":     "Alto",
+      "medium":   "Medio",
+      "low":      "Bajo"
+    },
+    "deltaLabels": {
+      "before": "Antes",
+      "after":  "Despues"
+    }
+  },
+
+  "settings": {
+    "breadcrumbDashboard": "Dashboard",
+    "title": "Configuracion",
+    "account": {
+      "heading": "Cuenta",
+      "email": "Email",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "organization": "Organizacion"
+    },
+    "plan": {
+      "heading": "Plan actual",
+      "availableRuns": "Ejecuciones disponibles",
+      "buyMore": "Comprar mas"
+    },
+    "credits": {
+      "heading": "Historial de creditos",
+      "table": {
+        "date":   "Fecha",
+        "reason": "Razon",
+        "amount": "Movimiento"
+      },
+      "empty": "No hay transacciones todavia."
+    },
+    "transactionReasons": {
+      "welcome_bonus":      "Bienvenida",
+      "purchase":           "Compra de ejecuciones",
+      "analysis_run":       "Analisis ejecutado",
+      "feedback_submitted": "Feedback enviado",
+      "referral":           "Referido",
+      "referral_bonus":     "Bonus por referido",
+      "report_shared":      "Informe compartido",
+      "bug_reported":       "Bug reportado",
+      "second_source":      "Segunda fuente conectada",
+      "first_update":       "Primera actualizacion"
+    },
+    "signOut": "Cerrar sesion"
+  }
+}
