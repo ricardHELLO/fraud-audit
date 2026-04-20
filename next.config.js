@@ -107,7 +107,11 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
-  experimental: {},
+  experimental: {
+    // B7: activate `instrumentation.ts` for boot-time env validation.
+    // In Next 14 this hook is opt-in; Next 15 enables it by default.
+    instrumentationHook: true,
+  },
   async headers() {
     return [
       {

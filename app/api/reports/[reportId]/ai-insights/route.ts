@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { createServerClient } from '@/lib/supabase'
 import { deductCredit } from '@/lib/credits'
+import { rateLimit, identifierFromRequest } from '@/lib/rate-limit'
 
 type RouteParams = { params: Promise<{ reportId: string }> }
 
@@ -93,11 +94,45 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
  * POST /api/reports/[reportId]/ai-insights
  * Trigger AI insights regeneration on demand.
  */
-export async function POST(_req: NextRequest, { params }: RouteParams) {
+export async function POST(req: NextRequest, { params }: RouteParams) {
   try {
     const { userId: clerkId } = await auth()
     if (!clerkId) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    // B8: rate limit the AI regeneration endpoint. Each POST triggers an
+    // Anthropic call (paid), deducts a credit, and runs synchronously for
+    // ~15 s of server time. Without this, a single authenticated user can
+    // drain both credit balance and Anthropic quota in seconds. We use the
+    // existing `analyze` preset (5/min) which is sized for this exact
+    // workload — same cost profile as POST /api/analyze.
+    const rlResult = await rateLimit(
+      'analyze',
+      identifierFromRequest(req, clerkId)
+    )
+    if (!rlResult.success) {
+      const retryAfterSec = rlResult.reset
+        ? Math.max(1, Math.ceil((rlResult.reset - Date.now()) / 1000))
+        : 60
+      return NextResponse.json(
+        {
+          error: 'Too many AI regeneration requests. Try again later.',
+          retryAfter: retryAfterSec,
+        },
+        {
+          status: 429,
+          headers: {
+            'Retry-After': String(retryAfterSec),
+            ...(rlResult.limit !== undefined && {
+              'X-RateLimit-Limit': String(rlResult.limit),
+            }),
+            ...(rlResult.remaining !== undefined && {
+              'X-RateLimit-Remaining': String(rlResult.remaining),
+            }),
+          },
+        }
+      )
     }
 
     const { reportId } = await params
