@@ -7,7 +7,7 @@ Orden: mas reciente primero.
 
 ---
 
-## ADR-008 — BIZ-04: calculators como unica fuente de verdad numerica
+## ADR-009 — BIZ-04: calculators como unica fuente de verdad numerica
 
 **Fecha:** 2026-04-19
 **Contexto:** `lib/ai-insights-generator.ts` pasa un `ReportData` pre-calculado por los `lib/calculators/*.ts` a Claude para generar narrativa, recomendaciones y anomalias. El system prompt original no regulaba los numeros, solo el formato de salida. Riesgo: el LLM puede "redondear", "aproximar" o recalcular cifras — produciendo divergencia entre el informe deterministico (tabs, graficas, PDF) y la narrativa de IA. Para un producto de auditoria de fraude, cualquier inconsistencia numerica erosiona la confianza del cliente y abre riesgo reputacional y legal.
@@ -38,6 +38,8 @@ Orden: mas reciente primero.
 **Follow-ups:**
 - [ ] Si queremos comparaciones sectoriales, anadirlas como `ReportData.benchmarks` (campo nuevo) en vez de permitir inferencia libre.
 - [ ] Monitorear respuestas del LLM en Inngest: extraer numeros de la narrativa con regex y loggear cuando no aparezcan en `ReportData` (validacion post-hoc, PostHog event).
+
+**Nota de numeracion:** originalmente este ADR se numero como ADR-008, pero coincidio con el ADR-008 del logger estructurado (PR #9, ERR-03). Se renumera a ADR-009 para evitar colision; el ADR-008 canonico queda para la decision del logger.
 
 **Regla de negocio completa en:** `docs/02_BUSINESS_RULES.md#biz-04`.
 

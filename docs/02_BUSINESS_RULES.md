@@ -35,7 +35,7 @@ Orden: mas reciente primero.
 
 ### Enforcement
 
-1. **System prompt (`lib/ai-insights-generator.ts`):** el `SYSTEM_PROMPT` incluye el bloque `REGLAS DE INTEGRIDAD NUMERICA` que enumera las reglas de forma explicita. Ver [ADR-008](../DECISIONS.md#adr-008).
+1. **System prompt (`lib/ai-insights-generator.ts`):** el `SYSTEM_PROMPT` incluye el bloque `REGLAS DE INTEGRIDAD NUMERICA` que enumera las reglas de forma explicita. Ver [ADR-009](../DECISIONS.md#adr-009).
 2. **Test unitario (`__tests__/ai-insights-generator.test.ts`):** parsea el fuente via `readFileSync` y verifica (8 assertions) que el bloque sigue presente. Si alguien lo elimina en un refactor, CI falla antes del merge.
 3. **(Roadmap) Validacion post-hoc:** tras la respuesta del LLM, extraer numeros de la narrativa con regex y comprobar que todos existen en `ReportData`. Si alguno no existe, loggear `ai_insights_number_drift` en PostHog + prompt re-run. **No implementado todavia.**
 
@@ -54,7 +54,7 @@ Sin regla explicita, observamos al modelo haciendo cosas como:
 
 ### Relacionado
 
-- [ADR-008 en DECISIONS.md](../DECISIONS.md#adr-008)
+- [ADR-009 en DECISIONS.md](../DECISIONS.md#adr-009)
 - `lib/ai-insights-generator.ts` (prompt de produccion)
 - `__tests__/ai-insights-generator.test.ts` (enforcement)
 - `lib/calculators/*.ts` (fuente de verdad)
