@@ -14,11 +14,19 @@ export async function POST(req: NextRequest) {
   const STRIPE_SECRET = process.env.STRIPE_SECRET_KEY;
   const WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET;
 
-  // Stripe not configured — free beta mode
+  // Stripe not configured: return 503 (not 200) so Stripe retries and on-call
+  // notices. A 200 here would silently drop real payments if keys rotate or
+  // someone fat-fingers the env vars in production. If the product is truly in
+  // free-beta, disable the webhook endpoint in the Stripe dashboard instead.
   if (!STRIPE_SECRET || !WEBHOOK_SECRET || STRIPE_SECRET === 'sk_test_placeholder') {
+    log.warn('Stripe webhook received but Stripe is not configured', {
+      hasSecret: !!STRIPE_SECRET,
+      hasWebhookSecret: !!WEBHOOK_SECRET,
+      isPlaceholder: STRIPE_SECRET === 'sk_test_placeholder',
+    });
     return NextResponse.json(
-      { error: 'Stripe is not configured (free beta mode)' },
-      { status: 200 }
+      { error: 'Stripe is not configured' },
+      { status: 503, headers: { 'Retry-After': '3600' } }
     );
   }
 
