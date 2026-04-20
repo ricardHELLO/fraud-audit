@@ -45,6 +45,32 @@ Orden: mas reciente primero.
 
 ---
 
+## ADR-008 — Logger estructurado propio sin auto-capture a Sentry (ERR-03)
+
+**Fecha:** 2026-04-19
+**Contexto:** auditoria identifico 116 `console.error('msg:', err)` en texto libre que complican el triage en Vercel/Sentry. No hay un campo comun (`route`, `userId`, `code`) para filtrar.
+
+**Decision:**
+1. Logger propio en `lib/logger.ts` sin dependencias (solo `JSON.stringify`).
+2. API: `logger.{debug,info,warn,error}(msg, meta?)` + `logger.exception(err, msg, meta?)` + `logger.child(bindings)` + `logger.forRequest(req, extra?)`.
+3. Solo `exception()` reporta a Sentry. `error()` solo loguea.
+
+**Razones del punto 3 (la menos obvia):**
+- Auto-capturar todo `logger.error` inunda Sentry con errores operativos esperados (usuarios sin creditos, PGRST116, rate limit 429) que no son bugs.
+- Forzar una decision explicita en cada call site obliga al autor a responder "¿es esto un error que necesita alerta?" antes de escribirlo.
+- Convencion: `error()` = cosa mala pero clasificable (DB down, validacion); `exception()` = "no se que paso aqui, que lo mire alguien".
+
+**Trade-off aceptado:** si alguien se olvida de usar `exception()` donde tocaba, el error no llega a Sentry. Contramedida: `instrumentation.ts` ya tiene `onRequestError` que captura cualquier error NO-manejado. Solo se pierde Sentry en los errores manejados que uno decide degradar a `error()` — que es el comportamiento deseado.
+
+**Alternativas descartadas:**
+- **pino:** mas batteries-included pero añade ~200 KB al bundle. No necesitamos level filtering avanzado, streams, ni serializers custom.
+- **winston:** pesado, API verbose, pensado para Node tradicional (no serverless).
+- **Solo `console.log(JSON.stringify(...))` inline:** rompe el contrato — no habria requestId, bindings, ni hook para Sentry.
+
+**Migracion:** este PR introduce logger + migra 5 rutas criticas (analyze, upload, feedback, webhooks/clerk, webhooks/stripe). Las ~24 rutas/paginas restantes quedan para un PR de seguimiento (no bloqueante — `console.error` sigue funcionando, solo pierde el formato estructurado).
+
+---
+
 ## 2026-04-18 — Sprint de bugfix QA completo (33 bugs / 14 tareas)
 
 Tras auditoria externa de QA se identificaron 33 bugs clasificados en 14 tareas. Este sprint introduce 5 patrones arquitectonicos nuevos que afectan al conjunto del frontend y al pipeline de Inngest. Los patrones se documentan individualmente mas abajo; este bloque resume el sprint como unidad.

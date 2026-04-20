@@ -4,6 +4,7 @@ import { createServerClient } from '@/lib/supabase';
 import { serverTrackSignup } from '@/lib/posthog-server-events';
 import { sendEmail } from '@/lib/email';
 import { welcomeEmail } from '@/lib/email-templates';
+import { logger } from '@/lib/logger';
 
 interface ClerkUserEvent {
   data: {
@@ -20,6 +21,7 @@ interface ClerkUserEvent {
 }
 
 export async function POST(req: NextRequest) {
+  const log = logger.forRequest(req, { route: '/api/webhooks/clerk' });
   const WEBHOOK_SECRET = process.env.CLERK_WEBHOOK_SECRET;
 
   if (!WEBHOOK_SECRET) {
@@ -89,7 +91,7 @@ export async function POST(req: NextRequest) {
         );
 
         if (error) {
-          console.error('Failed to create user:', error.message);
+          log.error('Failed to create user', { message: error.message, clerkId, event: event.type });
           return NextResponse.json(
             { error: 'Failed to create user' },
             { status: 500 }
@@ -121,7 +123,7 @@ export async function POST(req: NextRequest) {
           .eq('clerk_id', clerkId);
 
         if (error) {
-          console.error('Failed to update user:', error.message);
+          log.error('Failed to update user', { message: error.message, clerkId, event: event.type });
           return NextResponse.json(
             { error: 'Failed to update user' },
             { status: 500 }
@@ -138,7 +140,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ received: true }, { status: 200 });
   } catch (err) {
-    console.error('Clerk webhook error:', err);
+    log.exception(err, 'Unhandled Clerk webhook error', { event: event.type });
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
