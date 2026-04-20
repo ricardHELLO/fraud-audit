@@ -1,13 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { createServerClient } from '@/lib/supabase'
-import {
-  VALID_METRICS,
-  VALID_OPERATORS,
-  MAX_ALERT_RULES_PER_USER,
-} from '@/lib/types/alerts'
-import type { AlertMetric, AlertOperator } from '@/lib/types/alerts'
+import { MAX_ALERT_RULES_PER_USER } from '@/lib/types/alerts'
 import { rateLimit, identifierFromRequest } from '@/lib/rate-limit'
+import { parseJsonBody, AlertRuleBodySchema } from '@/lib/api-validation'
 
 /* ------------------------------------------------------------------ */
 /*  GET /api/alerts — List user's alert rules                          */
@@ -86,45 +82,13 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const body = await req.json()
-    const { name, metric, operator, threshold } = body as {
-      name?: string
-      metric?: string
-      operator?: string
-      threshold?: number
-    }
-
-    // Validate required fields
-    if (!name || !metric || !operator || threshold === undefined) {
-      return NextResponse.json(
-        { error: 'name, metric, operator, and threshold are required' },
-        { status: 400 }
-      )
-    }
-
-    // Validate metric
-    if (!VALID_METRICS.includes(metric as AlertMetric)) {
-      return NextResponse.json(
-        { error: `Invalid metric. Must be one of: ${VALID_METRICS.join(', ')}` },
-        { status: 400 }
-      )
-    }
-
-    // Validate operator
-    if (!VALID_OPERATORS.includes(operator as AlertOperator)) {
-      return NextResponse.json(
-        { error: `Invalid operator. Must be one of: ${VALID_OPERATORS.join(', ')}` },
-        { status: 400 }
-      )
-    }
-
-    // Validate threshold is a number
-    if (typeof threshold !== 'number' || !isFinite(threshold)) {
-      return NextResponse.json(
-        { error: 'threshold must be a valid finite number' },
-        { status: 400 }
-      )
-    }
+    // P2 fix: validación centralizada con zod. Cubre los 4 checks
+    // manuales anteriores (required fields, metric allowlist, operator
+    // allowlist, threshold finite) en una sola llamada; errores salen
+    // como 400 con `issues[]` por campo.
+    const parsed = await parseJsonBody(req, AlertRuleBodySchema)
+    if (!parsed.success) return parsed.response
+    const { name, metric, operator, threshold } = parsed.data
 
     const supabase = createServerClient()
 

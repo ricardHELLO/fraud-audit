@@ -3,6 +3,7 @@ import { auth } from '@clerk/nextjs/server';
 import { createServerClient } from '@/lib/supabase';
 import { awardCredit } from '@/lib/credits';
 import { rateLimit, identifierFromRequest } from '@/lib/rate-limit';
+import { parseJsonBody, BugReportBodySchema } from '@/lib/api-validation';
 
 export async function POST(req: NextRequest) {
   try {
@@ -27,22 +28,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const body = await req.json();
-    const { description } = body;
-
-    if (!description || typeof description !== 'string' || description.trim().length === 0) {
-      return NextResponse.json(
-        { error: 'Description is required' },
-        { status: 400 }
-      );
-    }
-
-    if (description.length > 2000) {
-      return NextResponse.json(
-        { error: 'Description must be 2000 characters or less' },
-        { status: 400 }
-      );
-    }
+    // P2 fix: validación centralizada con zod (trim + min/max en una).
+    const parsed = await parseJsonBody(req, BugReportBodySchema);
+    if (!parsed.success) return parsed.response;
+    const { description } = parsed.data;
 
     const supabase = createServerClient();
 
