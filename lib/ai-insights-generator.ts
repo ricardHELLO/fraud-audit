@@ -1,6 +1,11 @@
 import Anthropic from '@anthropic-ai/sdk'
 import type { ReportData } from './types/report'
 import type { AIInsights } from './types/ai-insights'
+import {
+  pseudonymizeReportData,
+  depseudonymizeInsights,
+  POST_PROCESS_PSEUDONYM_REGEX,
+} from './privacy/pseudonymize'
 
 const SYSTEM_PROMPT = `Eres un auditor experto en fraude operativo de restaurantes en Espana.
 Analiza los datos del informe y genera:
@@ -44,7 +49,10 @@ REGLAS DE INTEGRIDAD NUMERICA (criticas, no negociables):
 - Permitido: traducir el numero al formato de lectura espanol (coma decimal, punto de miles). PROHIBIDO: cambiar la magnitud.
 - Las comparaciones (%, "mayor que", "x veces") solo son validas si ambos terminos vienen de ReportData. No inferir medias del sector, benchmarks ni estacionalidad si no vienen en el input.
 - Si un campo es 0 o null, trata la seccion como "sin datos suficientes" en vez de fabricar una historia.
-- Las anomalias SOLO pueden hacer referencia a areas y montos que aparecen en ReportData. No enumerar anomalias plausibles que no esten respaldadas por un calculator.`
+- Las anomalias SOLO pueden hacer referencia a areas y montos que aparecen en ReportData. No enumerar anomalias plausibles que no esten respaldadas por un calculator.
+
+PROTECCION DE DATOS (GDPR):
+- Si en los datos aparecen tokens con el formato __EMP_<numero>__ (ej. __EMP_1__, __EMP_2__), son IDENTIFICADORES OPACOS de empleados cuyo nombre real se ha ocultado por privacidad. Tratalos como nombres normales: puedes referenciarlos en la narrativa, recomendaciones y anomalias igual que harias con un nombre propio. NO inventes un nombre real para esos tokens, NO los conviertas en frases genericas tipo "varios empleados", NO uses la letra N ni comentarios sobre anonimizacion. Simplemente escribe el token tal cual (ejemplo valido: "El empleado __EMP_1__ elimino 12 facturas").`
 
 // Max characters for the serialized report data sent to Claude.
 // ~80k chars ≈ ~20k tokens, well within the 200k context window.
@@ -71,8 +79,13 @@ export async function generateAIInsights(
     // 60s es holgado para 2000 max_tokens con un prompt de ~80k chars.
     const client = new Anthropic({ apiKey, timeout: 60_000 })
 
+    // GDPR: pseudonymize employee names before they leave our perimeter.
+    // Claude sees `__EMP_<n>__` tokens instead of real names; we restore
+    // them below after parsing the response.
+    const { pseudonymized, reverseMap } = pseudonymizeReportData(reportData)
+
     // Serialize and truncate if needed to avoid exceeding context limits
-    let serialized = JSON.stringify(reportData, null, 2)
+    let serialized = JSON.stringify(pseudonymized, null, 2)
     if (serialized.length > MAX_PAYLOAD_CHARS) {
       console.warn(
         `[AI Insights] Report data too large (${serialized.length} chars), truncating to ${MAX_PAYLOAD_CHARS}`
@@ -123,11 +136,29 @@ export async function generateAIInsights(
       throw new Error('Invalid AI response structure')
     }
 
-    const insights: AIInsights = {
+    const insightsRaw: AIInsights = {
       narrative: parsed.narrative,
       recommendations: parsed.recommendations.slice(0, 5),
       anomalies: parsed.anomalies.slice(0, 5),
       generated_at: new Date().toISOString(),
+    }
+
+    // Restore real employee names. Claude's response contains the opaque
+    // tokens; we swap them back in every user-visible string so the final
+    // narrative reads naturally for the auditor.
+    const insights = depseudonymizeInsights(insightsRaw, reverseMap)
+
+    // Telemetry: detect pseudonym leakage. If Claude hallucinated a token
+    // outside our map (e.g. `__EMP_99__` when we only minted __EMP_1__ and
+    // __EMP_2__), depseudonymizeInsights won't substitute it and the token
+    // will leak into the final report. Log so we can catch the drift.
+    const narrativeScan = insights.narrative.match(POST_PROCESS_PSEUDONYM_REGEX)
+    if (narrativeScan && narrativeScan.length > 0) {
+      console.warn(
+        `[AI Insights] Pseudonym leak detected: ${narrativeScan.length} token(s) left un-restored. ` +
+          `Tokens: ${[...new Set(narrativeScan)].join(', ')}. ` +
+          `Known map size: ${reverseMap.size}.`
+      )
     }
 
     console.log('[AI Insights] Generated successfully')
