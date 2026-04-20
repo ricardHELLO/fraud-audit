@@ -117,6 +117,53 @@ interface ReportLayoutProps {
 export function ReportLayout({ data, reportId, aiInsights }: ReportLayoutProps) {
   const [activeTab, setActiveTab] = useState<TabKey>('resumen')
 
+  /**
+   * AUDIT-001 (B9): WAI-ARIA Tabs keyboard navigation.
+   * https://www.w3.org/WAI/ARIA/apg/patterns/tabs/
+   *
+   * Required keys for a horizontal tablist:
+   *   ArrowRight / ArrowLeft: move focus to next / prev tab (wrapping).
+   *   Home / End:             jump to first / last tab.
+   *   Enter / Space:          activated by the button default behavior.
+   *
+   * After changing the active tab we must move focus to the new tab button.
+   * Without focus-sync, the previous tab remains focused but inert (its
+   * tabIndex just became -1), stranding keyboard users.
+   */
+  function handleTabKeyDown(
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    currentIndex: number
+  ) {
+    let nextIndex: number | null = null
+
+    switch (event.key) {
+      case 'ArrowRight':
+        nextIndex = (currentIndex + 1) % TABS.length
+        break
+      case 'ArrowLeft':
+        nextIndex = (currentIndex - 1 + TABS.length) % TABS.length
+        break
+      case 'Home':
+        nextIndex = 0
+        break
+      case 'End':
+        nextIndex = TABS.length - 1
+        break
+      default:
+        return
+    }
+
+    event.preventDefault()
+    const nextTab = TABS[nextIndex]
+    trackReportTabClicked(nextTab.key)
+    setActiveTab(nextTab.key)
+    // Focus must move AFTER React commits the tabIndex update to the DOM; a
+    // microtask-next-frame is the lightest guarantee without useEffect.
+    requestAnimationFrame(() => {
+      document.getElementById(`tab-${nextTab.key}`)?.focus()
+    })
+  }
+
   function renderTab() {
     switch (activeTab) {
       case 'resumen':
@@ -200,7 +247,7 @@ export function ReportLayout({ data, reportId, aiInsights }: ReportLayoutProps) 
             aria-label="Secciones del informe"
             className="-mb-px flex overflow-x-auto scrollbar-none"
           >
-            {TABS.map((tab) => {
+            {TABS.map((tab, index) => {
               const selected = activeTab === tab.key
               return (
                 <button
@@ -214,6 +261,7 @@ export function ReportLayout({ data, reportId, aiInsights }: ReportLayoutProps) 
                   // focusable via tab-key; los otros se alcanzan con flechas.
                   tabIndex={selected ? 0 : -1}
                   onClick={() => { trackReportTabClicked(tab.key); setActiveTab(tab.key) }}
+                  onKeyDown={(event) => handleTabKeyDown(event, index)}
                   className={cn(
                     'shrink-0 border-b-2 px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap',
                     selected
